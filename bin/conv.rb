@@ -1,3 +1,5 @@
+#!C:\Ruby\bin\ruby.exe
+#!C:\cygwin\bin\ruby.exe
 #!/usr/bin/env ruby
 =begin
 
@@ -11,7 +13,7 @@
 
 class Mode
 
-  attr_reader :comma, :period, :digits, :rsv, :tgm, :lightvlos, :uus, :tonal, :looloh, :harmon, :prefix, :nic, :doremi, :category, :precision
+  attr_reader :comma, :period, :digits, :rsv, :tgm, :idus, :lightvlos, :uus, :tonal, :looloh, :harmon, :prefix, :nic, :doremi, :category, :precision
 
   def xe?
     @mode[14] == 0
@@ -22,7 +24,7 @@ class Mode
   end
 
   def code(category=nil)
-    category ? ('000' + (@mode & 0xFF8F | category << 4).to_s(16))[-4..-1] : @code
+    category ? ('0000' + (@mode & 0xFFF8F | category << 4).to_s(16))[-5..-1] : @code
   end
 
   def initialize
@@ -30,6 +32,7 @@ class Mode
       q = Hash[*((ENV['QUERY_STRING']||ARGV[0]||'').split(/&/).map {|v| v.split(/=/,2)}).flatten]
       @mode      = q['p'].to_i                   #  0-3  : default precision
       @mode      = 0      if @mode  == 7
+      @mode     |=(1<<16) if q['i'] == '1'       # 16    : IDUS System
       @mode     |= 0x8000 if q['r'] == '1'       # 15    : gruoping separater
       @mode     |= 0x4000 if q['d'] == '1'       # 14    : digit symbols
       @mode     |= 0x2000 if q['n'] == '0'       # 13    : Nystrom's Tonal System
@@ -39,9 +42,10 @@ class Mode
       @mode     |= 0x0080 if q['a'] == '1'       #  7    : unit name (rule or alias)
       @code      = code(0)
     else
-      @code      = (ENV['QUERY_STRING']||ARGV[0]) =~ /m=([0-9A-F]+)/i ? ($1 + '000')[0..3] : '0000'
+      @code      = (ENV['QUERY_STRING']||ARGV[0]) =~ /m=([0-9A-F]+)/i ? ('00000' + $1)[-5..-1] : '00000'
       @mode      = @code.to_i(16)
     end
+    @idus      = @mode[16] == 1
     @comma     = @mode[15] == 1 ? '.' : ','
     @period    = @mode[15] == 1 ? ',' : '.'
     @digits    = @mode[14] == 1 ? "0123456789AB" : "0123456789XE"
@@ -482,6 +486,33 @@ module Unit
   GallonUK     = 0.00454609
   GallonUS     = 0.003785411784
 
+  # Bill Hall's International Dozenal Unit System
+  Tk           = 3191886105/9192631770.0       # 3191886105= 7,50E5,8389; # Tick  : time
+  Gk           = Tk / 12**8 * Light  # Geck      : length
+  Kn           = Gk / Tk             # Kine      : velocity / speed
+  Ca           = Gk**3               # Cask      : volume
+  Yu           = Quantum * 23804808 * 12**25 / Tk # 23804808. = 7E7,EE20; # Young : energy
+  Ad           = Yu / (Boltzmann/21984218*12**29) # 21984218. = 744,2422; # Ardor : temperature
+  Md           = Yu / (Gk/Tk)**2     # Myd       : mass
+  Bz           = Md * 1000           # Berzel    : amount of substance
+  Sg           = Md / Gk**3          # Spig      : density
+  Pv           = Yu / Tk             # Povi      : power
+  Hy           = Yu / Gk             # Huygen    : force
+  Bo           = Yu / (Gk**3)        # Boyle     : pressure
+  Kv           = Bo * Tk             # Kleve     : dynamic viscosity
+  Rh           = Gk**2 / Tk          # Rhine     : kinematic viscosity
+  Hs           = Ohmn * 4 * Math::PI # Heaviside : impedance
+  Zp           = Math.sqrt(Pv / Hs)  # Zapp      : electric current
+  Sa           = Zp * Tk             # Sargo     : electric charge
+  Dv           = Zp * Hs             # Devigi    : electric potential difference
+  Kp           = Tk / Hs             # Kapa      : electric capacitance
+  Nx           = Dv * Tk / Gk**2     # Nikola    : magnetic flux density
+  Ed           = Tk * Hs             # Elduk     : inductance
+  Sn           = 1 / Tk              # Sonif     : frequency
+  Vi           = 1 / Tk              # Villiard  : radioactivity
+  Sb           = Yu / Md             # Sorbi     : absorbed Dose
+  Eg           = Sb                  # Egal      : Equivalent Dose
+
   # Shakkan-ho
   Shaku        = 10.0/33
   Kuan         = 3.75
@@ -630,6 +661,36 @@ module Unit
         ['tontran-',     17], ['santran-',     18], ['milltran-',    19],
       ],
 
+      :SDN=> [
+        12,
+
+        ['quadnilcia',  -48], ['trilevcia',   -47], ['trideccia',   -46], ['trienncia',  -45],
+        ['trioctcia',   -44], ['triseptcia',  -43], ['trihexcia',   -42], ['tripentcia', -41],
+        ['triquadcia',  -40], ['tritricia',   -39], ['tribicia',    -38], ['triuncia',   -37],
+        ['trinilcia',   -36], ['bilevcia',    -35], ['bideccia',    -34], ['bienncia',   -33],
+        ['bioctcia',    -32], ['biseptcia',   -31], ['bihexcia',    -30], ['bipentcia',  -29],
+        ['biquadcia',   -28], ['bitricia',    -27], ['bibicia',     -26], ['biuncia',    -25],
+        ['binilcia',    -24], ['unlevcia',    -23], ['undeccia',    -22], ['unenncia',   -21],
+        ['unoctcia',    -20], ['unseptcia',   -19], ['unhexcia',    -18], ['unpentcia',  -17],
+        ['unquadcia',   -16], ['untricia',    -15], ['unbicia',     -14], ['ununcia',    -13],
+        ['unnilcia',    -12], ['levcia',      -11], ['deccia',      -10], ['enncia',      -9],
+        ['octcia',       -8], ['septcia',      -7], ['hexcia',       -6], ['pentcia',     -5],
+        ['quadcia',      -4], ['tricia',       -3], ['bicia',        -2], ['uncia',       -1],
+        ['[SDN]',         0],                                    
+        ['unqua',         1], ['biqua',         2], ['triqua',        3], ['quadqua',      4],
+        ['pentqua',       5], ['hexqua',        6], ['septqua',       7], ['octqua',       8],
+        ['ennqua',        9], ['decqua',       10], ['levqua',       11], ['unnilqua',    12],
+        ['ununqua',      13], ['unbiqua',      14], ['untriqua',     15], ['unquadqua',   16],
+        ['unpentqua',    17], ['unhexqua',     18], ['unseptqua',    19], ['unoctqua',    20],
+        ['unennqua',     21], ['undecqua',     22], ['unlevqua',     23], ['binilqua',    24],
+        ['biunqua',      25], ['bibiqua',      26], ['bitriqua',     27], ['biquadqua',   28],
+        ['bipentqua',    29], ['bihexqua',     30], ['biseptqua',    31], ['bioctqua',    32],
+        ['biennqua',     33], ['bidecqua',     34], ['bilevqua',     35], ['trinilqua',   36],
+        ['triunqua',     37], ['tribiqua',     38], ['tritriqua',    39], ['triquadqua',  40],
+        ['tripentqua',   41], ['trihexqua',    42], ['triseptqua'  , 43], ['trioctqua',   44],
+        ['triennqua',    45], ['tridecqua',    46], ['trilevqua',    47], ['quadnilqua',  48],
+      ],
+
       :Clock10 => [10, ['&nbsp;&nbsp;&nbsp;&nbsp;',  0]],
       :Clock12 => [12, ['&nbsp;&nbsp;&nbsp;&nbsp;',  0]]
     }
@@ -639,6 +700,7 @@ module Unit
       Unit.new(Harmon,                              Mh,                   :Univ),
       Unit.new('meter(10.)',                        1.0,                  :SI  ),
       Unit.new('Grafut',                            Grafut,               :TGM ),
+      Unit.new('Geck',                              Gk,                   :SDN ),
       Unit.new('meter(16.)',                        Mt,                   :Tonal),
       Unit.new('gravitic meter',                    MG,                   :NilU),
       Unit.new('Planck length',                     Planck),
@@ -679,11 +741,13 @@ module Unit
       CalendarContainer.new( 'Gregorian(10.)',      'Gregorian',      :Clock10),
       CalendarContainer.new( 'Gregorian(12.)',      'Gregorian',      :Clock12),
       CalendarContainer.new( 'Julian(10.)',         'Julian',         :Clock10),
-      CalendarContainer.new( 'FromCE500',           'FromCE500',      :Clock12),
+      CalendarContainer.new( "<a href='http://translate.weblio.jp/web/english?lp=JE&url=http%3A%2F%2Fsuchowan.at.webry.info%2F201311%2Farticle_16.html&rdt=tl&sentenceStyle=spoken' target='_blank'>FromCE500</a>", 'FromCE500',      :Clock12),
       CalendarContainer.new( 'Holocene',            'Holocene',       :Clock12),
-      CalendarContainer.new( "<a href='http://dozenal.com' target='_blank'>Calendar D.1.1</a>",
+      CalendarContainer.new( "Calendar <a href='http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/e28.pdf' target='_blank'>D.1.1</a> of" +
+                                     " <a href='http://dozenal.com/' target='_blank'>dozenal.com</a>",
                                                     'Calendar1',      :Clock12),
-      CalendarContainer.new( "<a href='http://dozenal.com' target='_blank'>Calendar D.1.2</a>",
+      CalendarContainer.new( "Calendar <a href='http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/e28.pdf' target='_blank'>D.1.2</a> of" +
+                                     " <a href='http://dozenal.com/' target='_blank'>dozenal.com</a>",
                                                     'Calendar2',      :Clock12),
     ],
 
@@ -691,6 +755,7 @@ module Unit
       Unit.new("#{Nic}",                            Sh,                   :Univ),
       Unit.new('second(10.)',                       1.0,                  :SI  ),
       Unit.new('Tim(12.)',                          Tim,                  :TGM ),
+      Unit.new('Tick',                              Tk,                   :SDN ),
       Unit.new('Tim(16.)',                          St,                   :Tonal),
       Unit.new('gravitic second',                   SG,                   :NilU),
       Unit.new('Planck time',                       Planck/Light),
@@ -720,6 +785,7 @@ module Unit
       Unit.new(Looloh,                              Gh,                   :Univ),
       Unit.new('gram(10.)',                         1.0E-3,               :SI  ),
       Unit.new('Maz',                               Maz,                  :TGM ),
+      Unit.new('Myd',                               Md,                   :SDN ),
       Unit.new('pon(16.)',                          Gt,                   :Tonal),
       Unit.new('electron mass',                     ElectronMass),
       Unit.new('unified atomic mass unit or Dalton, emiMaz',Uatm),
@@ -744,6 +810,7 @@ module Unit
       Unit.new(Harmon,                              Mh**2,                :Univ,  2),
       Unit.new('meter(10.)',                        1.0,                  :SI,    2),
       Unit.new('Surf',                              Grafut**2,            :TGM ),
+      Unit.new('Geck',                              Gk**2,                :SDN,   2),
       Unit.new('meter(16.)',                        Mt**2,                :Tonal, 2),
       Unit.new('square(12.)',                       Mh**2,                :Univ),
       Unit.new('are',                               100.0,                :SI),
@@ -760,6 +827,7 @@ module Unit
       Unit.new(Harmon,                              Mh**3,                :Univ,  3),
       Unit.new('meter(10.)',                        1.0,                  :SI,    3),
       Unit.new('Volm',                              Grafut**3,            :TGM ),
+      Unit.new('Cask',                              Gk**3,                :SDN),
       Unit.new('gall(16.)',                         Mt**3,                :Tonal),
       Unit.new('cube(12.)',                         Mh**3,                :Univ),
       Unit.new('liter',                             1.0E-3,               :SI ),
@@ -791,6 +859,7 @@ module Unit
       Unit.new("#{Harmon}/#{Nic} (=atol)",          Mh/Sh,                :Univ),
       Unit.new('meter(10.)/second(10.)',            1.0,                  :SI  ),
       Unit.new('Vlos',                              Grafut/Tim,           :TGM ),
+      Unit.new('Kine',                              Kn,                   :SDN ),
       Unit.new('speed of light in vacuum or Lightvlos', Light),
       Unit.new("#{Harmon}/solar sep",               Mh/(50.0/128),        :Univ),
       Unit.new("#{Harmon}/solar milly",             Mh/50,                :Univ),
@@ -818,6 +887,7 @@ module Unit
       Unit.new('mole(12.)',                         Molh,                 :Univ),
       Unit.new('mole(10.)',                         1.0,                  :SI  ),
       Unit.new('Molz',                              1000*Maz,             :TGM ),
+      Unit.new('Berzel',                            Bz,                   :SDN ),
       Unit.new('natural mol or per Avogadro',       1.0/Avogadro,         :Univ)
     ],
 
@@ -825,6 +895,7 @@ module Unit
       Unit.new('Kelvin(12.)',                       Kh,                   :Univ),
       Unit.new('Kelvin(10.)',                       1.0,                  :SI  ),
       Unit.new('Calg',                              Calg,                 :TGM ),
+      Unit.new('Ardor',                             Ad,                   :SDN ),
       Unit.new('temp(16.)',                         Kt,                   :Tonal,0,  273.15),
       Unit.new('melting point of ice(VSMOW)',       1.0,                  nil,   0,  273.15+0.000089),
       Unit.new('triple point of water',             1.0,                  nil,   0,  273.16),
@@ -846,6 +917,7 @@ module Unit
       Unit.new('Kelvin(12.)',                       Kh,                   :Univ),
       Unit.new('Kelvin(10.)',                       1.0,                  :SI  ),
       Unit.new('Calg',                              Calg,                 :TGM ),
+      Unit.new('Ardor',                             Ad,                   :SDN ),
       Unit.new('temp(16.)',                         Kt,                   :Tonal),
       Unit.new('Super Kelvin',                      12**4*Kh,             :Univ),
       Unit.new('Celsius',                           1.0,                  :SI  ),
@@ -862,11 +934,12 @@ module Unit
 
     [[['11101001', 'Energy, work, or amount of heat'],
       ['00100001', 'Earthquake magnitude',
-        {'fu'=>4-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'fl'=>+8, 'fq'=>'0',
-         'tu'=>3-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'tl'=>0}]],
+        {'fu'=>5-(Config.uus ? 0:1)-(Config.tgm ? 0:1)-(Config.idus ? 0:1), 'fl'=>+8, 'fq'=>'0',
+         'tu'=>4-(Config.uus ? 0:1)-(Config.tgm ? 0:1)-(Config.idus ? 0:1), 'tl'=>0}]],
       Unit.new('Joule(12.)',                        Jh,                   :Univ),
       Unit.new('Joule(10.)',                        1.0,                  :SI  ),
       Unit.new('Werg',                              Werg,                 :TGM ),
+      Unit.new('Young',                             Yu,                   :SDN ),
       Unit.new('ton of TNT',                        Calorie*1E6,          :SI  ),
       Unit.new('earthquake magnitude 0.0',          63.0*1E3),
       Unit.new('erg',                               1.0E-7,               :SI  ),
@@ -888,6 +961,7 @@ module Unit
       Unit.new('Watt(12.)',                         Jh/Sh,                :Univ),
       Unit.new('Watt(10.)',                         1.0,                  :SI  ),
       Unit.new('Pov',                               Werg/Tim,             :TGM ),
+      Unit.new('Povi',                              Pv,                   :SDN ),
       Unit.new('effect(16.)',                       Wt,                   :Tonal),
       Unit.new('British Thermal Unit/second',       1054.5,               :SI  ),
       Unit.new('British Thermal Unit/minute',       1054.5/60,            :SI  ),
@@ -906,6 +980,7 @@ module Unit
       Unit.new('Newton(12.)',                       Jh/Mh,                :Univ),
       Unit.new('Newton(10.)',                       1.0,                  :SI  ),
       Unit.new('Mag',                               Maz*Gee,              :TGM ),
+      Unit.new('Huygen',                            Hy,                   :SDN ),
       Unit.new('dyne',                              1.0E-5,               :SI  ),
       Unit.new('gravitic Newton',                   NG,                   :NilU),
       Unit.new('gravitational force constant',      Light**4/6.67384E-11),
@@ -919,11 +994,12 @@ module Unit
 
     [[['01101001', 'Pressure or mechanical stress'],
       ['00100001', 'Sound pressure level (dB_SPL)',
-        {'fu'=>5-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'fl'=>+4, 'fq'=>'0',
-         'tu'=>4-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'tl'=>+6}]],
+        {'fu'=>6-(Config.uus ? 0:1)-(Config.tgm ? 0:1)-(Config.idus ? 0:1), 'fl'=>+4, 'fq'=>'0',
+         'tu'=>5-(Config.uus ? 0:1)-(Config.tgm ? 0:1)-(Config.idus ? 0:1), 'tl'=>+6}]],
       Unit.new('Pascal(12.)',                       Jh/Mh**3,             :Univ),
       Unit.new('Pascal(10.)',                       1.0,                  :SI  ),
       Unit.new('Prem',                              Werg/Grafut**3,       :TGM ),
+      Unit.new('Boyle',                             Bo,                   :SDN ),
       Unit.new('bar',                               1.0E5,                :SI  ),
       Unit.new('reference of sound pressure level(12.)', 20.0E-6,         :Univ),
       Unit.new('reference of sound pressure level(10.)', 20.0E-6,         :SI  ),
@@ -941,11 +1017,12 @@ module Unit
 
     [[['00100001', 'Power density'],
       ['00100001', 'Sound intensity level (dB_SIL)',
-        {'fu'=>4-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'fl'=>+3, 'fq'=>'0',
-         'tu'=>3-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'tl'=>+5}]],
+        {'fu'=>5-(Config.uus ? 0:1)-(Config.tgm ? 0:1)-(Config.idus ? 0:1), 'fl'=>+3, 'fq'=>'0',
+         'tu'=>4-(Config.uus ? 0:1)-(Config.tgm ? 0:1)-(Config.idus ? 0:1), 'tl'=>+5}]],
       Unit.new("Watt(12.)/#{Harmon}^2",             Jh/Sh/Mh**2,          :Univ),
       Unit.new('Watt(10.)/meter(10.)^2',            1.0,                  :SI  ),
       Unit.new('Penz',                              Werg/Tim/Grafut**2,   :TGM ),
+      Unit.new('Povi/Geck^2',                       Pv/Gk**2,             :SDN ),
       Unit.new('reference of sound intensity level(12.)', 1.0E-12,        :Univ),
       Unit.new('reference of sound intensity level(10.)', 1.0E-12,        :SI  ),
       Unit.new('black-body radiation at ice point', Math::PI**2*Boltzmann**4/(60*Quantum**3*Light**2)*273.15**4)
@@ -955,6 +1032,7 @@ module Unit
       Unit.new("#{Harmon}/#{Nic}^2",                Mh/Sh**2,             :Univ),
       Unit.new('meter(10.)/second(10.)^2',          1.0,                  :SI  ),
       Unit.new('Gee',                               Gee,                  :TGM ),
+      Unit.new('Kine/Tick',                         Gk/Tk**2,             :SDN ),
       Unit.new('standard gravity(recommend)',       5.5*Mh/Sh**2),
       Unit.new("standard gravity(gee)",             GE),
       Unit.new('standard gravity(CGPM1901)',        G),
@@ -980,6 +1058,7 @@ module Unit
       Unit.new("#{Harmon}/#{Nic}^2",                Mh**2/Sh**2,          :Univ,  2),
       Unit.new('meter(10.)/second(10.)^2',          1.0,                  :SI,    2),
       Unit.new('Vlov',                              Grafut*Gee,           :TGM ),
+      Unit.new('Kine^2',                            Kn**2,                :SDN ),
       Unit.new('Lightvlov',                         Light**2,             :Nil),
       Unit.new('Geoid potential of the Earth',      RE/((PoleRad+2*EqRad)/3))
     ],
@@ -988,6 +1067,7 @@ module Unit
       Unit.new("(#{Harmon}/#{Nic})^4/Newton(12.)",  (Mh/Sh)**4/(Jh/Mh),    :NilU),
       Unit.new('(meter(10.)/second(10.))^4/Newton(10.)', 1.0,              nil  ),
       Unit.new('Vlov^4 / Mag',              (Grafut/Tim)**4/(Werg/Grafut), :Nil ),
+      Unit.new('Kine^4 / Huygen',                   Kn**4/Hy,              :SDN ),
       Unit.new('gravitic meter/second)^4/Newton',   (MG/SG)**4/(JG/MG),    :NilU),
       Unit.new('Newtonian constant of gravitation', 6.67384E-11)
     ],
@@ -996,6 +1076,7 @@ module Unit
       Unit.new("#{Harmon}/#{Nic}^2",                Mh**3/Sh**2,          :Univ,  3),
       Unit.new('meter(10.)/second(10.)^2',          1.0,                  :SI,    3),
       Unit.new('Graft/Tim^2',                       Grafut**3/Tim**2,     :TGM,   3),
+      Unit.new('Geck/Tick^2',                       Gk**3/Tk**2,          :SDN,   3),
       Unit.new('gravitational parameter of the Earth', RE),
       Unit.new('gravitational parameter of the Sun',   RS)
     ],
@@ -1004,6 +1085,7 @@ module Unit
       Unit.new("#{Harmon}/#{Nic}",                  Mh**3/Sh,             :Univ,  3),
       Unit.new('meter(10.)/second(10.)',            1.0,                  :SI,    3),
       Unit.new('Flo',                               Grafut**3/Tim,        :TGM ),
+      Unit.new('Cask/Tick',                         Ca/Tk,                :SDN ),
       Unit.new('liter/minute',                      1.0E-3/60,            :SI  ),
       Unit.new('foot/second',                       Foot**3,              nil,    3),
       Unit.new('foot/minute',                       Foot**3/60,           nil,    3),
@@ -1021,6 +1103,7 @@ module Unit
       Unit.new("#{Looloh}/#{Harmon}^3",             Gh/Mh**3,             :Univ),
       Unit.new('gram(10.)/meter(10.)^3',            1.0E-3,               :SI  ),
       Unit.new('Denz',                              Maz/Grafut**3,        :TGM ),
+      Unit.new('Spig ',                             Sg,                   :SDN ),
       Unit.new('maximum density of water',          Density),
       Unit.new('pound/inch^3',                      Pound/Inch**3),
       Unit.new('pound/foot^3',                      Pound/Foot**3),
@@ -1035,26 +1118,30 @@ module Unit
     [['01100001', 'Specific volume'],
       Unit.new("#{Harmon}/#{Looloh}",               Mh**3/Gh,             :Univ,  3),
       Unit.new('meter(10.)/kilogram',               1.0,                  :SI,    3),
-      Unit.new('Vosp',                              Grafut**3/Maz,        :TGM )
+      Unit.new('Vosp',                              Grafut**3/Maz,        :TGM ),
+      Unit.new('Spig^(-1)',                         1/Sg,                 :SDN )
     ],
 
     [['00100001', 'Action'],
       Unit.new("Joule(12.) #{Nic}",                 Jh*Sh,                :Univ),
       Unit.new('Joule(10.) second(10.)',            1.0,                  :SI  ),
       Unit.new('Ag',                                Werg*Tim,             :TGM ),
+      Unit.new('Young Tick',                        Yu*Tk,                :SDN ),
       Unit.new('quantum of action',                 Quantum)
     ],
 
     [['00100001', 'Momentum'],
       Unit.new("Joule(12.) #{Nic}/#{Harmon}",       Jh*Sh/Mh,             :Univ),
       Unit.new('gram(10.) meter(10.)/second(10.)',  1.0E-3,               :SI  ),
-      Unit.new('Mav',                               Maz*Grafut/Tim,       :TGM )
+      Unit.new('Mav',                               Maz*Grafut/Tim,       :TGM ),
+      Unit.new('Huygen Tick',                       Hy * Tk,              :SDN ),
     ],
 
     [['00100001', 'Tension'],
       Unit.new("Newton(12.) / #{Harmon}",           Jh/Mh**2,             :Univ),
       Unit.new('Newton(10.) / meter(10.)',          1.0,                  :SI  ),
       Unit.new('Tenz',                              Werg/Grafut**2,       :TGM ),
+      Unit.new('Huygen / Geck',                     Hy/Gk,                :SDN ),
       Unit.new('surface tension of water at 25&#8451;',                71.97E-3)
     ],
 
@@ -1062,6 +1149,7 @@ module Unit
       Unit.new("Pascal(12.) #{Nic}",                Jh/Mh**3*Sh,          :Univ),
       Unit.new('Pascal(10.) second(10.)',           1.0,                  :SI  ),
       Unit.new('Viscod',                            Werg/Grafut**3*Tim,   :TGM ),
+      Unit.new('Kleve',                             Kv,                   :SDN ),
       Unit.new('Poise',                             0.1,                  :SI  ),
       Unit.new('pound/foot/second',                 Pound/Foot),
       Unit.new('pound/foot/hour',                   Pound/Foot/3600),
@@ -1073,6 +1161,7 @@ module Unit
       Unit.new("#{Harmon} / #{Nic}",                Mh**2/Sh,             :Univ,  2),
       Unit.new('meter(10.) / second(10.)',          1.0,                  :SI,    2),
       Unit.new('Viskin',                            Grafut**2/Tim,        :TGM ),
+      Unit.new('Rhine',                             Rh,                   :SDN ),
       Unit.new('Stokes',                            1.0E-4,               :SI  ),
       Unit.new('foot / second',                     Foot**2,              nil,    2)
     ],
@@ -1081,6 +1170,7 @@ module Unit
       Unit.new("radian / #{Nic}",                   1/Sh,                 :Univ),
       Unit.new('radian / second(10.)',              1.0,                  :SI  ),
       Unit.new('radiVlos',                          1/Tim,                :TGM ),
+      Unit.new('Radian / Tick',                     1/Tk,                 :SDN ),
       Unit.new('revolutions per second(10.)',       2*Math::PI,           :SI  ),
       Unit.new('revolutions per minute',            2*Math::PI/60,        :SI  )
     ],
@@ -1088,19 +1178,22 @@ module Unit
     [['00100001', 'Angular acceleration'],
       Unit.new("radian / #{Nic}^2",                 1/Sh**2,              :Univ),
       Unit.new('radian / second(10.)^2',            1.0,                  :SI  ),
-      Unit.new('radiGee',                           1/Tim**2,             :TGM )
+      Unit.new('radiGee',                           1/Tim**2,             :TGM ),
+      Unit.new('Radian / Tick^2',                   1/Tk**2,              :SDN )
     ],
 
     [['00100001', 'Angular momentum'],
       Unit.new("Joule(12.) #{Nic} / radian",        Jh*Sh,                :Univ),
       Unit.new('Joule(10.) second(10.) / radian',   1.0,                  :SI  ),
-      Unit.new('radaMav',                           Werg*Tim,             :TGM )
+      Unit.new('radaMav',                           Werg*Tim,             :TGM ),
+      Unit.new('Young Tick / Radian',               Yu*Tk,                :SDN )
     ],
 
     [['00100001', 'Torque or moment of force'],
       Unit.new('Joule(12.)/radian',                 Jh,                   :Univ),
       Unit.new('Newton(10.) meter(10.)',            1.0,                  :SI  ),
       Unit.new('radaMag',                           Werg,                 :TGM ),
+      Unit.new('Young / Radian',                    Yu,                   :SDN ),
       Unit.new('meter kilogram force',              1/G,                  :SI  ),
       Unit.new('foot-pound force',                  Foot*Pound*G),
       Unit.new('inch-pound force',                  Inch*Pound*G)
@@ -1109,19 +1202,22 @@ module Unit
     [['00100001', 'Moment of inertia'],
       Unit.new("Joule(12.) #{Nic}^2/radian^2",      Jh*Sh**2,             :Univ),
       Unit.new('gram(10.) meter(10.)^2',            1.0E-3,               :SI  ),
-      Unit.new('quaraMaz',                          Maz*Grafut**2,        :TGM )
+      Unit.new('quaraMaz',                          Maz*Grafut**2,        :TGM ),
+      Unit.new('Myd Geck^2',                        Md*Gk**2,             :SDN )
     ],
 
     [['00100001', 'Radiant power'],
       Unit.new('Watt(12.)/radian^2',                Jh/Sh,                :Univ),
       Unit.new('Watt(10.)/sr',                      1.0,                  :SI  ),
-      Unit.new('QuaraPenz',                         Werg/Tim,             :TGM )
+      Unit.new('QuaraPenz',                         Werg/Tim,             :TGM ),
+      Unit.new('Pv / Steradian',                    Pv,                   :SDN )
     ],
 
     [['10010001', 'Electric charge'],
       Unit.new('Coulomb(12.)',                      Ch,                   :Univ),
       Unit.new('Coulomb(10.)',                      1.0,                  :SI  ),
       Unit.new('Quel',                              Kur*Tim,              :TGM ),
+      Unit.new('Sargo',                             Sa,                   :SDN ),
       Unit.new('gravitic Coulomb',                  CG,                   :NilU),
       Unit.new('Planck charge',                     Ch/12**15),
       Unit.new('charge of an electron',             Electron),
@@ -1133,13 +1229,15 @@ module Unit
     [['00010001', 'Electric flux'],
       Unit.new('turn Coulomb',                      Ch,                   :Univ),
       Unit.new('Coulomb(10.)',                      1.0,                  :SI  ),
-      Unit.new('Quel',                              Kur*Tim,              :TGM )
+      Unit.new('Quel',                              Kur*Tim,              :TGM ),
+      Unit.new('Sargo',                             Sa,                   :SDN )
     ],
 
     [['00010001', 'Magnetic flux'],
       Unit.new('nohm Coulomb',                      Ch*Ohmn,              :Univ),
       Unit.new('Weber',                             1.0,                  :SI  ),
       Unit.new('Flum',                              Kur*Tim*Og,           :TGM ),
+      Unit.new('Nikola Geck^2',                     Nx*Gk**2,             :SDN ),
       Unit.new('Maxwell',                           1.0E-8,               :SI  )
     ],
 
@@ -1147,6 +1245,7 @@ module Unit
       Unit.new('Ampere(12.)',                       Ch/Sh,                :Univ),
       Unit.new('Ampere(10.)',                       1.0,                  :SI  ),
       Unit.new('Kur',                               Kur,                  :TGM ),
+      Unit.new('Zapp',                              Zp,                   :SDN ),
       Unit.new('ab Ampere',                         10.0,                 :SI  ),
       Unit.new('esu/second',                        0.1/Light,            :SI  )
     ],
@@ -1155,6 +1254,7 @@ module Unit
       Unit.new('turn Ampere',                       Ch/Sh,                :Univ),
       Unit.new('Ampere(10.)',                       1.0,                  :SI  ),
       Unit.new('Kurn',                              Kur,                  :TGM ),
+      Unit.new('Zapp',                              Zp,                   :SDN ),
       Unit.new('Gilbert',                           10/(4*Math::PI),      :SI )
     ],
 
@@ -1162,6 +1262,7 @@ module Unit
       Unit.new('nohm Ampere',                       Ch/Sh*Ohmn,           :Univ),
       Unit.new('Volt',                              1.0,                  :SI  ),
       Unit.new('Pel',                               Kur*Og,               :TGM ),
+      Unit.new('Devigi',                            Dv,                   :SDN ),
       Unit.new('ab Volt',                           1.0E-8,               :SI  ),
       Unit.new('stat Volt',                         Light/1E6,            :SI  )
     ],
@@ -1170,108 +1271,125 @@ module Unit
       Unit.new('turn &#216;rsted',                  Ch/Sh/Mh,             :Univ),
       Unit.new('Ampere(10.) / meter(10.)',          1.0,                  :SI  ),
       Unit.new('Magra',                             Kur/Grafut,           :TGM ),
+      Unit.new('Zapp / Geck',                       Zp/Gk,                :SDN ),
       Unit.new('&#216;rsted',                       1000/(4*Math::PI),    :SI  )
     ],
 
     [['00010001', 'Electromotive field strength'],
       Unit.new('nohm &#216;rsted',                  Ch/Sh*Ohmn/Mh,        :Univ),
       Unit.new('Volt / meter(10.)',                 1.0,                  :SI  ),
-      Unit.new('Elgra',                             Kur*Og/Grafut,        :TGM )
+      Unit.new('Elgra',                             Kur*Og/Grafut,        :TGM ),
+      Unit.new('Devigi / Geck',                     Dv/Gk,                :SDN )
     ],
 
     [['00010001', 'Electric flux density'],
       Unit.new('turn Gauss',                        Ch/Mh**2,             :Univ),
       Unit.new('Coulomb(10.) / meter(10.)^2',       1.0,                  :SI  ),
-      Unit.new('Quenz',                             Kur*Tim/Grafut**2,    :TGM )
+      Unit.new('Quenz',                             Kur*Tim/Grafut**2,    :TGM ),
+      Unit.new('Sargo / Geck^2',                    Sa/Gk**2,             :SDN )
     ],
 
     [['00010001', 'Magnetic flux density'],
       Unit.new('nohm Gauss',                        Ch/Mh**2*Ohmn,        :Univ),
       Unit.new('Tesla',                             1.0,                  :SI  ),
       Unit.new('Flenz',                             Kur*Tim/Grafut**2*Og, :TGM ),
+      Unit.new('Nikola',                            Nx,                   :SDN ),
       Unit.new('Gauss',                             1.0E-4,               :SI  ),
       Unit.new('&#947;(gamma)',                     1.0E-9,               :SI  )
     ],
 
     [['10010001', 'Impedance or Electrical resistance'],
-      Unit.new('nohm or Planck impedance',          Ohmn,                :Univ),
+      Unit.new('nohm or Planck impedance',          Ohmn,                 :Univ),
       Unit.new('Ohm(10.)',                          1.0,                  :SI  ),
       Unit.new('Og',                                Og,                   :TGM ),
+      Unit.new('Heaviside',                         Hs,                   :SDN ),
       Unit.new('von Klitzing constant',          2*Math::PI*Quantum/Electron**2)
     ],
 
     [['00010001', 'Conductance, susceptance, and admittance'],
       Unit.new('nohm',                              1/Ohmn,               :Univ, -1),
       Unit.new('Siemens',                           1.0,                  :SI  ),
-      Unit.new('Go',                                1/Og,                 :TGM )
+      Unit.new('Go',                                1/Og,                 :TGM ),
+      Unit.new('Heaviside',                         1/Hs,                 :SDN,  -1)
     ],
 
     [['00010001', 'Capacitance'],
       Unit.new("#{Nic} / nohm",                     Sh/Ohmn,              :Univ),
       Unit.new('Farad',                             1.0,                  :SI  ),
-      Unit.new('Kap',                               Tim/Og,               :TGM )
+      Unit.new('Kap',                               Tim/Og,               :TGM ),
+      Unit.new('Kapa',                              Kp,                   :SDN )
     ],
 
     [['00010001', 'Permittivity'],
       Unit.new("#{Nic} radian^2/nohm/#{Harmon}", Sh/Ohmn/Mh/(4*Math::PI), :Univ),
       Unit.new('Farad / meter(10.)',                1.0,                  :SI  ),
       Unit.new('Mit',                               Tim/Og/Grafut,        :TGM ),
+      Unit.new('Kapa / Geck',                       Kp/Gk,                :SDN ),
       Unit.new('vacuum permittivity',               1/(4*Math::PI*1E-7)/Light**2)
     ],
 
     [['00010001', 'Inductance'],
       Unit.new("#{Nic} nohm",                       Sh*Ohmn,              :Univ),
       Unit.new('Henry',                             1.0,                  :SI  ),
-      Unit.new('Gen',                               Tim*Og,               :TGM )
+      Unit.new('Gen',                               Tim*Og,               :TGM ),
+      Unit.new('Elduk',                             Ed,                   :SDN )
     ],
 
     [['00010001', 'Permeability'],
       Unit.new("#{Nic} nohm/#{Harmon}/radian^2",    4*Math::PI*Sh*Ohmn/Mh,:Univ),
       Unit.new('Henry / meter(10.)',                1.0,                  :SI  ),
       Unit.new('Meab',                              Tim*Og/Grafut,        :TGM ),
+      Unit.new('Elduk / Geck',                      Ed/Gk,                :SDN ),
       Unit.new('vacuum permeability',               4*Math::PI*1E-7)
     ],
 
     [['00010001', 'Electric dipole'],
       Unit.new("Coulomb(12.) #{Harmon}/radian",     Ch*Mh,                :Univ),
       Unit.new('Coulomb(10.) meter(10.)',           1.0,                  :SI  ),
-      Unit.new('radaQuel',                          Kur*Tim*Grafut,       :TGM )
+      Unit.new('radaQuel',                          Kur*Tim*Grafut,       :TGM ),
+      Unit.new('Sargo Geck',                        Sa*Gk,                :SDN )
     ],
 
     [['00010001', 'Magnetic moment'],
       Unit.new("nohm Coulomb #{Harmon}",            Ch*Ohmn*Mh,           :Univ),
       Unit.new('Weber meter(10.)',                  1.0,                  :SI  ),
-      Unit.new('radaFlum',                          Kur*Tim*Og*Grafut,    :TGM )
+      Unit.new('radaFlum',                          Kur*Tim*Og*Grafut,    :TGM ),
+      Unit.new('Heaviside Sargo Geck',              Hs*Sa*Gk,             :SDN )
     ],
 
     [['00010001', 'Reluctance'],
       Unit.new("turn / #{Nic} nohm",                1/Sh/Ohmn,            :Univ),
       Unit.new('Siemens / second(10.)',             1.0,                  :SI  ),
-      Unit.new('radaQuel',                          1/Tim/Og,             :TGM )
+      Unit.new('radaQuel',                          1/Tim/Og,             :TGM ),
+      Unit.new('Heaviside Tick',                    1/Hs/Tk,              :SDN, -1)
     ],
 
     [['00010001', 'Resistivity'],
       Unit.new("nohm #{Harmon}",                    Ohmn*Mh,              :Univ),
       Unit.new('Ohm(10.) meter(10.)',               1.0,                  :SI  ),
-      Unit.new('Rezy',                              Og*Grafut,            :TGM )
+      Unit.new('Rezy',                              Og*Grafut,            :TGM ),
+      Unit.new('Heaviside Geck',                    Hs*Gk,                :SDN )
     ],
 
     [['00010001', 'Conductivity'],
       Unit.new("nohm #{Harmon}",                    1/(Ohmn*Mh),          :Univ, -1),
       Unit.new('Siemens / meter(10.)',              1.0,                  :SI  ),
-      Unit.new('Eldu',                              1/(Og*Grafut),        :TGM )
+      Unit.new('Eldu',                              1/(Og*Grafut),        :TGM ),
+      Unit.new('Heaviside Geck',                    1/(Hs*Gk),            :SDN,  -1)
     ],
 
     [['00011001', 'Ionic mobility'],
       Unit.new("#{Harmon} / nohm Coulomb",          Mh**2/(Ohmn*Ch),      :Univ,  2),
       Unit.new('meter(10.) / Volt second(10.)',     1.0,                  :SI,    2),
-      Unit.new('Imo',                               Grafut**2/(Kur*Tim*Og), :TGM )
+      Unit.new('Imo',                             Grafut**2/(Kur*Tim*Og), :TGM ),
+      Unit.new('Geck / Heaviside Sargo',            Gk**2/(Sa*Hs),        :SDN,   2)
     ],
 
     [['00010001', 'Electrochemical equivalence'],
       Unit.new("#{Looloh} / Coulomb(12.)",          Gh/Ch,                :Univ),
       Unit.new('gram(10.) / Coulomb(10.)',          1.0E-3,               :SI  ),
-      Unit.new('Depoz',                             Maz/(Kur*Tim),        :TGM )
+      Unit.new('Depoz',                             Maz/(Kur*Tim),        :TGM ),
+      Unit.new('Myd / Sargo',                       Md/Sa,                :SDN )
     ],
 
     [['10000001', 'Logarithm'],
@@ -1287,6 +1405,7 @@ module Unit
       Unit.new('Joule(12.) / Kelvin(12.)',          Jh/Kh,                :Univ),
       Unit.new('Joule(10.) / Kelvin(10.)',          1.0,                  :SI  ),
       Unit.new('Calkap',                            Werg/Calg,            :TGM ),
+      Unit.new('Young / Ardor',                     Yu/Ad,                :SDN ),
       Unit.new('Bolzmann',                          Boltzmann)
     ],
 
@@ -1294,25 +1413,29 @@ module Unit
       Unit.new("Joule(12.)/#{Looloh} Kelvin(12.)",  Jh/Gh/Kh,             :Univ),
       Unit.new('Joule(10.)/kilogram Kelvin(10.)',   1.0,                  :SI  ),
       Unit.new('Calsp',                             Werg/Maz/Calg,        :TGM ),
+      Unit.new('Young / Ardor Myd',                 Yu/(Md*Ad),           :SDN ),
       Unit.new('specific heat of water',            4184.0)
     ],
 
     [['01000001', 'Thermal conductivity'],
       Unit.new("Watt(12.)/#{Harmon} Kelvin(12.)",   Jh/Sh/Mh/Kh,          :Univ),
       Unit.new('Watt(10.)/meter(10.) Kelvin(10.)',  1.0,                  :SI  ),
-      Unit.new('Caldu',                             Werg/Tim/Grafut/Calg, :TGM )
+      Unit.new('Caldu',                             Werg/Tim/Grafut/Calg, :TGM ),
+      Unit.new('Povi / Geck Ardor',                 Pv/(Gk*Ad),           :SDN )
     ],
 
     [['01000001', 'Temperature gradient'],
       Unit.new("Kelvin(12.)/#{Harmon}",             Kh/Mh,                :Univ),
       Unit.new('Kelvin(10.)/meter(10.)',            1.0,                  :SI  ),
-      Unit.new('Temgra',                            Calg/Grafut,          :TGM )
+      Unit.new('Temgra',                            Calg/Grafut,          :TGM ),
+      Unit.new('Ardor / Geck',                      Ad/Gk,                :SDN )
     ],
 
     [['01001001', 'Specific energy or specific latent heat'],
       Unit.new("Joule(12.) / #{Looloh}",            Jh/Gh,                :Univ),
       Unit.new('Joule(10.) / kilogram',             1.0,                  :SI  ),
-      Unit.new('Wesp',                              (Grafut/Tim)**2,      :TGM )
+      Unit.new('Wesp',                              (Grafut/Tim)**2,      :TGM ),
+      Unit.new('Young / Myd',                       Yu/Md,                :SDN )
     ],
 
     [[['00001001', 'Molarity'],
@@ -1322,19 +1445,22 @@ module Unit
        'tu' => 0, 'tp' => 0, 'tr' => 12, 'tl' => -1 }]],
       Unit.new("mole(12.) / #{Harmon}^3",           Molh / Mh**3,         :Univ),
       Unit.new('mole(10.) / meter(10.)^3',          1.0,                  :SI  ),
-      Unit.new('Molv',                              1000*Maz/Grafut**3,   :TGM )
+      Unit.new('Molv',                              1000*Maz/Grafut**3,   :TGM ),
+      Unit.new('Berzel / Cask',                     Bz/Ca,                :SDN )
     ],
 
     [['00001001', 'Molmity'],
       Unit.new("mole(12.) / #{Looloh}",             Molh / Gh,            :Univ),
       Unit.new('mole(10.) / kilogram',              1.0,                  :SI  ),
-      Unit.new('Molm',                              1000.0,               :TGM )
+      Unit.new('Molm',                              1000.0,               :TGM ),
+      Unit.new('Berzel / Myd',                      Bz/Md,                :SDN )
     ],
 
     [['00001001', 'Molar extinction or absorption'],
       Unit.new("#{Harmon} / mole(12.)",             Mh**2 / Molh,         :Univ,  2),
       Unit.new('meter(10.) / mole(10.)',            1.0,                  :SI,    2),
-      Unit.new('Surfolz',                           Grafut**2/(1000*Maz), :TGM )
+      Unit.new('Surfolz',                           Grafut**2/(1000*Maz), :TGM ),
+      Unit.new('Geck / Berzel',                     Gk / Bz,              :SDN )
     ],
 
     [['00001001', 'Molar volume and refraction'],
@@ -1342,45 +1468,51 @@ module Unit
       Unit.new('meter(10.) / mole(10.)',            1.0,                  :SI,    3),
       Unit.new('Volmolz',                           Grafut**3/(1000*Maz), :TGM ),
       Unit.new('Avolz',  Boltzmann*Avogadro*273.15/(Werg/Grafut**3 * 35), :TGM ),
+      Unit.new('Cask / Berzel',                     Ca/Bz,                :SDN ),
       Unit.new('molar volume of an ideal gas', Boltzmann*Avogadro*273.15/101325)
     ],
 
     [['00001001', 'Molar enthalpy'],
-      Unit.new("Joule(12.) / mole(12.)",            Jh / Molh,            :Uni ),
+      Unit.new("Joule(12.) / mole(12.)",            Jh / Molh,            :Univ),
       Unit.new('Joule(10.) / mole(10.)',            1.0,                  :SI  ),
-      Unit.new('Wergolz',                           Werg/(1000*Maz),      :TGM )
+      Unit.new('Wergolz',                           Werg/(1000*Maz),      :TGM ),
+      Unit.new('Yound / Berzel',                    Yu / Bz,              :SDN )
     ],
 
     [['00011001', 'Molar electric charge'],
       Unit.new('Coulomb(12.) / mole(12.)',          Ch / Molh,            :Univ),
       Unit.new('Coulomb(10.) / mole(10.)',          1.0,                  :SI  ),
       Unit.new('Quel / Molz',                       Kur*Tim / (1000*Maz), :TGM ),
+      Unit.new('Sargo / Berzel',                    Sa / Bz,              :SDN ),
       Unit.new('Faraday or Emelectron',             Electron*Avogadro)
     ],
 
     [['00011001', 'Molar conductivity'],
       Unit.new("#{Harmon} / nohm mole",             1/Ohmn*Mh**2/Molh,    :Univ, 2),
       Unit.new('Siemens meter(10.)^2 / mole(10.)',  1.0,                  :SI  ),
-      Unit.new('Eldulz',                       1/Og*Grafut**2/(1000*Maz), :TGM )
+      Unit.new('Eldulz',                       1/Og*Grafut**2/(1000*Maz), :TGM ),
+      Unit.new("Geck / Heaviside Berzel",           1/Hs*Gk**2/Bz,        :SDN,  2)
     ],
 
     [['00001001', 'Molar entropy'],
       Unit.new('Joule(12.)/ Kelvin(12.) mole(12.) or gas constant',Jh/Kh/Molh,:Univ),
       Unit.new('Joule(10.)/ Kelvin(10.) mole(10.)', 1.0,                  :SI  ),
-      Unit.new('Calgolz',                           Werg/Calg/(1000*Maz), :TGM )
+      Unit.new('Calgolz',                           Werg/Calg/(1000*Maz), :TGM ),
+      Unit.new('Young / Ardor Berzel',              Yu/(Ad*Bz),           :SDN )
     ],
 
     [['00001001', 'Catalytic activity'],
       Unit.new("mole(12.) / #{Nic}",                Molh / Sh,            :Univ),
       Unit.new('katal',                             1.0,                  :SI  ),
       Unit.new('Molz / Tim',                        1000*Maz/Tim,         :TGM ),
+      Unit.new('Berzel / Tick',                     Bz/Tk,                :SDN ),
       Unit.new('unit',                              1.0E-7/6,             :SI  )
     ],
 
     [[['10000101', 'Luminous intensity'],
       ['00000101', 'Absolute magnitude',
-        {'fu'=>3-(Config.uus ? 0:1), 'fl'=>-7, 'fq'=>'4.8310628',
-         'tu'=>4-(Config.uus ? 0:1), 'tl'=>+5}]],
+        {'fu'=>3-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'fl'=>-7, 'fq'=>'4.8310628',
+         'tu'=>4-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'tl'=>+5}]],
       Unit.new('sensible Watt(12.)/radian^2',       Lmnh,                 :Univ),
       Unit.new('candela',                           1.0,                  :SI  ),
       Unit.new('QuaraLyde',                         Lypov,                :TGM ),
@@ -1397,8 +1529,8 @@ module Unit
 
     [[['10000101', 'Illuminance'],
       ['00000101', 'Apparent magnitude',
-        {'fu'=>3-(Config.uus ? 0:1), 'fl'=>-7, 'fq'=>'-2.736067',
-         'tu'=>4-(Config.uus ? 0:1), 'tl'=>+5}]],
+        {'fu'=>3-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'fl'=>-7, 'fq'=>'-2.736067',
+         'tu'=>4-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'tl'=>+5}]],
       Unit.new("sensible Watt(12.)/#{Harmon}^2",    Lmnh/Mh**2,           :Univ),
       Unit.new('lux',                               1.0,                  :SI  ),
       Unit.new('Lyde',                              Lypov/Grafut**2,      :TGM ),
@@ -1415,7 +1547,7 @@ module Unit
     ],
 
     [['00000101', 'Light sensitivity'],
-      Unit.new("#{Harmon} / sensible Watt(12.) #{Nic}", Mh**2/(Lmnh*Sh), :Univ, 2),
+      Unit.new("#{Harmon} / sensible Watt(12.) #{Nic}", Mh**2/(Lmnh*Sh),  :Univ, 2),
       Unit.new('meter(10.) / lumen second(10.)',    1.0,                  :SI,   2),
       Unit.new('Senz',                              Grafut**2/(Lypov*Tim),:TGM )
     ],
@@ -1429,13 +1561,15 @@ module Unit
     [['00001101', 'Molar optical rotation'],
       Unit.new("radian #{Harmon}^2 / mole(12.)",    Mh**2/Molh,           :Univ),
       Unit.new('radian meter(10.)^2 / mole(12.)',   1.0,                  :SI  ),
-      Unit.new('Orolz',                             Grafut**2/(1000*Maz), :TGM )
+      Unit.new('Orolz',                             Grafut**2/(1000*Maz), :TGM ),
+      Unit.new('Radian Geck^2 / Berzel',            Gk**2/Bz,             :SDN )
     ],
 
     [['00000101', 'Specific optical rotation'],
       Unit.new("radian #{Harmon}^2 / #{Looloh}",    Mh**2/Gh,             :Univ),
       Unit.new('radian meter(10.)^2 / kilogram',    1.0,                  :SI  ),
-      Unit.new('Orosp',                             Grafut**2/Maz,        :TGM )
+      Unit.new('Orosp',                             Grafut**2/Maz,        :TGM ),
+      Unit.new('Radian Geck^2 / Myd',               Gk**2/Md,             :SDN )
     ],
 
     [['10010001', 'Solid angle'],
@@ -1465,6 +1599,7 @@ module Unit
       Unit.new("cycle/#{Harmon}",                   1/Mh,                 :Univ),
       Unit.new('meter(10.)',                        1.0,                  :SI,   -1),
       Unit.new('Perfut',                            1/Grafut,             :TGM ),
+      Unit.new('Geck',                              1/Gk,                 :SDN,  -1),
       Unit.new('reciprocal gravitic meter',         1/MG,                 :NilU),
       Unit.new('Rydberg',                           Rydberg),
       Unit.new('kayser',                            100.0,                :SI  ),
@@ -1475,6 +1610,7 @@ module Unit
       Unit.new("#{Harmon}/cycle",                   Mh,                   :Univ),
       Unit.new('meter(10.)',                        1.0,                  :SI  ),
       Unit.new('Grafut',                            Grafut,               :TGM ),
+      Unit.new('Geck',                              Gk,                   :SDN ),
       Unit.new('most sensitive light wave length',  Light/540E12),
     ],
 
@@ -1482,6 +1618,7 @@ module Unit
       Unit.new("cycle / #{Nic}",                    1/Sh,                 :Univ),
       Unit.new('Hertz',                             1.0,                  :SI  ),
       Unit.new('Freq',                              1/Tim,                :TGM ),
+      Unit.new('Sonif',                             Sn,                   :SDN ),
       Unit.new('revolutions per minute',            1.0/60,               :SI  )
     ],
 
@@ -1489,6 +1626,7 @@ module Unit
       Unit.new("natural mole(12.) / #{Nic}",        1/Sh,                 :Univ),
       Unit.new('Becquerel',                         1.0,                  :SI  ),
       Unit.new('decay / Tim',                       1/Tim,                :TGM ),
+      Unit.new('Villiard',                          Vi,                   :SDN ),
       Unit.new('Curie',                             3.7E10,               :SI  ),
       Unit.new('Rutherford',                        1.0E6,                :SI  )
     ],
@@ -1497,6 +1635,7 @@ module Unit
       Unit.new("Coulomb(12.) / #{Looloh}",          Ch/Gh,                :Univ),
       Unit.new('Coulomb(10.) / kilogram',           1.0,                  :SI  ),
       Unit.new('Quel / Maz',                        Kur*Tim/Maz,          :TGM ),
+      Unit.new('Sargo / Myd',                       Sa/Md,                :SDN ),
       Unit.new('R&#246;ntgen',                      2.58E-4,              :SI  )
     ],
 
@@ -1504,6 +1643,7 @@ module Unit
       Unit.new("Joule(12.) / #{Looloh}",            Jh/Gh,                :Univ),
       Unit.new('Gray',                              1.0,                  :SI  ),
       Unit.new('Wesp',                              (Grafut/Tim)**2,      :TGM ),
+      Unit.new('Sorbi',                             Sb,                   :SDN ),
       Unit.new('rad',                               1.0E-2,               :SI  )
     ],
 
@@ -1511,6 +1651,7 @@ module Unit
       Unit.new("sensible Joule(12.) / #{Looloh}",   Jh/Gh,                :Univ),
       Unit.new('Sievert',                           1.0,                  :SI  ),
       Unit.new('Werg / Maz',                        (Grafut/Tim)**2,      :TGM ),
+      Unit.new('Egal',                              Eg,                   :SDN ),
       Unit.new('R&#246;ntgen equivalent man(rem)',  1.0E-2,               :SI  )
     ],
 
@@ -1557,6 +1698,7 @@ module Unit
         v.name.gsub!('.)', Period + ')')
         ([:Univ, :NilU].include?(v.prefix) && !Config.uus) ||
         (v.prefix == :TGM   && !Config.tgm)                ||
+        (v.prefix == :SDN   && !Config.idus)               ||
         (v.prefix == :Tonal && !Config.tonal)
       else
         false
@@ -1565,7 +1707,7 @@ module Unit
     if l.length < 3 || l[0][0].to_i(2)[Config.category] == 0
       true
     else
-      l[1],l[2] = l[2],l[1] if l[1].prefixes.to_s =~ /metric/
+      # l[1],l[2] = l[2],l[1] if l[1].prefixes.to_s =~ /metric/
       false
     end
   end
@@ -1675,7 +1817,7 @@ module Document
   end
 
   def to_sxm(e, b, p)
-    return to_sx(e, b) unless b==12 && Config.m? && p != :TGM
+    return to_sx(e, b) unless b==12 && Config.m? && ![:TGM, :SDN].include?(p)
     return '0' if e==0
     s = e.to_s(8)
     s.sub!(/(\d)$/, '@\1')
@@ -1974,6 +2116,16 @@ module Document
                 <option value='0'#{Config.lightvlos == 'eliminate'   ? ' selected':''}>eliminate</option>
                 <option value='1'#{Config.lightvlos == 'exactly'     ? ' selected':''}>Lightvlos exactly</option>
                 <option value='2'#{Config.lightvlos == 'not exactly' ? ' selected':''}>Lightvlos not exactly</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><a href=http://dozenal.wikia.com/wiki/IDUS
+                   target='_blank' > International Dozenal Unit System</a></td>
+            <td>
+              <select name='i'>
+                <option value='0'#{Config.idus ? '':' selected'}>eliminate</option>
+                <option value='1'#{Config.idus ? ' selected':''}>include  </option>
               </select>
             </td>
           </tr>
