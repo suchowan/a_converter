@@ -3,7 +3,7 @@
 #!/usr/bin/env ruby
 =begin
 
- Copyright (c) 2011-2014 Takashi Suga
+ Copyright (c) 2011-2015 Takashi Suga
 
  This software is released under the MIT License.
 
@@ -384,13 +384,13 @@ module Unit
   Prefix = Config.prefix
 
   # Universal Physical Constants
-  Alpha        = 7.2973525698E-3
-  Rydberg      = 10973731.568539
+  Alpha        = 7.2973525664E-3
+  Rydberg      = 10973731.568508
   Light        = 299792458.0
-  Quantum      = 1.054571726E-34
-  Boltzmann    = 1.3806488E-23
-  Avogadro     = 6.02214129E+23
-  Newtonian    = 6.67384E-11
+  Quantum      = 1.054571800E-34
+  Boltzmann    = 1.38064852E-23
+  Avogadro     = 6.022140857E+23
+  Newtonian    = 6.67408E-11
 
   # Derived Physical Constants
   Bohr         = Alpha / (4 * Math::PI * Rydberg)
@@ -900,7 +900,7 @@ module Unit
       Unit.new('melting point of ice(VSMOW)',       1.0,                  nil,   0,  273.15+0.000089),
       Unit.new('triple point of water',             1.0,                  nil,   0,  273.16),
       Unit.new('boiling point of water(VSMOW)',     1.0,                  nil,   0,  273.15+99.9839),
-      Unit.new('degree Super Kelvin',               12**4*Kh,             :Univ, 0, "1182356".to_i(12)*Kh),
+      Unit.new('degree Super Kelvin',               12**4*Kh,             :Univ, 0, "1182354".to_i(12)*Kh),
       Unit.new('degree Celsius',                    1.0,                  nil,   0,  273.15),
       Unit.new('degree Delisle',                    2.0/3,                nil,   0,  373.15, -1),
       Unit.new('degree Fahrenheit',                 5.0/9,                nil,   0,  459.67*5/9),
@@ -1119,7 +1119,7 @@ module Unit
       Unit.new("#{Harmon}/#{Looloh}",               Mh**3/Gh,             :Univ,  3),
       Unit.new('meter(10.)/kilogram',               1.0,                  :SI,    3),
       Unit.new('Vosp',                              Grafut**3/Maz,        :TGM ),
-      Unit.new('Spig^(-1)',                         1/Sg,                 :SDN )
+      Unit.new('Spig',                              1/Sg,                 :SDN,  -1)
     ],
 
     [['00100001', 'Action'],
@@ -1849,7 +1849,7 @@ module Document
       selected = Query[direction+'u'] == i ? 'selected ' : ''
       text     = Units[Query['d']][i+1].name.dup
       text     = text.sub(/natural |^solar /,'') if text =~ /natural |^solar.+\)/
-      text     = text.sub(/.*>(.+?)<.*/, '\1')
+      text     = text.gsub(/<.+?>/, ' ')
       option << "<option #{selected}value=#{i}>#{text}</option>"
     end
     option.join("\n              ")
