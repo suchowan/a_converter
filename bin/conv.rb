@@ -3,7 +3,7 @@
 #!/usr/bin/env ruby
 =begin
 
- Copyright (c) 2011-2015 Takashi Suga
+ Copyright (c) 2011-2017 Takashi Suga
 
  This software is released under the MIT License.
 
@@ -1513,16 +1513,16 @@ module Unit
       ['00000101', 'Absolute magnitude',
         {'fu'=>3-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'fl'=>-7, 'fq'=>'4.8310628',
          'tu'=>4-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'tl'=>+5}]],
-      Unit.new('sensible Watt(12.)/radian^2',       Lmnh,                 :Univ),
+      Unit.new('effective Watt(12.)/radian^2',      Lmnh,                 :Univ),
       Unit.new('candela',                           1.0,                  :SI  ),
       Unit.new('QuaraLyde',                         Lypov,                :TGM ),
-      Unit.new('sensible Watt(12.)/sphere',         Lmnh/(4*Math::PI),    :Univ),
+      Unit.new('effective Watt(12.)/sphere',        Lmnh/(4*Math::PI),    :Univ),
       Unit.new('absolute magnitude 0.0',            LuSun*100**(4.8310628/5)),
       Unit.new('luminous intensity of the Sun or Bril', LuSun,            :Nil )
     ],
 
     [['10000101', 'Luminous flux'],
-      Unit.new('sensible Watt(12.)',                Lmnh,                 :Univ),
+      Unit.new('effective Watt(12.)',               Lmnh,                 :Univ),
       Unit.new('lumen',                             1.0,                  :SI  ),
       Unit.new('Lypov',                             Lypov,                :TGM )
     ],
@@ -1531,7 +1531,7 @@ module Unit
       ['00000101', 'Apparent magnitude',
         {'fu'=>3-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'fl'=>-7, 'fq'=>'-2.736067',
          'tu'=>4-(Config.uus ? 0:1)-(Config.tgm ? 0:1), 'tl'=>+5}]],
-      Unit.new("sensible Watt(12.)/#{Harmon}^2",    Lmnh/Mh**2,           :Univ),
+      Unit.new("effective Watt(12.)/#{Harmon}^2",   Lmnh/Mh**2,           :Univ),
       Unit.new('lux',                               1.0,                  :SI  ),
       Unit.new('Lyde',                              Lypov/Grafut**2,      :TGM ),
       Unit.new('apparent magnitude 0.0',            2.57504508E-06),
@@ -1541,19 +1541,19 @@ module Unit
     ],
 
     [['00000101', 'Light quantity'],
-      Unit.new("sensible Watt(12.) #{Nic}",         Lmnh*Sh,              :Univ),
+      Unit.new("effective Watt(12.) #{Nic}",        Lmnh*Sh,              :Univ),
       Unit.new('lumen second(10.)',                 1.0,                  :SI  ),
       Unit.new('Lyqua',                             Lypov*Tim,            :TGM )
     ],
 
     [['00000101', 'Light sensitivity'],
-      Unit.new("#{Harmon} / sensible Watt(12.) #{Nic}", Mh**2/(Lmnh*Sh),  :Univ, 2),
+      Unit.new("#{Harmon} / effective Watt(12.) #{Nic}", Mh**2/(Lmnh*Sh),  :Univ, 2),
       Unit.new('meter(10.) / lumen second(10.)',    1.0,                  :SI,   2),
       Unit.new('Senz',                              Grafut**2/(Lypov*Tim),:TGM )
     ],
 
     [['00000101', 'Light efficiency'],
-      Unit.new('sensible Watt(12.) / Watt(12.)',    Lmnh/(Jh/Sh),         :Univ),
+      Unit.new('effective Watt(12.) / Watt(12.)',   Lmnh/(Jh/Sh),         :Univ),
       Unit.new('lumen / Watt(10.)',                 1.0,                  :SI  ),
       Unit.new('Lytef',                             Lypov/(Werg/Tim),     :TGM )
     ],
@@ -1648,7 +1648,7 @@ module Unit
     ],
 
     [['00000011', 'Radiation - equivalent dose'],
-      Unit.new("sensible Joule(12.) / #{Looloh}",   Jh/Gh,                :Univ),
+      Unit.new("effective Joule(12.) / #{Looloh}",  Jh/Gh,                :Univ),
       Unit.new('Sievert',                           1.0,                  :SI  ),
       Unit.new('Werg / Maz',                        (Grafut/Tim)**2,      :TGM ),
       Unit.new('Egal',                              Eg,                   :SDN ),
