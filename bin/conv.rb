@@ -3,7 +3,7 @@
 #!/usr/bin/env ruby
 =begin
 
- Copyright (c) 2011-2017 Takashi Suga
+ Copyright (c) 2011-2019 Takashi Suga
 
  This software is released under the MIT License.
 
@@ -36,7 +36,7 @@ class Mode
       @mode     |= 0x8000 if q['r'] == '1'       # 15    : gruoping separater
       @mode     |= 0x4000 if q['d'] == '1'       # 14    : digit symbols
       @mode     |= 0x2000 if q['n'] == '0'       # 13    : Nystrom's Tonal System
-      @mode     |= 0x1000 if q['f'] == '1'       # 12    : use myllion
+      @mode     |= 0x1000 if q['f'] == '1'       # 12    : use unillion
       @mode     |= ((q['t'].to_i + 1) % 3) << 10 # 10-11 : TGM System
       @mode     |= ((q['s'].to_i + 1) % 4) <<  8 #  8-9  : The Universal Unit System
       @mode     |= 0x0080 if q['a'] == '1'       #  7    : unit name (rule or alias)
@@ -50,7 +50,7 @@ class Mode
     @period    = @mode[15] == 1 ? ',' : '.'
     @digits    = @mode[14] == 1 ? "0123456789AB" : "0123456789XE"
     @tonal     = @mode[13] == 0
-    @myllion   = @mode[12] == 1
+    @unillion  = @mode[12] == 1
     t          = (@mode[11]*2+@mode[10] - 1) % 3
     u          = (@mode[ 9]*2+@mode[ 8] - 1) % 4
     a          = @mode[ 7] != 0
@@ -583,8 +583,8 @@ module Unit
         ['penta-atomic',        -40], ['penta-atomic ut',  -39], ['penta-atomic ti',  -38], ['penta-atomic la', -37],
         ['tetra-atomic fa',     -36], ['tetra-atomic mi',  -35], ['tetra-atomic re',  -34], ['tetra-atomic do', -33],
         ['tetra-atomic',        -32], ['tetra-atomic ut',  -31], ['tetra-atomic ti',  -30], ['tetra-atomic la', -29],
-        ['tri-atomic fa',       -28], ['tri-atomic mi',    -27], ['tri-atomic re',    -26], ['tri-atomic do',   -25],
-        ['tri-atomic',          -24], ['tri-atomic ut',    -23], ['tri-atomic ti',    -22], ['tri-atomic la',   -21],
+        ['ter-atomic fa',       -28], ['ter-atomic mi',    -27], ['ter-atomic re',    -26], ['ter-atomic do',   -25],
+        ['ter-atomic',          -24], ['ter-atomic ut',    -23], ['ter-atomic ti',    -22], ['ter-atomic la',   -21],
         ['di-atomic fa',        -20], ['di-atomic mi',     -19], ['di-atomic re',     -18], ['di-atomic do',    -17],
         ['di-atomic',           -16], ['di-atomic ut',     -15], ['di-atomic ti',     -14], ['di-atomic la',    -13],
         ['atomic fa',           -12], ['atomic mi',        -11], ['atomic re',        -10], ['atomic do',        -9],
@@ -596,8 +596,8 @@ module Unit
         ['cosmic ut',             9], ['cosmic ti',         10], ['cosmic la',         11], ['cosmic so',        12],
         ['di-cosmic mi',         13], ['di-cosmic re',      14], ['di-cosmic do',      15], ['di-cosmic',        16],
         ['di-cosmic ut',         17], ['di-cosmic ti',      18], ['di-cosmic la',      19], ['di-cosmic so',     20],
-        ['tri-cosmic mi',        21], ['tri-cosmic re',     22], ['tri-cosmic do',     23], ['tri-cosmic',       24],
-        ['tri-cosmic ut',        25], ['tri-cosmic ti',     26], ['tri-cosmic la',     27], ['tri-cosmic so',    28],
+        ['ter-cosmic mi',        21], ['ter-cosmic re',     22], ['ter-cosmic do',     23], ['ter-cosmic',       24],
+        ['ter-cosmic ut',        25], ['ter-cosmic ti',     26], ['ter-cosmic la',     27], ['ter-cosmic so',    28],
         ['tetra-cosmic mi',      29], ['tetra-cosmic re',   30], ['tetra-cosmic do',   31], ['tetra-cosmic',     32],
         ['tetra-cosmic ut',      33], ['tetra-cosmic ti',   34], ['tetra-cosmic la',   35], ['tetra-cosmic so',  36],
         ['penta-cosmic mi',      37], ['penta-cosmic re',   38], ['penta-cosmic do',   39], ['penta-cosmic',     40],
@@ -605,28 +605,27 @@ module Unit
       ] :
       [
         12,
-        ['penta-atomic',        -40], ['penta-atomic Dirac', -39], ['penta-atomic Hecty',  -38], ['penta-atomic Kily',  -37],
-        ['tetra-atomic sub',    -36], ['tetra-atomic milly', -35], ['tetra-atomic centy',  -34], ['tetra-atomic dour',  -33],
-        ['tetra-atomic',        -32], ['tetra-atomic Dirac', -31], ['tetra-atomic Hecty',  -30], ['tetra-atomic Kily',  -29],
-        ['tri-atomic sub',      -28], ['tri-atomic milly',   -27], ['tri-atomic centy',    -26], ['tri-atomic dour',    -25],
-        ['tri-atomic',          -24], ['tri-atomic Dirac',   -23], ['tri-atomic Hecty',    -22], ['tri-atomic Kily',    -21],
-        ['di-atomic sub',       -20], ['di-atomic milly',    -19], ['di-atomic centy',     -18], ['di-atomic dour',     -17],
-        ['di-atomic',           -16], ['di-atomic Dirac',    -15], ['di-atomic Hecty',     -14], ['di-atomic Kily',     -13],
-        ['atomic sub',          -12], ['atomic milly',       -11], ['atomic centy',        -10], ['atomic dour',         -9],
-        ['atomic',               -8], ['atomic Dirac',        -7], ['atomic Hecty',         -6], ['atomic Kily',         -5],
-        ["sub",                  -4], ["milly",               -3], ["centy",                -2], ["dour",                -1],
+        ['penta-atomic',        -40],
+        ['tetra-atomic sub',    -36],
+        ['tetra-atomic',        -32], 
+        ['ter-atomic sub',      -28],
+        ['ter-atomic',          -24],
+        ['di-atomic sub',       -20],
+        ['di-atomic',           -16],
+        ['atomic sub',          -12],
+        ['atomic',               -8],
+        ["sub",                  -4],
         ["[#{Prefix}]",           0],
-        ["Dirac",                 1], ["Hecty",                2], ["Kily",                  3], ["Super",                4],
-        ['cosmic milly',          5], ['cosmic centy',         6], ['cosmic dour',           7], ['cosmic',               8],
-        ['cosmic Dirac',          9], ['cosmic Hecty',        10], ['cosmic Kily',          11], ['cosmic Super',        12],
-        ['di-cosmic milly',      13], ['di-cosmic centy',     14], ['di-cosmic dour',       15], ['di-cosmic',           16],
-        ['di-cosmic Dirac',      17], ['di-cosmic Hecty',     18], ['di-cosmic Kily',       19], ['di-cosmic Super',     20],
-        ['tri-cosmic milly',     21], ['tri-cosmic centy',    22], ['tri-cosmic dour',      23], ['tri-cosmic',          24],
-        ['tri-cosmic Dirac',     25], ['tri-cosmic Hecty',    26], ['tri-cosmic Kily',      27], ['tri-cosmic Super',    28],
-        ['tetra-cosmic milly',   29], ['tetra-cosmic centy',  30], ['tetra-cosmic dour',    31], ['tetra-cosmic',        32],
-        ['tetra-cosmic Dirac',   33], ['tetra-cosmic Hecty',  34], ['tetra-cosmic Kily',    35], ['tetra-cosmic Super',  36],
-        ['penta-cosmic milly',   37], ['penta-cosmic centy',  38], ['penta-cosmic dour',    39], ['penta-cosmic',        40],
-        ['penta-cosmic Dirac',   41]
+        ["Super",                 4],
+        ['cosmic',                8],
+        ['cosmic Super',         12],
+        ['di-cosmic',            16],
+        ['di-cosmic Super',      20],
+        ['ter-cosmic',           24],
+        ['ter-cosmic Super',     28],
+        ['tetra-cosmic',         32],
+        ['tetra-cosmic Super',   36],
+        ['penta-cosmic',         40]
       ],
 
       :TGM=> [
@@ -718,7 +717,7 @@ module Unit
       Unit.new('lighttim(12.)',                     Light*Tim,            :TGM ),
       Unit.new('light second(10.)',                 Light,                :SI  ),
       Unit.new("light #{Nic}",                      Light*Sh,             :Univ),
-      Unit.new('light solar milly',                 Light*50,             :Univ),
+      Unit.new('terno light solar day',             Light*50,             :Univ),
       Unit.new('light (Julian) year',               LY,                   :SI  ),
       Unit.new('persec',                            PSEC,                 :SI  ),
       Unit.new('thou or mil',                       Inch/1000.0),
@@ -759,8 +758,8 @@ module Unit
       Unit.new('Tim(16.)',                          St,                   :Tonal),
       Unit.new('gravitic second',                   SG,                   :NilU),
       Unit.new('Planck time',                       Planck/Light),
-      Unit.new('solar sep',                         DAY/(12**3 * 128),    :NilU),
-      Unit.new('solar milly or moment',             DAY/(12**3),          :NilU, [ 1, ["'",128]]),
+      Unit.new('solar nic-angle',                   DAY/(12**3 * 128),    :NilU),
+      Unit.new('terno solar day or moment',         DAY/(12**3),          :NilU, [ 1, ["'",128]]),
       Unit.new('minute',                            60.0,                 nil,   [ 1, [":", 60]]),
       Unit.new('hour(12.)',                         3600.0,               :TGM,  Config.uus ? [1, [";",12**2],["'",128]] : []),
       Unit.new('hour(10.)',                         3600.0,               :SI,   [ 1, [":", 60],  [":", 60]]),
@@ -861,10 +860,10 @@ module Unit
       Unit.new('Vlos',                              Grafut/Tim,           :TGM ),
       Unit.new('Kine',                              Kn,                   :SDN ),
       Unit.new('speed of light in vacuum or Lightvlos', Light),
-      Unit.new("#{Harmon}/solar sep",               Mh/(50.0/128),        :Univ),
-      Unit.new("#{Harmon}/solar milly",             Mh/50,                :Univ),
+      Unit.new("#{Harmon}/solar nic-angle",         Mh/(50.0/128),        :Univ),
+      Unit.new("#{Harmon}/terno solar day",         Mh/50,                :Univ),
       Unit.new("#{Harmon}/hour",                    Mh/3600,              :Univ),
-      Unit.new("#{Harmon}/dour",                    Mh/7200,              :Univ),
+      Unit.new("#{Harmon}/unino solar day",         Mh/7200,              :Univ),
       Unit.new("#{Harmon}/solar day",               Mh/86400,             :Univ),
       Unit.new('Navlos(by GRS-80)',       EqRad*2*Math::PI/(4*12**7)/Tim, :TGM ),
       Unit.new('meter(10.)/minute',                 1.0/60,               :SI  ),
@@ -1821,7 +1820,7 @@ module Document
     return '0' if e==0
     s = e.to_s(8)
     s.sub!(/(\d)$/, '@\1')
-    s.sub!(/@0/, '')
+  # s.sub!(/@0/, '')
     s
   end
 
@@ -2040,7 +2039,7 @@ module Document
       return te<=0 ? '0' : tq + '0'*(te-tl) if flag
       tq[0..0] + Bases[tr][0] + insert_space(tq[1...tl],tr) +
       if Config.m? && tr==12
-        (te>1 ? ' &times;' : ' &#8725;') + ' M<sup>' + 
+        (te>1 ? ' &times;' : ' &#8725;') + ' U<sup>' + 
         ((te-1).abs.to_s(8) + '@').sub(/(.)@/, '@\1').sub(/^(-?.)@0$/, '\1').sub('@','<small>@</small>') + '</sup>'
       else
         " &times; #{tr}" + Period + '^' + (te-1).to_s(tr).upcase + Bases[tr][0]
@@ -2158,7 +2157,7 @@ module Document
             </td>
           </tr>
           <tr>
-            <td>use myllion</td>
+            <td>use unillion</td>
             <td>
               <select name='f'>
                 <option value='0'#{Config.m? ? '':' selected'}>No </option>
