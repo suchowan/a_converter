@@ -384,21 +384,22 @@ module Unit
   Prefix = Config.prefix
 
   # Universal Physical Constants
-  Alpha        = 7.2973525664E-3
-  Rydberg      = 10973731.568508
+  Alpha        = 7.2973525693E-3
+  Rydberg      = 10973731.568160
   Light        = 299792458.0
-  Quantum      = 1.054571800E-34
-  Boltzmann    = 1.38064852E-23
-  Avogadro     = 6.022140857E+23
-  Newtonian    = 6.67408E-11
+  Quantum      = 6.62607015E-34 / (2 * Math::PI)
+  Boltzmann    = 1.380649E-23
+  Avogadro     = 6.02214076E+23
+  Newtonian    = 6.67430E-11
+  Electron     = 1.602176634E-19
 
   # Derived Physical Constants
   Bohr         = Alpha / (4 * Math::PI * Rydberg)
   Planck       = Math.sqrt(Quantum * Newtonian / Light ** 3)
-  Ohmn         = Light / 1E7
-  Electron     = Math.sqrt(Alpha * Quantum / Ohmn)
+  Ohmn         = Alpha * Quantum / Electron ** 2
+# Electron     = Math.sqrt(Alpha * Quantum / Ohmn)
   ElectronMass = Quantum * Rydberg / Light * 4 * Math::PI * Alpha ** -2
-  Uatm         = 1E-3 / Avogadro
+  Uatm         = 1.66053906660E-27
 
   # Our environment on the Earth
   G            = 9.80665
