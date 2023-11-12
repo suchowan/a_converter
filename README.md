@@ -4,7 +4,7 @@ a_converter - for dozenal and decimal metric systems
 Web Server
 ----------
 
-Web server for a_converter is available on [hosi.org](http://hosi.org/cgi-bin/conv.cgi).
+Web server for a_converter is available on [hosi.org](http://hosi.org/cgi-bin/conv.cgi?m=01080).
 
 
 License

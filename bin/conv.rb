@@ -3,7 +3,7 @@
 #!/usr/bin/env ruby
 =begin
 
- Copyright (c) 2011-2019 Takashi Suga
+ Copyright (c) 2011-2023 Takashi Suga
 
  This software is released under the MIT License.
 
