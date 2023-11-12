@@ -564,18 +564,23 @@ module Unit
 
       :SI=> [
         10,
-        ['yocto',  -24], ['zepto', -21], ['atto',  -18], ['femto', -15], ['pico',  -12], ['nano',   -9], ['micro',  -6],
+        ['quecto', -30], ['ronto', -27], ['yocto', -24],
+        ['zepto',  -21], ['atto',  -18], ['femto', -15],
+        ['pico',   -12], ['nano',   -9], ['micro',  -6],
         ['milli',   -3], ['centi',  -2], ['deci',   -1],
         ['[metric]', 0],
         ['deca',    +1], ['hecto',  +2], ['kilo',   +3],
-        ['Mega',    +6], ['Giga',   +9], ['Tera',  +12], ['Peta',  +15], ['Exa',   +18], ['Zetta', +21], ['Yotta', +24]
+        ['Mega',    +6], ['Giga',   +9], ['Tera',  +12],
+        ['Peta',   +15], ['Exa',   +18], ['Zetta', +21],
+        ['Yotta',  +24], ['Ronna', +27], ['Quetta',+30]
       ],
 
       :Info=> [
         1024,
         ['[info]', 0],
-        ['Kilo',  +1], ['Mega',  +2], ['Giga',  +3], ['Tera',  +4],
-        ['Peta',  +5], ['Exa',   +6], ['Zetta', +7], ['Yotta', +8]
+        ['Kilo',  +1], ['Mega',   +2], ['Giga',  +3], ['Tera',  +4],
+        ['Peta',  +5], ['Exa',    +6], ['Zetta', +7], ['Yotta', +8],
+        ['Ronna', +9], ['Quetta',+10]
       ],
 
       :Univ=> Config.doremi ? 
