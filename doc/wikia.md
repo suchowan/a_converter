@@ -93,7 +93,7 @@ This is almost 1/1000; of the difference of the length of one Julian year and on
 
 1 harmon / nic (=__atol [al]__) equals 2.51 km / hour. (almost exact)
 
-See also chapter [4](https://github.com/suchowan/a_converter/blob/master/doc/wikia_source.md#4-time-unit-concepts).
+See also chapter [4](https://github.com/suchowan/a_converter/blob/master/doc/wikia.md#4-time-unit-concepts).
 
 3.3 Mass
 --------
@@ -161,7 +161,7 @@ The greatest common divisor of one tropical year and one day is 2<sup>-7</sup> d
 This quantity is the [coordinated](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) mean rotation angle of the Earth derived by using the direction of the Sun as a coordinate origin, and its dimension is not time but plain angle.
 
 
-The dimension of ratio of physical time and calendar time is [/ plain angle](time), which means the period length of one mean solar day. Because of tidal friction, this length is not constant and becomes longer little by little.
+The dimension of ratio of physical time and calendar time is [time / plain angle], which means the period length of one mean solar day. Because of tidal friction, this length is not constant and becomes longer little by little.
 
 [<div align='center'><img src='https://github.com/suchowan/a_converter/blob/master/doc/calendar_time_structure.png?raw=true'/></div>](https://github.com/suchowan/a_converter/blob/master/doc/calendar_time_structure.png)
 
@@ -182,7 +182,7 @@ Many of the constants introduced in [Wikipedia Talk:Planck_units](https://en.wik
 
 
 When designing number counting system, we must make sure that the same expression does not represent different numbers for decimal and dozenal context.
-Since [Dozenal Nomenclature]([Systematic)] fulfills this requirement, it can be used in combination with the Harmonic System.
+Since [Dozenal Nomenclature](https://dozenal.fandom.com/wiki/Systematic_Dozenal_Nomenclature) fulfills this requirement, it can be used in combination with the Harmonic System.
 
 When units of the Harmonic System are combined with Systematic Dozenal Nomenclature, only powers divisible with 4 or -1, -2, and -3 should be used.
 In this situation, dozen(10;), gross(100;) and doz gross(1000;) are used in substitution for powers 1, 2, and 3.
