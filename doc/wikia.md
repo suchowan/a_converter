@@ -23,7 +23,7 @@ The Harmonic System is conceptually designed and strictly defined as following:
 ---------------------
 'Conceptual design' is the system design that prescribes the rough quantity of the units to constitute a unit system conceptually.
 
-The Harmonic System concept is ''' '35G=c<sub>0</sub>=&#x127;=k<sub>B</sub>=Z<sub>P</sub>=1' '''.(See also [here(Wikipedia Talk:Planck_units)](https://en.wikipedia.org/wiki/Talk:Planck_units/Archive_3#Other_possible_normalizations).)
+The Harmonic System concept is __'35G=c<sub>0</sub>=&#x127;=k<sub>B</sub>=Z<sub>P</sub>=1'__.(See also [here(Wikipedia Talk:Planck_units)](https://en.wikipedia.org/wiki/Talk:Planck_units/Archive_3#Other_possible_normalizations).)
 
 
 The Harmonic System is conceptually designed to express the following quantities as multiples of integer powers of twelve of the corresponding unit quantities.
@@ -71,8 +71,8 @@ __harmon [hm]__ - 272.352206 mm, 10.7225278 inches (8 / 9 feet, difference 0.52%
 This is slightly shorter than 1/1000,0000; of the quadrant meridian length of the Earth(=279.136507 mm, difference 2.5%).
 
 Volume of a cube whose side is half harmon (i.e. cubic half harmon) is 2/3 U.S. liquid gallon.(difference 0.06%) 
-Water in this volume includes about 100;<sup>10;</sup> H<sub>2</sub>O molecules.(see section [[The_Harmonic_System#3.3_Mass|3.3]])
-[<div align='center'><img src='https://github.com/suchowan/a_converter/blob/master/doc/Cube.png?raw=true'/></div>](https://github.com/suchowan/a_converter/blob/master/doc/Cube.png)
+Water in this volume includes about 100;<sup>10;</sup> H<sub>2</sub>O molecules.(see section [3.3](https://github.com/suchowan/a_converter/blob/master/doc/wikia.md#33-mass))
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/Cube.png'/></div>
 
 
 100. yards equal 240; harmons.(difference 0.08%)
@@ -109,7 +109,7 @@ It means that [Avogadro constant](https://en.wikipedia.org/wiki/Avogadro_constan
 
 
 The universal gravitational force between 2 mass points 5 loolohs and 7 loolohs put unit length apart is 10;<sup>-8</sup> times force unit.
-[<div align='center'><img src='https://github.com/suchowan/a_converter/blob/master/doc/Force-comparison-1.png?raw=true'/></div>](https://github.com/suchowan/a_converter/blob/master/doc/Force-comparison-1.png)
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/Force-comparison-1.png'/></div>
 
 When we use the Harmonic System, temperature rises twice the unit temperature if we give water of the unit mass 'looloh' heat of the unit energy.(almost exact)
 
@@ -121,12 +121,12 @@ __nohm [&#x3A9;<sub>n</sub>]__ - 29.979245816 &#x3A9;(almost exact)
 This is the Planck impedance itself. The unit name 'nohm' is an abbreviation of 'natural ohm'.
 
 The coulomb force between unit electric charges put unit length apart is 10;<sup>8</sup> times force unit.
-[<div align='center'><img src='https://github.com/suchowan/a_converter/blob/master/doc/Force-comparison-2.png?raw=true'/></div>](https://github.com/suchowan/a_converter/blob/master/doc/Force-comparison-2.png)
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/Force-comparison-2.png'/></div>
 
 Relations of the electric and magnetic quantities in the Universal Unit System are shown as follows,
 where &#x3A9;<sub>2</sub> is total solid angle of the spherical surface(see [this ref](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/electromagnetism.pdf)):
 
-[<div align='center'><img src='https://github.com/suchowan/a_converter/blob/master/doc/Em-eq.png?raw=true'/></div>](https://github.com/suchowan/a_converter/blob/master/doc/Em-eq.png)
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/Em-eq.png'/></div>
 
 
 Supplemental comments
@@ -136,7 +136,7 @@ These difference percentages show us that the Harmonic System is a kind of dozen
 (See also '[Addition]' part of [this article](https://www.tapatalk.com/groups/dozensonline/the-universal-unit-system-and-its-notaions-t371-s120.html#p22025856).)
 
 
-Using the Harmonic System, many constants can be approximated by &#x3A9;<sub>0</sub>''<sup>n</sup>''&times;10;''<sup>m</sup>'' times the unit quantity, where &#x3A9;<sub>0</sub> = 2, ''n'' = 0 or &plusmn;1 and ''m'' &isin; integer.
+Using the Harmonic System, many constants can be approximated by &#x3A9;<sub>0</sub>_<sup>n</sup>_&times;10;_<sup>m</sup>_ times the unit quantity, where &#x3A9;<sub>0</sub> = 2, _n_ = 0 or &plusmn;1 and _m_ &isin; integer.
 The quadrant meridian length and gravitational acceleration of the Earth, the density and specific heat of water, which are used in the past for definition of units, are also included in these constants.
 
 Please refer to [this table](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/tables.pdf) and [online converter](http://hosi.org:8080/cgi-bin/conv.cgi?m=10080) for other units. This converter also teaches us the representation of units that belong to various unit systems.
@@ -148,7 +148,7 @@ The Harmonic System distinguishes 'calendar time' from 'physical time' as a diff
 
 4.1 Physical time
 -----------------
-[<div align='center'><img src='https://github.com/suchowan/a_converter/blob/master/doc/NaturalTimeScale.png?raw=true'/></div>](https://github.com/suchowan/a_converter/blob/master/doc/NaturalTimeScale.png)
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/NaturalTimeScale.png'/></div>
 
 This quantity is time which flows uniformly from a viewpoint of physics.
 
@@ -163,7 +163,7 @@ This quantity is the [coordinated](https://en.wikipedia.org/wiki/Coordinated_Uni
 
 The dimension of ratio of physical time and calendar time is [time / plain angle], which means the period length of one mean solar day. Because of tidal friction, this length is not constant and becomes longer little by little.
 
-[<div align='center'><img src='https://github.com/suchowan/a_converter/blob/master/doc/calendar_time_structure.png?raw=true'/></div>](https://github.com/suchowan/a_converter/blob/master/doc/calendar_time_structure.png)
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/calendar_time_structure.png'/></div>
 
 The unit that should be dozenal divisions of mean solar day is calendar time rather than physical time.
 
@@ -178,7 +178,7 @@ The Harmonic System adopts 'day' as a unit of calendar time corresponding to one
 The Universal Unit System recommends [the duodecimal myriad system](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/myriad.pdf). See Appendix C of [revised.pdf](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/revised.pdf).
 
 
-Many of the constants introduced in [Wikipedia Talk:Planck_units](https://en.wikipedia.org/wiki/Talk:Planck_units/Archive_3#Other_possible_normalizations) often have orders 8''n''-1. Therefore, it is convenient to use the factor U(=10;<sup>8</sup>(12.<sup>8</sup>)) to make the units of the Universal Unit System into human scale. The factor U can be regarded as a conversion factor between atomic scale, human scale, and cosmic scale. Since power 8(=2<sup>3</sup>) is a power of 2, [the decimal myriad system](https://en.wikipedia.org/wiki/-yllion) has affinity for our system. So, we propose the duodecimal myriad system in replacing ten/hundred with dozen/gross. Larger numbers consist of uni(1),di(2),ter(3),tetra(4),penta(5),hexa(6),hepta(7), lli(0),on(+), and reciprocals are expressed by replacing on(+) with no(-).
+Many of the constants introduced in [Wikipedia Talk:Planck_units](https://en.wikipedia.org/wiki/Talk:Planck_units/Archive_3#Other_possible_normalizations) often have orders 8*n*-1. Therefore, it is convenient to use the factor U(=10;<sup>8</sup>(12.<sup>8</sup>)) to make the units of the Universal Unit System into human scale. The factor U can be regarded as a conversion factor between atomic scale, human scale, and cosmic scale. Since power 8(=2<sup>3</sup>) is a power of 2, [the decimal myriad system](https://en.wikipedia.org/wiki/-yllion) has affinity for our system. So, we propose the duodecimal myriad system in replacing ten/hundred with dozen/gross. Larger numbers consist of uni(1),di(2),ter(3),tetra(4),penta(5),hexa(6),hepta(7), lli(0),on(+), and reciprocals are expressed by replacing on(+) with no(-).
 
 
 When designing number counting system, we must make sure that the same expression does not represent different numbers for decimal and dozenal context.
