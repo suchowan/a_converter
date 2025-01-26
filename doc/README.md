@@ -72,7 +72,7 @@ This is slightly shorter than 1/1000,0000; of the quadrant meridian length of th
 
 Volume of a cube whose side is half harmon (i.e. cubic half harmon) is 2/3 U.S. liquid gallon.(difference 0.06%) 
 Water in this volume includes about 100;<sup>10;</sup> H<sub>2</sub>O molecules.(see section [3.3](https://github.com/suchowan/a_converter/blob/master/doc/wikia.md#33-mass))
-<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/Cube.png'/></div>
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/Cube.png'/></div>
 
 
 100. yards equal 240; harmons.(difference 0.08%)
@@ -109,7 +109,7 @@ It means that [Avogadro constant](https://en.wikipedia.org/wiki/Avogadro_constan
 
 
 The universal gravitational force between 2 mass points 5 loolohs and 7 loolohs put unit length apart is 10;<sup>-8</sup> times force unit.
-<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/Force-comparison-1.png'/></div>
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/Force-comparison-1.png'/></div>
 
 When we use the Harmonic System, temperature rises twice the unit temperature if we give water of the unit mass 'looloh' heat of the unit energy.(almost exact)
 
@@ -121,12 +121,12 @@ __nohm [&#x3A9;<sub>n</sub>]__ - 29.979245816 &#x3A9;(almost exact)
 This is the Planck impedance itself. The unit name 'nohm' is an abbreviation of 'natural ohm'.
 
 The coulomb force between unit electric charges put unit length apart is 10;<sup>8</sup> times force unit.
-<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/Force-comparison-2.png'/></div>
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/Force-comparison-2.png'/></div>
 
 Relations of the electric and magnetic quantities in the Universal Unit System are shown as follows,
 where &#x3A9;<sub>2</sub> is total solid angle of the spherical surface(see [this ref](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/electromagnetism.pdf)):
 
-<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/Em-eq.png'/></div>
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/Em-eq.png'/></div>
 
 
 Supplemental comments
@@ -148,7 +148,7 @@ The Harmonic System distinguishes 'calendar time' from 'physical time' as a diff
 
 4.1 Physical time
 -----------------
-<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/NaturalTimeScale.png'/></div>
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/NaturalTimeScale.png'/></div>
 
 This quantity is time which flows uniformly from a viewpoint of physics.
 
@@ -163,7 +163,7 @@ This quantity is the [coordinated](https://en.wikipedia.org/wiki/Coordinated_Uni
 
 The dimension of ratio of physical time and calendar time is [time / plain angle], which means the period length of one mean solar day. Because of tidal friction, this length is not constant and becomes longer little by little.
 
-<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/calendar_time_structure.png'/></div>
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/calendar_time_structure.png'/></div>
 
 The unit that should be dozenal divisions of mean solar day is calendar time rather than physical time.
 
