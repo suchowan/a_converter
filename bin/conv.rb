@@ -3,7 +3,7 @@
 #!/usr/bin/env ruby
 =begin
 
- Copyright (c) 2011-2023 Takashi Suga
+ Copyright (c) 2011-2025 Takashi Suga
 
  This software is released under the MIT License.
 
@@ -315,7 +315,7 @@ module Unit
       y  = ('00000000' + y)[(-(Math.log(63)/Math.log(tr)).floor-1)..-1] unless c==''
       m  = ('00000000' + m)[(-(Math.log(@calendar.max_month)/Math.log(tr)).floor-1)..-1]
       d  = ('00000000' + d)[(-(Math.log(@calendar.max_day)/Math.log(tr)).floor-1)..-1]
-      (c == '' ? '' : c + i +'`') + y + (tr==12 && m.length==1? ';' : '-') + m + '-' + d
+      (c == '' ? '' : c + i +"<sup>&#x232C;</sup>") + y + (tr==12 && m.length==1? ';' : '-') + m + '-' + d
     end
 
     def dump(hs)
@@ -384,8 +384,8 @@ module Unit
   Prefix = Config.prefix
 
   # Universal Physical Constants
-  Alpha        = 7.2973525693E-3
-  Rydberg      = 10973731.568160
+  Alpha        = 7.2973525643E-3
+  Rydberg      = 10973731.568157
   Light        = 299792458.0
   Quantum      = 6.62607015E-34 / (2 * Math::PI)
   Boltzmann    = 1.380649E-23
@@ -399,21 +399,21 @@ module Unit
   Ohmn         = Alpha * Quantum / Electron ** 2
 # Electron     = Math.sqrt(Alpha * Quantum / Ohmn)
   ElectronMass = Quantum * Rydberg / Light * 4 * Math::PI * Alpha ** -2
-  Uatm         = 1.66053906660E-27
+  Uatm         = 1.66053906892E-27
 
   # Our environment on the Earth
   G            = 9.80665
   RE           = 3.986004418E14
-  ME           = 4.0007860000E+07
+  ME           = 4.0007863000E+07
   GE           = RE/(ME/2/Math::PI)**2
-  RS           = 1.32712442099E20
+  RS           = 1.32712440041E20
   Atm          = 101325
   Density      = 999.972
   Calorie      = 4184.0
   DAY          = 86400.0
   YEAR         = (365+31.0/128)*DAY
-  PoleRad      = 6356.75231414E3
-  EqRad        = 6378.137E3
+  PoleRad      = 6356.7523E3
+  EqRad        = 6378.1370E3
   AU           = 149597870700.0
   PSEC         = 360*60*60/(2*Math::PI)*AU
   LY           = 365.25*86400*Light
@@ -723,7 +723,7 @@ module Unit
       Unit.new('lighttim(12.)',                     Light*Tim,            :TGM ),
       Unit.new('light second(10.)',                 Light,                :SI  ),
       Unit.new("light #{Nic}",                      Light*Sh,             :Univ),
-      Unit.new('terno light solar day',             Light*50,             :Univ),
+      Unit.new('light solar tertia',                Light*50,             :Univ),
       Unit.new('light (Julian) year',               LY,                   :SI  ),
       Unit.new('persec',                            PSEC,                 :SI  ),
       Unit.new('thou or mil',                       Inch/1000.0),
@@ -764,8 +764,8 @@ module Unit
       Unit.new('Tim(16.)',                          St,                   :Tonal),
       Unit.new('gravitic second',                   SG,                   :NilU),
       Unit.new('Planck time',                       Planck/Light),
-      Unit.new('terno solar clock',                 DAY/(12**3 * 128),    :NilU),
-      Unit.new('terno solar day or moment',         DAY/(12**3),          :NilU, [ 1, ["'",128]]),
+      Unit.new('solar ternon',                      DAY/(12**3 * 128),    :NilU),
+      Unit.new('solar tertia or moment',            DAY/(12**3),          :NilU, [ 1, ["'",128]]),
       Unit.new('minute',                            60.0,                 nil,   [ 1, [":", 60]]),
       Unit.new('hour(12.)',                         3600.0,               :TGM,  Config.uus ? [1, [";",12**2],["'",128]] : []),
       Unit.new('hour(10.)',                         3600.0,               :SI,   [ 1, [":", 60],  [":", 60]]),
@@ -781,7 +781,7 @@ module Unit
       Unit.new('sidereal month',                    27.321661547*86400,   :SI  ),
       Unit.new('synodic month',                     29.530588853*86400,   :SI  ),
       Unit.new('solar year(12.)',                   YEAR,                 :Univ, [64, ["`",    64]]),
-      Unit.new('solar span(12.)',                   YEAR*64,              :Univ),
+      Unit.new('solar hexon',                       YEAR*64,              :Univ),
       Unit.new('age of solar system',               45.68E8*YEAR),
       Unit.new('age of the universe',               4.354E17)
     ],
@@ -866,10 +866,10 @@ module Unit
       Unit.new('Vlos',                              Grafut/Tim,           :TGM ),
       Unit.new('Kine',                              Kn,                   :SDN ),
       Unit.new('speed of light in vacuum or Lightvlos', Light),
-      Unit.new("#{Harmon}/terno solar clock",       Mh/(50.0/128),        :Univ),
-      Unit.new("#{Harmon}/terno solar day",         Mh/50,                :Univ),
+      Unit.new("#{Harmon}/solar ternon",            Mh/(50.0/128),        :Univ),
+      Unit.new("#{Harmon}/solar tertia",            Mh/50,                :Univ),
       Unit.new("#{Harmon}/hour",                    Mh/3600,              :Univ),
-      Unit.new("#{Harmon}/unino solar day",         Mh/7200,              :Univ),
+      Unit.new("#{Harmon}/solar unitia",            Mh/7200,              :Univ),
       Unit.new("#{Harmon}/solar day",               Mh/86400,             :Univ),
       Unit.new('Navlos(by GRS-80)',       EqRad*2*Math::PI/(4*12**7)/Tim, :TGM ),
       Unit.new('meter(10.)/minute',                 1.0/60,               :SI  ),
@@ -1288,15 +1288,15 @@ module Unit
     ],
 
     [['00010001', 'Electric flux density'],
-      Unit.new('turn Gauss',                        Ch/Mh**2,             :Univ),
+      Unit.new('turn Tesla(12.)',                   Ch/Mh**2,             :Univ),
       Unit.new('Coulomb(10.) / meter(10.)^2',       1.0,                  :SI  ),
       Unit.new('Quenz',                             Kur*Tim/Grafut**2,    :TGM ),
       Unit.new('Sargo / Geck^2',                    Sa/Gk**2,             :SDN )
     ],
 
     [['00010001', 'Magnetic flux density'],
-      Unit.new('nohm Gauss',                        Ch/Mh**2*Ohmn,        :Univ),
-      Unit.new('Tesla',                             1.0,                  :SI  ),
+      Unit.new('nohm Tesla(12.)',                   Ch/Mh**2*Ohmn,        :Univ),
+      Unit.new('Tesla(10.)',                        1.0,                  :SI  ),
       Unit.new('Flenz',                             Kur*Tim/Grafut**2*Og, :TGM ),
       Unit.new('Nikola',                            Nx,                   :SDN ),
       Unit.new('Gauss',                             1.0E-4,               :SI  ),
@@ -1400,7 +1400,8 @@ module Unit
     [['10000001', 'Logarithm'],
       Unit.new('figure',                            Math.log(12),         :Univ),
       Unit.new('Bel',                               Math.log(10),         :SI  ),
-      Unit.new('neper',                             1.0),
+      Unit.new('neper(12.)',                        1.0,                  :Univ),
+      Unit.new('neper(10.)',                        1.0),
       Unit.new('bit',                               Math.log(2),          :Info),
       Unit.new('nibble, nybble or nyble',           Math.log(2)*4,        :Info),
       Unit.new('byte or octet',                     Math.log(2)*8,        :Info)
@@ -1581,7 +1582,8 @@ module Unit
       Unit.new('radian(12.)',                       1.0,                  :Univ,  2),
       Unit.new('steradian(10.)',                    1.0,                  :SI),
       Unit.new('Steradian(12.)',                    1.0,                  :TGM),
-      Unit.new('sphere or turn(12.)',               4*Math::PI,           :Univ),
+      Unit.new('turn(12.)',                         4*Math::PI,           :Univ),
+      Unit.new('turn(10.)',                         4*Math::PI,           :SI),
       Unit.new('degree (of arc)',                   (Math::PI/180)**2,    nil,    2),
       Unit.new('minute (of arc)',                 (Math::PI/180/60)**2,   nil,    2),
       Unit.new('second (of arc)',               (Math::PI/180/3600)**2,   nil,    2)
@@ -1591,7 +1593,7 @@ module Unit
       Unit.new('radian(12.)',                       1.0,                  :Univ),
       Unit.new('radian(10.)',                       1.0,                  :SI),
       Unit.new('radian or [TGM]radiFut',            1.0,                  :TGM),
-      Unit.new('circle or cycle(12.)',              2*Math::PI,           :Univ),
+      Unit.new('cycle(12.)',                        2*Math::PI,           :Univ),
       Unit.new('cycle(10.)',                        2*Math::PI,           :SI),
       Unit.new('circle(16.)',                       2*Math::PI,           :Tonal),
       Unit.new('Pi',                                Math::PI,             :TGM),
@@ -1722,7 +1724,36 @@ module Document
 
   include Unit
 
+  Muse = {
+    "Newton(12.)"  => "Nete",
+    "Pascal(12.)"  => "Polym",
+    "Coulomb(12.)" => "Clio",
+    "Ampere(12.)"  => "Aoide",
+    "&#216;rsted"  => "Erato",
+    "Tesla(12.)"   => "Thalia",
+    "Kelvin(12.)"  => "Kalliope",
+    "Joule(12.)"   => "Juno",
+    "Watt(12.)"    => "Walku",
+    "turn Coulomb" => "turn Clio",
+    "turn Ampere"  => "turn Aoide",
+    "nohm Coulomb" => "nomega Clio",
+    "nohm Ampere"  => "nomega Aoide",
+    "nohm"         => "nomega",
+    "neper(12.)"   => "nephe"
+  }
+
+  MuseKeys = Muse.keys.sort_by {|key| -key.length}
+
   module_function
+
+  def muse(name)
+    if __FILE__ =~ /muse/
+      MuseKeys.each do |key|
+        name.gsub!(key, Muse[key])
+      end
+    end
+    name
+  end
 
   def response
     print "Content-type: text/html; charset=utf-8\n\n"
@@ -1855,7 +1886,7 @@ module Document
       text     = Units[Query['d']][i+1].name.dup
       text     = text.sub(/natural |^solar /,'') if text =~ /natural |^solar.+\)/
       text     = text.gsub(/<.+?>/, ' ')
-      option << "<option #{selected}value=#{i}>#{text}</option>"
+      option << "<option #{selected}value=#{i}>#{muse(text)}</option>"
     end
     option.join("\n              ")
   end
@@ -1964,7 +1995,7 @@ module Document
 
         tq   = unit.convert(0, Query['tl'], tr, fq)
         tm   = convert(i-1, 0, tr, fr, fl, tq)
-        [tq, tm, unit.name]
+        [tq, tm, muse(unit.name)]
       }).sort_by {|v| v[0]}.inject([]) {|m,s| m << [m[-1]?m[-1][0]+1:1, s[1], s[2]]}.flatten)
 
     rescue

@@ -66,12 +66,12 @@ All the units which have special names peculiar to the Harmonic System are liste
 
 3.1 Length
 ----------
-__harmon [hm]__ - 272.352206 mm, 10.7225278 inches (8 / 9 feet, difference 0.52%)
+__harmon [<sub>&#xB1;</sub>h]__ - 272.352206 mm, 10.7225278 inches (8 / 9 feet, difference 0.52%)
 
 This is slightly shorter than 1/1000,0000; of the quadrant meridian length of the Earth(=279.136507 mm, difference 2.5%).
 
 Volume of a cube whose side is half harmon (i.e. cubic half harmon) is 2/3 U.S. liquid gallon.(difference 0.06%) 
-Water in this volume includes about 100;<sup>10;</sup> H<sub>2</sub>O molecules.(see section [3.3](https://github.com/suchowan/a_converter/blob/master/doc/wikia.md#33-mass))
+Water in this volume includes about 100;<sup>10;</sup> H<sub>2</sub>O molecules.(see section [3.3](https://github.com/suchowan/a_converter/blob/master/doc/README.md#33-mass))
 <div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/Cube.png'/></div>
 
 
@@ -83,7 +83,7 @@ Water in this volume includes about 100;<sup>10;</sup> H<sub>2</sub>O molecules.
 
 3.2 Physical time
 -----------------
-__nic [nc]__ - 390.625115 ms (25./64. SI seconds, almost exact)
+__nic [<sub>&#xB1;</sub>n]__ - 390.625115 ms (25./64. SI seconds, almost exact)
 
 This is almost 1/1000; of the difference of the length of one Julian year and one mean tropical year.(difference 0.14% at the beginning of year 1900.)
 
@@ -91,13 +91,13 @@ This is almost 1/1000; of the difference of the length of one Julian year and on
 100,000. SI seconds(difference 2.8%), 10,0000; nics(almost exact), and 1 &#x215B; days are nearly equal.
 
 
-1 harmon / nic (=__atol [al]__) equals 2.51 km / hour. (almost exact)
+1 harmon / nic (=__atol [<sub>-</sub>&#x3B3;]__) equals 2.51 km / hour. (almost exact)
 
-See also chapter [4](https://github.com/suchowan/a_converter/blob/master/doc/wikia.md#4-time-unit-concepts).
+See also chapter [4](https://github.com/suchowan/a_converter/blob/master/doc/README.md#4-time-unit-concepts).
 
 3.3 Mass
 --------
-__looloh [__&#x2113;&#x2113;__]__ - 131.829289 g, 4.65014133 ounces
+__looloh [<sub>&#xB1;</sub>l]__ - 131.829289 g, 4.65014133 ounces
 
 This is slightly lighter than 1/100; of the mass of water in one cubic harmon capacity.(difference 6.4%)
 
@@ -116,7 +116,7 @@ When we use the Harmonic System, temperature rises twice the unit temperature if
 
 3.4 Impedance
 -------------
-__nohm [&#x3A9;<sub>n</sub>]__ - 29.979245816 &#x3A9;(almost exact)
+__nohm [<sub>&#x266E;</sub>&#x3A9;]__ - 29.979245796 &#x3A9;(almost exact)
 
 This is the Planck impedance itself. The unit name 'nohm' is an abbreviation of 'natural ohm'.
 
@@ -132,9 +132,6 @@ where &#x3A9;<sub>2</sub> is total solid angle of the spherical surface(see [thi
 Supplemental comments
 ---------------------
 These difference percentages show us that the Harmonic System is a kind of dozenalized metric system. (The quadrant meridian length of the Earth &#8786; 10;<sup>7</sup> harmons &#8786; 10.<sup>7</sup> meters, 1 &#8539; days &#8786; 10;<sup>5</sup> nics &#8786; 10.<sup>5</sup> seconds, water density &#8786; 10;<sup>2</sup> loolohs / harmon<sup>3</sup> &#8786; 10.<sup>3</sup> kilograms / meter<sup>3</sup>)
-
-(See also '[Addition]' part of [this article](https://www.tapatalk.com/groups/dozensonline/the-universal-unit-system-and-its-notaions-t371-s120.html#p22025856).)
-
 
 Using the Harmonic System, many constants can be approximated by &#x3A9;<sub>0</sub>_<sup>n</sup>_&times;10;_<sup>m</sup>_ times the unit quantity, where &#x3A9;<sub>0</sub> = 2, _n_ = 0 or &plusmn;1 and _m_ &isin; integer.
 The quadrant meridian length and gravitational acceleration of the Earth, the density and specific heat of water, which are used in the past for definition of units, are also included in these constants.
@@ -163,7 +160,7 @@ This quantity is the [coordinated](https://en.wikipedia.org/wiki/Coordinated_Uni
 
 The dimension of ratio of physical time and calendar time is [time / plain angle], which means the period length of one mean solar day. Because of tidal friction, this length is not constant and becomes longer little by little.
 
-<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/calendar_time_structure.png'/></div>
+<div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/calendar_time_structure_nodus.png'/></div>
 
 The unit that should be dozenal divisions of mean solar day is calendar time rather than physical time.
 
