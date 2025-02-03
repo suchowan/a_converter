@@ -1,4 +1,4 @@
-[The Harmonic System](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/revised.pdf) is one of variations of [the Universal Unit System](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/univunit-e.pdf).
+[The Harmonic System](https://github.com/suchowan/a_converter/blob/master/doc/revised.pdf) is one of variations of [the Universal Unit System](https://github.com/suchowan/a_converter/blob/master/doc/dozenal_com/univunit-e.pdf).
 
 
 
@@ -12,7 +12,7 @@ For putting these coincidences to use, the dozenal number system is the only cho
 
 We define the Universal Unit System as “the unit system that is constructed by using the dozenal number system and the speed of light in vacuum, the quantum of action, and the Boltzmann constant as the defining constants in such a way that these constants become strict multiples of integer powers of twelve of the unit quantities, and the Rydberg constant, the unified atomic mass unit, the Bohr radius, and half the value of the Planck length can be approximated by multiples of integer powers of twelve of the unit quantities”.
 
-(Please refer to [dozenal.com](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/) for the overall Universal Unit System. The notation of this article is in principle according to footnote 1 of [revised.pdf](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/revised.pdf).)
+(Please refer to [dozenal.com](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/) for the overall Universal Unit System. The notation of this article is in principle according to footnote 1 of [revised.pdf](https://github.com/suchowan/a_converter/blob/master/doc/revised.pdf).)
 
 
 2 Definition of the Harmonic System
@@ -124,7 +124,7 @@ The coulomb force between unit electric charges put unit length apart is 10;<sup
 <div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/Force-comparison-2.png'/></div>
 
 Relations of the electric and magnetic quantities in the Universal Unit System are shown as follows,
-where &#x3A9;<sub>2</sub> is total solid angle of the spherical surface(see [this ref](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/electromagnetism.pdf)):
+where &#x3A9;<sub>2</sub> is total solid angle of the spherical surface(see [this ref](https://github.com/suchowan/a_converter/blob/master/doc/dozenal_com/electromagnetism.pdf)):
 
 <div align='center'><img src='https://raw.githubusercontent.com/suchowan/a_converter/refs/heads/master/doc/pic/Em-eq.png'/></div>
 
@@ -136,7 +136,7 @@ These difference percentages show us that the Harmonic System is a kind of dozen
 Using the Harmonic System, many constants can be approximated by &#x3A9;<sub>0</sub>_<sup>n</sup>_&times;10;_<sup>m</sup>_ times the unit quantity, where &#x3A9;<sub>0</sub> = 2, _n_ = 0 or &plusmn;1 and _m_ &isin; integer.
 The quadrant meridian length and gravitational acceleration of the Earth, the density and specific heat of water, which are used in the past for definition of units, are also included in these constants.
 
-Please refer to [this table](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/tables.pdf) and [online converter](http://hosi.org:8080/cgi-bin/conv.cgi?m=10080) for other units. This converter also teaches us the representation of units that belong to various unit systems.
+Please refer to [this table](https://github.com/suchowan/a_converter/blob/master/doc/tables.pdf) and [online converter](http://hosi.org:8080/cgi-bin/conv.cgi?m=10080) for other units. This converter also teaches us the representation of units that belong to various unit systems.
 
 
 4 Time unit concepts
@@ -168,11 +168,11 @@ Because physical length of mean solar day is not constant but variable, the rela
 
 'day', as a unit, is equivalent to plain angle of total circumference.
 
-The Harmonic System adopts 'day' as a unit of calendar time corresponding to one mean solar day, and uses the calendar time unit structure shown on the right figure.
+The Harmonic System adopts 'day' as a unit of calendar time corresponding to one mean solar day, and uses the calendar time unit structure shown on the above figure.
 
 5 Number counting
 =================
-The Universal Unit System recommends [the duodecimal myriad system](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/myriad.pdf). See Appendix C of [revised.pdf](http://www.asahi-net.or.jp/~dd6t-sg/univunit-e/revised.pdf).
+The Universal Unit System recommends [the duodecimal myriad system](https://github.com/suchowan/a_converter/blob/master/doc/myriad.pdf). See Appendix C of [revised.pdf](https://github.com/suchowan/a_converter/blob/master/doc/revised.pdf).
 
 
 Many of the constants introduced in [Wikipedia Talk:Planck_units](https://en.wikipedia.org/wiki/Talk:Planck_units/Archive_3#Other_possible_normalizations) often have orders 8*n*-1. Therefore, it is convenient to use the factor U(=10;<sup>8</sup>(12.<sup>8</sup>)) to make the units of the Universal Unit System into human scale. The factor U can be regarded as a conversion factor between atomic scale, human scale, and cosmic scale. Since power 8(=2<sup>3</sup>) is a power of 2, [the decimal myriad system](https://en.wikipedia.org/wiki/-yllion) has affinity for our system. So, we propose the duodecimal myriad system in replacing ten/hundred with dozen/gross. Larger numbers consist of uni(1),di(2),ter(3),tetra(4),penta(5),hexa(6),hepta(7), lli(0),on(+), and reciprocals are expressed by replacing on(+) with no(-).
