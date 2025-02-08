@@ -412,6 +412,7 @@ module Unit
   Calorie      = 4184.0
   DAY          = 86400.0
   YEAR         = (365+31.0/128)*DAY
+  Lunation     = 29.530588853*DAY
   PoleRad      = 6356.7523E3
   EqRad        = 6378.1370E3
   AU           = 149597870700.0
@@ -779,7 +780,7 @@ module Unit
       Unit.new('leap year',                         366.0*86400),
       Unit.new('year(10.)',                         YEAR,                 :SI  ),
       Unit.new('sidereal month',                    27.321661547*86400,   :SI  ),
-      Unit.new('synodic month',                     29.530588853*86400,   :SI  ),
+      Unit.new('synodic month',                     Lunation,             :SI  ),
       Unit.new('solar year(12.)',                   YEAR,                 :Univ, [64, ["`",    64]]),
       Unit.new('solar hexon',                       YEAR*64,              :Univ),
       Unit.new('age of solar system',               45.68E8*YEAR),
@@ -1041,7 +1042,7 @@ module Unit
       Unit.new('standard gravity(recommend)',       5.5*Mh/Sh**2),
       Unit.new("standard gravity(gee)",             GE),
       Unit.new('standard gravity(CGPM1901)',        G),
-      Unit.new('light/year',                        Light / YEAR),
+      Unit.new('light / solar year',                Light / YEAR),
       Unit.new('gal',                               1.0E-2,               :SI  ),
       Unit.new('meter(10.)/hour/second(10.)',       1.0/3600,             :SI  ),
       Unit.new('inch/second^2',                     Inch),
@@ -1056,7 +1057,8 @@ module Unit
       Unit.new('mile/second^2',                     Mile),
       Unit.new('mile/minute/second',                Mile/60),
       Unit.new('mile/hour/second',                  Mile/3600),
-      Unit.new('knot/second',                       1852.0/3600)
+      Unit.new('knot/second',                       1852.0/3600),
+      Unit.new('light / lunar year',                Light/(12*Lunation))
     ],
 
     [['00100001', 'Gravitational potential'],
