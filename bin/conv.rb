@@ -487,6 +487,7 @@ module Unit
   Acre         = 4840 * Yard * Yard
   GallonUK     = 0.00454609
   GallonUS     = 0.003785411784
+  GallonDUS    = 0.00440488377086
 
   # Bill Hall's International Dozenal Unit System
   Tk           = 3191886105/9192631770.0       # 3191886105= 7,50E5,8389; # Tick  : time
@@ -784,7 +785,8 @@ module Unit
       Unit.new('solar year(12.)',                   YEAR,                 :Univ, [64, ["`",    64]]),
       Unit.new('solar hexon',                       YEAR*64,              :Univ),
       Unit.new('age of solar system',               45.68E8*YEAR),
-      Unit.new('age of the universe',               4.354E17)
+      Unit.new('age of the universe',               4.354E17),
+      Unit.new('NTSC frame',                        1/29.97)
     ],
 
     [['10100001', 'Mass'],
@@ -848,6 +850,9 @@ module Unit
       Unit.new('U.S. liquid cup',                   GallonUS/16),
       Unit.new('U.S. fluid ounce',                  GallonUS/128),
       Unit.new('U.S. customaryteaspoon',            GallonUS/128/6),
+      Unit.new('U.S. bushel',                       GallonDUS*8),
+      Unit.new('U.S. dry gallon',                   GallonDUS),
+      Unit.new('Imperial bushel',                   GallonUK*8),
       Unit.new('Imperial gallon',                   GallonUK),
       Unit.new('Imperial quart',                    GallonUK/4),
       Unit.new('Imperial pint',                     GallonUK/8),
