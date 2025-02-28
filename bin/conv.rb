@@ -765,7 +765,7 @@ module Unit
       Unit.new('Tick',                              Tk,                   :SDN ),
       Unit.new('Tim(16.)',                          St,                   :Tonal),
       Unit.new('gravitic second',                   SG,                   :NilU),
-      Unit.new('Planck time',                       Planck/Light),
+      Unit.new('solar nodus',                       DAY/ 128,             :NilU),
       Unit.new('solar ternon',                      DAY/(12**3 * 128),    :NilU),
       Unit.new('solar tertia or moment',            DAY/(12**3),          :NilU, [ 1, ["'",128]]),
       Unit.new('minute',                            60.0,                 nil,   [ 1, [":", 60]]),
@@ -786,7 +786,8 @@ module Unit
       Unit.new('solar hexon',                       YEAR*64,              :Univ),
       Unit.new('age of solar system',               45.68E8*YEAR),
       Unit.new('age of the universe',               4.354E17),
-      Unit.new('NTSC frame',                        1/29.97)
+      Unit.new('NTSC frame',                        1/29.97),
+      Unit.new('Planck time',                       Planck/Light)
     ],
 
     [['10100001', 'Mass'],
