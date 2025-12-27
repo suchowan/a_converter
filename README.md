@@ -1,45 +1,69 @@
-a_converter - for dozenal and decimal metric systems
-================================================================
+# a_converter — Universal Unit System & Harmonic System
 
-Summary of this repository
---------------------------
+## What is this?
 
-This repository presents the Universal Unit System (UUS) and its
-specific realization: the Harmonic System and a converter for it.
+This repository presents the **Universal Unit System (UUS)** and its specific realization, the **Harmonic System**, along with **a_converter** — tools for exploring a unit framework where physical constants and astronomical cycles align with unusually low structural entropy.
 
-It is a proposal for a unit framework in which physical constants
-and astronomical cycles exhibit low-entropy structural alignment.
+**New to this project?** Start here:
+- **[Discussion on the UUS and Harmonic System](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** — Conceptual overview
+- **[Natural Time Scale diagram](doc/pic/NaturalTimeScale.png)** — Visual summary
 
-## Documents
-- [doc/Discussion_on_the_UUS_and_the_Harmonic_System.md](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)
-  Conceptual overview and discussion.
+### A Striking Example
 
-- [doc/README.md](doc/README.md)
-  Brief summary of the Harmonic System.
+The ratio of **1 year to half-day** can be expressed using only powers of 2 and 3:
 
-- [doc/revised.pdf](doc/revised.pdf)
-  Formal description of the Universal Unit System.
+$$1 \text{ year} / \text{ half-day } \approx 3^{(+6)} + (3^{(+1)} \cdot 2^{(-1)}) - 2^{(-6)}$$
 
-- [doc/Attention.md](doc/Attention.md)
-  Philosophical background: perceiving structure.
+This matches the tropical year within **~0.2 seconds**.
+Such patterns become clearly visible when physical constants are expressed in Base-12.
 
-This project does not propose a new physical law, nor does it claim
-that nature "prefers" a specific numeral base.
+---
 
-Web Server
-----------
+## Key Documents
 
-The web server for a_converter is available on [hosi.org](http://hosi.org/cgi-bin/conv.cgi?m=01080).
+| Document | Purpose |
+|----------|---------|
+| **[Discussion_on_the_UUS_and_the_Harmonic_System.md](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** | Provides conceptual **overview** and philosophical context |
+| **[README.md](doc/README.md)** | Summarizes the **technical specification** of the Harmonic System |
+| **[revised.pdf](doc/revised.pdf)** | Presents the complete **formal derivation** of the Universal Unit System |
+| **[Attention.md](doc/Attention.md)** | Explains the **methodology**: perceiving hidden structures |
 
+---
 
-License
--------
+## Online Converter
 
-a_converter is released under the MIT license, see LICENSE.txt for details.
+Try the **[a_converter web interface](http://hosi.org/cgi-bin/conv.cgi?m=01080)** to explore unit conversions between decimal and dozenal (Base-12) systems.
 
+---
 
-Source Code
------------
+## Important Notes
 
-Source code for a_converter is available on [GitHub](https://github.com/suchowan/a_converter).
+- This project does **not** propose a new physical law.
+- It does **not** claim that nature "prefers" a specific numeral base.
+- It **does** demonstrate that certain mathematical structures become visible when expressed in Base-12 — structures that appear as noise in Base-10.
+
+The Universal Unit System is a **discovery of patterns**, not an invention of new physics.
+
+---
+
+## About
+
+**Author:** Takashi Suga (須賀 隆)  
+
+**License:** MIT (see [LICENSE.txt](LICENSE.txt))
+
+**Repository:** [https://github.com/suchowan/a_converter](https://github.com/suchowan/a_converter)
+
+---
+
+## For Researchers
+
+If you are interested in:
+- The mathematical structure of physical constants
+- Alternative numeral systems in scientific contexts
+- The relationship between representation and discovery
+
+...then the documents in this repository may provide novel perspectives.
+
+**Questions or collaboration?** Open an issue or discussion on GitHub.
 
