@@ -32,10 +32,10 @@ Calculated out, this matches the tropical year (~365.24219 days) within ~0.2 sec
 ## 4. The Role of "8" as a Structural Constant
 In the Harmonic System, the number **8** ($2^3$) emerges as a critical "[Nodus](https://suchowan.seesaa.net/article/202501article_17_3.html)" or pivot point, acting as a structural stabilizer:
 - **[Unillion](https://github.com/suchowan/a_converter/blob/master/doc/myriad.pdf) ($12^8$):** The primary scaling unit where physical constants align.
-- **Nodus ($8^{-2}$ half-day):** The $2^{-6}$ term from the symmetry formula above—the point where all series of physical scales (Planck, Atomic, Human, Cosmic) intersect.
-- **Hexon ($8^2$ years):** A scale corresponding to the human lifespan.
+- **Nodus ($8^{-2}$ half-day, the greatest common divisor of a tropical year and a day):** The $2^{-6}$ term from the symmetry formula above—the point where all series of physical scales (Planck, Atomic, Human, Cosmic) intersect.
+- **Hexon ($8^2$ years, half the least common multiple of a tropical year and a day):** A scale corresponding to the human lifespan.
 
-The fact that the $1700_{12}$ offset (used to harmonize gravity and rotation) and these critical junctions are all governed by the power of 8 is a discovery that highlights the inherent symmetry of the universe.
+The fact that the $1700_{12}$ offset (used to harmonize gravity and rotation) and these critical junctions (GCD and LCM) are all governed by the power of 8 is a discovery that highlights the inherent symmetry of the universe.
 
 ## 5. Perceiving the "Structure" (Attention)
 The development of the UUS is rooted in identifying inherent patterns rather than imposing human constructs.
