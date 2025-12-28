@@ -26,7 +26,9 @@ One of the most surprising empirical findings of the Harmonic System is that man
  - **Parameters:** $n \in \{0, \pm 1\}$ and $m \in \text{integer}$.
  - **Core Constant:** $\Omega_0 = 2$ (formally defined as the **total solid angle of a hypersphere** using the **Gamma function**, see **[doc/revised.pdf](doc/revised.pdf), Table 4**).
 
-This pattern holds for diverse values, including the **Earth's meridian length, gravitational acceleration ($g$), water's density, and specific heat** — values historically chosen to define the Metric system. For example, the specific heat of water(4184 J/kg·K) is represented approximately **$\Omega_{0}^{-1} \times 12^{0}$**. While individual alignments might be viewed as coincidental, their collective convergence into this single, low-entropy form suggests that a Base-12 representation can serve a high-resolution **lens** for perceiving aspects of the structural architecture of the Earth-environment system.
+This pattern holds for diverse values, including the **Earth's meridian length, gravitational acceleration ($g$), water's density, and specific heat** — values historically chosen to define the Metric system. For example, the specific heat of water(4184 J/kg·K) is represented approximately **$\Omega_{0}^{-1} \times 12^{0}$**([12‑base numeric form](http://hosi.org/cgi-bin/conv.cgi?m=00090&d=6&fq=1.0000000&frq=10&fe=0&fu=3&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert)).
+
+While individual alignments might be viewed as coincidental, their collective convergence into this single, low-entropy form suggests that a Base-12 representation can serve a high-resolution **lens** for perceiving aspects of the structural architecture of the Earth-environment system.
 
 *These observations concern **representational efficiency** and numerical structure, providing a novel perspective on the relationship between mathematical systems and physical discovery.*
 
