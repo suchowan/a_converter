@@ -17,6 +17,19 @@ $$1 \text{ year} / \text{ half-day } \approx 3^{(+6)} + (3^{(+1)} \cdot 2^{(-1)}
 This matches the tropical year within **~0.2 seconds**.
 Such patterns become clearly visible when physical constants are expressed in Base-12.
 
+## Efficiency of Representation: The $\Omega_0$ Convergence
+
+One of the most surprising empirical findings of the Harmonic System is that many macro-scale constants (including those historically used to define the Metric system) can be represented with extreme simplicity:
+
+ $$\text{Constant} \approx \Omega_{0}^{n} \times 12^{m}$$
+
+ - **Parameters:** $n \in \{0, \pm 1\}$ and $m \in \text{integer}$.
+ - **Core Constant:** $\Omega_0 \approx 2$ (formally defined as the **total solid angle of a hypersphere** using the **Gamma function**, see **[doc/revised.pdf](doc/revised.pdf), Table 4**).
+
+This pattern holds for diverse values, including the **Earth's meridian length, gravitational acceleration ($g$), water's density, and specific heat** — values historically chosen to define the Metric system. For example, the specific heat of water(4184 J/kg·K) is represented approximately **$\Omega_{0}^{-1} \times 12^{0}$**. While individual alignments might be viewed as coincidental, their collective convergence into this single, low-entropy form suggests that a Base-12 representation can serve a high-resolution **lens** for perceiving aspects of the structural architecture of the Earth-environment system.
+
+*These observations concern **representational efficiency** and numerical structure, providing a novel perspective on the relationship between mathematical systems and physical discovery.*
+
 ---
 
 ## Key Documents
