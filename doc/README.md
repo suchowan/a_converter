@@ -183,3 +183,18 @@ Since [Dozenal Nomenclature](https://dozenal.fandom.com/wiki/Systematic_Dozenal_
 
 When units of the Harmonic System are combined with Systematic Dozenal Nomenclature, only powers divisible with 4 or -1, -2, and -3 should be used.
 In this situation, dozen(10;), gross(100;) and doz gross(1000;) are used in substitution for powers 1, 2, and 3.
+
+
+6 Historical Commentary and Bilingual Archive
+=============================================
+The Harmonic System is the result of over two decades of continuous research. 
+While the core specifications are contained in this repository, 
+the underlying discussions and philosophical roots are documented in the author's blog archive.
+
+- **[English/Japanese Bilingual Articles (Blog Search)](https://suchowan.seesaa.net/search?keyword=%3EJapanese%3C)**  
+  *Access a curated thread of key articles that include technical derivations and conceptual reflections.*
+
+- **[Philosophical Roots: "Form is Emptiness, Emptiness is Form"](https://suchowan.seesaa.net/search?keyword=%E8%89%B2%E5%8D%B3%E6%98%AF%E7%A9%BA+%E7%A9%BA%E5%8D%B3%E6%98%AF%E8%89%B2)**  
+  *(Note: These search results are primarily in Japanese.)*  
+  *Original reflections on the act of observation—the spiritual predecessor to **[Attention.md](Attention.md)**. These posts explore how "structure" (Form) emerges from "noise" (Emptiness).*
+
