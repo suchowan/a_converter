@@ -45,6 +45,16 @@ While individual alignments might be viewed as coincidental, their collective co
 
 ---
 
+## Supplementary Documents
+
+| Document | Purpose |
+|----------|---------|
+| **[Deep_Structure_Form_and_Emptiness.md](doc/Deep_Structure_Form_and_Emptiness.md)** | Mathematical origins and philosophical framework |
+| **[AI_Resonance_with_Omega0_An_Essay.md](doc/AI_Resonance_with_Omega0_An_Essay.md)** | AI pattern-recognition phenomena |
+| **[relations.pdf](doc/relations.pdf)** | Includes symmetrization of electromagnetic quantities (1990s) |
+
+---
+
 ## Online Converter
 
 Try the **[a_converter web interface](http://hosi.org/cgi-bin/conv.cgi?m=01080)** to explore unit conversions between decimal and dozenal (Base-12) systems.
