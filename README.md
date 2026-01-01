@@ -73,7 +73,7 @@ The Universal Unit System is a **discovery of patterns**, not an invention of ne
 
 ## About
 
-**Author:** Takashi Suga (須賀 隆)  
+**Author:** [Takashi Suga](http://hosi.org/TakashiSuga.rdf) (須賀 隆)  
 
 **License:** MIT (see [LICENSE.txt](LICENSE.txt))
 

@@ -11,7 +11,7 @@ The foundation of this research lies in the **symmetrization of electrical and m
 
 The core of this approach was the introduction of two specific types of $\Omega$:
 - **$\Omega_2$**: The 2-dimensional total solid angle ( $4 \pi $).
-- **$\Omega(Z_P)$**: The natural impedance related to the Planck scale (the vacuum impedance normalized within the system).
+- **$_{\natural}\Omega(Z_P)$**: The natural impedance related to the Planck scale (the vacuum impedance normalized within the system).
 
 By utilizing these as geometric operators, the descriptive entropy of Maxwell’s equations decreases, allowing the symmetry of the electromagnetic field to be expressed without the "noise" of arbitrary historical coefficients.
 
