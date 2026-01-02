@@ -75,6 +75,9 @@ The Universal Unit System is a **discovery of patterns**, not an invention of ne
 
 **Author:** [Takashi Suga](http://hosi.org/TakashiSuga.rdf) (須賀 隆)  
 
+**History:**
+The foundational concepts of this system were first publicly introduced in the July 1984 issue of SF Magazine (Japan), released on May 25, 1984. Over the following four decades, these early insights were refined and formulated into the present Universal Unit System and Harmonic System.
+
 **License:** MIT (see [LICENSE.txt](LICENSE.txt))
 
 **Repository:** [https://github.com/suchowan/a_converter](https://github.com/suchowan/a_converter)
