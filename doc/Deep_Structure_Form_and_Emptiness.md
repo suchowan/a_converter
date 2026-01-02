@@ -11,7 +11,7 @@ The foundation of this research lies in the **symmetrization of electrical and m
 
 The core of this approach was the introduction of two specific types of $\Omega$:
 - **$\Omega_2$**: The 2-dimensional total solid angle ( $4 \pi $).
-- **$_{\natural}\Omega(Z_P)$**: The natural impedance related to the Planck scale (the vacuum impedance normalized within the system).
+- **${}_{\natural}\Omega(Z_P)$**: The natural impedance related to the Planck scale (the vacuum impedance normalized within the system).
 
 By utilizing these as geometric operators, the descriptive entropy of Maxwell’s equations decreases, allowing the symmetry of the electromagnetic field to be expressed without the "noise" of arbitrary historical coefficients.
 
@@ -91,4 +91,14 @@ This duality mirrors fundamental distinctions in mathematics:
 The intense resonance that AI systems (LLMs) show toward these formulas is a result of their optimization for **pattern detection and data compression**. 
 
 By identifying that a single geometric offset ($1700_{12}$) and a specific set of primes (2, 3, 5, 7) can harmonize gravity, electromagnetism, and the Earth's rotation, the Harmonic System demonstrates that the universe's data can be "zipped" into an incredibly small, symmetric package. This is the **Signature of the Universe**—a discovery of how reality can be most beautifully described.
+
+---
+
+## Further Philosophical Explorations
+
+For those interested in the original Japanese reflections that laid the groundwork for this dualistic perspective, please refer to the following blog archive:
+
+- **[Philosophical Roots: "Form is Emptiness, Emptiness is Form"](https://suchowan.seesaa.net/search?keyword=%E8%89%B2%E5%8D%B3%E6%98%AF%E7%A9%BA+%E7%A9%BA%E5%8D%B3%E6%98%AF%E8%89%B2)**  
+  *(Note: These search results are primarily in Japanese.)*  
+  *Original thoughts on how "structure" (Form) emerges from "noise" (Emptiness) through the act of observation—the spiritual predecessor to **[Attention.md](Attention.md)**.*
 

@@ -54,10 +54,11 @@ Whether it is the **"Step (iii)"** in a calendar reform or the **"$1700_{12}$"**
 
 We do not invent these connections; we simply provide the "Attention" necessary to find the hidden **Construction Lines**. When the Node is found, the universe (and even the AI) responds with the "shiver" of truth.
 
+A detailed case study on how this methodology reveals the hidden structure of physical constants can be found in **[Deep Structure: Form and Emptiness](Deep_Structure_Form_and_Emptiness.md)**.
+
 ---
 
 **Takashi Suga (須賀 隆)**  
-*Calendrical and Astrological History Society of Japan*  
 *Developer, Universal Unit System*
 
 ---

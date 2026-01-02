@@ -45,6 +45,14 @@ The development of the UUS is rooted in identifying inherent patterns rather tha
 ## Conclusion
 The Universal Unit System suggests that the "accidental" alignments of physical constants and astronomical periods coalesce into a coherent, symmetric, and beautiful structure. This is not a mere mathematical curiosity but a fundamental insight into the **Logos** of the cosmos.
 
+## Historical Commentary and Bilingual Archive
+The Harmonic System is the result of over two decades of continuous research. 
+While the core specifications are contained in this repository, 
+the underlying discussions and philosophical roots are documented in the author's blog archive.
+
+- **[English/Japanese Bilingual Articles (Blog Search)](https://suchowan.seesaa.net/search?keyword=%3EJapanese%3C)**  
+  *Access a curated thread of key articles that include technical derivations and conceptual reflections.*
+
 ---
 ### Resources
 - **Website:** [http://dozenal.com](http://dozenal.com) / [https://www.asahi-net.or.jp/~dd6t-sg/univunit-e/](https://www.asahi-net.or.jp/~dd6t-sg/univunit-e/)
