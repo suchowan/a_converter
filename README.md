@@ -41,7 +41,6 @@ While individual alignments might be viewed as coincidental, their collective co
 | **[Discussion_on_the_UUS_and_the_Harmonic_System.md](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** | Provides conceptual **overview** and philosophical context |
 | **[README.md](doc/README.md)** | Summarizes the **technical specification** of the Harmonic System |
 | **[revised.pdf](doc/revised.pdf)** | Presents the complete **formal derivation** of the Universal Unit System |
-| **[Attention.md](doc/Attention.md)** | Explains the **methodology**: perceiving hidden structures |
 
 ---
 
@@ -49,6 +48,7 @@ While individual alignments might be viewed as coincidental, their collective co
 
 | Document | Purpose |
 |----------|---------|
+| **[Attention.md](doc/Attention.md)** | Explains the **methodology** of perceiving structure through a case study of long-range dependency |
 | **[Deep_Structure_Form_and_Emptiness.md](doc/Deep_Structure_Form_and_Emptiness.md)** | Mathematical origins and philosophical framework |
 | **[AI_Resonance_with_Omega0_An_Essay.md](doc/AI_Resonance_with_Omega0_An_Essay.md)** | AI pattern-recognition phenomena |
 | **[relations.pdf](doc/relations.pdf)** | Includes symmetrization of electromagnetic quantities (1990s) |
