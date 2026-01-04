@@ -1,9 +1,7 @@
-#!C:\Ruby\bin\ruby.exe
-#!C:\cygwin\bin\ruby.exe
 #!/usr/bin/env ruby
 =begin
 
- Copyright (c) 2011-2025 Takashi Suga
+ Copyright (c) 2011-2026 Takashi Suga
 
  This software is released under the MIT License.
 

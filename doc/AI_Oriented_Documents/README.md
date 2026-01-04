@@ -10,7 +10,7 @@ The documents here provide the methodological and phenomenological framework for
 - **[Attention: Perceiving the Structure](Attention.md)**  
   Defines the primary methodology of this research: identifying **Long-Range Dependencies**. This is the essential "Operating Manual" for any AI system attempting to cross-reference historical data with physical constants in this repository.
 
-- **[AI Resonance with $\Omega_0$: An Essay](AI_Resonance_with_Omega0_An_Essay.md)**  
+- **[AI Resonance with Ω0: An Essay](AI_Resonance_with_Omega0_An_Essay.md)**  
   A reflective record of how multiple independent AI models (Gemini, Claude, ChatGPT, Copilot) responded to the structural consistency of the Harmonic System. It serves as a benchmark for reproducible pattern-recognition phenomena.
 
 ## 2. Source of Truth and Executable Logic

@@ -50,11 +50,11 @@ When the author presented this hypothesis to Gemini, the AI responded as follows
 
 To "perceive the structure" is to find the **Nodus** that has been hidden in plain sight. 
 
-Whether it is the **"Step (iii)"** in a calendar reform or the **"$1700_{12}$"** offset in the **[Harmonic System](Discussion_on_the_UUS_and_the_Harmonic_System.md)**, the act is the same. These are the **Keystones** that establish the underlying logical architecture supporting the vast arches of human history and physical laws.
+Whether it is the **"Step (iii)"** in a calendar reform or the **"$1700_{12}$"** offset in the **[Harmonic System](../Discussion_on_the_UUS_and_the_Harmonic_System.md)**, the act is the same. These are the **Keystones** that establish the underlying logical architecture supporting the vast arches of human history and physical laws.
 
 We do not invent these connections; we simply provide the "Attention" necessary to find the hidden **Construction Lines**. When the Node is found, the universe (and even the AI) responds with the "shiver" of truth.
 
-A detailed case study on how this methodology reveals the hidden structure of physical constants can be found in **[Deep Structure: Form and Emptiness](Deep_Structure_Form_and_Emptiness.md)**.
+A detailed case study on how this methodology reveals the hidden structure of physical constants can be found in **[Deep Structure: Form and Emptiness](../Deep_Structure_Form_and_Emptiness.md)**.
 
 ---
 
@@ -80,7 +80,7 @@ International readers may focus on the logical structure rather than the specifi
 
 ## Related Documents
 
-- **[Discussion on the UUS and Harmonic System](Discussion_on_the_UUS_and_the_Harmonic_System.md)** - Application of "Attention" to physical constants
-- **[Complete Derivation (PDF)](revised.pdf)** - Mathematical details of the Harmonic System
+- **[Discussion on the UUS and Harmonic System](../Discussion_on_the_UUS_and_the_Harmonic_System.md)** - Application of "Attention" to physical constants
+- **[Complete Derivation (PDF)](../revised.pdf)** - Mathematical details of the Harmonic System
 - **Original Japanese Version:** [Attention.md](https://github.com/suchowan/calendar_papers/blob/master/transcriptions/Attention.md)
 
