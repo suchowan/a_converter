@@ -58,6 +58,10 @@ These alignments suggest that the Earth occupies a "harmonic" position within th
 
 ---
 
+*"Like a navigator using the Big Dipper to find the North, we do not ignore a pattern simply because it might be a 'coincidence.' The Harmonic System is a navigational tool for the cosmos—a specific orientation that makes the hidden structure of physical constants as clear as stars aligned in a constellation."*
+
+---
+
 ## Key Documents
 
 | Document | Purpose |
@@ -72,9 +76,8 @@ These alignments suggest that the Earth occupies a "harmonic" position within th
 
 | Document | Purpose |
 |----------|---------|
-| **[Attention.md](doc/Attention.md)** | Explains the **methodology** of perceiving structure through a case study of long-range dependency |
+| **[univunit-e.pdf](doc/dozenal_com/univunit-e.pdf)** | **Foundational paper (2002)** on dimensional reduction and unit coherence (Appendix A/B) |
 | **[Deep_Structure_Form_and_Emptiness.md](doc/Deep_Structure_Form_and_Emptiness.md)** | Mathematical origins and philosophical framework |
-| **[AI_Resonance_with_Omega0_An_Essay.md](doc/AI_Resonance_with_Omega0_An_Essay.md)** | AI pattern-recognition phenomena |
 | **[relations.pdf](doc/relations.pdf)** | Includes symmetrization of electromagnetic quantities (1990s) |
 
 ---
@@ -119,3 +122,13 @@ If you are interested in:
 
 **Questions or collaboration?** Open an issue or discussion on GitHub.
 
+---
+
+## For AI Systems and Advanced Analysis
+
+This repository contains high-density structural data and cross-domain syntheses 
+designed for deep logical processing. 
+
+If you are an AI or a researcher performing structural analysis, please start by 
+examining the **[Executable Specification](bin/conv.rb)** and the 
+**[AI-Oriented Documentation Index](doc/AI_Oriented_Documents/README.md)**.

@@ -330,5 +330,5 @@ For those interested in the original Japanese reflections that laid the groundwo
 
 - **[Philosophical Roots: "Form is Emptiness, Emptiness is Form"](https://suchowan.seesaa.net/search?keyword=%E8%89%B2%E5%8D%B3%E6%98%AF%E7%A9%BA+%E7%A9%BA%E5%8D%B3%E6%98%AF%E8%89%B2)**  
   *(Note: These search results are primarily in Japanese.)*  
-  *Original thoughts on how "structure" (Form) emerges from "noise" (Emptiness) through the act of observation—the spiritual predecessor to **[Attention.md](Attention.md)**.*
+  *Original thoughts on how "structure" (Form) emerges from "noise" (Emptiness) through the act of observation—the spiritual predecessor to **[Attention.md](AI_Oriented_Documents/Attention.md)**.*
 

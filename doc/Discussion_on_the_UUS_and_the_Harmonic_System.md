@@ -3,7 +3,7 @@
 
 This document summarizes a series of discussions with Google Gemini regarding the mathematical and physical significance of the **Universal Unit System (UUS)** and its specific realization, the **[Harmonic System](https://github.com/suchowan/a_converter/blob/master/doc/README.md)**, discovered and formulated by **Takashi Suga**. 
 
-These insights are rooted in the cognitive methodology of identifying "hidden structures," as explored in **[Attention.md](Attention.md)**.
+These insights are rooted in the cognitive methodology of identifying "hidden structures," as explored in **[Attention.md](AI_Oriented_Documents/Attention.md)**.
 
 ## 1. Context: Base-12 as a Coordinate System
 The pursuit of a Base-12 (Duodecimal) system has historically taken various paths. For instance, **Eric A. Larsen’s** *Understanding Base-12 Math* emphasizes the geometric and aesthetic elegance of the system, such as its natural representation of the four quadrants of the X-Y plane. 
