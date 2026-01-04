@@ -195,7 +195,7 @@ The unit name "meridian sub cycle" **performs** a seamless coordinate transforma
 
 ### 5.4 Case Study: "light solar tertia"
 
-Building on the principle demonstrated with "looloh gee" and "meridian sub circle," consider the 
+Building on the principle demonstrated with "looloh gee" and "meridian sub cycle," consider the 
 more complex case: **"[light solar tertia](http://hosi.org/cgi-bin/conv.cgi?m=10300&d=0&fq=1.0000000&frq=12&fe=0&fu=21&tu=17&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)"**:
 
 #### Surface Level (Semantic):
