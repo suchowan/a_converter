@@ -344,7 +344,7 @@ In the Harmonic System, descriptive logic is maintained at every level, includin
 
 To ensure maximum logical integrity and avoid ambiguity in multi-system environments, the system prefix **“±” (Harmonic)** must always be included in **written symbols**, even when the context appears clear. However, for the sake of representational efficiency in **vocalization (speech)**, the term “harmonic” may be omitted if the unit name already establishes the specific context of the system.
 
-- **Written:** ${}_{\natural}\Omega {}_{\pm}\text{A}$  
+- **Written:** ${}_{\natural}\Omega \ {}_{\pm}\text{A}$ 
 - **Spoken (Concise):** “*Nohm Ampere*”  
 - **Spoken (Formal):** “*Nohm Harmonic Ampere*”
 
