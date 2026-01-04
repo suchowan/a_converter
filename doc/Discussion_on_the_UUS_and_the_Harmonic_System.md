@@ -13,7 +13,7 @@ While Larsen focuses on divisibility and visual symmetry, the **Universal Unit S
 ## 2. Discovery vs. Invention: Bridging the Universal and the Earthly
 A central theme of this discussion is that the UUS is a **discovery**, not an invention. This distinguishes it from previous unit system proposals:
 
-- **TGM (Time-Gravity-Mass):** A notable 12-base system developed by Tom Pendlebury, which prioritizes human-scale convenience. TGM defines units so that the Earth's surface gravity ($g$) and the density of water are near-unity, making it a highly practical "Metric-like" system for everyday life
+- **TGM (Tim-Grafut-Maz):** A notable 12-base system developed by Tom Pendlebury, named after its fundamental units: ***Tim*** (time), ***Grafut*** (length), and ***Maz*** (mass). TGM prioritizes human-scale convenience by defining its units so that the Earth's surface gravity ($g$) and the density of water are near-unity, making it a highly practical "Metric-like" system for everyday life
 (see [**why TGM is not based on fundamental constants**](https://suchowan.seesaa.net/article/201410article_11_1.html)).
 
 - **The Harmonic System (UUS):** In contrast, the Harmonic System prioritizes the integration of universal constants. It functions as a "Base-12 Metric System" that naturally aligns with earthly scales (see this [**simplified overview**](https://suchowan.seesaa.net/article/202501article_17_1.html) for the definition of units like the ***harmon***).
