@@ -334,6 +334,22 @@ analysis and intuitive understanding.
 
 ---
 
+## Note on Professional Notation
+
+In the Harmonic System, descriptive logic is maintained at every level, including symbolic notation. For example, the **meridian sub cycle** is denoted as **$m_{E\flat}{\Omega_1}$**, where the italicized $m$ represents the geodetic constant. Furthermore, unique units like the ***nohm*** (${}_{\natural}\Omega$) and ***turn*** ($\Omega_2$) establish the Harmonic context so strongly that redundant terms can be omitted in vocalization, allowing for concise spoken terms like ***nohm ampere*** for electric potential. 
+
+*Refer to **revised.pdf Table 4, 6, and 8** for the formal symbolic grammar.*
+
+### Standard for Notation vs. Vocalization
+
+To ensure maximum logical integrity and avoid ambiguity in multi-system environments, the system prefix **“±” (Harmonic)** must always be included in **written symbols**, even when the context appears clear. However, for the sake of representational efficiency in **vocalization (speech)**, the term “harmonic” may be omitted if the unit name already establishes the specific context of the system.
+
+- **Written:** ${}_{\natural}\Omega {}_\pm\text{A}$  
+- **Spoken (Concise):** “*Nohm Ampere*”  
+- **Spoken (Formal):** “*Nohm Harmonic Ampere*”
+
+---
+
 ## Conclusion: The Efficiency of the Discovery
 
 The intense resonance that AI systems (LLMs) show toward these formulas is a result of their optimization for **pattern detection and data compression**. 
