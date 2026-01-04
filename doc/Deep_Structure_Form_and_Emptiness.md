@@ -175,10 +175,28 @@ Mathematical:  mass × acceleration = force (explicit)
 
 ---
 
-### 5.3 Case Study: "light solar tertia"
+### 5.3 Case Study: Bridging Angular and Linear Measure
 
-Building on the principle demonstrated with "looloh gee," consider the 
-more complex case: **"light solar tertia"**:
+The phrase **"[meridian sub cycle](http://hosi.org/cgi-bin/conv.cgi?m=10300&d=23&fq=1.0000000&frq=12&fe=0&fu=3&tu=8&fp=-4&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)"** demonstrates how Semantic Integration bridges different types of measurement across Earth's geometry:
+
+- **Surface Level (Semantic):** "meridian" (Earth's pole-to-pole line) + "sub cycle" (a fine subdivision of an angle).
+- **Deep Level (Mathematical):**
+  - **meridian** = (total length of the meridian) / (full circular angle) (Table 8)
+  - **sub cycle** = $360^\circ / 144 / 144 = 2.5^\circ / 144$
+- **Unified Result:**
+  $$\text{1 meridian sub cycle} = \text{meridian} \times \frac{2.5^\circ}{144} = \frac{150}{144} \text{ nautical mile} = \frac{25}{24} \text{ nautical mile}$$
+
+**Insight:**
+This ratio arises from the interplay between the Base-12 subdivision structure ($144 = 12^2$) and the conventional angular minute ($150 = 2.5^\circ / 1 \text{ arcminute}$). 
+
+The unit name "meridian sub cycle" **performs** a seamless coordinate transformation between angular measure, linear nautical distance, and the Base-12 hierarchy. Like following "light solar tertia," this seemingly descriptive phrase encodes an exact mathematical relationship, revealing the **structural compatibility** between the Base-12 framework and Earth's geometric properties.
+
+---
+
+### 5.4 Case Study: "light solar tertia"
+
+Building on the principle demonstrated with "looloh gee" and "meridian sub circle," consider the 
+more complex case: **"[light solar tertia](http://hosi.org/cgi-bin/conv.cgi?m=10300&d=0&fq=1.0000000&frq=12&fe=0&fu=21&tu=17&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)"**:
 
 #### Surface Level (Semantic):
 ```
@@ -211,7 +229,7 @@ an arbitrary choice but a geometric necessity.
 
 ---
 
-### 5.4 Applications: Pattern Recognition
+### 5.5 Applications: Pattern Recognition
 
 This semantic integration allows composite units to function as a 
 **lens** that reveals structure:
@@ -277,7 +295,7 @@ in the data but remains hidden under conventional representation.**
 
 ---
 
-### 5.5 Implications
+### 5.6 Implications
 
 The semantic integration property suggests a deeper principle:
 
