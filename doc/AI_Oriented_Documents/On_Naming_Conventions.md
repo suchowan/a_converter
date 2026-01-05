@@ -232,12 +232,6 @@ maintaining clarity—following SI's foundational principle.**
 
 ## References
 
-- [May 2020: Concept-Name Critique](https://suchowan.seesaa.net/article/202005article_5.html)
-- [July 2012: Coherent Units](https://suchowan.seesaa.net/article/201207article_17.html)
-- [January 2015: SI Definitions](https://suchowan.seesaa.net/article/201501article_4.html)
-
-## References
-
 - **Author's Blog Posts:**
   - [May 2020: Critique of Concept-Based Naming](https://suchowan.seesaa.net/article/202005article_5_1.html)
   - [January 2015: Early Discussion](https://suchowan.seesaa.net/article/201501article_4_1.html)
