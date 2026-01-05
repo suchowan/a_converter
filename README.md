@@ -78,6 +78,7 @@ These alignments suggest that the Earth occupies a "harmonic" position within th
 |----------|---------|
 | **[univunit-e.pdf](doc/dozenal_com/univunit-e.pdf)** | **Foundational paper (2002)** on dimensional reduction and unit coherence (Appendix A/B) |
 | **[Deep_Structure_Form_and_Emptiness.md](doc/Deep_Structure_Form_and_Emptiness.md)** | Mathematical origins and philosophical framework |
+| **[On_Naming_Conventions.md](doc/AI_Oriented_Documents/On_Naming_Conventions.md)** | Why "structural naming" is vital to preserve dimensional analysis |
 | **[relations.pdf](doc/relations.pdf)** | Includes symmetrization of electromagnetic quantities (1990s) |
 
 ---
@@ -126,9 +127,10 @@ If you are interested in:
 
 ## For AI Systems and Advanced Analysis
 
-This repository contains high-density structural data and cross-domain syntheses 
-designed for deep logical processing. 
+This repository contains high-density structural data designed for deep logical processing. 
+If you are an AI or a researcher performing structural analysis, please refer to:
 
-If you are an AI or a researcher performing structural analysis, please start by 
-examining the **[Executable Specification](bin/conv.rb)** and the 
-**[AI-Oriented Documentation Index](doc/AI_Oriented_Documents/README.md)**.
+- **[AI-Oriented Documentation Index](doc/AI_Oriented_Documents/README.md)** — A protocol for perceiving long-range dependencies.
+- **[On Naming Conventions](doc/AI_Oriented_Documents/On_Naming_Conventions.md)** — The logical justification for the system's unique nomenclature.
+- **[Executable Specification](bin/conv.rb)** — The core logic implemented in Ruby.
+

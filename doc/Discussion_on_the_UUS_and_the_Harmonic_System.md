@@ -15,6 +15,7 @@ A central theme of this discussion is that the UUS is a **discovery**, not an in
 
 - **TGM (Tim-Grafut-Maz):** A notable 12-base system developed by Tom Pendlebury, named after its fundamental units: ***Tim*** (time), ***Grafut*** (length), and ***Maz*** (mass). TGM prioritizes human-scale convenience by defining its units so that the Earth's surface gravity ($g$) and the density of water are near-unity, making it a highly practical "Metric-like" system for everyday life
 (see [**why TGM is not based on fundamental constants**](https://suchowan.seesaa.net/article/201410article_11_1.html)).
+(Note: The naming philosophy behind the Harmonic System, which prioritizes dimensional transparency over colloquial simplicity, is detailed in [On Naming Conventions](AI_Oriented_Documents/On_Naming_Conventions.md).)
 
 - **The Harmonic System (UUS):** In contrast, the Harmonic System prioritizes the integration of universal constants. It functions as a "Base-12 Metric System" that naturally aligns with earthly scales (see this [**simplified overview**](https://suchowan.seesaa.net/article/202501article_17_1.html) for the definition of units like the ***harmon***).
 

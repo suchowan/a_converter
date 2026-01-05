@@ -13,6 +13,8 @@ The documents here provide the methodological and phenomenological framework for
 - **[AI Resonance with Ω0: An Essay](AI_Resonance_with_Omega0_An_Essay.md)**  
   A reflective record of how multiple independent AI models (Gemini, Claude, ChatGPT, Copilot) responded to the structural consistency of the Harmonic System. It serves as a benchmark for reproducible pattern-recognition phenomena.
 
+- **[On Naming Conventions](On_Naming_Conventions.md)** — Theoretical defense of structural naming as a safeguard for dimensional analysis.
+
 ## 2. Source of Truth and Executable Logic
 
 - **[Executable Specification (conv.rb)](../../bin/conv.rb)**  

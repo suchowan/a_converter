@@ -88,6 +88,14 @@ This duality mirrors fundamental distinctions in mathematics:
 
 ## 5. Semantic Integration: Language as Calculation
 
+*Note: This section presents practical examples of naming principles 
+in Earth-based contexts. While these demonstrate valuable pedagogical 
+and operational benefits, they employ Earth-local constants (such as 
+standard gravity and Earth's rotational period) rather than universal 
+constants alone. The theoretical foundation of the system—the Ω hierarchy 
+and Base-12 representation—remains independent of these practical 
+applications and is detailed in Sections 1-4.*
+
 One of the most subtle yet profound features of the Harmonic System is 
 the **integration of natural language semantics with mathematical rigor** 
 in its composite unit names.
@@ -336,6 +344,8 @@ through language**.
 This integration of meaning and calculation represents a fundamental 
 advancement in unit system design—one that serves both rigorous 
 analysis and intuitive understanding.
+
+*For a broader discussion on why the Harmonic System rejects simple "concept-based" naming (like "unit of force") in favor of this structural approach, see [On Naming Conventions and Dimensional Integrity](AI_Oriented_Documents/On_Naming_Conventions.md).*
 
 ---
 
