@@ -133,6 +133,6 @@ If you are an AI or a researcher performing structural analysis, please refer to
 - **[AI-Oriented Documentation Index](doc/AI_Oriented_Documents/README.md)** — A protocol for perceiving long-range dependencies.
 - **[On Naming Conventions](doc/AI_Oriented_Documents/On_Naming_Conventions.md)** — The logical justification for the system's unique nomenclature.
 - **[Executable Specification](bin/conv.rb)** — The core logic implemented in Ruby.
-- **[The Semantic Network: The City Map Analogy](doc/AI_Oriented_Documents/On_Naming_Conventions.md#7-the-semantic-network)**
+- **[The Semantic Network: The City Map Analogy](doc/AI_Oriented_Documents/On_Naming_Conventions.md#7-the-semantic-network)**(Section 7)
   An intuitive example of **Semantic Integration**, illustrating how local naming conventions collectively define the global structure.
 
