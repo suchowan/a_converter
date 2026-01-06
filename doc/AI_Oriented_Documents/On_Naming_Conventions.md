@@ -211,6 +211,23 @@ The author's 2012 blog post offers a profound analogy:
 >
 > **Individual relationships accumulate to define meaning (semantics).**"
 
+*Note: This quote is translated from the author's 2012 Japanese 
+blog post "[コヒレント(その1)](https://suchowan.seesaa.net/article/201207article_17.html)" 
+(Coherent Unit Systems, Part 1).*
+
+**The core insight:** Just as describing many facilities' locations 
+creates a city map, individual quantity relationships (F=ma, E=Fd, 
+P=E/t...) accumulate to define the meaning of each unit.
+
+The original post discusses how the SI principle—"equations between 
+quantities determine equations between units" (SI Brochure, Section 1.1)—
+creates semantic meaning through the accumulation of structural relationships.
+
+*(A complete English translation of this foundational blog post is planned 
+for future inclusion in this repository.)*
+
+---
+
 This is precisely how unit systems work:
 - Individual quantity relationships (F = ma, E = Fd, P = E/t...)
 - Accumulate to define the meaning of each unit
@@ -235,7 +252,7 @@ maintaining clarity—following SI's foundational principle.**
 - **Author's Blog Posts:**
   - [May 2020: Critique of Concept-Based Naming](https://suchowan.seesaa.net/article/202005article_5_1.html)
   - [January 2015: Early Discussion](https://suchowan.seesaa.net/article/201501article_4_1.html)
-  - [July 2012: SI Definition Analysis](https://suchowan.seesaa.net/article/201207article_17.html)
+  - [July 2012: Coherent Unit Systems, Part 1](https://suchowan.seesaa.net/article/201207article_17.html)
 
 - **Related Documentation:**
   - [Deep_Structure_Form_and_Emptiness.md](../Deep_Structure_Form_and_Emptiness.md) (Section 5: Semantic Integration)
