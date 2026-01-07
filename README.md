@@ -4,6 +4,8 @@
 
 This repository presents the **Universal Unit System (UUS)** and its specific realization, the **Harmonic System**, along with **a_converter** — tools for exploring a unit framework where physical constants and astronomical cycles align with unusually low structural entropy.
 
+**Note:** This system is designed to **coexist with SI**, not replace it—offering a complementary educational perspective.
+
 **New to this project?** Start here:
 - **[Discussion on the UUS and Harmonic System](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** — Conceptual overview
 - **[Natural Time Scale diagram](doc/pic/NaturalTimeScale.png)** — Visual summary
