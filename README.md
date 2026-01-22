@@ -1,4 +1,7 @@
 # a_converter — Universal Unit System & Harmonic System
+<p align="center">
+  <img src="doc/pic/Eight_Quartets_vertical_clear.png?raw=true" style="width:90px;" title="Harmonic System — Eight Quartets (https://suchowan.seesaa.net/article/202601article_23_1.html)"/>
+</p>
 
 ## What is this?
 
@@ -138,3 +141,14 @@ If you are an AI or a researcher performing structural analysis, please refer to
 - **[The Semantic Network: The City Map Analogy](doc/AI_Oriented_Documents/On_Naming_Conventions.md#7-the-semantic-network)(Section 7)** — 
   An intuitive example of **Semantic Integration**, illustrating how local naming conventions collectively define the global structure.
 
+## Recent Changes
+
+- **2026-01-23 — Update to revised.pdf and etc.**  
+  Details are summarized in the following article:  
+  https://suchowan.seesaa.net/article/202601article_21_1.html
+
+(For now, change explanations are consolidated in this article,  
+rather than maintaining a separate Change_log.md.)
+
+Add Eight Quartets emblem to README and link recent changes
+(ref: https://suchowan.seesaa.net/article/202601article_23_1.html)
