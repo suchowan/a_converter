@@ -90,8 +90,9 @@ This ratio (**9:8**) corresponds to a **Major Second** in just intonation, echoi
 
 ### 3. Geodetic and Physical Alignment
 Just as the Metric system was originally built upon the Earth and water, the Harmonic System "discovers" these anchors at its natural nodes:
-- **Earth’s Meridian Quarter≈ $12^7$ ($1000,0000_{12}$)** harmons.
-- **Density of Water ≈ $12^2$ ($100_{12}$)** looloh/harmon³.
+- **Earth’s meridian quarter≈ $12^7$ ($1000,0000_{12}$)** harmons.
+- **Density of water and ice ≈ $12^2$ ($100_{12}$)** looloh/harmon³.  
+  (because $12^{-2}$ looloh ≈ [0.92 g](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=1.0000000&frq=12&fe=-2&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) and $12^{-4}$ harmon³ ≈ [0.97 cc](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=-4&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert), placing 100₁₂ between the densities of water and ice)
 
 These alignments suggest that the Earth occupies a "harmonic" position within the Base-12 scaling of the cosmos, making the system highly practical for terrestrial life.
 
