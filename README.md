@@ -95,6 +95,7 @@ Just as the Metric system was originally built upon the Earth and water, the Har
   (because $12^{-2}$ looloh ≈ [0.92 g](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=1.0000000&frq=12&fe=-2&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) and $12^{-4}$ harmon³ ≈ [0.97 cc](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=-4&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert), placing 100₁₂ between the densities of water and ice)
 
 These alignments suggest that the Earth occupies a "harmonic" position within the Base-12 scaling of the cosmos, making the system highly practical for terrestrial life.
+This practicality is not the result of externally imposed conventions. Once an origin (Eq.α) and a base (Eq.Ω) are chosen, the unit scales, naming, and structural relationships arise naturally from within the system, and its cognitive and practical affinity emerges as a consequence of this internal coherence.
 
 ---
 
