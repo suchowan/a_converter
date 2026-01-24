@@ -7,33 +7,67 @@
 
 This repository presents the **Universal Unit System (UUS)** and its specific realization, the **Harmonic System**, along with **a_converter** — tools for exploring a unit framework where physical constants and astronomical cycles align with unusually low structural entropy.
 
+The Harmonic System is defined by **two independent choices**:
+
+- **Origin Selection (Eq.α)** — Calendar Symmetric Approximation  
+  *Where to anchor the system: Earth's rotation and revolution*
+  
+- **Base Selection (Eq.Ω)** — Constants Approximation  
+  *What base to use: 12 from alignment of physical constants*
+
+**Both are equally essential; neither is derived from the other.**  
+Together, they uniquely determine the system's structure.
+
 **Note:** This system is designed to **coexist with SI**, not replace it—offering a complementary educational perspective.
 
 **New to this project?** Start here:
 - **[Discussion on the UUS and Harmonic System](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** — Conceptual overview
 - **[Natural Time Scale diagram](doc/pic/NaturalTimeScale.png)** — Visual summary
 
-### A Striking Example
+---
 
-The ratio of **1 year to half-day** can be expressed using only powers of 2 and 3:
+## Origin Selection (Eq.α) — Calendar Symmetric Approximation
 
-$$1 \text{ year} / \text{ half-day } \approx 3^{(+6)} + (3^{(+1)} \cdot 2^{(-1)}) - 2^{(-6)}$$
+A fundamental alignment emerges when expressing the ratio of **1 year to half‑day** using only powers of 2 and 3:
 
-This matches the tropical year within **~0.2 seconds**.
-Such patterns become clearly visible when physical constants are expressed in Base-12.
+$$1 \text{ year} / \text{ half-day } \approx 3^{(+6)} + (3^{(+1)} \cdot 2^{(-1)}) - 2^{(-6)} \tag{Eq.α}$$
 
-## Efficiency of Representation: The $\Omega_0$ Convergence
+As an example of Origin Alignment, this approximation matches the tropical year with high precision.  
+The ~0.2‑second agreement refers to the **solar‑nodus scale**;  
+when expressed in **nic units**, the deviation is about **9 seconds per year**, consistent with *[doc/harmonic.pdf](https://github.com/suchowan/a_converter/blob/master/doc/harmonic.pdf)*.
 
-One of the most surprising empirical findings of the Harmonic System is that many macro-scale constants (including those historically used to define the Metric system) can be represented with extreme simplicity:
+This “calendar symmetry” is one of the two structural anchors of the Harmonic System.
 
- $$\text{Constant} \approx \Omega_{0}^{n} \times 12^{m}$$
+---
+
+## Base Selection (Eq.Ω) — Constants Approximation
+
+A second, independent alignment appears in the representation of macro‑scale physical constants:
+
+ $$\text{Constant} \approx \Omega_{0}^{n} \times 12^{m} \tag{Eq.Ω}$$
 
  - **Parameters:** $n \in \{0, \pm 1\}$ and $m \in \text{integer}$.
  - **Core Constant:** $\Omega_0 = 2$ (formally defined as the **total solid angle of a hypersphere** using the **Gamma function**, see **[doc/revised.pdf](doc/revised.pdf), Table 4**).
 
+One of the most surprising empirical findings of the Harmonic System is that many macro-scale constants can be represented with extreme simplicity.
 This pattern holds for diverse values, including the **Earth's meridian length, gravitational acceleration ($g$), water's density, and specific heat** — values historically chosen to define the Metric system. For example, the specific heat of water(4184 J/kg·K) is represented approximately **$\Omega_{0}^{-1} \times 12^{0}$**([12‑base numeric form](http://hosi.org/cgi-bin/conv.cgi?m=00090&d=6&fq=1.0000000&frq=10&fe=0&fu=3&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert)).
 
 While individual alignments might be viewed as coincidental, their collective convergence into this single, low-entropy form suggests that a Base-12 representation can serve a high-resolution **lens** for perceiving aspects of the structural architecture of the Earth-environment system.
+
+---
+
+## The Two Equations Together
+
+**Eq.α (Origin)** and **Eq.Ω (Base)** are the two pillars of the Harmonic System.
+
+| Aspect | Eq.α | Eq.Ω |
+|--------|------|------|
+| **Selects** | Origin | Base |
+| **Source** | Calendar geometry | Physical constants |
+| **Determines** | Time structure, “Harmonic” name | Unit values, scale hierarchy |
+
+They are conceptually independent, though the system exhibits a weak structural coupling (e.g., LCM = \(12^6\) GCD).  
+Together, they define the system’s architecture as structural backbone.
 
 *These observations concern **representational efficiency** and numerical structure, providing a novel perspective on the relationship between mathematical systems and physical discovery.*
 
