@@ -20,9 +20,19 @@ Together, they uniquely determine the system's structure.
 
 **Note:** This system is designed to **coexist with SI**, not replace it—offering a complementary educational perspective.
 
-**New to this project?** Start here:
-- **[Discussion on the UUS and Harmonic System](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** — Conceptual overview
-- **[Natural Time Scale diagram](doc/pic/NaturalTimeScale.png)** — Visual summary
+## New to this project? Start here
+
+The main reference document of this project is **revised.pdf**, which summarizes
+the current structure, design principles, and notation of the Universal Unit System
+and the Harmonic System.
+
+- **[Main document: revised.pdf](doc/revised.pdf)** — Comprehensive and up-to-date description of the system
+
+For an intuitive overview, see:
+
+- **[Overview: The Harmonic System — A Unified Framework for Units](doc/pic/Eight_Quartets_Overview_AI_edited.png)** — High-level diagram (click to view)
+- **[Natural Time Scale diagram](doc/pic/NaturalTimeScale.png)** — Visual summary of the time structure
+- **[Discussion on the UUS and Harmonic System](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** — Conceptual overview and historical background
 
 ---
 
