@@ -40,7 +40,7 @@ For an intuitive overview, see:
 
 A fundamental alignment emerges when expressing the ratio of **1 year to half‑day** using only powers of 2 and 3:
 
-$$1 \text{ year} / \text{ half-day } \approx 3^{(+6)} + (3^{(+1)} \cdot 2^{(-1)}) - 2^{(-6)} \tag{Eq.α}$$
+$$1 \text{ year} / \text{ half-day } \approx 3^{(+6)} + (3^{(+1)} \cdot 2^{(-1)}) - 2^{(-6)} $$
 
 As an example of Origin Alignment, this approximation matches the tropical year with high precision.  
 The ~0.2‑second agreement refers to the **solar‑nodus scale**;  
@@ -54,7 +54,7 @@ This “calendar symmetry” is one of the two structural anchors of the Harmoni
 
 A second, independent alignment appears in the representation of macro‑scale physical constants:
 
- $$\text{Constant} \approx \Omega_{0}^{n} \times 12^{m} \tag{Eq.Ω}$$
+ $$\text{Constant} \approx \Omega_{0}^{n} \times 12^{m} $$
 
  - **Parameters:** $n \in \{0, \pm 1\}$ and $m \in \text{integer}$.
  - **Core Constant:** $\Omega_0 = 2$ (formally defined as the **total solid angle of a hypersphere** using the **Gamma function**, see **[doc/revised.pdf](doc/revised.pdf), Table 4**).
