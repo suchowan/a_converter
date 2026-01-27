@@ -1,6 +1,6 @@
 # a_converter — Universal Unit System & Harmonic System
 <p align="center">
-  <img src="doc/pic/Eight_Quartets_vertical_clear.png?raw=true" style="width:90px;" title="Harmonic System — Eight Quartets (https://suchowan.seesaa.net/article/202601article_23_1.html)"/>
+  <img src="doc/pic/Eight_Quartets_vertical_clear.png" style="width:90px;" title="Harmonic System — Eight Quartets (https://suchowan.seesaa.net/article/202601article_23_1.html)"/>
 </p>
 
 ## What is this?
