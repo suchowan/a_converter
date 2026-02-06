@@ -31,6 +31,7 @@ and the Harmonic System.
 For an intuitive overview, see:
 
 - **[Overview: The Harmonic System — A Unified Framework for Units](doc/pic/Eight_Quartets_Overview_AI_edited.png)** — High-level diagram (click to view)
+- **[The Overlap That Creates the Harmonic System](https://suchowan.seesaa.net/article/202602article_6_1.html)** — Explanation of the Venn Diagram (revised.pdf §E)
 - **[Natural Time Scale diagram](doc/pic/NaturalTimeScale.png)** — Visual summary of the time structure
 - **[Discussion on the UUS and Harmonic System](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** — Conceptual overview and historical background
 
@@ -102,7 +103,7 @@ This ratio (**9:8**) corresponds to a **Major Second** in just intonation, echoi
 Just as the Metric system was originally built upon the Earth and water, the Harmonic System "discovers" these anchors at its natural nodes:
 - **Earth’s meridian quarter≈ $12^7$ ($1000,0000_{12}$)** harmons.
 - **Density of water and ice ≈ $12^2$ ($100_{12}$)** looloh/harmon³.  
-  (because $12^{-2}$ looloh ≈ [0.92 g](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=1.0000000&frq=12&fe=-2&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) and $12^{-4}$ harmon³ ≈ [0.97 cc](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=-4&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert), placing 100₁₂ between the densities of water and ice)
+  (because $12^{-2}$ looloh ≈ [0.92 gram](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=1.0000000&frq=12&fe=-2&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) and $12^{-4}$ harmon³ ≈ [0.97 cm³](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=-4&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert), placing 100₁₂ between the densities of water and ice)
 
 These alignments suggest that the Earth occupies a "harmonic" position within the Base-12 scaling of the cosmos, making the system highly practical for terrestrial life.
 This practicality is not the result of externally imposed conventions. Once an origin (Eq.α) and a base (Eq.Ω) are chosen, the unit scales, naming, and structural relationships arise naturally from within the system, and its cognitive and practical affinity emerges as a consequence of this internal coherence.

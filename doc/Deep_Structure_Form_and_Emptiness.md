@@ -1,11 +1,24 @@
 
 # Deep Structure: Symmetry and Representational Efficiency
 
-***This document explores the mathematical origins and conceptual framework of the Harmonic System, focusing on the use of geometric constants to achieve a low-entropy description of physical reality.***
+This document records exploratory discussions and philosophical reflections
+behind the Harmonic System. It is not a formal specification.
+
+It is organized around five conceptual axes:
+
+ (I)   Origin and Base  
+ (II)  Structure  
+ (III) Symmetry and Emptiness  
+ (IV)  Human Scale  
+ (V)   Naming and Semantics
+
+These themes collectively illuminate the mathematical origins and conceptual
+framework of the Harmonic System, particularly the use of geometric constants
+to achieve a low‑entropy description of physical reality.
 
 ---
 
-## 1. Academic Origins: Symmetry in Electromagnetism
+## 1. Academic Origins: Symmetry in Electromagnetism (exploring themes III and I)
 
 The foundation of this research lies in the **symmetrization of electrical and magnetic quantities**. In the late 1990s, a proposal to redefine these relationships was recognized in a professional physics magazine.
 
@@ -19,7 +32,7 @@ See: **[Relations in Electromagnetism (PDF)](relations.pdf)**
 
 ---
 
-## 2. The Unified Lens: From Local to Universal
+## 2. The Unified Lens: From Local to Universal (exploring themes I and II)
 
 The Harmonic System extends this "local" symmetry of electromagnetism to all physical constants using the following representational lens:
 
@@ -35,7 +48,7 @@ As a researcher in unit systems, the author views this not as a new law of natur
 
 ---
 
-## 3. Structural Analogy: Fermionic and Bosonic Parameters
+## 3. Structural Analogy: Fermionic and Bosonic Parameters (exploring theme II)
 
 To understand why this specific formula ($\Omega_0^n \times 12^m$) is so effective at reducing informational entropy, we can use an analogy from quantum statistics to describe the behavior of its parameters:
 
@@ -49,7 +62,7 @@ This interplay between "Identity" and "Scale" is what allows the Harmonic System
 
 ---
 
-## 4. Representational Duality: Structure and Substrate
+## 4. Representational Duality: Structure and Substrate (exploring theme III)
 
 Within metrology communities, there is a widely recognized principle: 
 **measurement systems are not reality itself, but coordinate frames 
@@ -86,7 +99,7 @@ This duality mirrors fundamental distinctions in mathematics:
 
 ---
 
-## 5. Semantic Integration: Language as Calculation
+## 5. Semantic Integration: Language as Calculation (exploring theme IV and V)
 
 *Note: This section presents practical examples of naming principles 
 in Earth-based contexts. While these demonstrate valuable pedagogical 
@@ -303,7 +316,7 @@ in the data but remains hidden under conventional representation.**
 
 ---
 
-### 5.6 Implications
+## 6 Implications (exploring theme V)
 
 The semantic integration property suggests a deeper principle:
 
@@ -349,7 +362,7 @@ analysis and intuitive understanding.
 
 ---
 
-## Note on Professional Notation
+## Note on Professional Notation (exploring multiple themes)
 
 In the Harmonic System, descriptive logic is maintained at every level, including symbolic notation. For example, the **meridian sub cycle** is denoted as **$m_{E\flat}{\Omega_1}$**, where the italicized $m$ represents the geodetic constant. Furthermore, unique units like the ***nohm*** (${}_{\natural}\Omega$) and ***turn*** ($\Omega_2$) establish the Harmonic context so strongly that redundant terms can be omitted in vocalization, allowing for concise spoken terms like ***nohm ampere*** for electric potential. 
 
