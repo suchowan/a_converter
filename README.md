@@ -160,6 +160,11 @@ The foundational concepts of this system were first publicly introduced in the J
 
 **License:** MIT (see [LICENSE.txt](LICENSE.txt))
 
+**Note:** Materials in `doc/published/` are *not* covered by the MIT License.  
+They are included with explicit permission from the original publisher and retain their original copyright.  
+Commercial redistribution of these materials is not permitted. 
+Use is limited to personal study, citation, and archival reference.
+
 **Repository:** [https://github.com/suchowan/a_converter](https://github.com/suchowan/a_converter)
 
 ---
