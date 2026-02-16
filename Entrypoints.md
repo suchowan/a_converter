@@ -17,6 +17,7 @@ Because (*1) and (*2) do not interfere dimensionally, the coincidence becomes st
 **Relevant:**  
 - [doc/revised.pdf](doc/revised.pdf) → p.23, equation (15;)  
 - [doc/publishedparity1997.pdf](doc/published) → dimensional analysis background
+- [doc/harmonic.pdf](doc/harmonic.pdf) → “Dozenal” column (dozenalized physical constants)
 
 ---
 
@@ -31,24 +32,31 @@ This approximation is the simplest numerical doorway into the system.
 
 **Relevant:**  
 - [README.md](README.md#origin-selection-eq%CE%B1--calendar-symmetric-approximation) → “Origin selection (Eq.α)”  
-- [doc/harmonic.pdf](doc/harmonic.pdf) → Sections on calendar symmetry
+- [doc/harmonic.pdf](doc/harmonic.pdf) → Orange column of the item “Time” (calendar symmetry)
+- [doc/pic/NaturalTimeScale.png](doc/pic/NaturalTimeScale.png) → Natural time scale from Planck time to the universe age
 
 ---
 
 ## 3. For readers interested in **chemistry / periodic structure**  
 ### **Universal mol and nucleon alignment**  
 Using equation (16;) in *revised.pdf*, nucleon masses fall into a dozenal framework independently of $\alpha$.  
-This leads to a “universal mol” of  
+As shown in *atomic.pdf*, the ter‑atomic looloh treats
+the atomic masses of all elements as effectively “atomic‑mass‑unit sized” quantities
+with sufficient precision for structural use.
 
-  $100_{12}{}^{10_{12}} N_{\text{A}}^{-1}$ ,
+Under this combined assumption, the universal mol can be defined exactly as
 
-which places Carbon‑12 and Iron‑56 on opposite sides of the ter‑atomic looloh.  
-The alignment is structurally independent of α, and provides a natural dozenal expression for chemical quantities.  
-This coincidence is statistically unlikely.
+  $100_{12}{}^{10_{12}} N_{\text{A}}^{-1}$
+
+in dozenal form.
+
+The agreement between the natural distribution of atomic masses and this dozenal
+structure is so precise that it appears statistically improbable as a mere coincidence.
 
 **Relevant:**  
 - [doc/revised.pdf](doc/revised.pdf) → equations (15;) and (16;)  
-- [doc/publishedparity1997.pdf](doc/published) → Table 6 ( [univunit‑e.pdf](doc/dozenal_com/univunit-e.pdf) )
+- [doc/published/parity1997.pdf](doc/published) → Table 6 ( [univunit‑e.pdf](doc/dozenal_com/univunit-e.pdf) )
+- [doc/atomic.pdf](doc/atomic.pdf)  → mean and typical atomic weights
 
 ---
 
