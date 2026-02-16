@@ -69,6 +69,8 @@ While individual alignments might be viewed as coincidental, their collective co
 
 ## The Two Equations Together
 
+For domain‑specific introductions, see [Entrypoints.md](Entrypoints.md).
+
 **Eq.α (Origin)** and **Eq.Ω (Base)** are the two pillars of the Harmonic System.
 
 | Aspect | Eq.α | Eq.Ω |

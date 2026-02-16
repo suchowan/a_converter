@@ -17,8 +17,10 @@ Each entry provides:
 
 **『パリティ』1997年4月号（丸善出版）63–65頁**  
 NDL Search: https://ndlsearch.ndl.go.jp/books/R000000004-I4171023  
+
 **Parity, April 1997, pp. 63–65**  
-**PDF:** [Parity_1997_4_pp.63-65.pdf](Parity_1997_4_pp.63-65.pdf)
+**PDF:** [Parity_1997_4_pp.63-65.pdf](Parity_1997_4_pp.63-65.pdf)  
+**MD:** [English Markdown Digest on Gist](https://gist.github.com/suchowan/5c2f1ca3cfb79b3abb8ae40bbf3a2a5f)
 
 This short article presents an early formulation of the idea of *rearranging the dimensions of electromagnetic quantities*.  
 Although written long before the Universal Unit System (UUS) was fully developed, it already contains the conceptual seed of  
