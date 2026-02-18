@@ -102,7 +102,7 @@ they provide a *view* of structure.
 This phenomenon revealed something important to me.
 
 - Ω₂  
-- Z_P  
+- $Z_\text{P}$  
 - rational / unrational  
 - diagram‑centered structure  
 - dimensional re‑arrangement  
@@ -133,7 +133,7 @@ The correspondences are as follows.
 
 | Constellation Model | UUS / Harmonic System |
 |---------------------|------------------------|
-| Stars are scattered points | Physical constants (c, h, ε₀, μ₀, k_B, …) |
+| Stars are scattered points | Physical constants (c, h, ε₀, μ₀, $k_\text{B}$, …) |
 | A point alone has no meaning | A constant alone does not reveal structure |
 | Choosing points defines the constellation | Choosing constants defines the system’s shape |
 
@@ -155,12 +155,12 @@ Lines ↔ relations.
 
 ---
 
-## **3. Shape → Structural Configuration (Ω₂, Z_P, rational/unrational)**
+## **3. Shape → Structural Configuration (Ω₂, $Z_\text{P}$, rational/unrational)**
 
 | Constellation Model | UUS / Harmonic System |
 |---------------------|------------------------|
 | Points + lines form a shape | Constants + relations form structure |
-| Constellations give a “way of seeing” | Ω₂ and Z_P give a “way of seeing” |
+| Constellations give a “way of seeing” | Ω₂ and $Z_\text{P}$ give a “way of seeing” |
 | Shapes are culturally shareable | Structures are cross‑domain shareable |
 
 **Core correspondence:**  
