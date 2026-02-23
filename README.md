@@ -53,14 +53,14 @@ This “calendar symmetry” is one of the two structural anchors of the Harmoni
 
 ## Base Selection (Eq.Ω) — Constants Approximation
 
-A second, independent alignment appears in the representation of macro‑scale physical constants:
+A second, independent alignment appears in the representation of macro‑ and micro-scale physical constants:
 
  $$\text{Constant} \approx \Omega_{0}^{n} \times 12^{m} $$
 
  - **Parameters:** $n \in \{0, \pm 1\}$ and $m \in \text{integer}$.
  - **Core Constant:** $\Omega_0 = 2$ (formally defined as the **total solid angle of a hypersphere** using the **Gamma function**, see **[doc/revised.pdf](doc/revised.pdf), Table 4**).
 
-One of the most surprising empirical findings of the Harmonic System is that many macro-scale constants can be represented with extreme simplicity.
+One of the most surprising empirical findings of the Harmonic System is that many macro- and micro-scale constants can be represented with extreme simplicity.
 This pattern holds for diverse values, including the **Earth's meridian length, gravitational acceleration ($g$), water's density, and specific heat** — values historically chosen to define the Metric system. For example, the specific heat of water(4184 J/kg·K) is represented approximately **$\Omega_{0}^{-1} \times 12^{0}$**([12‑base numeric form](http://hosi.org/cgi-bin/conv.cgi?m=00090&d=6&fq=1.0000000&frq=10&fe=0&fu=3&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert)).
 
 While individual alignments might be viewed as coincidental, their collective convergence into this single, low-entropy form suggests that a Base-12 representation can serve a high-resolution **lens** for perceiving aspects of the structural architecture of the Earth-environment system.
@@ -79,7 +79,7 @@ For domain‑specific introductions, see [Entrypoints.md](Entrypoints.md).
 | **Source** | Calendar geometry | Physical constants |
 | **Determines** | Time structure, “Harmonic” name | Unit values, scale hierarchy |
 
-They are conceptually independent, though the system exhibits a weak structural coupling (e.g., LCM = \(12^6\) GCD).  
+They are conceptually independent, though the system exhibits a weak structural coupling (e.g., LCM = $12^6$ GCD).  
 Together, they define the system’s architecture as structural backbone.
 
 *These observations concern **representational efficiency** and numerical structure, providing a novel perspective on the relationship between mathematical systems and physical discovery.*
@@ -99,16 +99,18 @@ In this system, 1 day is defined as $1000_{12}$ (*one doz gross*) tertias. Conse
 The fundamental unit of length, the ***harmon*** (approx. 27.2 cm), bridges the gap between universal constants and human-scale intuition:
 - **9 harmons ≈ 8 feet** 
 
-This ratio (**9:8**) corresponds to a **Major Second** in just intonation, echoing the "Harmonic" nature of the system. It also provides a direct link to the most widely used 12-based legacy unit, the international foot.
+This ratio (**9:8** - Harmonic Ratio, $\text{ω}_1 = 9/8$) corresponds to a **Major Second** in just intonation, echoing the "Harmonic" nature of the system. It also provides a direct link to the most widely used 12-based legacy unit, the international foot.
 
 ### 3. Geodetic and Physical Alignment
 Just as the Metric system was originally built upon the Earth and water, the Harmonic System "discovers" these anchors at its natural nodes:
-- **Earth’s meridian quarter≈ $12^7$ ($1000,0000_{12}$)** harmons.
+- **Earth’s meridian quarter≈ $12^7$ ($1000,0000_{12}$)** harmons. [^1]
 - **Density of water and ice ≈ $12^2$ ($100_{12}$)** looloh/harmon³.  
   (because $12^{-2}$ looloh ≈ [0.92 gram](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=1.0000000&frq=12&fe=-2&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) and $12^{-4}$ harmon³ ≈ [0.97 cm³](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=-4&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert), placing 100₁₂ between the densities of water and ice)
 
 These alignments suggest that the Earth occupies a "harmonic" position within the Base-12 scaling of the cosmos, making the system highly practical for terrestrial life.
 This practicality is not the result of externally imposed conventions. Once an origin (Eq.α) and a base (Eq.Ω) are chosen, the unit scales, naming, and structural relationships arise naturally from within the system, and its cognitive and practical affinity emerges as a consequence of this internal coherence.
+
+[^1]:A harmon is shorter than the terrestrial meridian unit by the factor 40/41. The density of ice at 0 ℃ is likewise lighter by nearly the same factor 40/41 (Fine Harmonic Ratio 41 : 40, $\text{ω}_2 = 41/40$). Hence meridian values in harmons are not more precise than SI.
 
 ---
 
