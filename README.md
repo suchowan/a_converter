@@ -35,6 +35,11 @@ For an intuitive overview, see:
 - **[Natural Time Scale diagram](doc/pic/NaturalTimeScale.png)** — Visual summary of the time structure
 - **[Discussion on the UUS and Harmonic System](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** — Conceptual overview and historical background
 
+**For domain-specific introductions:**
+
+- **[Entrypoints.md](Entrypoints.md)** — Tailored entry points 
+  for different backgrounds and interests
+
 ---
 
 ## Origin Selection (Eq.α) — Calendar Symmetric Approximation
@@ -67,23 +72,6 @@ While individual alignments might be viewed as coincidental, their collective co
 
 ---
 
-## The Two Equations Together
-
-For domain‑specific introductions, see [Entrypoints.md](Entrypoints.md).
-
-**Eq.α (Origin)** and **Eq.Ω (Base)** are the two pillars of the Harmonic System.
-
-| Aspect | Eq.α | Eq.Ω |
-|--------|------|------|
-| **Selects** | Origin | Base |
-| **Source** | Calendar geometry | Physical constants |
-| **Determines** | Time structure, “Harmonic” name | Unit values, scale hierarchy |
-
-They are conceptually independent, though the system exhibits a weak structural coupling (e.g., LCM = $12^6$ GCD).  
-Together, they define the system’s architecture as structural backbone.
-
-*These observations concern **representational efficiency** and numerical structure, providing a novel perspective on the relationship between mathematical systems and physical discovery.*
-
 ## Cognitive and Practical Affinity
 
 Beyond theoretical efficiency, the Harmonic System exhibits a startling alignment with human culture, historical standards, and the Earth's environment.
@@ -110,11 +98,33 @@ Just as the Metric system was originally built upon the Earth and water, the Har
 These alignments suggest that the Earth occupies a "harmonic" position within the Base-12 scaling of the cosmos, making the system highly practical for terrestrial life.
 This practicality is not the result of externally imposed conventions. Once an origin (Eq.α) and a base (Eq.Ω) are chosen, the unit scales, naming, and structural relationships arise naturally from within the system, and its cognitive and practical affinity emerges as a consequence of this internal coherence.
 
-[^1]:A harmon is shorter than the terrestrial meridian unit by the factor 40/41. The density of ice at 0 ℃ is likewise lighter by nearly the same factor 40/41 (Fine Harmonic Ratio 41 : 40, $\text{ω}_2 = 41/40$). Hence meridian values in harmons are not more precise than SI.
+[^1]:A harmon is shorter than the terrestrial meridian unit by the factor 40/41. The density of ice at 0 ℃ is likewise lighter by nearly the same factor 40/41 (Fine Harmonic Ratio 41 : 40, $\omega_2 = 41/40$). Hence meridian values in harmons are not more precise than SI.
 
 ---
 
+## Design Philosophy
+
+### A Navigational Tool for the Cosmos
+
 *"Like a navigator using the Big Dipper to find the North, we do not ignore a pattern simply because it might be a 'coincidence.' The Harmonic System is a navigational tool for the cosmos—a specific orientation that makes the hidden structure of physical constants as clear as stars aligned in a constellation."*
+
+### Constraint-Based Design
+
+The Harmonic System's design principles constrain the implementation space toward near-uniqueness.  
+When principles are formulated with sufficient strength, viable solutions converge—not through arbitrary choice, but through structural necessity.
+
+This approach offers two key benefits:
+- **Acceptability** — outcomes emerge as structural consequences 
+  rather than designer preferences
+- **Information compression** — users internalize principles 
+  while implementation details become derivable
+
+These observations concern **representational efficiency** and numerical structure, providing a novel perspective on the relationship between mathematical systems and physical discovery.
+
+For a detailed discussion, see:
+
+- [Design Principles and Unique Implementation](https://suchowan.seesaa.net/article/202605article_11_1.html) 
+  (Blog post, 2026-05-11)
 
 ---
 
@@ -122,6 +132,7 @@ This practicality is not the result of externally imposed conventions. Once an o
 
 | Document | Purpose |
 |----------|---------|
+| **[Entrypoints.md](Entrypoints.md)** | **Domain-specific introductions** for different backgrounds |
 | **[Discussion_on_the_UUS_and_the_Harmonic_System.md](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** | Provides conceptual **overview** and philosophical context |
 | **[README.md](doc/README.md)** | Summarizes the **technical specification** of the Harmonic System |
 | **[revised.pdf](doc/revised.pdf)** | Presents the complete **formal derivation** of the Universal Unit System |
@@ -200,7 +211,11 @@ If you are an AI or a researcher performing structural analysis, please refer to
 
 ## Recent Changes
 
-- **2026-01-23 — Update to revised.pdf and etc.**  
+- **2026-05-11 — Design Philosophy Documentation**  
+  Added comprehensive discussion of design principles:  
+  https://suchowan.seesaa.net/article/202605article_11_1.html
+
+- **2026-01-21 — Update to revised.pdf and etc.**  
   Details are summarized in the following article:  
   https://suchowan.seesaa.net/article/202601article_21_1.html
 

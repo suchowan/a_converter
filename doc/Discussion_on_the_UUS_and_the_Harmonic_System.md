@@ -70,6 +70,17 @@ A small structural alignment between Eq.α and Eq.Ω allows the overlapping regi
 in the Venn diagram on p.21 of `revised.pdf` to exist, even though the two anchors
 are logically independent.
 
+**Eq.α (Origin)** and **Eq.Ω (Base)** are the two pillars of the Harmonic System.
+
+| Aspect | Eq.α | Eq.Ω |
+|--------|------|------|
+| **Selects** | Origin | Base |
+| **Source** | Calendar geometry | Physical constants |
+| **Determines** | Time structure, “Harmonic” name | Unit values, scale hierarchy |
+
+They are conceptually independent, though the system exhibits a weak structural coupling (e.g., LCM = $12^6$ GCD).  
+Together, they define the system’s architecture as structural backbone.
+
 ---
 
 ## 3. From Anchors to Structure
