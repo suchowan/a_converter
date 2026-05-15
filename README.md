@@ -18,7 +18,13 @@ The Harmonic System is defined by **two independent choices**:
 **Both are equally essential; neither is derived from the other.**  
 Together, they uniquely determine the system's structure.
 
-**Note:** This system is designed to **coexist with SI**, not replace it—offering a complementary educational perspective.
+**Note:** The Harmonic System is designed to **coexist with SI**, not replace it—offering a complementary educational perspective.
+Used alongside SI as a comparative **lens**, this system can also help illuminate some of the distinctive characteristics of SI itself.
+
+The Harmonic System is, in a sense, a **constellation**-like framework built not only on structural correspondences discovered retrospectively, 
+but also on explicit and strong design principles. 
+By linking these design principles to a near-unique implementation, the system minimizes learning cost:
+users internalize the principles, while many details become derivable from them.
 
 ## New to this project? Start here
 
@@ -98,7 +104,7 @@ Just as the Metric system was originally built upon the Earth and water, the Har
 These alignments suggest that the Earth occupies a "harmonic" position within the Base-12 scaling of the cosmos, making the system highly practical for terrestrial life.
 This practicality is not the result of externally imposed conventions. Once an origin (Eq.α) and a base (Eq.Ω) are chosen, the unit scales, naming, and structural relationships arise naturally from within the system, and its cognitive and practical affinity emerges as a consequence of this internal coherence.
 
-[^1]:A harmon is shorter than the terrestrial meridian unit by the factor 40/41. The density of ice at 0 ℃ is likewise lighter by nearly the same factor 40/41 (Fine Harmonic Ratio 41 : 40, $\omega_2 = 41/40$). Hence meridian values in harmons are not more precise than SI.
+[^1]: A harmon is shorter than the terrestrial meridian unit by the factor 40/41. The density of ice at 0 ℃ is likewise lighter by nearly the same factor 40/41 (Fine Harmonic Ratio 41 : 40, ω₂ = 41/40). Hence meridian values in harmons are not more precise than SI.
 
 ---
 
@@ -163,6 +169,9 @@ Try the **[a_converter web interface](http://hosi.org/cgi-bin/conv.cgi?m=01080)*
 - It **does** demonstrate that certain mathematical structures become visible when expressed in Base-12 — structures that appear as noise in Base-10.
 
 The Universal Unit System is a **discovery of patterns**, not an invention of new physics.
+
+Some of the structural correspondences emphasized in the Harmonic System were recognized only retrospectively, 
+emerging from the interaction between the design principles and the resulting implementation.
 
 ---
 
