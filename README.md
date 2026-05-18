@@ -37,44 +37,15 @@ and the Harmonic System.
 For an intuitive overview, see:
 
 - **[Overview: The Harmonic System — A Unified Framework for Units](doc/pic/Eight_Quartets_Overview_AI_edited.png)** — High-level diagram (click to view)
-- **[The Overlap That Creates the Harmonic System](https://suchowan.seesaa.net/article/202602article_6_1.html)** — Explanation of the Venn Diagram (revised.pdf §E)
 - **[Natural Time Scale diagram](doc/pic/NaturalTimeScale.png)** — Visual summary of the time structure
 - **[Discussion on the UUS and Harmonic System](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** — Conceptual overview and historical background
+- **[The Overlap That Creates the Harmonic System](https://suchowan.seesaa.net/article/202602article_6_1.html)** — Explanation of the Venn Diagram (revised.pdf §E)
 
 **For domain-specific introductions:**
 
 - **[Entrypoints.md](Entrypoints.md)** — Tailored entry points 
   for different backgrounds and interests
-
----
-
-## Origin Selection (Eq.α) — Calendar Symmetric Approximation
-
-A fundamental alignment emerges when expressing the ratio of **1 year to half‑day** using only powers of 2 and 3:
-
-$$1 \text{ year} / \text{ half-day } \approx 3^{(+6)} + (3^{(+1)} \cdot 2^{(-1)}) - 2^{(-6)} $$
-
-As an example of Origin Alignment, this approximation matches the tropical year with high precision.  
-The ~0.2‑second agreement refers to the **solar‑nodus scale**;  
-when expressed in **nic units**, the deviation is about **9 seconds per year**, consistent with *[doc/harmonic.pdf](https://github.com/suchowan/a_converter/blob/master/doc/harmonic.pdf)*.
-
-This “calendar symmetry” is one of the two structural anchors of the Harmonic System.
-
----
-
-## Base Selection (Eq.Ω) — Constants Approximation
-
-A second, independent alignment appears in the representation of macro‑ and micro-scale physical constants:
-
- $$\text{Constant} \approx \Omega_{0}^{n} \times 12^{m} $$
-
- - **Parameters:** $n \in \{0, \pm 1\}$ and $m \in \text{integer}$.
- - **Core Constant:** $\Omega_0 = 2$ (formally defined as the **total solid angle of a hypersphere** using the **Gamma function**, see **[doc/revised.pdf](doc/revised.pdf), Table 4**).
-
-One of the most surprising empirical findings of the Harmonic System is that many macro- and micro-scale constants can be represented with extreme simplicity.
-This pattern holds for diverse values, including the **Earth's meridian length, gravitational acceleration ($g$), water's density, and specific heat** — values historically chosen to define the Metric system. For example, the specific heat of water(4184 J/kg·K) is represented approximately **$\Omega_{0}^{-1} \times 12^{0}$**([12‑base numeric form](http://hosi.org/cgi-bin/conv.cgi?m=00090&d=6&fq=1.0000000&frq=10&fe=0&fu=3&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert)).
-
-While individual alignments might be viewed as coincidental, their collective convergence into this single, low-entropy form suggests that a Base-12 representation can serve a high-resolution **lens** for perceiving aspects of the structural architecture of the Earth-environment system.
+- **[Online converter](http://hosi.org/cgi-bin/conv.cgi?m=01080)** — Try it first to explore how the system behaves in practice. 
 
 ---
 
@@ -105,6 +76,36 @@ These alignments suggest that the Earth occupies a "harmonic" position within th
 This practicality is not the result of externally imposed conventions. Once an origin (Eq.α) and a base (Eq.Ω) are chosen, the unit scales, naming, and structural relationships arise naturally from within the system, and its cognitive and practical affinity emerges as a consequence of this internal coherence.
 
 [^1]: A harmon is shorter than the terrestrial meridian unit by the factor 40/41. The density of ice at 0 ℃ is likewise lighter by nearly the same factor 40/41 (Fine Harmonic Ratio 41 : 40, ω₂ = 41/40). Hence meridian values in harmons are not more precise than SI.
+
+---
+
+## Origin Selection (Eq.α) — Calendar Symmetric Approximation
+
+A fundamental alignment emerges when expressing the ratio of **1 year to half‑day** using only powers of 2 and 3:
+
+$$1 \text{ year} / \text{ half-day } \approx 3^{(+6)} + (3^{(+1)} \cdot 2^{(-1)}) - 2^{(-6)} $$
+
+As an example of Origin Alignment, this approximation matches the tropical year with high precision.  
+The ~0.2‑second agreement refers to the **solar‑nodus scale**;  
+when expressed in **nic units**, the deviation is about **9 seconds per year**, consistent with *[doc/harmonic.pdf](https://github.com/suchowan/a_converter/blob/master/doc/harmonic.pdf)*.
+
+This “calendar symmetry” is one of the two structural anchors of the Harmonic System.
+
+---
+
+## Base Selection (Eq.Ω) — Constants Approximation
+
+A second, independent alignment appears in the representation of macro‑ and micro-scale physical constants:
+
+ $$\text{Constant} \approx \Omega_{0}^{n} \times 12^{m} $$
+
+ - **Parameters:** $n \in \{0, \pm 1\}$ and $m \in \text{integer}$.
+ - **Core Constant:** $\Omega_0 = 2$ (formally defined as the **total solid angle of a hypersphere** using the **Gamma function**, see **[doc/revised.pdf](doc/revised.pdf), Table 4**).
+
+One of the most surprising empirical findings of the Harmonic System is that many macro- and micro-scale constants can be represented with extreme simplicity.
+This pattern holds for diverse values, including the **Earth's meridian length, gravitational acceleration ($g$), water's density, and specific heat** — values historically chosen to define the Metric system. For example, the specific heat of water(4184 J/kg·K) is represented approximately **$\Omega_{0}^{-1} \times 12^{0}$**([12‑base numeric form](http://hosi.org/cgi-bin/conv.cgi?m=00090&d=6&fq=1.0000000&frq=10&fe=0&fu=3&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert)).
+
+While individual alignments might be viewed as coincidental, their collective convergence into this single, low-entropy form suggests that a Base-12 representation can serve a high-resolution **lens** for perceiving aspects of the structural architecture of the Earth-environment system.
 
 ---
 
@@ -153,12 +154,6 @@ For a detailed discussion, see:
 | **[Deep_Structure_Form_and_Emptiness.md](doc/Deep_Structure_Form_and_Emptiness.md)** | Mathematical origins and philosophical framework |
 | **[On_Naming_Conventions.md](doc/AI_Oriented_Documents/On_Naming_Conventions.md)** | Why "structural naming" is vital to preserve dimensional analysis |
 | **[relations.pdf](doc/relations.pdf)** | Includes symmetrization of electromagnetic quantities (1990s) |
-
----
-
-## Online Converter
-
-Try the **[a_converter web interface](http://hosi.org/cgi-bin/conv.cgi?m=01080)** to explore unit conversions between decimal and dozenal (Base-12) systems.
 
 ---
 
