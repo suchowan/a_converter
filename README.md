@@ -39,7 +39,7 @@ For an intuitive overview, see:
 - **[Overview: The Harmonic System — A Unified Framework for Units](doc/pic/Eight_Quartets_Overview_AI_edited.png)** — High-level diagram (click to view)
 - **[Natural Time Scale diagram](doc/pic/NaturalTimeScale.png)** — Visual summary of the time structure
 - **[Discussion on the UUS and Harmonic System](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** — Conceptual overview and historical background
-- **[The Overlap That Creates the Harmonic System](https://suchowan.seesaa.net/article/202602article_6_1.html)** — Explanation of the Venn Diagram (revised.pdf §E) from [blog articles](https://suchowan.seesaa.net/search?keyword=%3EJapanese%3C)
+- **[The Overlap That Creates the Harmonic System](https://suchowan.seesaa.net/article/202602article_6_1.html)** — Explanation of the [Venn Diagram](doc/pic/VennUGE.png) (revised.pdf §E) from [blog posts](https://suchowan.seesaa.net/search?keyword=%3EJapanese%3C)
 
 **For domain-specific introductions:**
 
@@ -58,7 +58,7 @@ One might expect a Base-12 shift to disrupt our sense of time. However, the Harm
 - **1 hour = 60 minutes** (Decimal)
 - **1 hour = 60; tertias** (Dozenal)
 
-In this system, 1 day is defined as $1000_{12}$ (*one doz gross*) tertias. Consequently, a single hour ($1/24$ day) corresponds exactly to **$60_{12}$** ($72_{10}$) tertias, allowing for a seamless transition in our visual and cognitive representation of time's divisions.
+In this system, 1 day is defined as $1000_{12}$ ([*one doz gross*](doc/pic/myriad.jpg)) tertias. Consequently, a single hour ($1/24$ day) corresponds exactly to **$60_{12}$** ($72_{10}$) tertias, allowing for a seamless transition in our visual and cognitive representation of time's divisions.
 
 ### 2. A Musical Bridge to the Human Scale
 The fundamental unit of length, the ***harmon*** (approx. 27.2 cm), bridges the gap between universal constants and human-scale intuition:
@@ -69,7 +69,7 @@ This ratio (**9:8** - Harmonic Ratio, $\text{ω}_1 = 9/8$) corresponds to a **Ma
 ### 3. Geodetic and Physical Alignment
 Just as the Metric system was originally built upon the Earth and water, the Harmonic System "discovers" these anchors at its natural nodes:
 - **Earth’s meridian quarter≈ $12^7$ ($1000,0000_{12}$)** harmons. [^1]
-- **Density of water and ice ≈ $12^2$ ($100_{12}$)** looloh/harmon³.  
+- **Density of water and ice ≈ $12^2$ ($100_{12}$)** [looloh/harmon³](doc/pic/Cube.png).  
   (because $12^{-2}$ looloh ≈ [0.92 gram](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=1.0000000&frq=12&fe=-2&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) and $12^{-4}$ harmon³ ≈ [0.97 cm³](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=-4&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert), placing 100₁₂ between the densities of water and ice)
 
 These alignments suggest that the Earth occupies a "harmonic" position within the Base-12 scaling of the cosmos, making the system highly practical for terrestrial life.
