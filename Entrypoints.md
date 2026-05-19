@@ -66,7 +66,8 @@ The *parity1997* approach expresses electromagnetic quantities without $\epsilon
 
   $e = \sqrt{\alpha \hbar / Z_{\text{P}}}$ .
 
-These operators make the dimensional structure explicit and reduce reliance on conventional electromagnetic constants.
+These operators make the dimensional structure explicit and reduce reliance on conventional electromagnetic constants.  
+See [operator table](doc/pic/Em-eq.png) (older notation: Ωn corresponds to the current ♮Ω).
 
 **Relevant:**  
 - [doc/publishedparity1997.pdf](doc/published) → operator formulation  
