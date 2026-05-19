@@ -39,7 +39,7 @@ For an intuitive overview, see:
 - **[Overview: The Harmonic System — A Unified Framework for Units](doc/pic/Eight_Quartets_Overview_AI_edited.png)** — High-level diagram (click to view)
 - **[Natural Time Scale diagram](doc/pic/NaturalTimeScale.png)** — Visual summary of the time structure
 - **[Discussion on the UUS and Harmonic System](doc/Discussion_on_the_UUS_and_the_Harmonic_System.md)** — Conceptual overview and historical background
-- **[The Overlap That Creates the Harmonic System](https://suchowan.seesaa.net/article/202602article_6_1.html)** — Explanation of the Venn Diagram (revised.pdf §E)
+- **[The Overlap That Creates the Harmonic System](https://suchowan.seesaa.net/article/202602article_6_1.html)** — Explanation of the Venn Diagram (revised.pdf §E) from [blog articles](https://suchowan.seesaa.net/search?keyword=%3EJapanese%3C)
 
 **For domain-specific introductions:**
 
