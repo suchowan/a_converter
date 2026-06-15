@@ -21,7 +21,7 @@ subscripted. SI equivalents are taken from the *Clock_by_Rydberg* sheet of
 | <font color='royalblue'>rad</font> | [radian](http://hosi.org/cgi-bin/conv.cgi?c=d&m=100f0&d=86&tu=1&tr=10&tm=off&tp=0&tl=0&fu=0&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert)| plane angle | same as SI | natural, coherent, core |  [radian](https://en.wikipedia.org/wiki/Radian) |
 | <font color='royalblue'>neper</font> | [neper](http://hosi.org/cgi-bin/conv.cgi?c=fu&m=100f0&d=59&tu=1&tr=10&tm=off&tp=0&tl=0&fu=2&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert) | logarithm of Napier's constant | same as SI | natural, base | [neper](https://en.wikipedia.org/wiki/Neper) |
 | <font color='royalblue'><sub>♮</sub>mol</font> | [natural mol](http://hosi.org/cgi-bin/conv.cgi?m=100c0&d=0&fq=1.0000000&frq=12&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | reciprocal Avogadro constant (<font color='royalblue'>N<sub>A</sub>⁻¹</font>) | mol / 602,214,076,000,000,000,000,000 | `♮` ≡ `3-`; substance must be specified | [Avogadro constant](https://en.wikipedia.org/wiki/Avogadro_constant) ⁻¹ |
-| <font color='royalblue'><sub>♮</sub>Ω</font> (<font color='royalblue'>Z<sub>P</sub></font>) | [nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | natural unit of impedance | 29.9792458 Ω | vacuum impedance | [Impedance of free space](https://en.wikipedia.org/wiki/Impedance_of_free_space) / `Ω₂` |
+| <font color='royalblue'><sub>♮</sub>Ω</font> (<font color='royalblue'>Z<sub>P</sub></font>) | [nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | natural unit of impedance | 29.9792458 Ω | vacuum impedance | [Impedance of free space](https://en.wikipedia.org/wiki/Impedance_of_free_space) / [`Ω₂`](#5-derived-units--electromagnetic) |
 
 ## 2. Base Units (not natural)
 
@@ -57,6 +57,21 @@ subscripted. SI equivalents are taken from the *Clock_by_Rydberg* sheet of
 | <font color='royalblue'><sub>±</sub>A</font> | [harmonic Ampere](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=3&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | electric current | 73.975219 mA | voltage = <font color='royalblue'><sub>♮</sub>Ω</font><font color='royalblue'><sub>±</sub>A</font>, read "[nohm Ampere](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=5&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)" |
 | <font color='royalblue'><sub>±</sub>E</font> | [harmonic Ørsted](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=6&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | field strength| 271.616 mA/m / Ω₂ | magnetic field strength = <font color='royalblue'><sub>♮</sub>Ω</font><font color='royalblue'><sub>±</sub>E</font> |
 | <font color='royalblue'><sub>±</sub>T</font> | [harmonic Tesla](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=9&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | flux density | 11.678991 T / Z<sub>P</sub> | electric flux density = <font color='royalblue'>Ω<sub>2</sub><sub>±</sub>T</font> |
+
+<p align="center">
+  <a href="https://gist.github.com/suchowan/5c2f1ca3cfb79b3abb8ae40bbf3a2a5f#3-figure-1--symmetric-placement-of-electromagnetic-quantities">
+    <img src="https://raw.githubusercontent.com/suchowan/notes/refs/heads/master/pic/Figure_1.png" width="400"
+         title="Relationships among the dimensions of electromagnetic quantities"/>
+  </a>
+</p>
+
+*Figure 1.* How the electromagnetic quantities relate through ×impedance
+(<font color='royalblue'><sub>♮</sub>Ω</font>), ×solid angle(`Ω₂`), ×area, ×time, and ×length. The four base units
+<font color='royalblue'><sub>±</sub>C</font>,
+<font color='royalblue'><sub>±</sub>A</font>,
+<font color='royalblue'><sub>±</sub>E</font>,
+<font color='royalblue'><sub>±</sub>T</font> occupy four nodes of this lattice;
+every other quantity follows by these operations.
 
 The prefix `harmonic` (`±`) may be called `universal`, since the universal
 unit equals the harmonic unit. When context makes the Harmonic System clear,
