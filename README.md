@@ -1,6 +1,6 @@
 # a_converter — Universal Unit System & Harmonic System
 <p align="center">
-  <a href="doc/Eight_Quartets.pdf?raw=true">
+  <a href="https://raw.githubusercontent.com/suchowan/a_converter/master/doc/Eight_Quartets.pdf">
     <img src="doc/pic/Eight_Quartets_vertical_clear.png" width="90"
          title="Harmonic System — Eight Quartets (click for interactive PDF with active links)"/>
   </a>
@@ -36,7 +36,7 @@ the current structure, design principles, and notation of the Universal Unit Sys
 and the Harmonic System.
 
 - **[Main document: revised.pdf](doc/revised.pdf)** — Comprehensive and up-to-date description of the system
-- **[Conceptual map: Eight_Quartets.pdf](doc/Eight_Quartets.pdf?raw=true)** — Interactive map with active links to [doc/glossary.md](doc/glossary.md)
+- **[Conceptual map: Eight_Quartets.pdf](https://raw.githubusercontent.com/suchowan/a_converter/master/doc/Eight_Quartets.pdf)** — Interactive map with active links to [doc/glossary.md](doc/glossary.md)
 
 For an intuitive overview, see:
 
