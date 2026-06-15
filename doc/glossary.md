@@ -21,7 +21,7 @@ subscripted. SI equivalents are taken from the *Clock_by_Rydberg* sheet of
 | <font color='royalblue'>rad</font> | [radian](http://hosi.org/cgi-bin/conv.cgi?c=d&m=100f0&d=86&tu=1&tr=10&tm=off&tp=0&tl=0&fu=0&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert)| plane angle | same as SI | natural, coherent, core |  [radian](https://en.wikipedia.org/wiki/Radian) |
 | <font color='royalblue'>neper</font> | [neper](http://hosi.org/cgi-bin/conv.cgi?c=fu&m=100f0&d=59&tu=1&tr=10&tm=off&tp=0&tl=0&fu=2&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert) | logarithm of Napier's constant | same as SI | natural, base | [neper](https://en.wikipedia.org/wiki/Neper) |
 | <font color='royalblue'><sub>♮</sub>mol</font> | [natural mol](http://hosi.org/cgi-bin/conv.cgi?m=100c0&d=0&fq=1.0000000&frq=12&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | reciprocal Avogadro constant (<font color='royalblue'>N<sub>A</sub>⁻¹</font>) | mol / 602,214,076,000,000,000,000,000 | `♮` ≡ `3-`; substance must be specified | [Avogadro constant](https://en.wikipedia.org/wiki/Avogadro_constant) ⁻¹ |
-| <font color='royalblue'><sub>♮</sub>Ω</font> (<font color='royalblue'>Z<sub>P</sub></font>) | [nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | natural unit of impedance | 29.9792458 Ω | vacuum impedance | [Planck Impedance](https://en.wikipedia.org/wiki/Impedance_of_free_space) / `Ω₂` |
+| <font color='royalblue'><sub>♮</sub>Ω</font> (<font color='royalblue'>Z<sub>P</sub></font>) | [nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | natural unit of impedance | 29.9792458 Ω | vacuum impedance | [Impedance of free space](https://en.wikipedia.org/wiki/Impedance_of_free_space) / `Ω₂` |
 
 ## 2. Base Units (not natural)
 
@@ -64,21 +64,21 @@ unit equals the harmonic unit. When context makes the Harmonic System clear,
 
 ## 6. Defining Constants
 
-| Symbol | Name | Quantity | Constant | Wikipedia |
-|--------|------|----------|----------|-----------|
-| <font color='royalblue'>R<sub>∞</sub></font> | [Rydberg](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=87&fq=1.0000000000000&frq=10&fe=0&fu=5&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | wave number | the Rydberg constant | [Rydberg constant](https://en.wikipedia.org/wiki/Rydberg_constant) |
-| <font color='royalblue'><sub>♮</sub>γ</font> (`c₀`) | [light](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=6&fq=1.00000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | velocity | speed of light in vacuum | [Speed of light](https://en.wikipedia.org/wiki/Speed_of_light) |
-| `ħ` | [quantum](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=25&fq=1.000000000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | action | quantum of action (reduced Planck constant) | [Planck constant](https://en.wikipedia.org/wiki/Planck_constant) |
-| <font color='royalblue'>k<sub>B</sub></font> | [Boltzmann](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=5&fq=1.0000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | entropy | the Boltzmann constant | [Boltzmann constant](https://en.wikipedia.org/wiki/Boltzmann_constant) |
+| Symbol | Name | Quantity | SI equivalent | Constant | Wikipedia |
+|--------|------|----------|---------------|----------|-----------|
+| <font color='royalblue'>R<sub>∞</sub></font> | [Rydberg](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=87&fq=1.0000000000000&frq=10&fe=0&fu=5&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | wave number | 10973731.568157 Ω₁/m | the Rydberg constant | [Rydberg constant](https://en.wikipedia.org/wiki/Rydberg_constant) |
+| <font color='royalblue'><sub>♮</sub>γ</font> (`c₀`) | [light](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=6&fq=1.00000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | velocity | 299792458 m/s | speed of light in vacuum | [Speed of light](https://en.wikipedia.org/wiki/Speed_of_light) |
+| `ħ` | [quantum](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=25&fq=1.000000000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | action | 6.62607015×10<sup>−34</sup> J⋅s / 2π | quantum of action (reduced Planck constant) | [Planck constant](https://en.wikipedia.org/wiki/Planck_constant) |
+| <font color='royalblue'>k<sub>B</sub></font> | [Boltzmann](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=5&fq=1.0000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | entropy | 1.380649×10<sup>−23</sup> J/K | the Boltzmann constant | [Boltzmann constant](https://en.wikipedia.org/wiki/Boltzmann_constant) |
 
 ## 7. Supplementary Constants
 
-| Symbol | Name | Constant | Wikipedia |
-|--------|------|----------|-----------|
-| `e` | [electron](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=0&fq=1.0000000&frq=10&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | elementary electric charge | [Elementary charge](https://en.wikipedia.org/wiki/Elementary_charge) |
-| <font color='royalblue'><sub>±</sub>mol</font><sub>substance</sub> | [harmonic / universal mol](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=7&fq=1.0000000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | with substance name (ex. <font color='royalblue'><sub>±</sub>mol</font><sub>CO₂</sub>) | [Mole (unit)](https://en.wikipedia.org/wiki/Mole_(unit)) |
-| <font color='royalblue'>Ω<sub>k</sub></font> | turn-class unit | total solid angle of a hypersphere (Ω₁=[cycle](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=86&fq=1.0000000&frq=12&fe=0&fu=3&tu=7&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert), Ω₂=[turn](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=3&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | — |
-| <font color='royalblue'>℧<sub>k</sub></font> (<font color='royalblue'>f<sub>k</sub></font>) | figure | logarithm of an integer; f₁=[bit](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=59&fq=1.0000000&frq=10&fe=0&fu=4&tu=3&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert), f₄=nibble, f₈=byte, f_z=[figure](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=59&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (z = log12./log2). Alias `f` where `℧` unavailable | — |
+| Symbol | Name | SI equivalent | Constant | Wikipedia |
+|--------|------|---------------|----------|-----------|
+| `e` | [electron](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=0&fq=1.0000000&frq=10&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | 1.602176634×10<sup>−19</sup> C | elementary electric charge | [Elementary charge](https://en.wikipedia.org/wiki/Elementary_charge) |
+| <font color='royalblue'><sub>±</sub>mol</font><sub>substance</sub> | [harmonic / universal mol](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=7&fq=1.0000000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 132.00762 mol | with substance name (ex. <font color='royalblue'><sub>±</sub>mol</font><sub>CO₂</sub>) | [Mole (unit)](https://en.wikipedia.org/wiki/Mole_(unit)) |
+| <font color='royalblue'>Ω<sub>k</sub></font> | turn-class unit | — | total solid angle of a hypersphere (Ω₁=[cycle](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=86&fq=1.0000000&frq=12&fe=0&fu=3&tu=7&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert), Ω₂=[turn](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=3&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | — |
+| <font color='royalblue'>℧<sub>k</sub></font> (<font color='royalblue'>f<sub>k</sub></font>) | figure | — | logarithm of an integer; f₁=[bit](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=59&fq=1.0000000&frq=10&fe=0&fu=4&tu=3&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert), f₄=nibble, f₈=byte, f_z=[figure](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=59&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (z = log12./log2). Alias `f` where `℧` unavailable | — |
 
 ## 8. Structural Constants
 
@@ -118,8 +118,8 @@ the 53-tone equal-tempered keyboard.
 | <font color='royalblue'>m<sub>E</sub></font> | Earth meridian ([meridian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=0&fq=1.0000000&frq=12&fe=0&fu=13&tu=1&fp=0&tp=3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | meridian length of the Earth (≑ (ω₂/3) cosmic harmon / Ω₁) |
 | <font color='royalblue'>s<sub>E</sub></font> | Earth solar ([solar](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=2&fq=1.0000000&frq=12&fe=0&fu=14&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | rotation period of the Earth (epoch: start of year 1900.) |
 | <font color='royalblue'>g<sub>E</sub></font> | gee of Earth ([gee](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=18&fq=1.0000000&frq=12&fe=0&fu=5&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | gravitational acceleration of the Earth |
-| `°H` | [degree H](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=0.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | difference of thermodynamic temperature from the base point; `0;°H` ↔ `118,2354; ±K` (T_E), chosen so that `100;°H` matches the boiling point of water |
-| <font color='royalblue'>T<sub>E</sub></font> | — | Earth-local temperature scale = `118,2354; ±K` (≈ −74.36 °C, −101.85 °F); the only deliberately chosen component |
+| <font color='royalblue'>T<sub>E</sub></font> | base point of degree H | Earth-local temperature scale = `118,2354; ±K` (≈ −74.36 °C, −101.85 °F); the only deliberately chosen component |
+| `°H` | [degree H](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=0.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | difference of thermodynamic temperature from the base point; `0;°H` ↔ `118,2354; ±K` (T<sub>E</sub>), chosen so that `100;°H` matches the boiling point of water |
 
 ## 12. Calendar-Time Units
 
@@ -127,7 +127,7 @@ the 53-tone equal-tempered keyboard.
 |--------|------|------------|
 | `☼̃` | [year](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.00000000&frq=12&fe=0&fu=23&tu=13&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 365. 31./128. days |
 | `☽̃` | month | 10;⁻¹ year |
-| `°̃` | day | 1 Ω₁ |
+| `°̃` | [day](pic/calendar_time_structure_nodus.png) | 1 Ω₁ |
 | `′̃` | unitia | 10;⁻¹ day |
 | `″̃` | ditia | 10;⁻² day |
 | `‴̃` | [tertia](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=8&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ day |
@@ -141,8 +141,8 @@ the 53-tone equal-tempered keyboard.
 |--------|------|------------|
 | `mon`<sub>country</sub> | mon | least-valued currency unit of a country/economic group (ex. 1$ = 84; mon<sub>us</sub>) |
 | ;′<font color='royalblue'><sub>±</sub>h</font> | unínoh | 10;⁻¹ harmon = [2.2696 cm](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=0%3B10000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [0.89354 inch](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=0%3B10000000&frq=12&fe=0&fu=0&tu=25&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) |
-| ;″<font color='royalblue'><sub>±</sub>l</font> | [dinól](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=7&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻² looloh = [0.91548 gram](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=0%3B010000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [0.03229 ounce](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=0%3B010000000&frq=12&fe=0&fu=0&tu=10&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) |
-| `-γ` | atol | 10;⁻⁸ c₀ = 1 harmon / nic = 2.509 997 km/h |
+| ;″<font color='royalblue'><sub>±</sub>l</font> | dinól | 10;⁻² looloh = [0.91548 gram](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=0%3B010000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [0.03229 ounce](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=0%3B010000000&frq=12&fe=0&fu=0&tu=10&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) |
+| <font color='royalblue'><sub>-</sub>γ</font> | atol | 10;⁻⁸ c₀ = 1 harmon / nic = 2.509 997 km/h |
 
 Aliases are *interfaces*, not weaknesses. Several social aliases, introduced
 independently, necessarily derive their final letter from the corresponding
