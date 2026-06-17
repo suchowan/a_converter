@@ -32,7 +32,7 @@ subscripted. SI equivalents are taken from the *Clock_by_Rydberg* sheet of
 | Symbol | Name | Quantity | Definition | SI equivalent |
 |--------|------|----------|------------|---------------|
 | <font color='royalblue'><sub>±</sub>h</font> | [harmon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | length | 100,1700; <font color='royalblue'>Ω<sub>1</sub> / R<sub>∞</sub> </font> | 0.27235220594 m (272.352 mm) |
-| <font color='royalblue'><sub>±</sub>n</font> | [nic](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | physical time | 10;<sup>-8</sup> <font color='royalblue'><sub>±</sub>h / c<sub>0</sub></font> | 0.39062511513 s (390.625 ms) |
+| <font color='royalblue'><sub>±</sub>n</font> | [nic](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | physical time | 10;<sup>+8</sup> <font color='royalblue'><sub>±</sub>h / c<sub>0</sub></font> | 0.39062511513 s (390.625 ms) |
 | <font color='royalblue'><sub>±</sub>J</font> | [harmonic Joule](http://hosi.org/cgi-bin/conv.cgi?m=100a0&d=2&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | energy | 10;<sup>+26;</sup> <font color='royalblue'>ℏ / <sub>±</sub>n</font> | 64.084556 mJ — overline <font color='royalblue'><sub>±</sub>J̅</font> : equivalent dose (effective Joule) |
 | <font color='royalblue'><sub>±</sub>K</font> | [harmonic Kelvin](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=1.0000000&frq=12&fe=0&fu=8&tu=9&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | thermo-dynamic temperature | 10;<sup>-20;</sup> <font color='royalblue'><sub>±</sub>J / K<sub>B</sub></font> | 58.387542 μK (= <font color='royalblue'>10;⁻⁴ °H</font>) |
 
@@ -140,7 +140,7 @@ the 53-tone equal-tempered keyboard.
 
 ## 10. Power Prefixes
 
-Power prefixes, which represent powers of 12<sup>8</sup>(=[U](#14-scaling--hierarchy)), are used in combination with terms such as “atomic” and “cosmic.”
+Power prefixes, which represent powers of 12<sup>8</sup>(=[U](#15-scaling--hierarchy)), are used in combination with terms such as “atomic” and “cosmic.”
 
 Example from `revised.pdf` Table 7:  
 - the age of the universe : 6; di-cosmic nic ( 6;<sub>2+</sub>n )
@@ -199,7 +199,17 @@ base unit name (−h from harmon, −l from looloh, −n from nodus) — a conve
 reflecting the system's structural constraints. The optional diacritical mark
 “ ́” on unínoh/dinól indicates word stress.
 
-## 14. Scaling & Hierarchy
+## 14. Alternative Muse & Goddess Names
+
+Alternative proposal replacing unit names with the names of Muses or Goddesses that share the same initials (`revised.pdf` Note 46).
+
+| Unit | Alternate | Unit | Alternate | Unit | Alternate | Unit | Alternate |
+|------|-----------|------|-----------|------|-----------|------|-----------|
+| [Ampere](#5-derived-units--electromagnetic) | → [Aoide](https://en.wikipedia.org/wiki/Aoide) | [Boltzmann](https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#6-defining-constants) | → [Bia](https://en.wikipedia.org/wiki/Bia_(mythology)) | [Coulomb](#5-derived-units--electromagnetic) | → [Clio](https://en.wikipedia.org/wiki/Clio) | [dirac](#9-minor--major-prefixes) | → [diana](https://en.wikipedia.org/wiki/Diana_(mythology)) |
+| [Ørsted](#5-derived-units--electromagnetic) | → [Erato](https://en.wikipedia.org/wiki/Erato) | [Joule](#2-base-units-not-natural) | → [Juno](https://en.wikipedia.org/wiki/Juno_(mythology)) | [Kelvin](#2-base-units-not-natural) | → [Kalliope](https://en.wikipedia.org/wiki/Calliope) | [neper](#1-base-units-natural) | → [nephe](https://en.wikipedia.org/wiki/Nephele) |
+| [Newton](#4-derived-units--dynamical) | → [Nete](https://en.wikipedia.org/wiki/Nete_(mythology)) | [Pascal](#4-derived-units--dynamical) | → [Polym](https://en.wikipedia.org/wiki/Polyhymnia) | [Tesla](#5-derived-units--electromagnetic) | → [Thalia](https://en.wikipedia.org/wiki/Thalia_(Muse)) | [Watt](#4-derived-units--dynamical) | → [Walku](https://en.wikipedia.org/wiki/Valkyrie) |
+
+## 15. Scaling & Hierarchy
 
 The scaling factor **U = 12⁸**(10;<sup>8</sup>) is not chosen for human convenience; it
 **emerges** as a dimensionless ratio `u / M = 1;0009060E × 10;⁸` ( `revised.pdf`, p.23 Eq.(17;)) 
