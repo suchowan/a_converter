@@ -1,9 +1,9 @@
 # Glossary — Universal Unit System (UUS) / Harmonic System
 
 A reference glossary of units, prefixes, constants, and structural terms used
-across [`revised.pdf`](doc/revised.pdf), [`units.pdf`](doc/units.pdf),
-[`harmonic.pdf`](doc/harmonic.pdf), and the
-[`Eight Quartets`](doc/pic/Eight_Quartets_vertical_clear.png) diagram.
+across [`revised.pdf`](revised.pdf), [`units.pdf`](units.pdf),
+[`harmonic.pdf`](harmonic.pdf), and the
+[`Eight Quartets`](Eight_Quartets.pdf) diagram.
 
 **Notation.** A semicolon `;` is the duodecimal radix point; `↊` = ten,
 `↋` = eleven. SI values use a period `.` as the radix point. The identifier of
@@ -20,7 +20,7 @@ subscripted. SI equivalents are taken from the *Clock_by_Rydberg* sheet of
 
 | Symbol | Name | Quantity | SI equivalent | Notes | Wikipedia |
 |--------|------|----------|---------------|-------|-----------|
-| <font color='royalblue'>rad</font> | [radian](http://hosi.org/cgi-bin/conv.cgi?c=d&m=100f0&d=86&tu=1&tr=10&tm=off&tp=0&tl=0&fu=0&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert)| plane angle | same as SI<br/>`Ω₁`(cycle) = 2π `rad`,<br/>`Ω₂`(turn) = 4π `sr` = 4π `rad²` | See [univunit-e.pdf](https://github.com/suchowan/a_converter/blob/master/doc/dozenal_com/univunit-e.pdf) pp.16-17 A.2 ‘Mathematical’ Units|  [radian](https://en.wikipedia.org/wiki/Radian) |
+| <font color='royalblue'>rad</font> | [radian](http://hosi.org/cgi-bin/conv.cgi?c=d&m=100f0&d=86&tu=1&tr=10&tm=off&tp=0&tl=0&fu=0&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert)| plane angle | same as SI<br/>`Ω₁`(cycle) = 2π `rad`,<br/>`Ω₂`(turn) = 4π `sr` = 4π `rad²` | See [univunit-e.pdf](dozenal_com/univunit-e.pdf) pp.16-17 A.2 ‘Mathematical’ Units|  [radian](https://en.wikipedia.org/wiki/Radian) |
 | <font color='royalblue'>neper</font> | [neper](http://hosi.org/cgi-bin/conv.cgi?c=fu&m=100f0&d=59&tu=1&tr=10&tm=off&tp=0&tl=0&fu=2&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert) | logarithm of Napier's constant | not part of SI | See the note for rad above | [neper](https://en.wikipedia.org/wiki/Neper) |
 | <font color='royalblue'><sub>♮</sub>mol</font> | [natural mol](http://hosi.org/cgi-bin/conv.cgi?m=100c0&d=0&fq=1.0000000&frq=12&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | reciprocal Avogadro constant (<font color='royalblue'>N<sub>A</sub>⁻¹</font>) | mol / 602,214,076,000,000,000,000,000 (exact) | When combined with `mol`, `♮` ≡ `3-`; substance must be specified | [Avogadro constant](https://en.wikipedia.org/wiki/Avogadro_constant) ⁻¹ |
 | <font color='royalblue'><sub>♮</sub>Ω</font> (<font color='royalblue'>Z<sub>P</sub></font>) | [nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | natural unit of impedance | 29.9792458 Ω (measured in SI)| vacuum impedance; <font color='royalblue'>αℏ/e<sup>2</sup></font> | [Fine-structure constant](https://en.wikipedia.org/wiki/Fine-structure_constant)(α), [Impedance of free space](https://en.wikipedia.org/wiki/Impedance_of_free_space) / [`Ω₂`](#5-derived-units--electromagnetic) |
@@ -44,7 +44,7 @@ By successively applying the [defining constants](#6-defining-constants), these 
 
 | Symbol | Name | Quantity | Definition | SI equivalent | Notes |
 |--------|------|----------|------------|---------------|-------|
-| - | [steradian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | solid angle | <font color='royalblue'>rad<sup>2</sup></font> | 1 sr | derived from `rad` (See [univunit-e.pdf](https://github.com/suchowan/a_converter/blob/master/doc/dozenal_com/univunit-e.pdf) p.11 eq.(19))|
+| - | [steradian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | solid angle | <font color='royalblue'>rad<sup>2</sup></font> | 1 sr | derived from `rad` (See [univunit-e.pdf](dozenal_com/univunit-e.pdf) p.11 eq.(19))|
 | <font color='royalblue'><sub>±</sub>q</font> | [harmonic square](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=4&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | area | square harmon (<font color='royalblue'><sub>±</sub>h<sup>2</sup></font>) | 741.757241 cm²| `q` from Latin *quadrata* |
 | <font color='royalblue'><sub>±</sub>c</font> | [harmonic cube](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-1&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | volume | cubic harmon ( <font color='royalblue'><sub>±</sub>h<sup>3</sup></font>) | 20.2019221 dm³ | ≈ 16/3 gallon (since 2/3 gallon ≈ <font color='royalblue'>(½ <sub>±</sub>h)³</font>);<br/>`c` from Latin *cubus* |
 
