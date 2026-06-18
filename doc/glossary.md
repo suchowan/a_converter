@@ -12,12 +12,20 @@ across [`revised.pdf`](revised.pdf), [`units.pdf`](units.pdf),
 [`harmonic.pdf`](harmonic.pdf), and the
 [`Eight Quartets`](Eight_Quartets.pdf) diagram.
 
-**Notation.** A semicolon `;` is the duodecimal radix point; `↊` = ten,
-`↋` = eleven. SI values use a period `.` as the radix point. The identifier of
-a Harmonic System unit is the **prefix** `±` (formerly the suffix `h`); it is
-rendered here as <font color='royalblue'><sub>±</sub></font> to keep it
-subscripted. SI equivalents are taken from the *Clock_by_Rydberg* sheet of
-`harmonic.pdf`.
+**Notation:** A semicolon `;` is the duodecimal radix point; `↊` = ten, `↋` = eleven. 
+A following `′` or `″` shifts the duodecimal radix point one or two dozenal places (1<font color='royalblue'>;′<sub>±</sub>h</font> = 10;⁻¹ harmon); 
+see [myriad.pdf](myriad.pdf) for the general shift notation (`′ ″ ‴ , _` for 1, 2, 3, 4, 8 places). 
+Decimal (SI) values use a period `.` as the radix point. 
+The identifier of a Harmonic System unit is the **prefix** `±` (formerly the suffix `h`); it is rendered here as <font color='royalblue'><sub>±</sub></font> to keep it subscripted. 
+SI equivalents are taken from the *Clock_by_Rydberg* sheet of [`condensed.xlsx`](condensed.xlsx). 
+
+---
+
+## Related Resources
+
+- [README.md](../README.md) — a concise introduction to UUS / the Harmonic System for first-time readers.
+- [doc/README.md](README.md) — a summary of `revised.pdf`, told as a human-readable story with abundant diagrams.
+- Blog — English posts (those paired with a Japanese version): [suchowan.seesaa.net](https://suchowan.seesaa.net/search?keyword=%3EJapanese%3C) — design rationale and topical essays.
 
 ---
 
@@ -157,9 +165,9 @@ the 53-tone equal-tempered keyboard.
 |--------|--------|-------|-------|
 | sub | `♭` | 10;⁻⁴ | `±` omitted when `sub` is present |
 | atomic | `-` | 10;⁻⁸ | `±` omitted when `atomic` is present |
-| dirac | `∜♯` | 10;¹ | only for [Gravitic-with-Harmonic System](gravitic.pdf) |
-| hyper | `♯` | 10;⁴ | `±` omitted when `hyper` is present |
-| cosmic | `+` | 10;⁸ | `±` omitted when `cosmic` is present |
+| dirac | `∜♯` | 10;⁺¹ | only for [Gravitic System](gravitic.pdf) |
+| hyper | `♯` | 10;⁺⁴ | `±` omitted when `hyper` is present |
+| cosmic | `+` | 10;⁺⁸ | `±` omitted when `cosmic` is present |
 
 See also blog post '[The Day Musical Symbols Fell Naturally into Place](https://suchowan.seesaa.net/article/202601article_10_1.html)'.
 
@@ -211,7 +219,7 @@ The gravitational radius of the Earth, <font color='royalblue'>r<sub>E</sub></fo
 
 ## 13. Social Aliases
 
-| Symbol | Name | Definition |
+| Symbol / Notation | Name | Definition |
 |--------|------|------------|
 | <font color='royalblue'>mon<sub>country</sub></font> | mon | least-valued currency unit of a country/economic group (ex. 1$ = 84; <font color='royalblue'>mon<sub>us</sub></font>) |
 | ;′<font color='royalblue'><sub>±</sub>h</font> | unínoh | 10;⁻¹ harmon = [2.2696 cm](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=0%3B10000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [0.89354 inch](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=0%3B10000000&frq=12&fe=0&fu=0&tu=25&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (≈ 8/9 inch) |
