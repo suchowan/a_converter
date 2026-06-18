@@ -38,12 +38,12 @@ subscripted. SI equivalents are taken from the *Clock_by_Rydberg* sheet of
 
 <p align="center"><em>Universal, Coherent, Base Category</em></p>
 
-| Symbol | Name | Quantity | SI equivalent | Notes | Wikipedia |
-|--------|------|----------|---------------|-------|-----------|
-| <font color='royalblue'>rad</font> | [radian](http://hosi.org/cgi-bin/conv.cgi?c=d&m=100f0&d=86&tu=1&tr=10&tm=off&tp=0&tl=0&fu=0&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert)| plane angle | same as SI<br/>`Ω₁`(cycle) = 2π `rad`,<br/>`Ω₂`(turn) = 4π `sr` = 4π `rad²` | See [univunit-e.pdf](dozenal_com/univunit-e.pdf) pp.16-17 A.2 ‘Mathematical’ Units|  [radian](https://en.wikipedia.org/wiki/Radian) |
-| <font color='royalblue'>neper</font> | [neper](http://hosi.org/cgi-bin/conv.cgi?c=fu&m=100f0&d=59&tu=1&tr=10&tm=off&tp=0&tl=0&fu=2&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert) | logarithm of Napier's constant | not part of SI | See the note for rad above | [neper](https://en.wikipedia.org/wiki/Neper) |
-| <font color='royalblue'><sub>♮</sub>mol</font> | [natural mol](http://hosi.org/cgi-bin/conv.cgi?m=100c0&d=0&fq=1.0000000&frq=12&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | reciprocal Avogadro constant (<font color='royalblue'>N<sub>A</sub>⁻¹</font>) | mol / 602,214,076,000,000,000,000,000 (exact) | When combined with `mol`, `♮` ≡ `3-`; substance must be specified | [Avogadro constant](https://en.wikipedia.org/wiki/Avogadro_constant) ⁻¹ |
-| <font color='royalblue'><sub>♮</sub>Ω</font> (<font color='royalblue'>Z<sub>P</sub></font>) | [nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | natural unit of impedance | 29.9792458 Ω (measured in SI)| vacuum impedance; <font color='royalblue'>αℏ/e<sup>2</sup></font> | [Fine-structure constant](https://en.wikipedia.org/wiki/Fine-structure_constant)(α), [Impedance of free space](https://en.wikipedia.org/wiki/Impedance_of_free_space) × [`rad²`](#5-derived-units--electromagnetic) |
+| Symbol | Name | Quantity | Definition | SI equivalent | Notes | Wikipedia |
+|--------|------|----------|------------|---------------|-------|-----------|
+| <font color='royalblue'>rad</font> | [radian](http://hosi.org/cgi-bin/conv.cgi?c=d&m=100f0&d=86&tu=1&tr=10&tm=off&tp=0&tl=0&fu=0&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert)| plane angle | (2/π) arc sin(1) | same as SI<br/>`Ω₁`(cycle) = 2π `rad`,<br/>`Ω₂`(turn) = 4π `sr` = 4π `rad²` | See [univunit-e.pdf](dozenal_com/univunit-e.pdf) pp.16-17 A.2 ‘Mathematical’ Units|  [radian](https://en.wikipedia.org/wiki/Radian) |
+| <font color='royalblue'>neper</font> | [neper](http://hosi.org/cgi-bin/conv.cgi?c=fu&m=100f0&d=59&tu=1&tr=10&tm=off&tp=0&tl=0&fu=2&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert) | information and logarithmic quantity | logarithm of Napier's constant | not part of SI | See the note for rad above | [neper](https://en.wikipedia.org/wiki/Neper) |
+| <font color='royalblue'><sub>♮</sub>mol</font> | [natural mol](http://hosi.org/cgi-bin/conv.cgi?m=100c0&d=0&fq=1.0000000&frq=12&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | amount of substance | reciprocal Avogadro constant (<font color='royalblue'>N<sub>A</sub>⁻¹</font>) | mol / 602,214,076,000,000,000,000,000 (exact) | When combined with `mol`, `♮` ≡ `3-`; substance must be specified | [Avogadro constant](https://en.wikipedia.org/wiki/Avogadro_constant) ⁻¹ |
+| <font color='royalblue'><sub>♮</sub>Ω</font> (<font color='royalblue'>Z<sub>P</sub></font>) | [nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | impedance | natural unit of impedance | 29.9792458 Ω (measured in SI)| vacuum impedance; <font color='royalblue'>αℏ/e<sup>2</sup></font> | [Fine-structure constant](https://en.wikipedia.org/wiki/Fine-structure_constant)(α), [Impedance of free space](https://en.wikipedia.org/wiki/Impedance_of_free_space) × [`rad²`](#5-derived-units--electromagnetic) |
 
 ## 2. Base Units (not natural)
 
@@ -63,7 +63,7 @@ See also the relationships between all units with specific names in [relations.p
 
 <p align="center"><em>Universal, Coherent, Derived Category</em></p>
 
-| Symbol | Name | Quantity | Definition | SI equivalent | Notes |
+| Prefix | Name | Quantity | Definition | SI equivalent | Notes |
 |--------|------|----------|------------|---------------|-------|
 | - | [steradian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | solid angle | <font color='royalblue'>rad<sup>2</sup></font> | 1 sr | derived from `rad` (See [univunit-e.pdf](dozenal_com/univunit-e.pdf) p.11 eq.(19))|
 | <font color='royalblue'><sub>±</sub>q</font> | [harmonic square](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=4&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | area | square harmon (<font color='royalblue'><sub>±</sub>h<sup>2</sup></font>) | 741.757241 cm²| `q` from Latin *quadrata* |
@@ -101,11 +101,11 @@ The order of “square/cube,” “[minor/major](#9-minor--major-prefixes),” a
 </p>
 
 *Figure 1.* How the electromagnetic quantities relate through ×impedance
-(<font color='royalblue'><sub>♮</sub>Ω</font>), ×solid angle(`Ω₂`), ×area, ×time, and ×length. The four base units
+(<font color='royalblue'><sub>♮</sub>Ω</font>), ×solid angle(`Ω₂`), ×area, ×time, and ×length. The four named derived units
 <font color='royalblue'><sub>±</sub>C</font>,
 <font color='royalblue'><sub>±</sub>A</font>,
 <font color='royalblue'><sub>±</sub>E</font>,
-<font color='royalblue'><sub>±</sub>T</font> occupy four nodes of this lattice;
+<font color='royalblue'><sub>±</sub>T</font> occupy four center nodes of this lattice;
 every other quantity follows by these operations. 
 When context makes the Harmonic System clear, `±` need not be pronounced.
 
