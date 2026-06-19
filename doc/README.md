@@ -183,3 +183,8 @@ Since [Dozenal Nomenclature](https://dozenal.fandom.com/wiki/Systematic_Dozenal_
 
 When units of the Harmonic System are combined with Systematic Dozenal Nomenclature, only powers divisible with 4 or -1, -2, and -3 should be used.
 In this situation, dozen(10;), gross(100;) and doz gross(1000;) are used in substitution for powers 1, 2, and 3.
+
+-----------------
+
+For unit definitions and SI equivalents, see [glossary.md](glossary.md).
+

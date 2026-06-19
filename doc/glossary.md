@@ -153,11 +153,12 @@ See also the physical, material, and astronomical constants in [tables.pdf](tabl
 | `Ω₀` | — | total solid angle of a hypersphere, `Ω₀ = 2`; fermi component of the [Eq.Ω](../README.md#base-selection-eq%CF%89--constants-approximation) (in `2^n × 12^m`, the `2` is `Ω₀`) |
 | `Ω₁` | [cycle](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=86&fq=1.0000000&frq=12&fe=0&fu=3&tu=7&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | `Ω₁` = 2π `rad` |
 | `Ω₂` | [turn](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=3&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | `Ω₂` = 4π `sr` = 4π `rad²`<br/>pairs with <font color='royalblue'><sub>♮</sub>Ω</font> as `⟨♮Ω, Ω₂⟩` dual structure in the electromagnetic quantities |
-| `ω₁` | Primary Harmonic Ratio | `9/8` (= 90/80). Ratio between one harmonic meter and ... ; links day ↔ <font color='royalblue'><sub>±</sub>n</font>; a major second |
+| `ω₁` | (Primary) Harmonic Ratio | `9/8` (= 90/80). Ratio between the international foot and 1 <font color='royalblue'><sub>±</sub>h</font> ; links 10;<sup>5</sup><font color='royalblue'><sub>±</sub>n</font> ↔ day ; a major second |
 | `ω₂` | Fine Harmonic Ratio | `41/40` (= 82/80). Elementary charge / impedance-derived charge unit; appears in Earth's meridian and ice density; one comma-pair in [53-TET](https://en.wikipedia.org/wiki/53_equal_temperament) (`revised.pdf` Note 49) |
 
 `(ω₁−1)/(ω₂−1) = 5` — corresponds to one black-key sub-division (5 commas) of
-the 53-tone equal-tempered keyboard.
+the 53-tone equal-tempered keyboard.  
+`ω₀ = 1` is the trivial harmonic ratio — too trivial to have a use.
 
 ## 9. Minor / Major Prefixes
 
@@ -193,9 +194,9 @@ See also the duodecimal myriad system for pure numbers in [myriad.pdf](myriad.pd
 
 | Symbol | Name | Definition |
 |--------|------|------------|
-| <font color='royalblue'>m<sub>E</sub></font> | Earth meridian ([meridian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=0&fq=1.0000000&frq=12&fe=0&fu=13&tu=1&fp=0&tp=3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | meridian length of the Earth (≑ (ω₂/3) <font color='royalblue'><sub>+</sub>h / Ω₁</font>);<br/>Since one sub cycle (<font color='royalblue'><sub>♭</sub>Ω<sub>1</sub></font>) is 150/144 minutes (plane angle), 1 [meridian sub cycle](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=0&fq=1.0000000&frq=12&fe=0&fu=13&tu=30&fp=-4&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (<font color='royalblue'>m<sub>E♭</sub>Ω<sub>1</sub></font>) ≈ 1.041 metric nautical mile |
-| <font color='royalblue'>s<sub>E</sub></font> | Earth solar ([solar](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=2&fq=1.0000000&frq=12&fe=0&fu=14&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | rotation period of the Earth (epoch for SI second: start of year 1900.);<br/>Multiplying the units in “[Calendar Time Units](#12-calendar-time-units)”(unit dimension: plane angle ) by <font color='royalblue'>s<sub>E</sub></font> (unit dimension: physical time  / plane angle ) yields the corresponding physical time |
-| <font color='royalblue'>g<sub>E</sub></font> | gee of Earth ([gee](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=18&fq=1.0000000&frq=12&fe=0&fu=5&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | gravitational acceleration of the Earth;<br/>Earth's gravitational force corresponding to one looloh of mass can be expressed as the [looloh](#4-derived-units--dynamical) gee (of Earth) ― <font color='royalblue'><sub>±</sub>l g<sub>E</sub></font>, see also [Deep_Structure_Form_and_Emptiness.md](Deep_Structure_Form_and_Emptiness.md#52-case-study-looloh-gee) |
+| <font color='royalblue'>m<sub>E</sub></font> | Earth meridian ([meridian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=0&fq=1.0000000&frq=12&fe=0&fu=13&tu=1&fp=0&tp=3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | meridian length of the Earth (≑ (ω₂/3) <font color='royalblue'><sub>+</sub>h / Ω₁</font>);<br/>Since one sub cycle (<font color='royalblue'><sub>♭</sub>Ω<sub>1</sub></font>) is 150/144 minutes (plane angle), 1 [meridian sub cycle](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=0&fq=1.0000000&frq=12&fe=0&fu=13&tu=30&fp=-4&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (<font color='royalblue'>m<sub>E♭</sub>Ω<sub>1</sub></font>) ≈ 1.041 nautical mile — see also [Case Study](Deep_Structure_Form_and_Emptiness.md#53-case-study-bridging-angular-and-linear-measure) |
+| <font color='royalblue'>s<sub>E</sub></font> | Earth solar ([solar](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=2&fq=1.0000000&frq=12&fe=0&fu=14&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | rotation period of the Earth (24×60×60 s / <font color='royalblue'>Ω₁</font> at the SI-second epoch: start of 1900);<br/>Multiplying the units in “[Calendar Time Units](#12-calendar-time-units)” (unit dimension: plane angle ) by <font color='royalblue'>s<sub>E</sub></font> (unit dimension: physical time / plane angle ) yields the corresponding physical time  — see also [Case Study](Deep_Structure_Form_and_Emptiness.md#54-case-study-light-solar-tertia) |
+| <font color='royalblue'>g<sub>E</sub></font> | gee of Earth ([gee](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=18&fq=1.0000000&frq=12&fe=0&fu=5&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | gravitational acceleration of the Earth;<br/>Earth's gravitational force corresponding to one looloh of mass can be expressed as the [looloh](#4-derived-units--dynamical) gee (of Earth) ― <font color='royalblue'><sub>±</sub>l g<sub>E</sub></font>, see also [Case Study](Deep_Structure_Form_and_Emptiness.md#52-case-study-looloh-gee) |
 | <font color='royalblue'>T<sub>E</sub></font> | base point of degree H | Earth-local temperature scale = `118,2354; ±K` (≈ −74.36 °C, −101.85 °F); the only deliberately chosen component |
 | `°H` | [degree H](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=0.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | difference of thermodynamic temperature from the base point; `0;°H` ↔ `118,2354; ±K` (<font color='royalblue'>T<sub>E</sub></font>), chosen so that `100;°H` matches the boiling point of water, and approximately `61;°H` ↔ 14.°C, `78;°H` ↔ 37.°C<br/>- value of °C ≈ value of `°H` ×(1E;/17;) - 62;44<br/>- value of `°H` ≈ value of °C ×(17;/1E;) + 51;50 |
 
@@ -207,15 +208,17 @@ The gravitational radius of the Earth, <font color='royalblue'>r<sub>E</sub></fo
 
 | Symbol | Name | Definition |   Figure   |
 |--------|------|------------|------------|
-| `☼̃` | [year](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.00000000&frq=12&fe=0&fu=23&tu=13&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 365. 31./128. days |  |
+| `☼̃` | [**year**](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.00000000&frq=12&fe=0&fu=23&tu=13&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 365. 31./128. days |  |
 | `☽̃` | month | 10;⁻¹ year |  |
-| `°̃` | day | 1 Ω₁ | [The calendar time unit structure around day (hexon-ternon)](pic/calendar_time_structure_nodus.png) |
+| `°̃` | **day** | 1 <font color='royalblue'>Ω₁</font> | [The calendar time unit structure around day (hexon-ternon)](pic/calendar_time_structure_nodus.png) |
 | `′̃` | unitia | 10;⁻¹ day | [27-hour clock (unitia notation)](27-hours.pdf) |
 | `″̃` | ditia | 10;⁻² day |  |
 | `‴̃` | [tertia](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=8&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ day |  |
-| `☆̃` | [nodus](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁻⁷ (1/128.) day | [The natural time scale ladder(the age of the universe - the Planck time)](pic/NaturalTimeScale.png) - see also [blog post](https://suchowan.seesaa.net/article/202501article_17_3.html)|
-| `⌬̃` | [hexon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=24&tu=23&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁺⁶ years |  |
-| `▽̃` | [ternon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=7&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ nodus |  |
+| `☆̃` | [**nodus**](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁻⁷ (1/128.) day<br/>GCD of year and half-day | [The natural time scale ladder(the age of the universe - the Planck time)](pic/NaturalTimeScale.png) - see also [blog post](https://suchowan.seesaa.net/article/202501article_17_3.html)|
+| `⌬̃` | [**hexon**](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=24&tu=23&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁺⁶ years<br/>LCM of year and half-day |  |
+| `▽̃` | [ternon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=7&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ nodus<br/>If [coordinated](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), 1 solar ternon = 1 nic |  |
+
+The four units listed in [`Eight_Quartets.pdf`](Eight_Quartets.pdf) — with the Name in bold — were chosen so that no two share a ratio that is a power of 12 (cf. **Calendar Time**: year, day, nodus, hexon).
 
 ## 13. Social Aliases
 

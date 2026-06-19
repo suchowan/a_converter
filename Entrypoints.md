@@ -2,6 +2,9 @@
 ## Entry Points into the Harmonic System  
 *This document lists several natural starting points for readers who prefer to begin with a familiar domain before exploring the full harmonic system.*
 
+*If any term or symbol is unfamiliar, [glossary.md](doc/glossary.md) provides
+definitions, SI equivalents, and cross-references for all of them.*
+
 ---
 
 ## 1. For readers interested in **physics / atomic constants**  
