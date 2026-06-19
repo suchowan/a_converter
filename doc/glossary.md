@@ -65,15 +65,16 @@ SI equivalents are taken from the *Clock_by_Rydberg* sheet of [`condensed.xlsx`]
 | <font color='royalblue'><sub>±</sub>K</font> | [harmonic Kelvin](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=1.0000000&frq=12&fe=0&fu=8&tu=9&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | thermo-dynamic temperature | 10;<sup>-20;</sup> <font color='royalblue'><sub>±</sub>J / K<sub>B</sub></font> | 58.387542 μK (= <font color='royalblue'>10;⁻⁴ °H</font>) |
 
 By successively applying the [defining constants](#6-defining-constants), these base units are defined sequentially in the order <font color='royalblue'><sub>±</sub>h</font> → <font color='royalblue'><sub>±</sub>n</font> → <font color='royalblue'><sub>±</sub>J</font> → <font color='royalblue'><sub>±</sub>K</font>.  
-See also the relationships between all units with specific names in [relations.pdf](relations.pdf).
+See also the relationships between all units with special names in [relations.pdf](relations.pdf).
 
 ## 3. Derived Units — Geometrical
 
-<p align="center"><em>Universal, Coherent, Derived Category</em></p>
+<p align="center"><em>Universal, Derived Category</em></p>
 
 | Prefix | Name | Quantity | Definition | SI equivalent | Notes |
 |--------|------|----------|------------|---------------|-------|
-| - | [steradian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | solid angle | <font color='royalblue'>rad<sup>2</sup></font> | 1 sr | derived from `rad` (See [univunit-e.pdf](dozenal_com/univunit-e.pdf) p.11 eq.(19))|
+| - | [steradian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | solid angle | <font color='royalblue'>rad<sup>2</sup></font> | 1 sr | derived from `rad` (See [univunit-e.pdf](dozenal_com/univunit-e.pdf) p.11 eq.(19)) |
+| - | [cycle / nic](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=24&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | frequency and revolution | <font color='royalblue'>Ω<sub>1</sub>/<sub>±</sub>n</font> | 2.56000 Hz | not coherent |
 | <font color='royalblue'><sub>±</sub>q</font> | [harmonic square](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=4&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | area | square harmon (<font color='royalblue'><sub>±</sub>h<sup>2</sup></font>) | 741.757241 cm²| `q` from Latin *quadrata* |
 | <font color='royalblue'><sub>±</sub>c</font> | [harmonic cube](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-1&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | volume | cubic harmon ( <font color='royalblue'><sub>±</sub>h<sup>3</sup></font>) | 20.2019221 dm³ | ≈ 16/3 gallon (since 2/3 gallon ≈ <font color='royalblue'>(½ <sub>±</sub>h)³</font>);<br/>`c` from Latin *cubus* |
 
@@ -96,7 +97,7 @@ The order of “square/cube,” “[minor/major](#9-minor--major-prefixes),” a
 
 | Symbol | Name | Quantity | Definition | SI equivalent | Notes |
 |--------|------|----------|------------|---------------|-------|
-| <font color='royalblue'><sub>±</sub>C</font> | [harmonic / universal Coulomb](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=0&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | electric charge | <font color='royalblue'>(<sub>±</sub>J <sub>±</sub>n / <sub>♮</sub>Ω)<sup>1/2</sup></font>| 28.896578 mC | The prefix `harmonic` (`±`) may be called `universal`, since the universal unit equals the harmonic unit |
+| <font color='royalblue'><sub>±</sub>C</font> | [harmonic / universal Coulomb](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=0&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | electric charge | <font color='royalblue'>(<sub>±</sub>J <sub>±</sub>n / <sub>♮</sub>Ω)<sup>1/2</sup></font> | 28.896578 mC | The prefix `harmonic` (`±`) may be called `universal`, since the universal unit equals the harmonic unit |
 | <font color='royalblue'><sub>±</sub>A</font> | [harmonic Ampere](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=3&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | electric current | <font color='royalblue'><sub>±</sub>C /<sub>±</sub>n</font> | 73.975219 mA | electric potential : <font color='royalblue'><sub>♮</sub>Ω<sub>±</sub>A</font>, read "[nohm Ampere](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=5&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)" (voltage)<br/> magnetic potential : <font color='royalblue'>Ω<sub>2・±</sub>A</font>, read "turn Ampere" |
 | <font color='royalblue'><sub>±</sub>E</font> | [harmonic Ørsted](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=6&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | field strength | <font color='royalblue'><sub>±</sub>A /<sub>±</sub>h</font> | 271.616 mA/m | electric field strength : <font color='royalblue'><sub>♮</sub>Ω<sub>±</sub>E</font><br/>magnetic field strength : <font color='royalblue'>Ω<sub>2・±</sub>E</font> |
 | <font color='royalblue'><sub>±</sub>T</font> | [harmonic Tesla](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=9&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | flux density | <font color='royalblue'><sub>±</sub>C /<sub>±</sub>h<sup>2</sup></font> | 11.678991 T / Z<sub>P</sub> | magnetic flux density : <font color='royalblue'><sub>♮</sub>Ω<sub>±</sub>T</font><br/>electric flux density : <font color='royalblue'>Ω<sub>2・±</sub>T</font> |
@@ -116,6 +117,13 @@ The order of “square/cube,” “[minor/major](#9-minor--major-prefixes),” a
 <font color='royalblue'><sub>±</sub>T</font> occupy four center nodes of this lattice;
 every other quantity follows by these operations. 
 When context makes the Harmonic System clear, `±` need not be pronounced.
+
+The units of capacitance and inductance do not have special names.
+
+| Name | Quantity | Definition | SI equivalent |
+|------|----------|------------|---------------|
+| [nic / nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=12&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | capacitance | <font color='royalblue'><sub>±</sub>n/<sub>♮</sub>Ω</font> | 13.029851 mF |
+| [nic nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=14&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | inductance | <font color='royalblue'><sub>±</sub>n<sub>♮</sub>Ω</font> | 11.710646 H |
 
 ## 6. Defining Constants
 
@@ -142,7 +150,7 @@ In the Harmonic System, the values of the Bohr radius (a<sub>B</sub>), the charg
 | `e` | [electron](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=0&fq=1.0000000&frq=10&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | 1.602176634×10<sup>−19</sup> C (exact) | elementary electric charge | [Elementary charge](https://en.wikipedia.org/wiki/Elementary_charge) |
 | <font color='royalblue'><sub>±</sub>mol</font><sub>substance</sub> | [harmonic / universal mol](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=7&fq=1.0000000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 132.00762 mol | with substance name (ex. <font color='royalblue'><sub>±</sub>mol</font><sub>CO₂</sub>) | [Mole (unit)](https://en.wikipedia.org/wiki/Mole_(unit)) |
 | <font color='royalblue'>Ω<sub>k</sub></font> | total solid angle of a hypersphere | — | <font color='royalblue'>Ω<sub>k-1</sub></font> = (2π<sup>k/2</sup> / Γ(k/2)) <font color='royalblue'>rad<sup>k-1</sup></font> | [Unit sphere](https://en.wikipedia.org/wiki/Unit_sphere#Volume_and_area) |
-| <font color='royalblue'>℧<sub>k</sub></font> (<font color='royalblue'>f<sub>k</sub></font>) | figure | — | logarithm of an integer;<br/><font color='royalblue'>f₁</font>=[bit](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=59&fq=1.0000000&frq=10&fe=0&fu=4&tu=3&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) ≈ 3 dB, <font color='royalblue'>f₄</font>=nibble, <font color='royalblue'>f₈</font>=byte,<br/><font color='royalblue'>f<sub>z</sub></font>=[figure](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=59&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (z = log12./log2),<br/><font color='royalblue'>f<sub>z-2</sub></font> can represent ternary digit.<br/>Alias `f` where `℧` unavailable | — |
+| <font color='royalblue'>℧<sub>k</sub></font> (<font color='royalblue'>f<sub>k</sub></font>) | figure | — | logarithm of an integer;<br/><font color='royalblue'>℧₁</font>=[bit](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=59&fq=1.0000000&frq=10&fe=0&fu=4&tu=3&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) ≈ 3 dB, <font color='royalblue'>℧₄</font>=nibble, <font color='royalblue'>℧₈</font>=byte,<br/><font color='royalblue'>℧<sub>z</sub></font>=[figure](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=59&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (z = log12./log2),<br/><font color='royalblue'>℧<sub>z-2</sub></font> can represent ternary digit.<br/>Alias `f` where <font color='royalblue'>℧</font> unavailable | — |
 
 See also the physical, material, and astronomical constants in [tables.pdf](tables.pdf).
 
