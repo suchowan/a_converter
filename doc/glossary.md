@@ -137,9 +137,9 @@ The units of capacitance and inductance do not have special names.
 | <font color='royalblue'>k<sub>B</sub></font> | [Boltzmann](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=5&fq=1.0000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | entropy | 1.380649×10<sup>−23</sup> J/K (exact) | the Boltzmann constant | [Boltzmann constant](https://en.wikipedia.org/wiki/Boltzmann_constant) |
 
 In the Harmonic System, the values of the Bohr radius (a<sub>B</sub>), the charge (e) and mass (m<sub>e</sub>) of the electron can be determined by measuring only the fine-structure constant (α). In contrast to the SI system, <font color='royalblue'><sub>♮</sub>Ω</font> is the defined quantity, while e is the measured quantity.
-- a<sub>B</sub> = α<font color='royalblue'>Ω<sub>1</sub></font> / 4π<font color='royalblue'>R<sub>∞</sub></font> (factor ≈ 12.<sup>-3</sup>)
-- e = (α<font color='royalblue'>ℏ/<sub>♮</sub>Ω</font>)<sup>1/2</sup> (factor ≈ 12.<sup>-1</sup>)
-- m<sub>e</sub> = 4π<font color='royalblue'>R<sub>∞</sub>ℏ</font> / α<sup>2</sup><font color='royalblue'>Ω<sub>1</sub>c<sub>0</sub></font> (factor ≈ 12.<sup>-5</sup>)
+- a<sub>B</sub> = α<font color='royalblue'>Ω<sub>1</sub></font> / 4π<font color='royalblue'>R<sub>∞</sub></font> (factor ≈ 12.<sup>-3</sup>) ≈ <font color='royalblue'>1;′<sub>-</sub>h</font>
+- e = (α<font color='royalblue'>ℏ/<sub>♮</sub>Ω</font>)<sup>1/2</sup> (factor ≈ 12.<sup>-1</sup>) ≈ <font color='royalblue'>1;<sub>2-</sub>C</font>
+- m<sub>e</sub> = 4π<font color='royalblue'>R<sub>∞</sub>ℏ</font> / α<sup>2</sup><font color='royalblue'>Ω<sub>1</sub>c<sub>0</sub></font> (factor ≈ 12.<sup>-5</sup>) ≈ <font color='royalblue'>1;‴<sub>3-</sub>l</font>
 
 ## 7. Supplementary Constants
 
@@ -263,11 +263,16 @@ between the nucleon rest energy and a typical chemical energy. At this scale:
 
 | Scale | Quantity |
 |-------|----------|
-| `U⁻³` | rest mass of 1 nucleon |
-| `U⁻¹` | rest energy of 1 nucleon (E = mc₀²) |
-| `U⁻²` | typical chemical energy (= energy of 1 photon at peak visual sensitivity, 540 THz) |
+| [<font color='royalblue'>U<sup>+2</sup></font>](http://hosi.org/cgi-bin/conv.cgi?m=11080&d=2&fq=0.501002&frq=10&fe=0&fu=25&tu=0&fp=0&tp=0&fm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) | half the age of the solar system |
+| [<font color='royalblue'>U<sup>+1</sup></font>](http://hosi.org/cgi-bin/conv.cgi?m=11080&d=0&fq=3.0000000&frq=12&fe=0&fu=13&tu=0&fp=0&tp=0&fm=off&tm=off&fr=12&tr=12&fl=0&tl=0&c=Convert) | [Light](http://hosi.org/cgi-bin/conv.cgi?m=11080&d=6&fq=1.0000000&frq=10&fe=0&fu=4&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) travels 3 times meridian length of the Earth in 1 nic |
+| <font color='royalblue'>U<sup>0</sup></font> |human scale |
+| <font color='royalblue'>U<sup>-1</sup></font> | rest energy of 1 nucleon (E = mc₀²) |
+| [<font color='royalblue'>U<sup>-2</sup></font>](http://hosi.org/cgi-bin/conv.cgi?m=11080&d=9&fq=1.0000000&frq=10&fe=0&fu=15&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) | typical chemical energy (= energy of 1 photon at peak visual sensitivity, 540 THz); also matches the [electron charge](http://hosi.org/cgi-bin/conv.cgi?m=110b0&d=0&fq=1.0000000&frq=10&fe=0&fu=6&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) in this scale's units |
+| [<font color='royalblue'>U<sup>-3</sup></font>](http://hosi.org/cgi-bin/conv.cgi?m=11080&d=3&fq=1.0000000&frq=10&fe=0&fu=6&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) | rest mass of 1 nucleon |
+| [<font color='royalblue'>U<sup>-4</sup></font>](http://hosi.org/cgi-bin/conv.cgi?m=11080&d=0&fq=0.5000000&frq=10&fe=0&fu=6&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) | half the Planck length |
+| [<font color='royalblue'>U<sup>-5</sup></font>](http://hosi.org/cgi-bin/conv.cgi?m=11080&d=2&fq=0.5000000&frq=10&fe=0&fu=28&tu=0&fp=0&tp=0&fm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) | half the Planck time |
 
-See also Wikipedia Talk '[Planck_units](https://web.archive.org/web/20250128231044/https:/en.wikipedia.org/wiki/Talk:Planck_units/Archive_3#Other_possible_normalizations)' and blog post '[The Scaling Factor U (= 12^8)](https://suchowan.seesaa.net/article/202605article_29_1.html)'.
+See also Wikipedia Talk '[Planck_units](https://en.wikipedia.org/wiki/Talk:Planck_units/Archive_3#Other_possible_normalizations)'([archive](https://web.archive.org/web/20250128231044/https://en.wikipedia.org/wiki/Talk:Planck_units/Archive_3#Other_possible_normalizations)) and blog post '[The Scaling Factor U (= 12^8)](https://suchowan.seesaa.net/article/202605article_29_1.html)'.
 
 ---
 
