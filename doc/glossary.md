@@ -62,7 +62,7 @@ SI equivalents are taken from the *Clock_by_Rydberg* sheet of [`condensed.xlsx`]
 | <font color='royalblue'><sub>±</sub>h</font> | [harmon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | length | 100,1700; <font color='royalblue'>Ω<sub>1</sub> / R<sub>∞</sub> </font> | 0.27235220594 m (272.352 mm) |
 | <font color='royalblue'><sub>±</sub>n</font> | [nic](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | physical time | 10;<sup>+8</sup> <font color='royalblue'><sub>±</sub>h / c<sub>0</sub></font> | 0.39062511513 s (390.625 ms) |
 | <font color='royalblue'><sub>±</sub>J</font> | [harmonic Joule](http://hosi.org/cgi-bin/conv.cgi?m=100a0&d=2&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | energy | 10;<sup>+26;</sup> <font color='royalblue'>ℏ / <sub>±</sub>n</font> | 64.084556 mJ — overline <font color='royalblue'><sub>±</sub>J̅</font> : equivalent dose (effective Joule) |
-| <font color='royalblue'><sub>±</sub>K</font> | [harmonic Kelvin](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=1.0000000&frq=12&fe=0&fu=8&tu=9&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | thermo-dynamic temperature | 10;<sup>-20;</sup> <font color='royalblue'><sub>±</sub>J / K<sub>B</sub></font> | 58.387542 μK (= <font color='royalblue'>10;⁻⁴ °H</font>) |
+| <font color='royalblue'><sub>±</sub>K</font> | [harmonic Kelvin](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=1.0000000&frq=12&fe=0&fu=8&tu=9&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | thermo-dynamic temperature | 10;<sup>-20;</sup> <font color='royalblue'><sub>±</sub>J / K<sub>B</sub></font> | 58.387542 μK (= <font color='royalblue'>10;⁻⁴ [°H](#11-earth-local-units--constants)</font>) |
 
 By successively applying the [defining constants](#6-defining-constants), these base units are defined sequentially in the order <font color='royalblue'><sub>±</sub>h</font> → <font color='royalblue'><sub>±</sub>n</font> → <font color='royalblue'><sub>±</sub>J</font> → <font color='royalblue'><sub>±</sub>K</font>.  
 See also the relationships between all units with special names in [relations.pdf](relations.pdf).
@@ -73,10 +73,10 @@ See also the relationships between all units with special names in [relations.pd
 
 | Prefix | Name | Quantity | Definition | SI equivalent | Notes |
 |--------|------|----------|------------|---------------|-------|
-| - | [steradian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | solid angle | <font color='royalblue'>rad<sup>2</sup></font> | 1 sr | derived from `rad` (See [univunit-e.pdf](dozenal_com/univunit-e.pdf) p.11 eq.(19)) |
-| - | [cycle / nic](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=24&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | frequency and revolution | <font color='royalblue'>Ω<sub>1</sub>/<sub>±</sub>n</font> | 2.56000 Hz | not coherent |
-| <font color='royalblue'><sub>±</sub>q</font> | [harmonic square](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=4&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | area | square harmon (<font color='royalblue'><sub>±</sub>h<sup>2</sup></font>) | 741.757241 cm²| `q` from Latin *quadrata* |
-| <font color='royalblue'><sub>±</sub>c</font> | [harmonic cube](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-1&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | volume | cubic harmon ( <font color='royalblue'><sub>±</sub>h<sup>3</sup></font>) | 20.2019221 dm³ | ≈ 16/3 gallon (since 2/3 gallon ≈ <font color='royalblue'>(½ <sub>±</sub>h)³</font>);<br/>`c` from Latin *cubus* |
+| - | [*steradian*](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | solid angle | <font color='royalblue'>rad<sup>2</sup></font> | 1 sr | derived from `rad` (See [univunit-e.pdf](dozenal_com/univunit-e.pdf) p.11 eq.(19)) |
+| - | [*cycle / nic*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=24&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | frequency and revolution | <font color='royalblue'>Ω<sub>1</sub>/<sub>±</sub>n</font> | 2.56000 Hz | not coherent |
+| <font color='royalblue'><sub>±</sub>q</font> | [*harmonic square*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=4&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | area | square harmon (<font color='royalblue'><sub>±</sub>h<sup>2</sup></font>) | 741.757241 cm²| `q` from Latin *quadrata* |
+| <font color='royalblue'><sub>±</sub>c</font> | [*harmonic cube*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-1&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | volume | cubic harmon ( <font color='royalblue'><sub>±</sub>h<sup>3</sup></font>) | 20.2019221 dm³ | ≈ 16/3 gallon (since 2/3 gallon ≈ <font color='royalblue'>(½ <sub>±</sub>h)³</font>);<br/>`c` from Latin *cubus* |
 
 The order of “square/cube,” “[minor/major](#9-minor--major-prefixes),” and “[power prefixes](#10-power-prefixes)” determines the exponent of the units. Example : <font color='royalblue'>sub cube</font>(<font color='royalblue'><sub>♭</sub>c</font>) ≈ [0.97 cm³](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=-4&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)
 
@@ -122,8 +122,8 @@ The units of capacitance and inductance do not have special names.
 
 | Name | Quantity | Definition | SI equivalent |
 |------|----------|------------|---------------|
-| [nic / nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=12&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | capacitance | <font color='royalblue'><sub>±</sub>n/<sub>♮</sub>Ω</font> | 13.029851 mF |
-| [nic nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=14&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | inductance | <font color='royalblue'><sub>±</sub>n<sub>♮</sub>Ω</font> | 11.710646 H |
+| [*nic / nohm*](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=12&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | capacitance | <font color='royalblue'><sub>±</sub>n/<sub>♮</sub>Ω</font> | 13.029851 mF |
+| [*nic nohm*](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=14&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | inductance | <font color='royalblue'><sub>±</sub>n<sub>♮</sub>Ω</font> | 11.710646 H |
 
 ## 6. Defining Constants
 
@@ -159,10 +159,10 @@ See also the physical, material, and astronomical constants in [tables.pdf](tabl
 | Symbol | Name | Value / role |
 |--------|------|--------------|
 | `Ω₀` | — | total solid angle of a hypersphere, `Ω₀ = 2`; fermi component of the [Eq.Ω](../README.md#base-selection-eq%CF%89--constants-approximation) (in `2^n × 12^m`, the `2` is `Ω₀`) |
-| `Ω₁` | [cycle](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=86&fq=1.0000000&frq=12&fe=0&fu=3&tu=7&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | `Ω₁` = 2π `rad` |
-| `Ω₂` | [turn](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=3&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | `Ω₂` = 4π `sr` = 4π `rad²`<br/>pairs with <font color='royalblue'><sub>♮</sub>Ω</font> as `⟨♮Ω, Ω₂⟩` dual structure in the electromagnetic quantities |
-| `ω₁` | (Primary) Harmonic Ratio | `9/8` (= 90/80). Ratio between the international foot and 1 <font color='royalblue'><sub>±</sub>h</font> ; links 10;<sup>5</sup><font color='royalblue'><sub>±</sub>n</font> ↔ day ; a major second |
-| `ω₂` | Fine Harmonic Ratio | `41/40` (= 82/80). Elementary charge / impedance-derived charge unit; appears in Earth's meridian and ice density; one comma-pair in [53-TET](https://en.wikipedia.org/wiki/53_equal_temperament) (`revised.pdf` Note 49) |
+| `Ω₁` | [*cycle*](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=86&fq=1.0000000&frq=12&fe=0&fu=3&tu=7&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | `Ω₁` = 2π `rad` |
+| `Ω₂` | [*turn*](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=3&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | `Ω₂` = 4π `sr` = 4π `rad²`<br/>pairs with <font color='royalblue'><sub>♮</sub>Ω</font> as `⟨♮Ω, Ω₂⟩` dual structure in the electromagnetic quantities |
+| `ω₁` | *(Primary) Harmonic Ratio* | `9/8` (= 90/80). Ratio between the international foot and 1 <font color='royalblue'><sub>±</sub>h</font> ; links 10;<sup>5</sup><font color='royalblue'><sub>±</sub>n</font> ↔ day ; a major second |
+| `ω₂` | *Fine Harmonic Ratio* | `41/40` (= 82/80). Elementary charge / impedance-derived charge unit; appears in Earth's meridian and ice density; one comma-pair in [53-TET](https://en.wikipedia.org/wiki/53_equal_temperament) (`revised.pdf` Note 49) |
 
 `(ω₁−1)/(ω₂−1) = 5` — corresponds to one black-key sub-division (5 commas) of
 the 53-tone equal-tempered keyboard.  
@@ -172,11 +172,11 @@ the 53-tone equal-tempered keyboard.
 
 | Prefix | Symbol | Power | Notes |
 |--------|--------|-------|-------|
+| cosmic | `+` | 10;⁺⁸ | `±` omitted when `cosmic` is present |
+| hyper | `♯` | 10;⁺⁴ | `±` omitted when `hyper` is present |
+| dirac | `∜♯` | 10;⁺¹ | only for [Gravitic System](gravitic.pdf) |
 | sub | `♭` | 10;⁻⁴ | `±` omitted when `sub` is present |
 | atomic | `-` | 10;⁻⁸ | `±` omitted when `atomic` is present |
-| dirac | `∜♯` | 10;⁺¹ | only for [Gravitic System](gravitic.pdf) |
-| hyper | `♯` | 10;⁺⁴ | `±` omitted when `hyper` is present |
-| cosmic | `+` | 10;⁺⁸ | `±` omitted when `cosmic` is present |
 
 See also blog post '[The Day Musical Symbols Fell Naturally into Place](https://suchowan.seesaa.net/article/202601article_10_1.html)'.
 
@@ -206,7 +206,7 @@ See also the duodecimal myriad system for pure numbers in [myriad.pdf](myriad.pd
 | <font color='royalblue'>s<sub>E</sub></font> | Earth solar ([solar](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=2&fq=1.0000000&frq=12&fe=0&fu=14&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | rotation period of the Earth (24×60×60 s / <font color='royalblue'>Ω₁</font> at the SI-second epoch: start of 1900);<br/>Multiplying the units in “[Calendar Time Units](#12-calendar-time-units)” (unit dimension: plane angle ) by <font color='royalblue'>s<sub>E</sub></font> (unit dimension: physical time / plane angle ) yields the corresponding physical time  — see also [Case Study](Deep_Structure_Form_and_Emptiness.md#54-case-study-light-solar-tertia) |
 | <font color='royalblue'>g<sub>E</sub></font> | gee of Earth ([gee](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=18&fq=1.0000000&frq=12&fe=0&fu=5&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | gravitational acceleration of the Earth;<br/>Earth's gravitational force corresponding to one looloh of mass can be expressed as the [looloh](#4-derived-units--dynamical) gee (of Earth) ― <font color='royalblue'><sub>±</sub>l g<sub>E</sub></font>, see also [Case Study](Deep_Structure_Form_and_Emptiness.md#52-case-study-looloh-gee) |
 | <font color='royalblue'>T<sub>E</sub></font> | base point of degree H | Earth-local temperature scale = `118,2354; ±K` (≈ −74.36 °C, −101.85 °F); the only deliberately chosen component |
-| `°H` | [degree H](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=0.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | difference of thermodynamic temperature from the base point; `0;°H` ↔ `118,2354; ±K` (<font color='royalblue'>T<sub>E</sub></font>), chosen so that `100;°H` matches the boiling point of water, and approximately `61;°H` ↔ 14.°C, `78;°H` ↔ 37.°C<br/>- value of °C ≈ value of `°H` ×(1E;/17;) - 62;44<br/>- value of `°H` ≈ value of °C ×(17;/1E;) + 51;50 |
+| `°H` | [*degree H*](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=0.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | difference of thermodynamic temperature from the base point; `0;°H` ↔ `118,2354; ±K` (<font color='royalblue'>T<sub>E</sub></font>), chosen so that `100;°H` matches the boiling point of water, and approximately `61;°H` ↔ 14.°C, `78;°H` ↔ 37.°C, an interval of 1 `°H` = 10;<sup>+4</sup><font color='royalblue'><sub>±</sub>K</font><br/>- value of °C ≈ value of `°H` ×(1E;/17;) - 62;44<br/>- value of `°H` ≈ value of °C ×(17;/1E;) + 51;50 |
 
 The gravitational radius of the Earth, <font color='royalblue'>r<sub>E</sub></font>, is not an independent constant; rather, <font color='royalblue'>r<sub>E</sub> = g<sub>E</sub> (m<sub>E</sub> rad / c<sub>0</sub>)<sup>2</sup></font>.
 
@@ -216,26 +216,26 @@ The gravitational radius of the Earth, <font color='royalblue'>r<sub>E</sub></fo
 
 | Symbol | Name | Definition |   Figure   |
 |--------|------|------------|------------|
-| `☼̃` | [**year**](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.00000000&frq=12&fe=0&fu=23&tu=13&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 365. 31./128. days |  |
-| `☽̃` | month | 10;⁻¹ year |  |
-| `°̃` | **day** | 1 <font color='royalblue'>Ω₁</font> | [The calendar time unit structure around day (hexon-ternon)](pic/calendar_time_structure_nodus.png) |
-| `′̃` | unitia | 10;⁻¹ day | [27-hour clock (unitia notation)](27-hours.pdf) |
-| `″̃` | ditia | 10;⁻² day |  |
-| `‴̃` | [tertia](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=8&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ day |  |
-| `☆̃` | [**nodus**](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁻⁷ (1/128.) day<br/>GCD of year and half-day | [The natural time scale ladder(the age of the universe - the Planck time)](pic/NaturalTimeScale.png) - see also [blog post](https://suchowan.seesaa.net/article/202501article_17_3.html)|
-| `⌬̃` | [**hexon**](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=24&tu=23&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁺⁶ years<br/>LCM of year and half-day |  |
-| `▽̃` | [ternon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=7&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ nodus<br/>If [coordinated](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), 1 solar ternon = 1 nic |  |
+| `⌬̃` | [hexon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=24&tu=23&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁺⁶ years<br/>LCM of year and half-day |  |
+| `☼̃` | [year](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.00000000&frq=12&fe=0&fu=23&tu=13&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 365. 31./128. days |  |
+| `☽̃` | *month* | 10;⁻¹ year |  |
+| `°̃` | day | 1 <font color='royalblue'>Ω₁</font> | [The calendar time unit structure around day (hexon-ternon)](pic/calendar_time_structure_nodus.png) |
+| `′̃` | *unitia* | 10;⁻¹ day | [27-hour clock (unitia notation)](27-hours.pdf) |
+| `″̃` | *ditia* | 10;⁻² day |  |
+| `‴̃` | [*tertia*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=8&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ day |  |
+| `▽̃` | [*ternon*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=7&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ nodus<br/>If [coordinated](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), 1 solar ternon = 1 nic |  |
+| `☆̃` | [nodus](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁻⁷ (1/128.) day<br/>GCD of year and half-day | [The natural time scale ladder(the age of the universe - the Planck time)](pic/NaturalTimeScale.png) - see also [blog post](https://suchowan.seesaa.net/article/202501article_17_3.html)|
 
-The four units listed in [`Eight_Quartets.pdf`](Eight_Quartets.pdf) — with the Name in bold — were chosen so that no two share a ratio that is a power of 12 (cf. **Calendar Time**: year, day, nodus, hexon).
+The four units listed in [`Eight_Quartets.pdf`](Eight_Quartets.pdf) — with the Name in roman — were chosen so that no two share a ratio that is a power of 12 (cf. **Calendar Time**: nodus, day, year, hexon).
 
 ## 13. Social Aliases
 
 | Symbol / Notation | Name | Definition |
 |--------|------|------------|
-| <font color='royalblue'>mon<sub>country</sub></font> | mon | least-valued currency unit of a country/economic group (ex. 1$ = 84; <font color='royalblue'>mon<sub>us</sub></font>) |
+| <font color='royalblue'>mon<sub>country</sub></font> | mon | least-valued currency unit of a country/economic group (ex. 1$ = 84; <font color='royalblue'>mon<sub>us</sub></font>, 84<sub>12</sub>=100<sub>10</sub>) |
 | ;′<font color='royalblue'><sub>±</sub>h</font> | unínoh | 10;⁻¹ harmon = [2.2696 cm](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=0%3B10000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [0.89354 inch](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=0%3B10000000&frq=12&fe=0&fu=0&tu=25&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (≈ 8/9 inch) |
 | ;″<font color='royalblue'><sub>±</sub>l</font> | dinól | 10;⁻² looloh = [0.03229 ounce](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=0%3B010000000&frq=12&fe=0&fu=0&tu=10&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [0.91548 gram](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=0%3B010000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)  (≈ 11/12 gram) |
-| <font color='royalblue'><sub>-</sub>γ</font> | atol | 10;⁻⁸ c₀ = 1 harmon / nic = 2.509 997 km/h |
+| <font color='royalblue'><sub>-</sub>γ</font> | atol | 10;⁻⁸ c₀ = 1 harmon / nic = [2.51000 km/h](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=6&fq=1.0000000&frq=12&fe=0&fu=0&tu=12&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) |
 
 Aliases are *interfaces*, not weaknesses. Several social aliases, introduced
 independently, necessarily derive their final letter from the corresponding
