@@ -28,7 +28,7 @@ SI equivalents are taken from `harmonic.pdf`.
   it; SI conversion factors are stable since the 2019 SI redefinition and
   unaffected by CODATA adjustments.
 - **Quartet structure** — the system organizes units into universal,
-  Earth local, and alias quartets ([*Eight Quartets diagram*](Eight_Quartets.pdf)). See also [Three‑Dimensional Arrangement of the Quartets](https://suchowan.seesaa.net/article/202601article_23_1.html).
+  Earth local, and alias quartets ([*Eight Quartets diagram*](https://raw.githubusercontent.com/suchowan/a_converter/master/doc/Eight_Quartets.pdf)). See also [Three‑Dimensional Arrangement of the Quartets](https://suchowan.seesaa.net/article/202601article_23_1.html).
 - **Names are conveniences, not boundaries** — a table entry with a special name 
   (e.g. <font color='royalblue'><sub>±</sub>N</font>) marks a combination the system found useful enough to name.  
   Any other combination of base/derived units remains valid (especially [§3](#3-derived-units--geometrical), e.g. <font color='royalblue'>rad/<sub>±</sub>n</font>); 
@@ -40,6 +40,7 @@ SI equivalents are taken from `harmonic.pdf`.
 
 - [README.md](../README.md) — a concise introduction to UUS / the Harmonic System for first-time readers.
 - [doc/README.md](README.md) — a summary of `revised.pdf`, told as a human-readable story with abundant diagrams.
+- [doc/Discussion on the UUS and the Harmonic System](Discussion_on_the_UUS_and_the_Harmonic_System.md) — a discursive overview of the system's design principles, structure, historical development, and relationship to SI, TGM, and Planck units.
 - Blog — English posts (those paired with a Japanese version): [suchowan.seesaa.net](https://suchowan.seesaa.net/search?keyword=%3EJapanese%3C) — design rationale and topical essays.
 
 ---
@@ -53,7 +54,7 @@ SI equivalents are taken from `harmonic.pdf`.
 | <font color='royalblue'>rad</font> | [radian](http://hosi.org/cgi-bin/conv.cgi?c=d&m=100f0&d=86&tu=1&tr=10&tm=off&tp=0&tl=0&fu=0&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert)| plane angle | (2/π) arc sin(1) | same as SI | See [univunit-e.pdf](dozenal_com/univunit-e.pdf) pp.16-19 A.2,A.3.<br/>`Ω₁`(cycle) = 2π `rad`,<br/>`Ω₂`(turn) = 4π `sr` = 4π `rad²` |  [radian](https://en.wikipedia.org/wiki/Radian) |
 | <font color='royalblue'>neper</font> | [neper](http://hosi.org/cgi-bin/conv.cgi?c=fu&m=100f0&d=59&tu=1&tr=10&tm=off&tp=0&tl=0&fu=2&fr=12&fm=off&fp=0&fl=0&fq=1.0000000&fe=0&c=Convert) | information and logarithmic quantity | logarithm of Napier's constant | not part of SI | See the note for rad above.<br/>In the context of particle decay:<br/>- mean lifetime = physical time / neper<br/>- half-life = physical time / [bit](#7-supplementary-constants)<br/>These are two expressions of a **single** concept: the slowness of decay.| [neper](https://en.wikipedia.org/wiki/Neper) |
 | <font color='royalblue'><sub>♮</sub>mol</font> | [natural mol](http://hosi.org/cgi-bin/conv.cgi?m=100c0&d=0&fq=1.0000000&frq=12&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | count (amount of substance and events) | reciprocal Avogadro constant (<font color='royalblue'>N<sub>A</sub>⁻¹</font>) | mol / 6.02214076×10<sup>23</sup> (exact) | When combined with `mol`, `♮` ≡ `3-`; substance must be specified.<br/>As a pure count of entities, it **also** measures events: e.g. activity (SI becquerel:[Bq](http://hosi.org/cgi-bin/conv.cgi?m=100e0&d=0&fq=1.0000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) corresponds to <font color='royalblue'><sub>♮</sub>mol/<sub>±</sub>n</font> (decays per nic). | [Avogadro constant](https://en.wikipedia.org/wiki/Avogadro_constant) ⁻¹ |
-| <font color='royalblue'><sub>♮</sub>Ω</font> (<font color='royalblue'>Z<sub>P</sub></font>) | [nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | impedance | natural unit of impedance | 29.9792458 Ω (measured in SI)| vacuum impedance; <font color='royalblue'>αℏ/e<sup>2</sup></font> | [Fine-structure constant](https://en.wikipedia.org/wiki/Fine-structure_constant)(α), [Impedance of free space](https://en.wikipedia.org/wiki/Impedance_of_free_space) × [`rad²`](#5-derived-units--electromagnetic) |
+| <font color='royalblue'><sub>♮</sub>Ω</font> (<font color='royalblue'>Z<sub>P</sub></font>) | [nohm](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | impedance | natural unit of impedance | 29.9792458 Ω (measured in SI as α) | vacuum impedance; <font color='royalblue'>αℏ/e<sup>2</sup></font> | [Fine-structure constant](https://en.wikipedia.org/wiki/Fine-structure_constant)(α), [Impedance of free space](https://en.wikipedia.org/wiki/Impedance_of_free_space) × [`rad²`](#5-derived-units--electromagnetic) |
 
 ## 2. Base Units (not natural)
 
@@ -88,7 +89,7 @@ The order of “square/cube,” “[minor/major](#9-minor--major-prefixes),” a
 
 | Symbol | Name | Quantity | Definition | SI equivalent | Notes |
 |--------|------|----------|------------|---------------|-------|
-| <font color='royalblue'><sub>±</sub>l</font> | [looloh](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | mass | <font color='royalblue'><sub>±</sub>J /(<sub>±</sub>h/<sub>±</sub>n)<sup>2</sup></font> | 131.829289 g | ≈ 100;<sup>10;</sup> atomic mass unit ― see also the atomic mass table in [atomic.pdf](atomic.pdf).<br/>Water or ice H<sub>2</sub>O mass filling a cube of <font color='royalblue'>[(½ harmon)³](pic/Cube.png)</font> ≈ 1 <font color='royalblue'><sub>±</sub>mol</font> - approximately 100; <font color='royalblue'><sub>±</sub>l</font> / 2<sup>3</sup> (molecular weight of water 18 = 100; / 2<sup>3</sup>), adding 1 <font color='royalblue'><sub>±</sub>J</font> of heat to 1 <font color='royalblue'><sub>±</sub>l</font> of water raises its temperature by 2 <font color='royalblue'><sub>±</sub>K</font> ([specific heat of water](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=6&fq=1.0000000&frq=10&fe=0&fu=4&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) ≈ 0;6045 <font color='royalblue'><sub>±</sub>J/<sub>±</sub>l<sub>±</sub>K</font>, `revised.pdf` Note 53; cf. the [thermodynamic calorie](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=6&fq=1.0000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert)) |
+| <font color='royalblue'><sub>±</sub>l</font> (<font color='royalblue'><sub>±</sub>ℓ</font>) | [looloh](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | mass | <font color='royalblue'><sub>±</sub>J /(<sub>±</sub>h/<sub>±</sub>n)<sup>2</sup></font> | 131.829289 g | ≈ 100;<sup>10;</sup> atomic mass unit ― see also the atomic mass table in [atomic.pdf](atomic.pdf).<br/>Water or ice H<sub>2</sub>O mass filling a cube of <font color='royalblue'>[(½ harmon)³](pic/Cube.png)</font> ≈ 1 <font color='royalblue'><sub>±</sub>mol</font> - approximately 100; <font color='royalblue'><sub>±</sub>l</font> / 2<sup>3</sup> (molecular weight of water 18 = 100; / 2<sup>3</sup>), adding 1 <font color='royalblue'><sub>±</sub>J</font> of heat to 1 <font color='royalblue'><sub>±</sub>l</font> of water raises its temperature by 2 <font color='royalblue'><sub>±</sub>K</font> ([specific heat of water](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=6&fq=1.0000000&frq=10&fe=0&fu=4&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) ≈ 0;6045 <font color='royalblue'><sub>±</sub>J/<sub>±</sub>l<sub>±</sub>K</font>, `revised.pdf` Note 53; cf. the [thermodynamic calorie](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=6&fq=1.0000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert)) |
 | <font color='royalblue'><sub>±</sub>W</font> | [harmonic Watt](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | power | <font color='royalblue'><sub>±</sub>J /<sub>±</sub>n</font> | 164.056415 mW | overline <font color='royalblue'><sub>±</sub>W̅</font> ≈115.667212 lumen : luminous flux (effective Watt) |
 | <font color='royalblue'><sub>±</sub>N</font> | [harmonic Newton](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=11&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | force | <font color='royalblue'><sub>±</sub>J /<sub>±</sub>h</font> | 235.300301 mN | In practice, gram-force is sometimes used as a force unit instead of the Newton. In parallel, Earth's gravitational force corresponding to one looloh of mass can be expressed as the looloh [gee](#11-earth-local-units--constants) (of Earth) ― <font color='royalblue'><sub>±</sub>l g<sub>E</sub></font>.<br/>Two examples of ["atomic"/"cosmic" prefixes](#9-minor--major-prefixes) in force:<br/>- the [Coulomb repulsion](pic/Force-comparison-2.png) between two 1 <font color='royalblue'><sub>±</sub>C</font> charges 1 <font color='royalblue'><sub>±</sub>h</font> apart is exactly 1 <font color='royalblue'><sub>+</sub>N</font> (cosmic Newton);<br/>- the [gravitational attraction](pic/Force-comparison-1.png) between 7 <font color='royalblue'><sub>±</sub>l</font> and 5 <font color='royalblue'><sub>±</sub>l</font> masses 1 <font color='royalblue'><sub>±</sub>h</font> apart is approximately 1 <font color='royalblue'><sub>-</sub>N</font> (atomic Newton). |
 | <font color='royalblue'><sub>±</sub>P</font> | [harmonic Pascal](http://hosi.org/cgi-bin/conv.cgi?m=100a0&d=6&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | pressure | <font color='royalblue'><sub>±</sub>N /<sub>±</sub>h<sup>2</sup></font> | 3.172201 Pa | overline <font color='royalblue'><sub>±</sub>P̅</font> : phon pressure (effective Pascal)<br/>At the thermodynamic temperature of the triple point of water (273.16 K), the pressure at which the ideal-gas molar volume becomes exactly 100;<font color='royalblue'><sub>±</sub>h<sup>3</sup>/<sub>±</sub>mol</font> is 1;6975 <font color='royalblue'><sub>♯</sub>P</font> (103061.2 Pa, 47./30. <font color='royalblue'><sub>♯</sub>P</font>), `revised.pdf` Note 51 |
@@ -121,7 +122,8 @@ every other quantity follows by these operations.
 When context makes the Harmonic System clear, `±` need not be pronounced.
 
 The following units do not have special names, 
-but they are listed here to explicitly indicate their SI equivalents.
+but they are listed here to explicitly indicate their SI equivalents.  
+The <font color='royalblue'><sub>♮</sub>Ω</font>-<font color='royalblue'>Ω<sub>2</sub></font> pair eliminates the need to give special names to these quantities.
 
 | Name | Quantity | Definition | SI equivalent | Name | Quantity | Definition | SI equivalent |
 |------|----------|------------|---------------|------|----------|------------|---------------|
@@ -139,7 +141,7 @@ but they are listed here to explicitly indicate their SI equivalents.
 | `ħ` | [quantum](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=25&fq=1.000000000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | action | 6.62607015×10<sup>−34</sup> J⋅s / 2π (exact) | quantum of action (reduced Planck constant) | [Planck constant](https://en.wikipedia.org/wiki/Planck_constant) |
 | <font color='royalblue'>k<sub>B</sub></font> | [Boltzmann](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=5&fq=1.0000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | entropy | 1.380649×10<sup>−23</sup> J/K (exact) | the Boltzmann constant | [Boltzmann constant](https://en.wikipedia.org/wiki/Boltzmann_constant) |
 
-In the Harmonic System, the values of the Bohr radius (a<sub>B</sub>), the charge (e) and mass (m<sub>e</sub>) of the electron can be determined by measuring only the fine-structure constant (α). In contrast to the SI system, <font color='royalblue'><sub>♮</sub>Ω</font> is the defined quantity, while e is the measured quantity.
+In the Harmonic System, the values of the Bohr radius (a<sub>B</sub>), the charge (e) and mass (m<sub>e</sub>) of the electron can be determined by measuring only the fine-structure constant ([α](#8-structural-constants)). In contrast to the SI system, <font color='royalblue'><sub>♮</sub>Ω</font> is the defined quantity, while e is the measured quantity.
 - a<sub>B</sub> = α<font color='royalblue'>Ω<sub>1</sub></font> / 4π<font color='royalblue'>R<sub>∞</sub></font> (factor ≈ 12.<sup>-3</sup>) ≈ <font color='royalblue'>1;′<sub>-</sub>h</font>
 - e = (α<font color='royalblue'>ℏ/<sub>♮</sub>Ω</font>)<sup>1/2</sup> (factor ≈ 12.<sup>-1</sup>) ≈ <font color='royalblue'>1;<sub>2-</sub>C</font>
 - m<sub>e</sub> = 4π<font color='royalblue'>R<sub>∞</sub>ℏ</font> / α<sup>2</sup><font color='royalblue'>Ω<sub>1</sub>c<sub>0</sub></font> (factor ≈ 12.<sup>-5</sup>) ≈ <font color='royalblue'>1;‴<sub>3-</sub>l</font>
@@ -152,32 +154,49 @@ In the Harmonic System, the values of the Bohr radius (a<sub>B</sub>), the charg
 |--------|------|---------------|----------|-----------|
 | `e` | [electron](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=0&fq=1.0000000&frq=10&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) | 1.602176634×10<sup>−19</sup> C (exact) | elementary electric charge | [Elementary charge](https://en.wikipedia.org/wiki/Elementary_charge) |
 | <font color='royalblue'><sub>±</sub>mol</font><sub>substance</sub> | [harmonic / universal mol](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=7&fq=1.0000000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 132.00762 mol | with substance name (ex. <font color='royalblue'><sub>±</sub>mol</font><sub>CO₂</sub>) | [Mole (unit)](https://en.wikipedia.org/wiki/Mole_(unit)) |
-| <font color='royalblue'>Ω<sub>k</sub></font> | total solid angle of a hypersphere | — | <font color='royalblue'>Ω<sub>k-1</sub></font> = (2π<sup>k/2</sup> / Γ(k/2)) <font color='royalblue'>rad<sup>k-1</sup></font> | [Unit sphere](https://en.wikipedia.org/wiki/Unit_sphere#Volume_and_area) |
+| <font color='royalblue'>Ω<sub>k</sub></font> | [total solid angle of a hypersphere](#details-on-the-total-solid-angle-of-a-hypersphere) | — | <font color='royalblue'>Ω<sub>k-1</sub></font> = (2π<sup>k/2</sup> / Γ(k/2)) <font color='royalblue'>rad<sup>k-1</sup></font> | [Unit sphere](https://en.wikipedia.org/wiki/Unit_sphere#Volume_and_area) |
 | <font color='royalblue'>℧<sub>k</sub></font> (<font color='royalblue'>f<sub>k</sub></font>) | figure | — | logarithm of an integer;<br/><font color='royalblue'>℧₁</font>=[bit](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=59&fq=1.0000000&frq=10&fe=0&fu=4&tu=3&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert) ≈ 3 dB, <font color='royalblue'>℧₄</font>=nibble, <font color='royalblue'>℧₈</font>=byte,<br/><font color='royalblue'>℧<sub>z</sub></font>=[figure](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=59&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (z = log12./log2),<br/><font color='royalblue'>℧<sub>z-2</sub></font> can represent ternary digit.<br/>Alias `f` where <font color='royalblue'>℧</font> unavailable | — |
 
 See also the physical, material, and astronomical constants in [tables.pdf](tables.pdf).
 
 ## 8. Structural Constants
 
+### Structural Constants Characterizing UUS / Harmonic System
+
+| Symbol | Name | Value / role |
+|--------|------|--------------|
+| `ω₀` | *Trivial Harmonic Ratio* | `1/1` — too trivial to have a use, but paradoxically, it could be said to appear throughout UUS / Harmonic System; a **perfect unison** |
+| `ω₁` | *(Primary) Harmonic Ratio* | `9/8` (= 90/80). Ratio between the [international foot](../README.md#2-a-musical-bridge-to-the-human-scale) and 1 <font color='royalblue'><sub>±</sub>h</font> ; links 10;<sup>5</sup><font color='royalblue'><sub>±</sub>n</font> ↔ day ; a **major second**  — the origin of the name "Harmonic System" |
+| `ω₂` | *Fine Harmonic Ratio* | `41/40` (= 82/80). Elementary charge / impedance-derived charge unit (12α<sup>1/2</sup>=41.00378/40.);<br/>appears in [Earth's meridian and ice density](../README.md#notes); one comma-pair in [53-TET](https://en.wikipedia.org/wiki/53_equal_temperament) (`revised.pdf` Note 49) |
+| `α` | [*Fine Structure Constant*](https://en.wikipedia.org/wiki/Fine-structure_constant) | <font color='royalblue'><sub>♮</sub>Ωe<sup>2</sup>/ℏ</font> =  0.0072973525643 ≈ 1/137.035999177 (measured in both  SI and Harmonic System) |
+
+`(ω₁−1)/(ω₂−1) = 5` — corresponds to two black-key sub-division (5 commas) of
+the 53-tone equal-tempered keyboard.  
+
+### Details on the total solid angle of a hypersphere
+
+From the [Supplementary Constants](#7-supplementary-constants) section, broken down by prefix k
+
 | Symbol | Name | Value / role |
 |--------|------|--------------|
 | `Ω₀` | — | total solid angle of a hypersphere, `Ω₀ = 2`; fermi component of the [Eq.Ω](../README.md#base-selection-eq%CF%89--constants-approximation) (in `2^n × 12^m`, the `2` is `Ω₀`) |
 | `Ω₁` | [*cycle*](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=86&fq=1.0000000&frq=12&fe=0&fu=3&tu=7&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | `Ω₁` = 2π `rad` |
 | `Ω₂` | [*turn*](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=3&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | `Ω₂` = 4π `sr` = 4π `rad²`<br/>pairs with <font color='royalblue'><sub>♮</sub>Ω</font> as `⟨♮Ω, Ω₂⟩` dual structure in the electromagnetic quantities |
-| `ω₁` | *(Primary) Harmonic Ratio* | `9/8` (= 90/80). Ratio between the international foot and 1 <font color='royalblue'><sub>±</sub>h</font> ; links 10;<sup>5</sup><font color='royalblue'><sub>±</sub>n</font> ↔ day ; a major second |
-| `ω₂` | *Fine Harmonic Ratio* | `41/40` (= 82/80). Elementary charge / impedance-derived charge unit; appears in Earth's meridian and ice density; one comma-pair in [53-TET](https://en.wikipedia.org/wiki/53_equal_temperament) (`revised.pdf` Note 49) |
-
-`(ω₁−1)/(ω₂−1) = 5` — corresponds to two black-key sub-division (5 commas) of
-the 53-tone equal-tempered keyboard.  
-`ω₀ = 1` is the trivial harmonic ratio — too trivial to have a use.
 
 ## 9. Minor / Major Prefixes
+
+When several prefixes combine, they are read — and written as a subscript — in the order 
+`(cosmic | atomic)` then `(hyper | dirac | sub)`, optionally preceded by a [power prefix](#10-power-prefixes). 
+The subscript mirrors this reading order.
+
+Example from `revised.pdf` Table 7:  
+- Tera Byte : cosmic hyper bit ( 1;<sub>+♯</sub>℧<sub>1</sub> ), because 2<sup>43.</sup> ≈ 12.<sup>12.</sup>
 
 | Prefix | Symbol | Power | Notes |
 |--------|--------|-------|-------|
 | cosmic | `+` | 10;⁺⁸ | `±` omitted when `cosmic` is present |
 | hyper | `♯` | 10;⁺⁴ | `±` omitted when `hyper` is present |
-| dirac | `∜♯` | 10;⁺¹ | only for [Gravitic System](gravitic.pdf) |
+| *dirac* | `∜♯` | 10;⁺¹ | only for [Gravitic System](gravitic.pdf) |
 | sub | `♭` | 10;⁻⁴ | `±` omitted when `sub` is present |
 | atomic | `-` | 10;⁻⁸ | `±` omitted when `atomic` is present |
 

@@ -232,3 +232,6 @@ rather than maintaining a separate Change_log.md.)
 
 Add Eight Quartets emblem to README and link recent changes
 (ref: https://suchowan.seesaa.net/article/202601article_23_1.html)
+
+## Notes
+

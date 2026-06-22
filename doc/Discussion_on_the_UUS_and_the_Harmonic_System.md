@@ -232,6 +232,9 @@ This convergence—geometric, numerical, and semantic—makes harmonic the only 
 - **Formal specification**  
   [revised.pdf](revised.pdf)
 
+- **Reference glossary**  
+  [glossary.md](glossary.md) — units, prefixes, constants, and structural terms, with SI equivalents and cross-links to the whole UUS ecosystem.
+
 - **Repository**  
   https://github.com/suchowan/a_converter
 
