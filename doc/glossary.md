@@ -246,16 +246,20 @@ The gravitational radius of the Earth, <font color='royalblue'>r<sub>E</sub></fo
 
 <p align="center"><em>Earth Local Category</em></p>
 
+The symmetrical equation [Eq.α](../README.md#origin-selection-eq%CE%B1--calendar-symmetric-approximation) (year / half-day ≈ 3⁺⁶ + 3⁺¹×2⁻¹ − 2⁻⁶) 
+yields the GCD and LCM of the year and the half-day as nodus and hexon respectively.  
+The Earth-Local Calendar Time System is built from these units.
+
 | Symbol | Name | Definition | Notes | Figure |
 |--------|------|------------|-------|--------|
 | `⌬̃` | [hexon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=24&tu=23&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁺⁶ years | [LCM](https://en.wikipedia.org/wiki/Least_common_multiple) of year and half-day<br/> ≈ 10;<sup>+6</sup> nodus | |
 | `☼̃` | [year](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.00000000&frq=12&fe=0&fu=23&tu=13&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 365. 31./128. days | 365. days 5 h 48. m 45. s | |
-| `☽̃` | *month* | 10;⁻¹ year | |  |
+| `☽̃` | └ *month* | 10;⁻¹ year | |  |
 | `°̃` | day | 1 <font color='royalblue'>Ω₁</font> | | [The calendar time unit structure around day (hexon-ternon)](pic/calendar_time_structure_nodus.png) |
-| `′̃` | *unitia* | 10;⁻¹ day | | [27-hour clock (unitia notation)](27-hours.pdf) |
-| `″̃` | *ditia* | 10;⁻² day | |  |
-| `‴̃` | [*tertia*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=8&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ day | | |
-| `▽̃` | [*ternon*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=7&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ nodus | If [coordinated](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), 1 solar ternon = 1 nic |  |
+| `′̃` | ├ *unitia* | 10;⁻¹ day | | [27-hour clock (unitia notation)](27-hours.pdf) |
+| `″̃` | ├ *ditia* | 10;⁻² day | |  |
+| `‴̃` | └ [*tertia*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=8&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ day | | |
+| `▽̃` | ┌ [*ternon*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=7&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ nodus | also 2⁻⁷ (1/128.) tertia<br/>If [coordinated](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), 1 solar ternon = 1 nic |  |
 | `☆̃` | [nodus](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁻⁷ (1/128.) day | [GCD](https://en.wikipedia.org/wiki/Greatest_common_divisor) of year and half-day | [The natural time scale ladder(the age of the universe - the Planck time)](pic/NaturalTimeScale.png) - see also [blog post](https://suchowan.seesaa.net/article/202501article_17_3.html)|
 
 The four units listed in [`Eight_Quartets.pdf`](Eight_Quartets.pdf) — with the Name in roman — were chosen so that no two share a ratio that is a power of 12 (cf. **Calendar Time**: nodus, day, year, hexon).
