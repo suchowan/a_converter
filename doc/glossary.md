@@ -66,7 +66,7 @@ See also [The Semantic Network](AI_Oriented_Documents/On_Naming_Conventions.md#7
 | <font color='royalblue'><sub>±</sub>h</font> | [harmon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | length | 100,1700; <font color='royalblue'>Ω<sub>1</sub> / R<sub>∞</sub> </font> | 0.27235220594 m (272.352 mm, ≈ 8 / 9 foot) |
 | <font color='royalblue'><sub>±</sub>n</font> | [nic](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | physical time | 10;<sup>+8</sup> <font color='royalblue'><sub>±</sub>h / c<sub>0</sub></font> | 0.39062511513 s (390.625 ms, ≈ 25. / 64. s) |
 | <font color='royalblue'><sub>±</sub>J</font> | [harmonic Joule](http://hosi.org/cgi-bin/conv.cgi?m=100a0&d=2&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | energy | 10;<sup>+26;</sup> <font color='royalblue'>ℏ / <sub>±</sub>n</font> | 64.084556 mJ — overline <font color='royalblue'><sub>±</sub>J̅</font> : equivalent dose (effective Joule) |
-| <font color='royalblue'><sub>±</sub>K</font> | [harmonic Kelvin](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=1.0000000&frq=12&fe=0&fu=8&tu=9&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | thermo-dynamic temperature | 10;<sup>-20;</sup> <font color='royalblue'><sub>±</sub>J / K<sub>B</sub></font> | 58.387542 μK (= <font color='royalblue'>10;⁻⁴ [°H](#11-earth-local-units--constants)</font>) |
+| <font color='royalblue'><sub>±</sub>K</font> | [harmonic Kelvin](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=1.0000000&frq=12&fe=0&fu=8&tu=9&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | thermo-dynamic temperature | 10;<sup>-20;</sup> <font color='royalblue'><sub>±</sub>J / K<sub>B</sub></font> | 58.387542 μK (= <font color='royalblue'>10;⁻⁴ [°H](#12-earth-local-units--constants)</font>) |
 
 By successively applying the [defining constants](#6-defining-constants), these base units are defined sequentially in the order <font color='royalblue'><sub>±</sub>h</font> → <font color='royalblue'><sub>±</sub>n</font> → <font color='royalblue'><sub>±</sub>J</font> → <font color='royalblue'><sub>±</sub>K</font>.  
 See also the relationships between all units with special names in [relations.pdf](relations.pdf).
@@ -84,7 +84,9 @@ See also the relationships between all units with special names in [relations.pd
 
 *Note on Prefix:* In <font color='royalblue'><sub>±</sub>c</font> or <font color='royalblue'><sub>±</sub>q</font>, the "c" (cubic) and "q" (quadrata) function as dimensional prefixes modifying the base harmon unit, rather than standalone unit symbols.
 
-The order of “square/cube,” “[minor/major](#9-minor--major-prefixes),” and “[power prefixes](#10-power-prefixes)” determines the exponent of the units. Example : <font color='royalblue'>sub cube</font>(<font color='royalblue'><sub>♭</sub>c</font>) ≈ [0.97 cm³](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=-4&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)
+The order of “square/cube,” “[minor/major](#10-minor--major-prefixes),” and “[power prefixes](#11-power-prefixes)” determines the exponent of the units. Example : <font color='royalblue'>sub cube</font>(<font color='royalblue'><sub>♭</sub>c</font>) ≈ [0.97 cm³](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=5&fq=1.0000000&frq=12&fe=-4&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)
+
+---
 
 ## 4. Derived Units — Dynamical
 
@@ -94,7 +96,7 @@ The order of “square/cube,” “[minor/major](#9-minor--major-prefixes),” a
 |--------|------|----------|------------|---------------|-------|
 | <font color='royalblue'><sub>±</sub>l</font> (<font color='royalblue'><sub>±</sub>ℓ</font>) | [looloh](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | mass | <font color='royalblue'><sub>±</sub>J /(<sub>±</sub>h/<sub>±</sub>n)<sup>2</sup></font> | 131.829289 g | ≈ 100;<sup>10;</sup> atomic mass unit ― see also the atomic mass table in [atomic.pdf](atomic.pdf).<br/>Water or ice H<sub>2</sub>O mass filling a cube of <font color='royalblue'>[(½ harmon)³](pic/Cube.png)</font> ≈ 1 <font color='royalblue'><sub>±</sub>mol</font> - approximately 100; <font color='royalblue'><sub>±</sub>l</font> / 2<sup>3</sup> (molecular weight of water 18 = 100; / 2<sup>3</sup>), adding 1 <font color='royalblue'><sub>±</sub>J</font> of heat to 1 <font color='royalblue'><sub>±</sub>l</font> of water raises its temperature by 2 <font color='royalblue'><sub>±</sub>K</font> ([specific heat of water](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=6&fq=1.0000000&frq=10&fe=0&fu=4&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) ≈ 0;6045 <font color='royalblue'><sub>±</sub>J/<sub>±</sub>l<sub>±</sub>K</font>, `revised.pdf` Note 53; cf. the [thermodynamic calorie](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=6&fq=1.0000000&frq=10&fe=0&fu=4&tu=1&fp=0&tp=0&fm=off&tm=off&fr=10&tr=10&fl=0&tl=0&c=Convert)) |
 | <font color='royalblue'><sub>±</sub>W</font> | [harmonic Watt](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=10&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | power | <font color='royalblue'><sub>±</sub>J /<sub>±</sub>n</font> | 164.056415 mW | overline <font color='royalblue'><sub>±</sub>W̅</font> ≈115.667212 lumen : luminous flux (effective Watt) |
-| <font color='royalblue'><sub>±</sub>N</font> | [harmonic Newton](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=11&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | force | <font color='royalblue'><sub>±</sub>J /<sub>±</sub>h</font> | 235.300301 mN | In practice, gram-force is sometimes used as a force unit instead of the Newton. In parallel, Earth's gravitational force corresponding to one looloh of mass can be expressed as the looloh [gee](#11-earth-local-units--constants) (of Earth) ― <font color='royalblue'><sub>±</sub>l g<sub>E</sub></font>.<br/>Two examples of ["atomic"/"cosmic" prefixes](#9-minor--major-prefixes) in force:<br/>- the [Coulomb repulsion](pic/Force-comparison-2.png) between two 1 <font color='royalblue'><sub>±</sub>C</font> charges 1 <font color='royalblue'><sub>±</sub>h</font> apart is exactly 1 <font color='royalblue'><sub>+</sub>N</font> (cosmic Newton);<br/>- the [gravitational attraction](pic/Force-comparison-1.png) between 7 <font color='royalblue'><sub>±</sub>l</font> and 5 <font color='royalblue'><sub>±</sub>l</font> masses 1 <font color='royalblue'><sub>±</sub>h</font> apart is approximately 1 <font color='royalblue'><sub>-</sub>N</font> (atomic Newton). |
+| <font color='royalblue'><sub>±</sub>N</font> | [harmonic Newton](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=11&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | force | <font color='royalblue'><sub>±</sub>J /<sub>±</sub>h</font> | 235.300301 mN | In practice, gram-force is sometimes used as a force unit instead of the Newton. In parallel, Earth's gravitational force corresponding to one looloh of mass can be expressed as the looloh [gee](#12-earth-local-units--constants) (of Earth) ― <font color='royalblue'><sub>±</sub>l g<sub>E</sub></font>.<br/>Two examples of ["atomic"/"cosmic" prefixes](#10-minor--major-prefixes) in force:<br/>- the [Coulomb repulsion](pic/Force-comparison-2.png) between two 1 <font color='royalblue'><sub>±</sub>C</font> charges 1 <font color='royalblue'><sub>±</sub>h</font> apart is exactly 1 <font color='royalblue'><sub>+</sub>N</font> (cosmic Newton);<br/>- the [gravitational attraction](pic/Force-comparison-1.png) between 7 <font color='royalblue'><sub>±</sub>l</font> and 5 <font color='royalblue'><sub>±</sub>l</font> masses 1 <font color='royalblue'><sub>±</sub>h</font> apart is approximately 1 <font color='royalblue'><sub>-</sub>N</font> (atomic Newton). |
 | <font color='royalblue'><sub>±</sub>P</font> | [harmonic Pascal](http://hosi.org/cgi-bin/conv.cgi?m=100a0&d=6&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | pressure | <font color='royalblue'><sub>±</sub>N /<sub>±</sub>h<sup>2</sup></font> | 3.172201 Pa | overline <font color='royalblue'><sub>±</sub>P̅</font> : phon pressure (effective Pascal)<br/>At the thermodynamic temperature of the triple point of water (273.16 K), the pressure at which the ideal-gas molar volume becomes exactly 100;<font color='royalblue'><sub>±</sub>h<sup>3</sup>/<sub>±</sub>mol</font> is 1;6975 <font color='royalblue'><sub>♯</sub>P</font> (103061.2 Pa, 47./30. <font color='royalblue'><sub>♯</sub>P</font>), `revised.pdf` Note 51 |
 
 ## 5. Derived Units — Electromagnetic
@@ -162,6 +164,8 @@ In the Harmonic System, the values of the Bohr radius (a<sub>B</sub>), the charg
 
 See also the physical, material, and astronomical constants in [tables.pdf](tables.pdf).
 
+---
+
 ## 8. Structural Constants
 
 ### Structural Constants Characterizing UUS / Harmonic System
@@ -188,110 +192,7 @@ From the [Supplementary Constants](#7-supplementary-constants) section, broken d
 | `Ω₁` | [*cycle*](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=86&fq=1.0000000&frq=12&fe=0&fu=3&tu=7&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | plane angle | `Ω₁` = 2π `rad` ― a full rotation in 2D |
 | `Ω₂` | [*turn*](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=85&fq=1.0000000&frq=12&fe=0&fu=3&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | solid angle | `Ω₂` = 4π `sr` = 4π `rad²` ― a full rotation in 3D ([sweeping all 3D directions](https://gist.github.com/suchowan/5c2f1ca3cfb79b3abb8ae40bbf3a2a5f#4-figure-2--geometric-interpretation-of-magnetic-potential))<br/>pairs with <font color='royalblue'><sub>♮</sub>Ω</font> as `⟨♮Ω, Ω₂⟩` dual structure in the electromagnetic quantities |
 
-## 9. Minor / Major Prefixes
-
-When several prefixes combine, they are read — and written as a subscript — in the order 
-`(cosmic | atomic)` then `(hyper | dirac | sub)`, optionally preceded by a [power prefix](#10-power-prefixes). 
-The subscript mirrors this reading order.
-
-Example from `revised.pdf` Table 7:  
-- Tera Byte : cosmic hyper bit ( 1;<sub>+♯</sub>℧<sub>1</sub> ), because 2<sup>43.</sup> ≈ 12.<sup>12.</sup>
-
-| Prefix | Symbol | Power | Notes |
-|--------|--------|-------|-------|
-| cosmic | `+` | 10;⁺⁸ | `±` omitted when `cosmic` is present |
-| hyper | `♯` | 10;⁺⁴ | `±` omitted when `hyper` is present |
-| *dirac* | `∜♯` | 10;⁺¹ | only for [Gravitic System](gravitic.pdf) |
-| sub | `♭` | 10;⁻⁴ | `±` omitted when `sub` is present |
-| atomic | `-` | 10;⁻⁸ | `±` omitted when `atomic` is present |
-
-See also blog post '[The Day Musical Symbols Fell Naturally into Place](https://suchowan.seesaa.net/article/202601article_10_1.html)'.
-
-## 10. Power Prefixes
-
-Power prefixes, which represent powers of 12<sup>8</sup>(=[U](#15-scaling--hierarchy)), are used in combination with terms such as “atomic” and “cosmic.”
-
-Example from `revised.pdf` Table 7:  
-- the age of the universe : 6; di-cosmic nic ( 6;<sub>2+</sub>n )
-- the Planck length : 2; tetra-atomic harmon ( 2;<sub>4-</sub>h )
-
-|  Power | Prefix |
-|--------|--------|
-| 0th | do not use 'cosmic/atomic' itself |
-| 1st | omit the prefix and use 'cosmic/atomic' on its own |
-| 2nd | di- (`2`) |
-| 3rd | ter- (`3`) |
-| 4th | tetra- (`4`) |
-| 5th | penta- (`5`) |
-| 6th | hexa- (`6`) |
-| 7th | hepta- (`7`) |
-
-See also the duodecimal myriad system for pure numbers in [myriad.pdf](myriad.pdf) and blog post '[Design Principles and Unique Implementation](https://suchowan.seesaa.net/article/202605article_11_1.html)'.
-
-## 11. Earth Local Units & Constants
-
-<p align="center"><em>Earth Local Category</em></p>
-
-| Symbol | Name | Definition |
-|--------|------|------------|
-| <font color='royalblue'>m<sub>E</sub></font> | Earth meridian ([meridian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=0&fq=1.0000000&frq=12&fe=0&fu=13&tu=1&fp=0&tp=3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | meridian length of the Earth (≑ (ω₂/3) <font color='royalblue'><sub>+</sub>h / Ω₁</font>);<br/>Since one sub cycle (<font color='royalblue'><sub>♭</sub>Ω<sub>1</sub></font>) is 150/144 minutes (plane angle), 1 [meridian sub cycle](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=0&fq=1.0000000&frq=12&fe=0&fu=13&tu=30&fp=-4&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (<font color='royalblue'>m<sub>E♭</sub>Ω<sub>1</sub></font>) ≈ 1.041 nautical mile — see also [Case Study](Deep_Structure_Form_and_Emptiness.md#53-case-study-bridging-angular-and-linear-measure) |
-| <font color='royalblue'>s<sub>E</sub></font> | Earth solar ([solar](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=2&fq=1.0000000&frq=12&fe=0&fu=14&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | rotation period of the Earth (24×60×60 s / <font color='royalblue'>Ω₁</font> at the SI-second epoch: start of 1900);<br/>Multiplying the units in “[Calendar Time Units](#12-calendar-time-units)” (unit dimension: plane angle ) by <font color='royalblue'>s<sub>E</sub></font> (unit dimension: physical time / plane angle ) yields the corresponding physical time  — see also [Case Study](Deep_Structure_Form_and_Emptiness.md#54-case-study-light-solar-tertia) |
-| <font color='royalblue'>g<sub>E</sub></font> | gee of Earth ([gee](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=18&fq=1.0000000&frq=12&fe=0&fu=5&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | gravitational acceleration of the Earth;<br/>Earth's gravitational force corresponding to one looloh of mass can be expressed as the [looloh](#4-derived-units--dynamical) gee (of Earth) ― <font color='royalblue'><sub>±</sub>l g<sub>E</sub></font>, see also [Case Study](Deep_Structure_Form_and_Emptiness.md#52-case-study-looloh-gee) |
-| <font color='royalblue'>T<sub>E</sub></font> | base point of degree H | Earth-local temperature scale = `118,2354; ±K` (≈ −74.36 °C, −101.85 °F); the only deliberately chosen component |
-| `°H` | [*degree H*](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=0.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | difference of thermodynamic temperature from the base point; `0;°H` ↔ `118,2354; ±K` (<font color='royalblue'>T<sub>E</sub></font>), chosen so that `100;°H` matches the boiling point of water, and approximately `61;°H` ↔ 14.°C, `78;°H` ↔ 37.°C, an interval of 1 `°H` = 10;<sup>+4</sup><font color='royalblue'><sub>±</sub>K</font><br/>- value of °C ≈ value of `°H` ×(1↋;/17;) - 62;44<br/>- value of `°H` ≈ value of °C ×(17;/1↋;) + 51;50 |
-
-The gravitational radius of the Earth, <font color='royalblue'>r<sub>E</sub></font>, is not an independent constant; rather, <font color='royalblue'>r<sub>E</sub> = g<sub>E</sub> (m<sub>E</sub> rad / c<sub>0</sub>)<sup>2</sup></font>.
-
-## 12. Calendar Time Units
-
-<p align="center"><em>Earth Local Category</em></p>
-
-The symmetrical equation [Eq.α](../README.md#origin-selection-eq%CE%B1--calendar-symmetric-approximation) (year / half-day ≈ 3⁺⁶ + 3⁺¹×2⁻¹ − 2⁻⁶) 
-yields the GCD and LCM of the year and the half-day as nodus and hexon respectively.  
-The Earth-Local Calendar Time System is built from these units.
-
-| Symbol | Name | Definition | Notes | Figure |
-|--------|------|------------|-------|--------|
-| `⌬̃` | [hexon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=24&tu=23&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁺⁶ years | [LCM](https://en.wikipedia.org/wiki/Least_common_multiple) of year and half-day<br/> ≈ 10;<sup>+6</sup> nodus | |
-| `☼̃` | [year](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.00000000&frq=12&fe=0&fu=23&tu=13&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 365. 31./128. days | 365. days 5 h 48. m 45. s | |
-| `☽̃` | └ *month* | 10;⁻¹ year | |  |
-| `°̃` | day | 1 <font color='royalblue'>Ω₁</font> | | [The calendar time unit structure around day (hexon-ternon)](pic/calendar_time_structure_nodus.png) |
-| `′̃` | ├ *unitia* | 10;⁻¹ day | | [27-hour clock (unitia notation)](27-hours.pdf) |
-| `″̃` | ├ *ditia* | 10;⁻² day | |  |
-| `‴̃` | └ [*tertia*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=8&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ day | | |
-| `▽̃` | ┌ [*ternon*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=7&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ nodus | also 2⁻⁷ (1/128.) tertia<br/>If [coordinated](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), 1 solar ternon = 1 nic |  |
-| `☆̃` | [nodus](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁻⁷ (1/128.) day | [GCD](https://en.wikipedia.org/wiki/Greatest_common_divisor) of year and half-day | [The natural time scale ladder(the age of the universe - the Planck time)](pic/NaturalTimeScale.png) - see also [blog post](https://suchowan.seesaa.net/article/202501article_17_3.html)|
-
-The four units listed in [`Eight_Quartets.pdf`](Eight_Quartets.pdf) — with the Name in roman — were chosen so that no two share a ratio that is a power of 12 (cf. **Calendar Time**: nodus, day, year, hexon).
-
-## 13. Social Aliases
-
-| Symbol / Notation | Name | Definition |
-|--------|------|------------|
-| <font color='royalblue'>mon<sub>country</sub></font> | mon | least-valued currency unit of a country/economic group (ex. 1$ = 84; <font color='royalblue'>mon<sub>us</sub></font>, 84<sub>12</sub>=100<sub>10</sub>) |
-| ;′<font color='royalblue'><sub>±</sub>h</font> | unínoh | 10;⁻¹ harmon = [2.2696 cm](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=0%3B10000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [0.89354 inch](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=0%3B10000000&frq=12&fe=0&fu=0&tu=25&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (≈ 8/9 inch) |
-| ;″<font color='royalblue'><sub>±</sub>l</font> | dinól | 10;⁻² looloh = [0.03229 ounce](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=0%3B010000000&frq=12&fe=0&fu=0&tu=10&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [0.91548 gram](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=0%3B010000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)  (≈ 11/12 gram) |
-| <font color='royalblue'><sub>-</sub>γ</font> | atol | 10;⁻⁸ c₀ = 1 harmon / nic = [2.51000 km/h](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=6&fq=1.0000000&frq=12&fe=0&fu=0&tu=12&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [1.55964 mile/h](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=6&fq=1.0000000&frq=12&fe=0&fu=0&tu=22&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) |
-
-Aliases are *interfaces*, not weaknesses. Several social aliases, introduced
-independently, necessarily derive their final letter from the corresponding
-base unit name (−h from harmon, −l from looloh, −n from nodus) — a convergence
-reflecting the system's structural constraints. The optional diacritical mark
-“ ́” on unínoh/dinól indicates word stress.
-
-See also the relationship between other legacy units and Harmonic System units in [legacy_units.pdf](legacy_units.pdf).
-
-## 14. Alternative Muse & Goddess Names
-
-Alternative proposal replacing unit names with the names of a dozen Muses or Goddesses that share the same initials (`revised.pdf` Note 46).
-
-| Unit | Alternate | Unit | Alternate | Unit | Alternate | Unit | Alternate |
-|------|-----------|------|-----------|------|-----------|------|-----------|
-| [Ampere](#5-derived-units--electromagnetic) | → [Aoide](https://en.wikipedia.org/wiki/Aoide) | [Boltzmann](https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#6-defining-constants) | → [Bia](https://en.wikipedia.org/wiki/Bia_(mythology)) | [Coulomb](#5-derived-units--electromagnetic) | → [Clio](https://en.wikipedia.org/wiki/Clio) | [dirac](#9-minor--major-prefixes) | → [diana](https://en.wikipedia.org/wiki/Diana_(mythology)) |
-| [Ørsted](#5-derived-units--electromagnetic) | → [Erato](https://en.wikipedia.org/wiki/Erato) | [Joule](#2-base-units-not-natural) | → [Juno](https://en.wikipedia.org/wiki/Juno_(mythology)) | [Kelvin](#2-base-units-not-natural) | → [Kalliope](https://en.wikipedia.org/wiki/Calliope) | [neper](#1-base-units-natural) | → [nephe](https://en.wikipedia.org/wiki/Nephele) |
-| [Newton](#4-derived-units--dynamical) | → [Nete](https://en.wikipedia.org/wiki/Nete_(mythology)) | [Pascal](#4-derived-units--dynamical) | → [Polym](https://en.wikipedia.org/wiki/Polyhymnia) | [Tesla](#5-derived-units--electromagnetic) | → [Thalia](https://en.wikipedia.org/wiki/Thalia_(Muse)) | [Watt](#4-derived-units--dynamical) | → [Walku](https://en.wikipedia.org/wiki/Valkyrie) |
-
-## 15. Scaling & Hierarchy
+## 9. Scaling & Hierarchy
 
 The scaling factor **U = 12⁸**(10;<sup>8</sup>) is not chosen for human convenience; it
 **emerges** as a dimensionless ratio `u / M = 1;0009060↋ × 10;⁸` ( `revised.pdf`, p.23 Eq.(17;)) 
@@ -310,11 +211,114 @@ between the nucleon rest energy and a typical chemical energy. At this scale:
 
 See also Wikipedia Talk '[Planck_units](https://en.wikipedia.org/wiki/Talk:Planck_units/Archive_3#Other_possible_normalizations)'([archive](https://web.archive.org/web/20250128231044/https://en.wikipedia.org/wiki/Talk:Planck_units/Archive_3#Other_possible_normalizations)) and blog post '[The Scaling Factor U (= 12^8)](https://suchowan.seesaa.net/article/202605article_29_1.html)'.
 
+## 10. Minor / Major Prefixes
+
+When several prefixes combine, they are read — and written as a subscript — in the order 
+`(cosmic | atomic)` then `(hyper | dirac | sub)`, optionally preceded by a [power prefix](#11-power-prefixes). 
+The subscript mirrors this reading order.
+
+Example from `revised.pdf` Table 7:  
+- Tera Byte : cosmic hyper bit ( 1;<sub>+♯</sub>℧<sub>1</sub> ), because 2<sup>43.</sup> ≈ 12.<sup>12.</sup>
+
+| Prefix | Symbol | Power | Notes |
+|--------|--------|-------|-------|
+| cosmic | `+` | 10;⁺⁸ | `±` omitted when `cosmic` is present |
+| hyper | `♯` | 10;⁺⁴ | `±` omitted when `hyper` is present |
+| *dirac* | `∜♯` | 10;⁺¹ | only for [Gravitic System](gravitic.pdf) |
+| sub | `♭` | 10;⁻⁴ | `±` omitted when `sub` is present |
+| atomic | `-` | 10;⁻⁸ | `±` omitted when `atomic` is present |
+
+See also blog post '[The Day Musical Symbols Fell Naturally into Place](https://suchowan.seesaa.net/article/202601article_10_1.html)'.
+
+## 11. Power Prefixes
+
+Power prefixes, which represent powers of 12<sup>8</sup>(=[U](#9-scaling--hierarchy)), are used in combination with terms such as “atomic” and “cosmic.”
+
+Example from `revised.pdf` Table 7:  
+- the age of the universe : 6; di-cosmic nic ( 6;<sub>2+</sub>n )
+- the Planck length : 2; tetra-atomic harmon ( 2;<sub>4-</sub>h )
+
+|  Power | Prefix |
+|--------|--------|
+| 0th | do not use 'cosmic/atomic' itself |
+| 1st | omit the prefix and use 'cosmic/atomic' on its own |
+| 2nd | di- (`2`) |
+| 3rd | ter- (`3`) |
+| 4th | tetra- (`4`) |
+| 5th | penta- (`5`) |
+| 6th | hexa- (`6`) |
+| 7th | hepta- (`7`) |
+
+See also the duodecimal myriad system for pure numbers in [myriad.pdf](myriad.pdf) and blog post '[Design Principles and Unique Implementation](https://suchowan.seesaa.net/article/202605article_11_1.html)'.
+
 ---
 
-*Generated from the text layers of `revised.pdf`, `units.pdf`, and
-`harmonic.pdf`. SI equivalents come from the Clock_by_Rydberg sheet
-(`harmonic.pdf`). Because the unit values are regenerated on demand, the
-source `units.pdf` deliberately omits them to reduce maintenance after CODATA
-revisions. Cell-level deep links into specific PDF pages remain a target for
-future refinement.*
+## 12. Earth Local Units & Constants
+
+<p align="center"><em>Earth Local Category</em></p>
+
+| Symbol | Name | Definition |
+|--------|------|------------|
+| <font color='royalblue'>m<sub>E</sub></font> | Earth meridian ([meridian](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=0&fq=1.0000000&frq=12&fe=0&fu=13&tu=1&fp=0&tp=3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | meridian length of the Earth (≑ (ω₂/3) <font color='royalblue'><sub>+</sub>h / Ω₁</font>);<br/>Since one sub cycle (<font color='royalblue'><sub>♭</sub>Ω<sub>1</sub></font>) is 150/144 minutes (plane angle), 1 [meridian sub cycle](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=0&fq=1.0000000&frq=12&fe=0&fu=13&tu=30&fp=-4&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (<font color='royalblue'>m<sub>E♭</sub>Ω<sub>1</sub></font>) ≈ 1.041 nautical mile — see also [Case Study](Deep_Structure_Form_and_Emptiness.md#53-case-study-bridging-angular-and-linear-measure) |
+| <font color='royalblue'>s<sub>E</sub></font> | Earth solar ([solar](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=2&fq=1.0000000&frq=12&fe=0&fu=14&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | rotation period of the Earth (24×60×60 s / <font color='royalblue'>Ω₁</font> at the SI-second epoch: start of 1900);<br/>Multiplying the units in “[Calendar Time Units](#13-calendar-time-units)” (unit dimension: plane angle ) by <font color='royalblue'>s<sub>E</sub></font> (unit dimension: physical time / plane angle ) yields the corresponding physical time  — see also [Case Study](Deep_Structure_Form_and_Emptiness.md#54-case-study-light-solar-tertia) |
+| <font color='royalblue'>g<sub>E</sub></font> | gee of Earth ([gee](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=18&fq=1.0000000&frq=12&fe=0&fu=5&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | gravitational acceleration of the Earth;<br/>Earth's gravitational force corresponding to one looloh of mass can be expressed as the [looloh](#4-derived-units--dynamical) gee (of Earth) ― <font color='royalblue'><sub>±</sub>l g<sub>E</sub></font>, see also [Case Study](Deep_Structure_Form_and_Emptiness.md#52-case-study-looloh-gee) |
+| <font color='royalblue'>T<sub>E</sub></font> | base point of degree H | Earth-local temperature scale = `118,2354; ±K` (≈ −74.36 °C, −101.85 °F); the only deliberately chosen component |
+| `°H` | [*degree H*](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=0.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | difference of thermodynamic temperature from the base point; `0;°H` ↔ `118,2354; ±K` (<font color='royalblue'>T<sub>E</sub></font>), chosen so that `100;°H` matches the boiling point of water, and approximately `61;°H` ↔ 14.°C, `78;°H` ↔ 37.°C, an interval of 1 `°H` = 10;<sup>+4</sup><font color='royalblue'><sub>±</sub>K</font><br/>- value of °C ≈ value of `°H` ×(1↋;/17;) - 62;44<br/>- value of `°H` ≈ value of °C ×(17;/1↋;) + 51;50 |
+
+The gravitational radius of the Earth, <font color='royalblue'>r<sub>E</sub></font>, is not an independent constant; rather, <font color='royalblue'>r<sub>E</sub> = g<sub>E</sub> (m<sub>E</sub> rad / c<sub>0</sub>)<sup>2</sup></font>.
+
+## 13. Calendar Time Units
+
+<p align="center"><em>Earth Local Category</em></p>
+
+The symmetrical equation [Eq.α](../README.md#origin-selection-eq%CE%B1--calendar-symmetric-approximation) (year / half-day ≈ 3⁺⁶ + 3⁺¹×2⁻¹ − 2⁻⁶) 
+yields the GCD and LCM of the year and the half-day as nodus and hexon respectively.  
+The Earth-Local Calendar Time System is built from these units.
+
+| Symbol | Name | Definition | Notes | Figure |
+|--------|------|------------|-------|--------|
+| `⌬̃` | [hexon](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=24&tu=23&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁺⁶ years | [LCM](https://en.wikipedia.org/wiki/Least_common_multiple) of year and half-day<br/> ≈ 10;<sup>+6</sup> nodus | |
+| `☼̃` | [year](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.00000000&frq=12&fe=0&fu=23&tu=13&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 365. 31./128. days | 365. days 5 h 48. m 45. s | |
+| `☽̃` | └*month* | 10;⁻¹ year | |  |
+| `°̃` | day | 1 <font color='royalblue'>Ω₁</font> | | [The calendar time unit structure around day (hexon-ternon)](pic/calendar_time_structure_nodus.png) |
+| `′̃` | ├*unitia* | 10;⁻¹ day | | [27-hour clock (unitia notation)](27-hours.pdf) |
+| `″̃` | ├*ditia* | 10;⁻² day | |  |
+| `‴̃` | └[*tertia*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=8&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ day | | |
+| `▽̃` | ┌[*ternon*](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=7&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 10;⁻³ nodus | also 2⁻⁷ (1/128.) tertia<br/>If [coordinated](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), 1 solar ternon = 1 nic |  |
+| `☆̃` | [nodus](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=2&fq=1.0000000&frq=12&fe=0&fu=6&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | 2⁻⁷ (1/128.) day | [GCD](https://en.wikipedia.org/wiki/Greatest_common_divisor) of year and half-day | [The natural time scale ladder(the age of the universe - the Planck time)](pic/NaturalTimeScale.png) - see also [blog post](https://suchowan.seesaa.net/article/202501article_17_3.html)|
+
+The four units listed in [`Eight_Quartets.pdf`](Eight_Quartets.pdf) — with the Name in roman — were chosen so that no two share a ratio that is a power of 12 (cf. **Calendar Time**: nodus, day, year, hexon).
+
+## 14. Social Aliases
+
+| Symbol / Notation | Name | Definition |
+|--------|------|------------|
+| <font color='royalblue'>mon<sub>country</sub></font> | mon | least-valued currency unit of a country/economic group (ex. 1$ = 84; <font color='royalblue'>mon<sub>us</sub></font>, 84<sub>12</sub>=100<sub>10</sub>) |
+| ;′<font color='royalblue'><sub>±</sub>h</font> | unínoh | 10;⁻¹ harmon = [2.2696 cm](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=0%3B10000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-2&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [0.89354 inch](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=0&fq=0%3B10000000&frq=12&fe=0&fu=0&tu=25&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) (≈ 8/9 inch) |
+| ;″<font color='royalblue'><sub>±</sub>l</font> | dinól | 10;⁻² looloh = [0.03229 ounce](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=0%3B010000000&frq=12&fe=0&fu=0&tu=10&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [0.91548 gram](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=3&fq=0%3B010000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)  (≈ 11/12 gram) |
+| <font color='royalblue'><sub>-</sub>γ</font> | atol | 10;⁻⁸ c₀ = 1 harmon / nic = [2.51000 km/h](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=6&fq=1.0000000&frq=12&fe=0&fu=0&tu=12&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) = [1.55964 mile/h](http://hosi.org/cgi-bin/conv.cgi?m=10080&d=6&fq=1.0000000&frq=12&fe=0&fu=0&tu=22&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) |
+
+Aliases are *interfaces*, not weaknesses. Several social aliases, introduced
+independently, necessarily derive their final letter from the corresponding
+base unit name (−h from harmon, −l from looloh, −n from nodus) — a convergence
+reflecting the system's structural constraints. The optional diacritical mark
+“ ́” on unínoh/dinól indicates word stress.
+
+See also the relationship between other legacy units and Harmonic System units in [legacy_units.pdf](legacy_units.pdf).
+
+## 15. Alternative Muse & Goddess Names
+
+Alternative proposal replacing unit names with the names of a dozen Muses or Goddesses that share the same initials (`revised.pdf` Note 46).
+
+| Unit | Alternate | Unit | Alternate | Unit | Alternate | Unit | Alternate |
+|------|-----------|------|-----------|------|-----------|------|-----------|
+| [Ampere](#5-derived-units--electromagnetic) | → [Aoide](https://en.wikipedia.org/wiki/Aoide) | [Boltzmann](#6-defining-constants) | → [Bia](https://en.wikipedia.org/wiki/Bia_(mythology)) | [Coulomb](#5-derived-units--electromagnetic) | → [Clio](https://en.wikipedia.org/wiki/Clio) | [dirac](#10-minor--major-prefixes) | → [diana](https://en.wikipedia.org/wiki/Diana_(mythology)) |
+| [Ørsted](#5-derived-units--electromagnetic) | → [Erato](https://en.wikipedia.org/wiki/Erato) | [Joule](#2-base-units-not-natural) | → [Juno](https://en.wikipedia.org/wiki/Juno_(mythology)) | [Kelvin](#2-base-units-not-natural) | → [Kalliope](https://en.wikipedia.org/wiki/Calliope) | [neper](#1-base-units-natural) | → [nephe](https://en.wikipedia.org/wiki/Nephele) |
+| [Newton](#4-derived-units--dynamical) | → [Nete](https://en.wikipedia.org/wiki/Nete_(mythology)) | [Pascal](#4-derived-units--dynamical) | → [Polym](https://en.wikipedia.org/wiki/Polyhymnia) | [Tesla](#5-derived-units--electromagnetic) | → [Thalia](https://en.wikipedia.org/wiki/Thalia_(Muse)) | [Watt](#4-derived-units--dynamical) | → [Walku](https://en.wikipedia.org/wiki/Valkyrie) |
+
+---
+
+*Generated from the text layers of `revised.pdf`, `units.pdf`, and `harmonic.pdf`.
+SI equivalents come from `harmonic.pdf`. Because the unit values are regenerated on demand, 
+the source `units.pdf` deliberately omits them to reduce maintenance after CODATA revisions. 
+Cell-level deep links into specific PDF pages remain a target for future refinement.*

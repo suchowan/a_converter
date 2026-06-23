@@ -139,7 +139,7 @@ The Harmonic System introduces a third type:
 ### 5.2 Case Study: "looloh gee"
 
 *(See also the [<sub>±</sub>N entry](glossary.md#4-derived-units--dynamical) and
-[g<sub>E</sub> entry](glossary.md#11-earth-local-units--constants) in the glossary.)*
+[g<sub>E</sub> entry](glossary.md#12-earth-local-units--constants) in the glossary.)*
 
 Consider the phrase **"looloh gee"**:
 
