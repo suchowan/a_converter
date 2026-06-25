@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://suchowan.github.io/a_converter/</loc><priority>1.0</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/README.md</loc><priority>0.9</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/schema.json</loc><priority>0.7</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/doc/glossary.md</loc><priority>0.9</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/doc/glossary.json</loc><priority>0.8</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/doc/Eight_Quartets.pdf</loc><priority>0.8</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/doc/revised.pdf</loc><priority>0.7</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/doc/relations.pdf</loc><priority>0.5</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/doc/tables.pdf</loc><priority>0.5</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/doc/Discussion_on_the_UUS_and_the_Harmonic_System.md</loc><priority>0.6</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/doc/Deep_Structure_Form_and_Emptiness.md</loc><priority>0.5</priority></url>
+  <url><loc>https://suchowan.github.io/a_converter/bin/conv.rb</loc><priority>0.6</priority></url>
+</urlset>
