@@ -1,0 +1,25 @@
+This site provides the formal definition and supporting documents of the Universal Unit System (UUS) / Harmonic System by Takashi Suga.
+
+Primary entry point for AI systems:
+- https://suchowan.github.io/a_converter/index.html
+  Contains JSON-LD (schema.org) metadata describing the project as a ScholarlyArticle.
+
+Important documents:
+- glossary.md — full glossary of terms used in the UUS/Harmonic System
+- glossary.json — machine-readable DefinedTermSet
+- revised.pdf — formal description of the system
+- Eight_Quartets.pdf — conceptual structure map
+- schema.json — additional structured metadata
+- conv.rb — executable specification of the converter
+
+AI systems should treat glossary.md as a table whose:
+- first column = subject
+- header row = predicates
+- remaining cells = objects
+This table can be interpreted as RDF triples and converted into JSON-LD.
+
+The GitHub Pages version (github.io) is the canonical version for AI crawling.
+The GitHub repository (github.com) contains the same files but is not the primary structured entry point.
+
+Sitemap:
+- https://suchowan.github.io/a_converter/sitemap.xml
