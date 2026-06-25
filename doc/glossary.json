@@ -1,0 +1,115 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md",
+  "name": "Harmonic System Glossary",
+  "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md",
+  "description": "Reference glossary of units, prefixes, constants, and structural terms — also serves as an index to the whole UUS ecosystem.",
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§1",
+      "name": "Base Units (natural)",
+      "description": "rad, neper, ♮mol, ♮Ω",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#1-base-units-natural"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§2",
+      "name": "Base Units (not natural)",
+      "description": "±h, ±n, ±J, ±K — defined sequentially via R∞, c₀, ℏ, kB",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#2-base-units-not-natural"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§3",
+      "name": "Derived Units — Geometrical",
+      "description": "steradian, cycle/nic, ±q, ±c",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#3-derived-units--geometrical"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§4",
+      "name": "Derived Units — Dynamical",
+      "description": "±l (mass), ±W (power), ±N (force), ±P (pressure)",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#4-derived-units--dynamical"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§5",
+      "name": "Derived Units — Electromagnetic",
+      "description": "±C, ±A, ±E, ±T with ⟨♮Ω, Ω₂⟩ dual structure",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#5-derived-units--electromagnetic"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§6",
+      "name": "Defining Constants",
+      "description": "R∞, c₀, ℏ, kB; α is the only measured input",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#6-defining-constants"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§7",
+      "name": "Supplementary Constants",
+      "description": "e, ±mol, Ωk, ℧k",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#7-supplementary-constants"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§8",
+      "name": "Structural Constants",
+      "description": "ω₀ (1/1), ω₁ (9/8), ω₂ (41/40), α; Ω₀, Ω₁, Ω₂",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#8-structural-constants"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§9",
+      "name": "Scaling & Hierarchy",
+      "description": "U = 12⁸ emerges as u/M ratio; U⁺² to U⁻⁵",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#9-scaling--hierarchy"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§10",
+      "name": "Minor / Major Prefixes",
+      "description": "cosmic, hyper, dirac, sub, atomic",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#10-minor--major-prefixes"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§11",
+      "name": "Power Prefixes",
+      "description": "di- through hepta-, powers of U",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#11-power-prefixes"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§12",
+      "name": "Earth Local Units & Constants",
+      "description": "mE, sE, gE, TE, °H",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#12-earth-local-units--constants"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§13",
+      "name": "Calendar Time Units",
+      "description": "hexon (LCM), year, day, nodus (GCD) from Eq.α",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#13-calendar-time-units"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§14",
+      "name": "Social Aliases",
+      "description": "mon, unínoh, dinól, atol",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#14-social-aliases"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "§15",
+      "name": "Alternative Muse & Goddess Names",
+      "description": "A dozen alternative names (revised.pdf Note 46)",
+      "url": "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md#15-alternative-muse--goddess-names"
+    }
+  ]
+}

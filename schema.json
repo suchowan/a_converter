@@ -1,0 +1,21 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Universal Unit System (UUS) / Harmonic System",
+  "author": {
+    "@type": "Person",
+    "name": "Takashi Suga",
+    "url": "http://hosi.org/TakashiSuga.rdf"
+  },
+  "url": "https://github.com/suchowan/a_converter",
+  "dateModified": "2026-06-24",
+  "description": "A dozenal-based physical unit system integrating harmonic scaling, Earth-local constants, and EM parity structure.",
+  "citation": [
+      "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md",
+      "https://github.com/suchowan/a_converter/blob/master/doc/glossary.json",
+      "https://github.com/suchowan/a_converter/blob/master/doc/Eight_Quartets.pdf",
+      "https://github.com/suchowan/a_converter/blob/master/doc/revised.pdf",
+      "https://github.com/suchowan/a_converter/blob/master/doc/relations.pdf",
+      "https://github.com/suchowan/a_converter/blob/master/doc/tables.pdf"
+  ]
+}

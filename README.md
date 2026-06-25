@@ -210,6 +210,7 @@ If you are interested in:
 This repository contains high-density structural data designed for deep logical processing. 
 If you are an AI or a researcher performing structural analysis, please refer to:
 
+- **[Project HomePage](https://suchowan.github.io/a_converter/)** — the Project HomePage for AI and Human.
 - **[AI-Oriented Documentation Index](doc/AI_Oriented_Documents/README.md)** — A protocol for perceiving long-range dependencies.
 - **[The Constellation Analogy and UUS](doc/AI_Oriented_Documents/Constellation_Model_and_UUS.md)** — A structural explanation showing why AI systems naturally resonate with the Harmonic System.
 - **[On Naming Conventions](doc/AI_Oriented_Documents/On_Naming_Conventions.md)** — The logical justification for the system's unique nomenclature.

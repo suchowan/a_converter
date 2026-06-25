@@ -174,7 +174,7 @@ These are all pure numbers characterizing UUS / Harmonic System.
 
 | Symbol | Name | Value / role |
 |--------|------|--------------|
-| `ω₀` | *Trivial Harmonic Ratio* | `1/1` — too trivial to have a use, but paradoxically, it could be said to appear throughout UUS / Harmonic System; a **perfect unison** |
+| `ω₀` | *Trivial Harmonic Ratio* | `1/1` — too trivial to have a use, but paradoxically, it could be said to appear throughout UUS / Harmonic System; a **perfect unison**  (`revised.pdf` Note 19) |
 | `ω₁` | *(Primary) Harmonic Ratio* | `9/8` (= 90/80). Ratio between the [international foot](../README.md#2-a-musical-bridge-to-the-human-scale) and 1 <font color='royalblue'><sub>±</sub>h</font> ; links 10;<sup>5</sup><font color='royalblue'><sub>±</sub>n</font> ↔ day ; a **major second**  — the origin of the name "Harmonic System" |
 | `ω₂` | *Fine Harmonic Ratio* | `41/40` (= 82/80). Elementary charge / impedance-derived charge unit (12α<sup>1/2</sup>=41.00378/40.);<br/>appears in [Earth's meridian and ice density](../README.md#notes); one comma-pair in [53-TET](https://en.wikipedia.org/wiki/53_equal_temperament) (`revised.pdf` Note 49) |
 | `α` | [*Fine Structure Constant*](https://en.wikipedia.org/wiki/Fine-structure_constant) | <font color='royalblue'><sub>♮</sub>Ωe<sup>2</sup>/ℏ</font> =  0.0072973525643 ≈ 1/137.035999177 (measured in both SI and Harmonic System) |
