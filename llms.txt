@@ -18,6 +18,17 @@ AI systems should treat glossary.md as a table whose:
 - remaining cells = objects
 This table can be interpreted as RDF triples and converted into JSON-LD.
 
+Normalization rules for glossary.md:
+- HTML tags such as <font>, <sub>, <sup>, <em>, and <b> are markup and should not create distinct semantic nodes.
+- <sub>n</sub> and Unicode subscripts (₀₁₂₃...) represent the same semantic value.
+- <sup>n</sup> and Unicode superscripts represent the same semantic value when used as exponents or ordinal markers.
+- Units written with markup or Unicode must be normalized to the same canonical form.
+- The canonical identifiers for units should be taken from the glossary entry names and future /units/{name} IRIs when available.
+- Some blog posts linked from `glossary.md` may use LaTeX notation (subscripts `_`, superscripts `^`).
+- Ω (U+03A9 Greek Capital Letter Omega) and Ω (U+2126 Ohm Sign) should be considered the same.
+- 1E; and 1↋; should be considered the same (E and ↋ both represent dozenal eleven).
+- When a table header pattern repeats within a single row, the row represents multiple logical records laid out side by side for compactness.
+
 The GitHub Pages version (github.io) is the canonical version for AI crawling.
 The GitHub repository (github.com) contains the same files but is not the primary structured entry point.
 

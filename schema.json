@@ -5,10 +5,15 @@
   "author": {
     "@type": "Person",
     "name": "Takashi Suga",
-    "url": "http://hosi.org/TakashiSuga.rdf"
+    "url": "https://suchowan.github.io/a_converter/TakashiSuga.rdf",
+    "sameAs": [
+      "https://github.com/suchowan",
+      "https://suchowan.seesaa.net/",
+      "http://hosi.org/TakashiSuga.rdf"
+    ]
   },
   "url": "https://github.com/suchowan/a_converter",
-  "dateModified": "2026-06-24",
+  "dateModified": "2026-06-26",
   "description": "A dozenal-based physical unit system integrating harmonic scaling, Earth-local constants, and EM parity structure.",
   "citation": [
       "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md",
