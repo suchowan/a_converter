@@ -46,6 +46,20 @@
       line-height: 1.6;
       padding: 0 1rem;
     }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      background-image: url("doc/pic/VennUGE.png");
+      background-repeat: space;
+      background-position: center;
+      background-size: 40%;
+
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: -1;
+    }
     h1, h2 {
       border-bottom: 1px solid #ddd;
       padding-bottom: .3rem;
