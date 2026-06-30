@@ -1,19 +1,20 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <rdf:RDF xmlns:foaf='http://xmlns.com/foaf/0.1/' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'>
   <foaf:PersonalProfileDocument rdf:about='https://suchowan.github.io/a_converter/TakashiSuga.rdf'>
-    <rdfs:label>Description of Dr. Takashi Suga for the hosi.org</rdfs:label>
+    <rdfs:label>Description of Dr. Takashi Suga for the Universal Unit System project</rdfs:label>
     <foaf:primaryTopic>
       <foaf:Person rdf:about='https://suchowan.github.io/a_converter/TakashiSuga'>
         <foaf:currentProject rdf:resource='https://github.com/suchowan/a_converter' />
         <foaf:familyName>Suga</foaf:familyName>
         <foaf:givenName>Takashi</foaf:givenName>
-        <foaf:homepage rdf:resource='http://www.asahi-net.or.jp/~dd6t-sg' />
+        <foaf:homepage rdf:resource='https://independent.academia.edu/TakashiSUGA' />
         <foaf:mbox rdf:resource='mailto:suchowan@box.email.ne.jp' />
         <foaf:name>Takashi Suga</foaf:name>
-         <foaf:name xml:lang='ja'>須賀隆</foaf:name>
+        <foaf:name xml:lang='ja'>須賀隆</foaf:name>
         <foaf:nick>suchowan</foaf:nick>
         <foaf:title>Dr.</foaf:title>
         <foaf:weblog rdf:resource='https://suchowan.seesaa.net/tag/%E6%99%AE%E9%81%8D%E5%8D%98%E4%BD%8D%E7%B3%BB' />
+        <rdfs:seeAlso rdf:resource="https://www.asahi-net.or.jp/~dd6t-sg/"/>
       </foaf:Person>
     </foaf:primaryTopic>
   </foaf:PersonalProfileDocument>
