@@ -5,6 +5,9 @@
          title="Harmonic System — Eight Quartets (click for interactive PDF with active links)"/>
   </a>
 </p>
+<p align="right">
+  Official entry: <a href="http://dozenal.com">http://dozenal.com</a>
+</p>
 
 ## What is this?
 

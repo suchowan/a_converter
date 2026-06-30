@@ -263,7 +263,7 @@ See also the duodecimal myriad system for pure numbers in [myriad.pdf](myriad.pd
 | <font color='royalblue'>s<sub>E</sub></font> | Earth solar ([solar](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=2&fq=1.0000000&frq=12&fe=0&fu=14&tu=1&fp=0&tp=0&fm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | rotation period of the Earth (24×60×60 s / <font color='royalblue'>Ω₁</font> at the SI-second epoch: start of 1900);<br/>Multiplying the units in “[Calendar Time Units](#13-calendar-time-units)” (unit dimension: plane angle ) by <font color='royalblue'>s<sub>E</sub></font> (unit dimension: physical time / plane angle ) yields the corresponding physical time  — see also [Case Study](Deep_Structure_Form_and_Emptiness.md#54-case-study-light-solar-tertia) |
 | <font color='royalblue'>g<sub>E</sub></font> | gee of Earth ([gee](http://hosi.org/cgi-bin/conv.cgi?m=100f0&d=18&fq=1.0000000&frq=12&fe=0&fu=5&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert)) | gravitational acceleration of the Earth;<br/>Earth's gravitational force corresponding to one looloh of mass can be expressed as the [looloh](#4-derived-units--dynamical) gee (of Earth) ― <font color='royalblue'><sub>±</sub>l g<sub>E</sub></font>, see also [Case Study](Deep_Structure_Form_and_Emptiness.md#52-case-study-looloh-gee) |
 | <font color='royalblue'>T<sub>E</sub></font> | base point of degree H | Earth-local temperature scale = `118,2354; ±K` (≈ −74.36 °C, −101.85 °F); the only deliberately chosen component |
-| `°H` | [*degree H*](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=0.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | difference of thermodynamic temperature from the base point; `0;°H` ↔ `118,2354; ±K` (<font color='royalblue'>T<sub>E</sub></font>), chosen so that `100;°H` matches the boiling point of water, and approximately `61;°H` ↔ 14.°C, `78;°H` ↔ 37.°C, an interval of 1 `°H` = 10;<sup>+4</sup><font color='royalblue'><sub>±</sub>K</font><br/>- value of °C ≈ value of `°H` ×(1↋;/17;) - 62;44<br/>- value of `°H` ≈ value of °C ×(17;/1↋;) + 51;50 |
+| `°H` | [*degree H*](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=0.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | difference of thermodynamic temperature from the base point; `0;°H` ↔ `118,2354; ±K` (<font color='royalblue'>T<sub>E</sub></font>), chosen so that `100;°H` matches the boiling point of water, and approximately `61;°H` ↔ 14.°C, `78;°H` ↔ 37.°C, an interval of 1 `°H` = 10;<sup>+4</sup><font color='royalblue'><sub>±</sub>K</font> ≈ 1.210724 °C ≈ 2.179303 °F<br/>- value of °C ≈ value of `°H` ×(1↋;/17;) - 62;44<br/>- value of `°H` ≈ value of °C ×(17;/1↋;) + 51;50<br/>Example (near room temperature): 18. °C ≈ 64. °F ≈ 64; `°H` (more strictly: [18.000 °C](http://hosi.org/cgi-bin/conv.cgi?m=10090&d=0&fq=18.0000000&frq=10&fe=0&fu=1&tu=0&fp=0&tp=0&fm=off&tm=off&fr=10&tr=12&fl=0&tl=0&c=Convert) = 64.400 °F ≈ 64;351 `°H`) |
 
 The gravitational radius of the Earth, <font color='royalblue'>r<sub>E</sub></font>, is not an independent constant; rather, <font color='royalblue'>r<sub>E</sub> = g<sub>E</sub> (m<sub>E</sub> rad / c<sub>0</sub>)<sup>2</sup></font>.
 
@@ -322,3 +322,10 @@ Alternative proposal replacing unit names with the names of a dozen Muses or God
 SI equivalents come from `harmonic.pdf`. Because the unit values are regenerated on demand, 
 the source `units.pdf` deliberately omits them to reduce maintenance after CODATA revisions. 
 Cell-level deep links into specific PDF pages remain a target for future refinement.*
+
+---
+
+<p align="center">
+  Official entry: <a href="http://dozenal.com">http://dozenal.com</a>
+</p>
+

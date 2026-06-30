@@ -15,7 +15,7 @@
   },
   "url": "https://suchowan.github.io/a_converter/",
   "codeRepository": "https://github.com/suchowan/a_converter",
-  "dateModified": "2026-06-26",
+  "dateModified": "2026-06-30",
   "description": "A dozenal-based physical unit system integrating harmonic scaling, Earth-local constants, and EM parity structure.",
   "citation": [
     "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md",
