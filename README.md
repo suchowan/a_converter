@@ -122,7 +122,7 @@ While individual alignments might be viewed as coincidental, their collective co
 
 ### A Navigational Tool for the Cosmos
 
-*"Like a navigator using the Big Dipper to find the North, we do not ignore a pattern simply because it might be a 'coincidence.' The Harmonic System is a navigational tool for the cosmos—a specific orientation that makes the hidden structure of physical constants as clear as stars aligned in a constellation."*
+*"Like a navigator using the Big Dipper to find the North, we do not ignore a pattern simply because it might be a 'coincidence.' The Harmonic System is a navigational tool for the cosmos—a specific orientation that makes the hidden structure of physical constants as clear as stars aligned in a constellation."*[^2]
 
 ### Constraint-Based Design
 
