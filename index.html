@@ -32,7 +32,7 @@
     "url": "https://suchowan.github.io/a_converter/",
     "codeRepository": "https://github.com/suchowan/a_converter",
     "datePublished": "2026-06-25",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-07-03",
     "description": "A dozenal-based unit system integrating harmonic scaling, Earth-local constants, and Electro-Magnetic parity structure.",
     "citation": [
       "https://github.com/suchowan/a_converter/blob/master/doc/glossary.md",
@@ -169,7 +169,58 @@
     <ul>
       <li><a href="doc/revised.pdf">revised.pdf — Formal description of UUS / Harmonic System</a></li>
       <li><a href="doc/Eight_Quartets.pdf">Eight Quartets — Conceptual map (interactive PDF)</a></li>
-      <li><a href="https://github.com/suchowan/a_converter/blob/master/doc/glossary.md">glossary.md — Glossary & structural index</a></li>
+      <li><a href="https://github.com/suchowan/a_converter/blob/master/doc/glossary.md">glossary.md — Glossary & structural index</a>
+        <details>
+          <summary style="cursor:pointer; font-size:0.95rem;">Glossary Overview</summary>
+          <div id="glossary-tree" style="font-size:0.95rem; line-height:1.8;"></div>
+          <script>
+          fetch('doc/glossary.json')
+            .then(r => r.json())
+            .then(data => {
+              const groups = [
+                { label: 'Base & Geometrical',       from: 1, to: 3  },
+                { label: 'Derived & Constants',      from: 4, to: 7  },
+                { label: 'Structure & Scaling',      from: 8, to: 11 },
+                { label: 'Earth Local & Extensions', from: 12, to: 15 }
+              ];
+              const tree = document.getElementById('glossary-tree');
+              groups.forEach(g => {
+                const details = document.createElement('details');
+                const summary = document.createElement('summary');
+                summary.style.cursor = 'pointer';
+                summary.style.fontWeight = 'bold';
+                summary.textContent = g.label;
+                details.appendChild(summary);
+                const ul = document.createElement('ul');
+                ul.style.marginTop = '0.3rem';
+                data.hasDefinedTerm
+                  .filter(t => {
+                    const n = parseInt(t.termCode.replace('§',''));
+                    return n >= g.from && n <= g.to;
+                  })
+                  .forEach(term => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = term.url;
+                    a.textContent = term.termCode + ' ' + term.name;
+                    li.appendChild(a);
+                    const small = document.createElement('small');
+                    small.textContent = ' — ' + term.description;
+                    small.style.color = '#888';
+                    li.appendChild(small);
+                    ul.appendChild(li);
+                  });
+                details.appendChild(ul);
+                tree.appendChild(details);
+              });
+            })
+            .catch(err => {
+              document.getElementById('glossary-tree').textContent = 
+                'Glossary data unavailable — see glossary.md directly.';
+            });
+          </script>
+        </details>
+      </li>
     </ul>
   </div>
 
