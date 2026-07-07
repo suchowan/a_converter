@@ -249,7 +249,14 @@ Example from `revised.pdf` Table 7:
 | 6th | hexa- (`6`) |
 | 7th | hepta- (`7`) |
 
-See also the duodecimal myriad system for pure numbers in [myriad.pdf](myriad.pdf) and blog post '[Design Principles and Unique Implementation](https://suchowan.seesaa.net/article/202605article_11_1.html)'.
+The following diagram summarizes the duodecimal myriad naming system used for pure numbers.
+
+<p align="center">
+    <img src="pic/myriad.png" width="600"
+         title="the duodecimal myriad system for pure numbers"/>
+</p>
+
+ See also blog post '[Design Principles and Unique Implementation](https://suchowan.seesaa.net/article/202605article_11_1.html)'.
 
 ---
 

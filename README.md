@@ -65,7 +65,7 @@ One might expect a Base-12 shift to disrupt our sense of time. However, the Harm
 - **1 hour = 60 minutes** (Decimal)
 - **1 hour = 60; tertias** (Dozenal)
 
-In this system, 1 day is defined as $1000_{12}$ ([*one doz gross*](doc/pic/myriad.jpg)) tertias. Consequently, a single hour ($1/24$ day) corresponds exactly to **$60_{12}$** ($72_{10}$) tertias, allowing for a seamless transition in our visual and cognitive representation of time's divisions.
+In this system, 1 day is defined as $1000_{12}$ ([*one doz gross*](doc/pic/myriad.png)) tertias. Consequently, a single hour ($1/24$ day) corresponds exactly to **$60_{12}$** ($72_{10}$) tertias, allowing for a seamless transition in our visual and cognitive representation of time's divisions.
 
 ### 2. A Musical Bridge to the Human Scale
 The fundamental unit of length, the ***harmon*** (approx. 27.2 cm), bridges the gap between universal constants and human-scale intuition:
