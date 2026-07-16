@@ -106,7 +106,7 @@ The order of “square/cube,” “[minor/major](#10-minor--major-prefixes),” 
 | Symbol | Name | Quantity | Definition | SI equivalent | Notes |
 |--------|------|----------|------------|---------------|-------|
 | <font color='royalblue'><sub>±</sub>C</font> | [harmonic / universal Coulomb](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=0&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | electric charge | <font color='royalblue'>(<sub>±</sub>J <sub>±</sub>n / <sub>♮</sub>Ω)<sup>1/2</sup></font> | 28.896578 mC | The prefix `harmonic` (`±`) may be called `universal`, since the universal unit equals the harmonic unit |
-| <font color='royalblue'><sub>±</sub>A</font> | [harmonic Ampere](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=3&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | electric current | <font color='royalblue'><sub>±</sub>C /<sub>±</sub>n</font> | 73.975219 mA | electric potential : <font color='royalblue'><sub>♮</sub>Ω<sub>±</sub>A</font>, read "nohm Ampere" (voltage)<br/> magnetic potential : <font color='royalblue'>Ω<sub>2・±</sub>A</font>, read "turn Ampere" |
+| <font color='royalblue'><sub>±</sub>A</font> | [harmonic Ampere](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=3&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | electric current | <font color='royalblue'><sub>±</sub>C /<sub>±</sub>n</font> | 73.975219 mA | electric potential : <font color='royalblue'><sub>♮</sub>Ω<sub>±</sub>A</font>, read "nohm Ampere" (voltage)<br/> magnetic potential : <font color='royalblue'>Ω<sub>2・±</sub>A</font>[,](#10-minor--major-prefixes) read "turn Ampere" |
 | <font color='royalblue'><sub>±</sub>E</font> | [harmonic Ørsted](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=6&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=-3&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | field strength | <font color='royalblue'><sub>±</sub>A /<sub>±</sub>h</font> | 271.616 mA/m | electric field strength : <font color='royalblue'><sub>♮</sub>Ω<sub>±</sub>E</font><br/>magnetic field strength : <font color='royalblue'>Ω<sub>2・±</sub>E</font> |
 | <font color='royalblue'><sub>±</sub>T</font> | [harmonic Tesla](http://hosi.org/cgi-bin/conv.cgi?m=100b0&d=9&fq=1.0000000&frq=12&fe=0&fu=0&tu=1&fp=0&tp=0&fm=off&tm=off&fr=12&tr=10&fl=0&tl=0&c=Convert) | flux density | <font color='royalblue'><sub>±</sub>C /<sub>±</sub>h<sup>2</sup></font> | 11.678991 T / Z<sub>P</sub> | magnetic flux density : <font color='royalblue'><sub>♮</sub>Ω<sub>±</sub>T</font><br/>electric flux density : <font color='royalblue'>Ω<sub>2・±</sub>T</font> |
 
@@ -229,6 +229,11 @@ Example from `revised.pdf` Table 7:
 | atomic | `-` | 10;⁻⁸ | `±` omitted when `atomic` is present |
 
 See also blog post '[The Day Musical Symbols Fell Naturally into Place](https://suchowan.seesaa.net/article/202601article_10_1.html)'.
+
+The interpunct '・' may be inserted at any junction where subscript boundaries could blur 
+(e.g. [Ω<sub>2・±</sub>A](#5-derived-units--electromagnetic), or between a numeral and a prefixed unit); 
+it carries only its ordinary multiplicative meaning and is never required; when both neighbors are subscripts, 
+the interpunct is set as a subscript as well (a separator shares the typographic level of what it separates).
 
 ## 11. Power Prefixes
 
