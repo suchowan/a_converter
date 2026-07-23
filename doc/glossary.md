@@ -226,7 +226,7 @@ Example from `revised.pdf` Table 7:
 |--------|--------|-------|-------|
 | cosmic | `+` | 10;⁺⁸ | `±` omitted when `cosmic` is present |
 | hyper | `♯` | 10;⁺⁴ | `±` omitted when `hyper` is present |
-| *dirac* | `∜♯` | 10;⁺¹ | only for [Gravitic System](gravitic.pdf) |
+| *dirac* | `∜♯` | 10;⁺¹ | only for [Gravitic System](gravitic.pdf), see also [dirac.md](dirac.md) |
 | sub | `♭` | 10;⁻⁴ | `±` omitted when `sub` is present |
 | atomic | `-` | 10;⁻⁸ | `±` omitted when `atomic` is present |
 
@@ -327,9 +327,11 @@ Alternative proposal replacing unit names with the names of a dozen Muses or God
 
 | Unit | Alternate | Unit | Alternate | Unit | Alternate | Unit | Alternate |
 |------|-----------|------|-----------|------|-----------|------|-----------|
-| [Ampere](#5-derived-units--electromagnetic) | → [Aoide](https://en.wikipedia.org/wiki/Aoide) | [Boltzmann](#6-defining-constants) | → [Bia](https://en.wikipedia.org/wiki/Bia_(mythology)) | [Coulomb](#5-derived-units--electromagnetic) | → [Clio](https://en.wikipedia.org/wiki/Clio) | [dirac](#10-minor--major-prefixes) | → [diana](https://en.wikipedia.org/wiki/Diana_(mythology)) |
-| [Ørsted](#5-derived-units--electromagnetic) | → [Erato](https://en.wikipedia.org/wiki/Erato) | [Joule](#2-base-units-not-natural) | → [Juno](https://en.wikipedia.org/wiki/Juno_(mythology)) | [Kelvin](#2-base-units-not-natural) | → [Kalliope](https://en.wikipedia.org/wiki/Calliope) | [neper](#1-base-units-natural) | → [nephe](https://en.wikipedia.org/wiki/Nephele) |
+| [Ampere](#5-derived-units--electromagnetic) | → [Aoide](https://en.wikipedia.org/wiki/Aoide) | [*Boltzmann*](#6-defining-constants) | → [Bia](https://en.wikipedia.org/wiki/Bia_(mythology)) | [Coulomb](#5-derived-units--electromagnetic) | → [Clio](https://en.wikipedia.org/wiki/Clio) | [*dirac*](#10-minor--major-prefixes) | → [diana](https://en.wikipedia.org/wiki/Diana_(mythology)) |
+| [Ørsted](#5-derived-units--electromagnetic) | → [Erato](https://en.wikipedia.org/wiki/Erato) | [Joule](#2-base-units-not-natural) | → [Juno](https://en.wikipedia.org/wiki/Juno_(mythology)) | [Kelvin](#2-base-units-not-natural) | → [Kalliope](https://en.wikipedia.org/wiki/Calliope) | [*neper*](#1-base-units-natural) | → [nephe](https://en.wikipedia.org/wiki/Nephele) |
 | [Newton](#4-derived-units--dynamical) | → [Nete](https://en.wikipedia.org/wiki/Nete_(mythology)) | [Pascal](#4-derived-units--dynamical) | → [Polym](https://en.wikipedia.org/wiki/Polyhymnia) | [Tesla](#5-derived-units--electromagnetic) | → [Thalia](https://en.wikipedia.org/wiki/Thalia_(Muse)) | [Watt](#4-derived-units--dynamical) | → [Walku](https://en.wikipedia.org/wiki/Valkyrie) |
+
+*Italics*: Terms that are **not** adapted from existing metric unit names
 
 ---
 
