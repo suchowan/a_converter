@@ -1,4 +1,4 @@
-﻿
+
 # The Binary Operator `°`
 
 ## Purpose
@@ -52,5 +52,4 @@ of water" contains no "C" yet carries kelvin as its graduation.
 
 Common practice sometimes drops the `°` itself. This specification recommends
 writing `°` explicitly.
-```
 
