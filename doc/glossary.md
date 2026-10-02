@@ -269,6 +269,8 @@ The following diagram summarizes the duodecimal myriad naming system used for pu
 
 ## 12. Earth Local Units & Constants
 
+The Earth-local constants *m*<sub>E</sub>, *s*<sub>E</sub>, *g*<sub>E</sub> and *T*<sub>E</sub> form a quartet of bridging constants: each relates a locally salient quantity to a universal kind — length per Earth angle, physical time per calendar angle, Earth weight per mass, and everyday temperature against thermodynamic temperature. Together they record the local conditions of the Earth as the place where everyday measurement is done: its size, its rotation, its gravity and its climate.
+
 <p align="center"><em>Earth Local Category</em></p>
 
 | Symbol | Name | Definition |
