@@ -41,7 +41,7 @@ These rules are what make `°` worth distinguishing from `−`.
 |---|---|---|
 | `°CE` | `year ° Common Era` | 1 |
 | `°C` | `K ° melting point of water` | 1 |
-| `dB°mV` | `deci log(10) ° deci log(mV)` | 2 |
+| `dB°mW` | `deci log(10) ° log(mW)` | 2 |
 | `°H` | `♯K ° `*T*<sub>E</sub> | 1 |
 
 *T*<sub>E</sub> is the base Hyper Kelvin of the Earth. Although the symbol does
