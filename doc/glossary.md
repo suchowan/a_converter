@@ -112,12 +112,13 @@ The order of “square/cube,” “[minor/major](#10-minor--major-prefixes),” 
 
 <p align="center">
   <a href="https://gist.github.com/suchowan/5c2f1ca3cfb79b3abb8ae40bbf3a2a5f#3-figure-1--symmetric-placement-of-electromagnetic-quantities">
-    <img src="https://raw.githubusercontent.com/suchowan/notes/refs/heads/master/pic/Figure_1.png" width="400"
+    <img src="https://raw.githubusercontent.com/suchowan/dimension_criterion/refs/heads/main/fig/Figure_1.png" width="400"
          title="Relationships among the dimensions of electromagnetic quantities"/>
-  </a>
+  </a><br/>
+  <i>Figure 1.</i> Relationships among the dimensions of electromagnetic quantities
 </p>
 
-*Figure 1.* How the electromagnetic quantities relate through ×impedance
+How the electromagnetic quantities relate through ×impedance
 (<font color='royalblue'><sub>♮</sub>Ω</font>), ×solid angle(`Ω₂`), ×area, ×time, and ×length. The four named derived units
 <font color='royalblue'><sub>±</sub>C</font>,
 <font color='royalblue'><sub>±</sub>A</font>,
