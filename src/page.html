@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Universal Unit System converter</title>
+<meta name="description" content="Converter of the Universal Unit System (Harmonic System) and other systems of units, running in the browser.">
+<style>
+  :root { --ink: #1f2b3a; --soft: #5b6874; --line: #c9d0d6; --bg: #fbfcfb; --band: #eef2f3; --accent: #0a7c8e; --bad: #a8306b; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --ink: #e6ebef; --soft: #a9b4bc; --line: #3a4652; --bg: #141a20; --band: #1d252d; --accent: #56c4d1; --bad: #e07aae; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.35rem; margin: 0 0 4px; }
+  .sub { color: var(--soft); margin: 0 0 20px; font-size: .92rem; }
+  form { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+  input[type=text] { flex: 1 1 420px; min-width: 0; font: 1rem ui-monospace, "SFMono-Regular", Consolas, monospace; padding: 8px 10px;
+    border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); }
+  button { font: inherit; padding: 8px 16px; border: 1px solid var(--accent); background: var(--accent); color: var(--bg); border-radius: 6px; cursor: pointer; }
+  .examples { font-size: .88rem; color: var(--soft); margin-bottom: 20px; }
+  .examples a { margin-right: 10px; white-space: nowrap; }
+  a { color: var(--accent); }
+  code, pre { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; }
+  .uus-query { margin: 0 0 12px; }
+  .uus-query code { font-size: 1.05rem; word-break: break-all; }
+  .also { color: var(--soft); }
+  .wrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
+  th { background: var(--band); font-weight: 600; }
+  td.n { text-align: right; color: var(--soft); width: 3em; }
+  td.q { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; text-align: right; white-space: nowrap; }
+  td.u { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: .9rem; }
+  td.k { color: var(--soft); font-size: .9rem; }
+  .uus-props { width: auto; margin: 8px 0 16px; }
+  .uus-props th { background: none; color: var(--soft); font-weight: 500; }
+  .uus-unit .desc { font-size: 1.1rem; }
+  .uus-error { border-left: 4px solid var(--bad); padding: 4px 12px; background: var(--band); }
+  .uus-at { margin: 4px 0; overflow-x: auto; }
+  .hint { color: var(--soft); }
+  footer { margin-top: 32px; font-size: .85rem; color: var(--soft); }
+  details { margin-top: 24px; font-size: .9rem; }
+  details pre { white-space: pre-wrap; background: var(--band); padding: 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Universal Unit System converter</h1>
+  <p class="sub">Write a request of the UUS API; the answer is computed in this page from <code>units.json</code>.</p>
+  <form id="f" autocomplete="off">
+    <input type="text" id="q" aria-label="request" spellcheck="false" placeholder="9E0*harmon/foot_TRAD">
+    <button type="submit">Convert</button>
+  </form>
+  <div class="examples">Examples:
+    <a href="#9E0*harmon/foot_TRAD">9E0*harmon/foot_TRAD</a>
+    <a href="#1.00000000E0*harmon1nic-1/meter_SI1second_SI-1">speed</a>
+    <a href="#1.0000Z0*harmon1nic-2/*">acceleration, all units</a>
+    <a href="#0E0°Celsius_SI/°Fahrenheit_TRAD">0 °C in °F</a>
+    <a href="#3.000E0°earthquakeMagnitude_00_CONST/*">magnitude 3</a>
+    <a href="#Omega_1">Omega_1</a>
+    <a href="#harmon">harmon</a>
+  </div>
+  <div id="out" aria-live="polite"></div>
+  <details>
+    <summary>How to write a request (<a href="https://github.com/suchowan/a_converter/blob/HEAD/doc/UUS_API.md">the full specification</a>)</summary>
+    <pre>REQUEST    ::= ( UNITS | CONVERSION ) [ "." TYPE ]
+CONVERSION ::= QUANTITY "/" ( QUANTITY | "*" )          "*": every unit of the dimension
+QUANTITY   ::= [ VALUE ( "*" | "°" | "@" ) ] UNITS
+UNITS      ::= UNIT [ POWER ] { UNIT [ POWER ] }         harmon1nic-1, Omega_1nic-1
+UNIT       ::= NAME { "_" ( NAMESPACE | VARIANT ) }      meter_SI, meter_universal  (SI/meter is the same)
+NAMESPACE  ::= SI | TGM | IDUS | TONAL | TRAD | CGS | CONST
+VARIANT    ::= harmonic | universal | GCD | gravitic | exact
+VALUE      ::= NUMBER12 ( "E" | "Z" ) [ "-" ] NUMBER     E: decimal, Z: duodecimal (digits x e)
+The digits of VALUE set the precision of the answer.</pre>
+  </details>
+  <footer>Unit definitions: conv.rb by Takashi Suga (MIT License). <a href="#" id="json">This answer as JSON</a> ·
+    <a href="https://github.com/suchowan/a_converter/blob/HEAD/doc/UUS_API.md">Specification</a> · <a href="index.html">The converter (conv.cgi's form)</a></footer>
+</main>
+<!--CONV_JS-->
+<!--UNITS_JSON-->
+<script>
+(function () {
+  var out = document.getElementById('out'), input = document.getElementById('q'), jsonLink = document.getElementById('json');
+  var conv = null, last = null;
+  // the request: after "#", or after "/units/" in the path (a 404 page on a static host), or ?q=
+  function current() {
+    if (location.hash.length > 1) return location.hash.slice(1);
+    if (!location.search && !/\/units\//.test(location.pathname)) return '1.0000000Z0*harmon/*';     // something to start with
+    var m = /\/units\/(.+)$/.exec(location.pathname);
+    if (m) return m[1];
+    var q = new URLSearchParams(location.search).get('q');
+    return q || '';
+  }
+  function show() {
+    var req = current();
+    var shown = req; try { shown = decodeURIComponent(req); } catch (e) {}
+    input.value = shown;
+    if (!req) { out.innerHTML = ''; last = null; return; }
+    try {
+      last = conv.request(req);
+      out.innerHTML = conv.toHTML(last).replace('<table class="uus-results">', '<div class="wrap"><table class="uus-results">').replace('</table>\n</section>', '</table></div>\n</section>');
+      document.title = (last.uri || (last.unit && last.unit.uri) || 'UUS') + ' — UUS converter';
+    } catch (e) {
+      last = null;
+      if (!(e instanceof Conv.ConvError)) { out.innerHTML = Conv.errorHTML({ status: 500, code: 'internal', message: String(e) }, req); throw e; }
+      out.innerHTML = Conv.errorHTML(e, req);
+    }
+  }
+  jsonLink.addEventListener('click', function (ev) {
+    ev.preventDefault();
+    var w = window.open('', '_blank');
+    if (w) { w.document.write('<pre>' + Conv.escapeHTML(JSON.stringify(last, null, 2)) + '</pre>'); w.document.close(); }
+  });
+  document.getElementById('f').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    location.hash = encodeURI(input.value.trim()).replace(/#/g, '%23');
+  });
+  window.addEventListener('hashchange', show);
+  function start(units) { conv = Conv.load(units); show(); }
+  if (window.UUS_UNITS) start(window.UUS_UNITS);
+  else fetch('units.json').then(function (r) { return r.json(); }).then(start).catch(function (e) {
+    out.innerHTML = Conv.errorHTML({ status: 500, code: 'no_units', message: 'units.json could not be loaded: ' + e }, '');
+  });
+})();
+</script>
+</body>
+</html>

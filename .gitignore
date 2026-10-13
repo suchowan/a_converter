@@ -1,0 +1,15 @@
+# Windows
+Thumbs.db
+desktop.ini
+
+# Office temporary files
+~$*.docx
+~$*.doc
+
+# LaTeX / conversion artifacts (if any)
+*.aux
+*.log
+*.out
+
+# Temporary work files
+work/

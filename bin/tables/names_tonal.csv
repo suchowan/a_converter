@@ -1,0 +1,8 @@
+﻿"name","texts","description","note"
+"circle","circle(16.)","circle(16.)",""
+"effect","effect(16.)","effect(16.)",""
+"gall","gall(16.)","gall(16.)",""
+"meter","meter(16.)","meter(16.)",""
+"pon","pon(16.)","pon(16.)",""
+"temp","temp(16.)","temp(16.)",""
+"Tim","Tim(16.)","Tim(16.)","TGM と衝突しなくなる"

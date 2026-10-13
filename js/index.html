@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Converter</title>
+<meta name="description" content="A converter of units: the Universal Unit System (Harmonic System), SI, TGM, IDUS, the Tonal System and traditional units. It runs in the browser.">
+<meta name="keywords" content="duodecimal, dozenal, universal unit system, universal system of units">
+<style>
+  :root { --ink: #1f2b3a; --soft: #5b6874; --line: #c9d0d6; --bg: #fbfcfb; --band: #eef2f3; --accent: #a8306b; --bad: #a8306b; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --ink: #e6ebef; --soft: #a9b4bc; --line: #3a4652; --bg: #141a20; --band: #1d252d; --accent: #e07aae; --bad: #e07aae; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 18px 16px 40px; }
+  h1 { font-size: 1.25rem; margin: 0; text-align: center; }
+  .links { text-align: center; font-size: .85rem; margin: 2px 0 6px; }
+  .cat { text-align: center; font-size: .85rem; margin-bottom: 14px; }
+  .cat a.on { color: var(--ink); text-decoration: none; font-weight: 600; pointer-events: none; }
+  a { color: var(--accent); }
+  table.form { border-collapse: collapse; width: 100%; table-layout: fixed; }
+  table.form td, table.form th { border: 1px solid var(--line); padding: 6px 8px; vertical-align: middle; }
+  table.form th { background: var(--band); font-weight: 600; text-align: center; }
+  col.c-h { width: 7.5em; } col.c-m { width: 3em; }
+  #d { flex: 1 1 14em; width: auto; }
+  table.form td.mid { width: 2.5em; text-align: center; }
+  select, input[type=text] { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 3px 5px; max-width: 100%; }
+  select { width: 100%; min-width: 0; text-overflow: ellipsis; }
+  .qrow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: center; }
+  .qrow select { width: auto; }
+  #fq { flex: 1 1 8em; width: 15em; min-width: 0; max-width: 18em; font-family: ui-monospace, Consolas, monospace; }
+  #fe { width: 4em; font-family: ui-monospace, Consolas, monospace; }
+  button { font: inherit; padding: 4px 14px; border: 1px solid var(--line); background: var(--band); color: var(--ink); border-radius: 4px; cursor: pointer; }
+  button.main { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  .buttons { text-align: center; margin: 10px 0 14px; }
+  label.sub { font-size: .85rem; color: var(--soft); white-space: nowrap; }
+  #out { margin-top: 6px; }
+  .wrap { overflow-x: auto; }
+  table.res { border-collapse: collapse; margin: 0 auto; }
+  table.res th, table.res td { border: 1px solid var(--line); padding: 3px 8px; }
+  table.res th { background: var(--band); }
+  table.res td.n { text-align: right; color: var(--soft); }
+  td.q, .single .q { font-family: ui-monospace, Consolas, monospace; text-align: right; white-space: nowrap; }
+  .single { text-align: center; font-size: 1.1rem; }
+  .err { color: var(--bad); text-align: center; }
+  details { margin-top: 26px; font-size: .9rem; }
+  details table td { padding: 3px 8px; }
+  #note:empty { display: none; }
+  .uus-error { border-left: 4px solid var(--bad); padding: 4px 12px; background: var(--band); margin-bottom: 10px; }
+  footer { margin-top: 24px; font-size: .8rem; color: var(--soft); text-align: center; }
+  @media (max-width: 560px) {
+    col.c-h { width: 4.6em; } col.c-m { width: 2em; }
+    table.form th { font-size: .78rem; padding: 4px 2px; }
+    table.form td { padding: 4px; }
+    table.form td.mid { padding: 2px; }
+    #swap { padding: 2px 4px; }
+    .qrow select:not(#d) { width: 4.5em; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>A Converter</h1>
+  <div class="links">[<a href="https://suchowan.github.io/a_converter/" target="_blank">Home</a>]
+    [<a href="#config-panel" onclick="document.getElementById('config-panel').open = true">Config</a>]
+    [<a href="https://github.com/suchowan/a_converter" target="_blank">GitHub</a>]</div>
+  <div class="cat">
+    <a href="#" data-k="0">Typical</a> / <a href="#" data-k="1">Thermo-</a> / <a href="#" data-k="2">Dynamical</a> /
+    <a href="#" data-k="3">Electromagnetical</a> / <a href="#" data-k="4">Chemical</a> / <a href="#" data-k="5">Optical</a> /
+    <a href="#" data-k="6">Radiological</a> / <a href="#" data-k="7">All</a>
+  </div>
+  <div id="note"></div>
+  <form id="form" autocomplete="off">
+    <table class="form">
+      <colgroup><col class="c-h"><col><col class="c-m"><col></colgroup>
+      <tr><th>dimension</th><td colspan="3"><div class="qrow"><select id="d" aria-label="dimension"></select> <button type="button" id="reset">Reset</button></div></td></tr>
+      <tr><th>quantity</th><td colspan="3"><div class="qrow">
+        <input type="text" id="fq" aria-label="quantity" spellcheck="false"> ×
+        <select id="frq" aria-label="radix of the quantity"></select> ^ <input type="text" id="fe" aria-label="exponent" spellcheck="false"></div></td></tr>
+      <tr><th>item</th><td style="text-align:center">from</td><td class="mid" rowspan="5"><button type="button" id="swap" title="swap from and to">⇔</button></td><td style="text-align:center">to</td></tr>
+      <tr><th>unit or<br>constant</th><td><select id="fu" aria-label="from unit"></select></td><td><select id="tu" aria-label="to unit"></select></td></tr>
+      <tr><th>power</th><td><select id="fp" aria-label="from power"></select></td><td><select id="tp" aria-label="to power"></select></td></tr>
+      <tr><th>radix</th><td><select id="fr" aria-label="from radix"></select>
+        <label class="sub"><input type="checkbox" id="fm"> subunits</label></td>
+        <td><select id="tr" aria-label="to radix"></select> <label class="sub"><input type="checkbox" id="tm"> subunits</label></td></tr>
+      <tr><th>type</th><td><select id="fl" aria-label="from type"></select></td><td><select id="tl" aria-label="to type"></select></td></tr>
+    </table>
+    <div class="buttons"><button type="submit" class="main">Convert</button></div>
+  </form>
+  <div id="out" aria-live="polite"></div>
+
+  <details id="config-panel">
+    <summary>Config</summary>
+    <form id="config">
+      <table>
+        <tr><td><a href="https://suchowan.github.io/a_converter/" target="_blank">Universal Unit System</a></td><td><select id="s">
+          <option value="eliminate">eliminate</option><option value="universal">universal</option><option value="GCD">GCD</option><option value="harmonic">harmonic</option></select></td></tr>
+        <tr><td>TGM System</td><td><select id="t">
+          <option value="eliminate">eliminate</option><option value="exactly">Lightvlos exactly</option><option value="not exactly">Lightvlos not exactly</option></select></td></tr>
+        <tr><td>International Dozenal Unit System</td><td><select id="i"><option value="0">eliminate</option><option value="1">include</option></select></td></tr>
+        <tr><td>Tonal System</td><td><select id="n"><option value="0">eliminate</option><option value="1">include</option></select></td></tr>
+        <tr><td>grouping separator</td><td><select id="r"><option value=",">","</option><option value=".">"."</option></select></td></tr>
+        <tr><td>digit symbols</td><td><select id="dg"><option value="0">0123456789XE</option><option value="1">0123456789AB</option></select></td></tr>
+        <tr><td>default precision</td><td><select id="p">
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option>
+          <option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option></select></td></tr>
+      </table>
+      <button type="submit">Set</button>
+    </form>
+  </details>
+  <footer>The same converter as <a href="http://hosi.org/cgi-bin/conv.cgi">conv.cgi</a>, computed in this page from units.json (generated from conv.rb).
+    MIT License. The Date dimension (calendars) is not here yet.<br>
+    Units and conversions also have URIs: <a href="api.html">the UUS API</a> (<a href="https://github.com/suchowan/a_converter/blob/HEAD/doc/UUS_API.md">specification</a>).</footer>
+</main>
+<script src="conv.js"></script>
+
+<script src="ui.js"></script>
+</body>
+</html>

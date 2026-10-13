@@ -58,7 +58,7 @@ class Mode
     @prefix    = ['eliminate', 'universal', 'GCD', 'harmonic'][u]
     @harmon    = a && u == 3 ? 'harmon' : 'meter(12.)'
     @nic       = a && u == 3 ? 'nic'    : 'second(12.)'
-    @looloh    = !a ? 'gram(12.)' : u <= 1 ? 'loolou' : 'looloh'
+    @looloh    = !a ? 'gram(12.)' : u == 3 ? 'looloh' : u == 1 ? 'loolou' : 'gram(12.)'
     @doremi    = false # @mode[ 7] == 1
     @category  = 7 - (@mode >> 4 & 7)
     @precision = @mode & 15
@@ -720,7 +720,7 @@ module Unit
       Unit.new('gravitational radius of the Sun',   RS/Light**2),
       Unit.new('Nafut(by GRS-80)',            EqRad*2*Math::PI/(4*12**7), :TGM ),
       Unit.new('astronomical unit or Astru',        AU),
-      Unit.new('lighttim(12.)',                     Light*Tim,            :TGM ),
+      Unit.new('lightTim(12.)',                     Light*Tim,            :TGM ),
       Unit.new('light second(10.)',                 Light,                :SI  ),
       Unit.new("light #{Nic}",                      Light*Sh,             :Univ),
       Unit.new('light solar tertia',                Light*50,             :Univ),
@@ -735,7 +735,6 @@ module Unit
       Unit.new('metric nautical mile',              1852.0),
       Unit.new('nautical league',                   1852.0*3),
       Unit.new('league(12.)',                       Mh*12*12*12*12,       :Univ),
-      Unit.new('uncia(12.)',                        Mh/12,                :Univ),
       Unit.new('&#23610;',                          Shaku),
       Unit.new('&#38291;',                          Shaku*6),
       Unit.new('&#37324;',                          Shaku*6*60*36)
@@ -769,7 +768,7 @@ module Unit
       Unit.new('minute',                            60.0,                 nil,   [ 1, [":", 60]]),
       Unit.new('hour(12.)',                         3600.0,               :TGM,  Config.uus ? [1, [";",12**2],["'",128]] : []),
       Unit.new('hour(10.)',                         3600.0,               :SI,   [ 1, [":", 60],  [":", 60]]),
-      Unit.new('dour(12.)',                         7200.0,               :Univ, [ 1, [";",12**2],["'",128]]),
+      Unit.new('solar unitia or dour',              7200.0,               :Univ, [ 1, [";",12**2],["'",128]]),
       Unit.new('day(10.)',                          DAY,                  :SI,   [ 1, ["T", 24]]+[[":", 60]]*2),
       Unit.new('solar day(12.)',                    DAY,                  :Univ, [ 1, [";",12**3],["'",128]]),
       Unit.new('week',                              DAY*7),
@@ -778,8 +777,8 @@ module Unit
       Unit.new('Julian year',                       365.25*86400),
       Unit.new('leap year',                         366.0*86400),
       Unit.new('year(10.)',                         YEAR,                 :SI  ),
-      Unit.new('sidereal month',                    27.321661547*86400,   :SI  ),
-      Unit.new('synodic month',                     Lunation,             :SI  ),
+      Unit.new('sidereal month',                    27.321661547*86400),
+      Unit.new('synodic month',                     Lunation),
       Unit.new('solar year(12.)',                   YEAR,                 :Univ, [64, ["`",    64]]),
       Unit.new('solar hexon',                       YEAR*64,              :Univ),
       Unit.new('age of solar system',               45.68E8*YEAR),
@@ -1014,7 +1013,7 @@ module Unit
       Unit.new('reference of sound pressure level(12.)', 20.0E-6,         :Univ),
       Unit.new('reference of sound pressure level(10.)', 20.0E-6,         :SI  ),
       Unit.new('atmosphere (standard)',             101325.0,             :SI  ),
-      Unit.new('atmosphere (recommend for UUS)',    Jh/Mh**3 * 31968,     :Univ),
+      Unit.new('atmosphere (recommend for UUS)',    Boltzmann*Avogadro*273.16*Molh/(144*Mh**3), :Univ), # the molar volume at the triple point is 100;
       Unit.new('Atmoz (recommend for TGM)',         Werg/Grafut**3 * 35,  :TGM ),
       Unit.new('torr',                              101325.0/760,         :SI  ),
       Unit.new('meter of mercury',                  13595.1*G,            :SI  ),
@@ -1077,16 +1076,16 @@ module Unit
     [['00100001', 'Gravitational constant'],
       Unit.new("(#{Harmon}/#{Nic})^4/Newton(12.)",  (Mh/Sh)**4/(Jh/Mh),    :NilU),
       Unit.new('(meter(10.)/second(10.))^4/Newton(10.)', 1.0,              nil  ),
-      Unit.new('Vlov^4 / Mag',              (Grafut/Tim)**4/(Werg/Grafut), :Nil ),
+      Unit.new('Vlos^4 / Mag',              (Grafut/Tim)**4/(Werg/Grafut), :Nil ),
       Unit.new('Kine^4 / Huygen',                   Kn**4/Hy,              :SDN ),
-      Unit.new('gravitic meter/second)^4/Newton',   (MG/SG)**4/(JG/MG),    :NilU),
+      Unit.new('(gravitic meter/second)^4/Newton',  (MG/SG)**4/(JG/MG),    :NilU),
       Unit.new('Newtonian constant of gravitation', 6.67384E-11)
     ],
 
     [['00100001', 'Gravitational parameter'],
       Unit.new("#{Harmon}/#{Nic}^2",                Mh**3/Sh**2,          :Univ,  3),
       Unit.new('meter(10.)/second(10.)^2',          1.0,                  :SI,    3),
-      Unit.new('Graft/Tim^2',                       Grafut**3/Tim**2,     :TGM,   3),
+      Unit.new('Grafut/Tim^2',                      Grafut**3/Tim**2,     :TGM,   3),
       Unit.new('Geck/Tick^2',                       Gk**3/Tk**2,          :SDN,   3),
       Unit.new('gravitational parameter of the Earth', RE),
       Unit.new('gravitational parameter of the Sun',   RS)
@@ -1114,7 +1113,7 @@ module Unit
       Unit.new("#{Looloh}/#{Harmon}^3",             Gh/Mh**3,             :Univ),
       Unit.new('gram(10.)/meter(10.)^3',            1.0E-3,               :SI  ),
       Unit.new('Denz',                              Maz/Grafut**3,        :TGM ),
-      Unit.new('Spig ',                             Sg,                   :SDN ),
+      Unit.new('Spig',                              Sg,                   :SDN ),
       Unit.new('maximum density of water',          Density),
       Unit.new('pound/inch^3',                      Pound/Inch**3),
       Unit.new('pound/foot^3',                      Pound/Foot**3),
@@ -1221,7 +1220,7 @@ module Unit
       Unit.new('Watt(12.)/radian^2',                Jh/Sh,                :Univ),
       Unit.new('Watt(10.)/sr',                      1.0,                  :SI  ),
       Unit.new('QuaraPenz',                         Werg/Tim,             :TGM ),
-      Unit.new('Pv / Steradian',                    Pv,                   :SDN )
+      Unit.new('Povi / Steradian',                  Pv,                   :SDN )
     ],
 
     [['10010001', 'Electric charge'],
@@ -1371,7 +1370,7 @@ module Unit
     [['00010001', 'Reluctance'],
       Unit.new("turn / #{Nic} nohm",                1/Sh/Ohmn,            :Univ),
       Unit.new('Siemens / second(10.)',             1.0,                  :SI  ),
-      Unit.new('radaQuel',                          1/Tim/Og,             :TGM ),
+      Unit.new('1/Tim/Og',                          1/Tim/Og,             :TGM ),
       Unit.new('Heaviside Tick',                    1/Hs/Tk,              :SDN, -1)
     ],
 
@@ -1418,7 +1417,7 @@ module Unit
       Unit.new('Joule(10.) / Kelvin(10.)',          1.0,                  :SI  ),
       Unit.new('Calkap',                            Werg/Calg,            :TGM ),
       Unit.new('Young / Ardor',                     Yu/Ad,                :SDN ),
-      Unit.new('Bolzmann',                          Boltzmann)
+      Unit.new('Boltzmann',                         Boltzmann)
     ],
 
     [['01000001', 'Specific heat capacity'],
@@ -1488,7 +1487,7 @@ module Unit
       Unit.new("Joule(12.) / mole(12.)",            Jh / Molh,            :Univ),
       Unit.new('Joule(10.) / mole(10.)',            1.0,                  :SI  ),
       Unit.new('Wergolz',                           Werg/(1000*Maz),      :TGM ),
-      Unit.new('Yound / Berzel',                    Yu / Bz,              :SDN )
+      Unit.new('Young / Berzel',                    Yu / Bz,              :SDN )
     ],
 
     [['00011001', 'Molar electric charge'],
@@ -1528,7 +1527,7 @@ module Unit
       Unit.new('effective Watt(12.)/radian^2',      Lmnh,                 :Univ),
       Unit.new('candela',                           1.0,                  :SI  ),
       Unit.new('QuaraLyde',                         Lypov,                :TGM ),
-      Unit.new('effective Watt(12.)/sphere',        Lmnh/(4*Math::PI),    :Univ),
+      Unit.new('effective Watt(12.)/turn(12.)',     Lmnh/(4*Math::PI),    :Univ),
       Unit.new('absolute magnitude 0.0',            LuSun*100**(4.8310628/5)),
       Unit.new('luminous intensity of the Sun or Bril', LuSun,            :Nil )
     ],
@@ -1572,7 +1571,7 @@ module Unit
 
     [['00001101', 'Molar optical rotation'],
       Unit.new("radian #{Harmon}^2 / mole(12.)",    Mh**2/Molh,           :Univ),
-      Unit.new('radian meter(10.)^2 / mole(12.)',   1.0,                  :SI  ),
+      Unit.new('radian meter(10.)^2 / mole(10.)',   1.0,                  :SI  ),
       Unit.new('Orolz',                             Grafut**2/(1000*Maz), :TGM ),
       Unit.new('Radian Geck^2 / Berzel',            Gk**2/Bz,             :SDN )
     ],
@@ -1841,7 +1840,7 @@ module Document
   end
 
   def to_num(key, target, radix)
-    return key unless key =~ /^[A-Z]/i
+    return key unless key.to_s =~ /^[A-Z]/i
     decode(key)
     match = /#{key}/
     (radix...target.length).to_a.each do |i|
