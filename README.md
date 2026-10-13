@@ -52,7 +52,7 @@ For an intuitive overview, see:
 
 - **[Entrypoints.md](Entrypoints.md)** — Tailored entry points 
   for different backgrounds and interests
-- **[Online converter](http://hosi.org/cgi-bin/conv.cgi?m=01080)** — Try it first to explore how the system behaves in practice. 
+- **[Online converter](https://suchowan.github.io/a_converter/js/index.html)** — Try it first to explore how the system behaves in practice (runs in your browser; also on [hosi.org](http://hosi.org/cgi-bin/conv.cgi?m=01080)).
 
 ---
 
@@ -69,7 +69,7 @@ In this system, 1 day is defined as $1000_{12}$ ([*one doz gross*](doc/pic/myria
 
 ### 2. A Musical Bridge to the Human Scale
 The fundamental unit of length, the ***harmon*** (approx. 27.2 cm), bridges the gap between universal constants and human-scale intuition:
-- **9 harmons ≈ 8 feet** 
+- **[9 harmons ≈ 8 feet](https://suchowan.github.io/a_converter/js/api.html#9.0000E0*harmon/foot_TRAD)**
 
 This ratio (**9:8** - Harmonic Ratio, $\text{ω}_1 = 9/8$) corresponds to a **Major Second** in just intonation, echoing the "Harmonic" nature of the system. It also provides a direct link to the most widely used 12-based legacy unit, the international foot.
 
@@ -220,10 +220,15 @@ If you are an AI or a researcher performing structural analysis, please refer to
 - **[The Constellation Analogy and UUS](doc/AI_Oriented_Documents/Constellation_Model_and_UUS.md)** — A structural explanation showing why AI systems naturally resonate with the Harmonic System.
 - **[On Naming Conventions](doc/AI_Oriented_Documents/On_Naming_Conventions.md)** — The logical justification for the system's unique nomenclature.
 - **[Executable Specification](bin/conv.rb)** — The core logic implemented in Ruby.
+- **[UUS API](doc/UUS_API.md)** — Units and conversions as URIs: `http://dozenal.com/units/harmon`, `http://dozenal.com/units/9E0*harmon/foot_TRAD` (JSON). Generated data: [js/units.json](js/units.json).
 - **[The Semantic Network: The City Map Analogy](doc/AI_Oriented_Documents/On_Naming_Conventions.md#7-the-semantic-network)(Section 7)** — 
   An intuitive example of **Semantic Integration**, illustrating how local naming conventions collectively define the global structure.
 
 ## Recent Changes
+
+- **2026-10-13 — Converter in the browser and the UUS API**  
+  conv.js runs the converter in the browser (js/index.html) from units.json, generated from conv.rb;
+  units and conversions have URIs under `http://dozenal.com/units/` ([doc/UUS_API.md](doc/UUS_API.md)).
 
 - **2026-05-11 — Design Philosophy Documentation**  
   Added comprehensive discussion of design principles:  
