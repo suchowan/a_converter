@@ -4,6 +4,7 @@
  *
  *   api.js?api=9E0*harmon/foot_TRAD.json   the answer as JSON (also without ".json")
  *   api.js?api=9E0*harmon/foot_TRAD.html   a redirect to conv.cgi showing the same conversion
+ *   api.js?api=SI/                          the units of a namespace (api= empty: the UUS and every namespace)
  *
  * Copyright (c) 2011-2026 Takashi Suga
  * This software is released under the MIT License.
@@ -20,6 +21,8 @@ const Conv = require('./conv.js');
 const CONV_CGI = process.env.UUS_CONV_CGI || 'http://hosi.org/cgi-bin/conv.cgi';
 // "render" answers ".html" with a page of its own instead of a redirect
 const HTML = process.env.UUS_HTML || 'redirect';
+// where ".html" requests for a namespace (a list of units) go: conv.cgi has no such page
+const PAGE = process.env.UUS_PAGE || 'https://suchowan.github.io/a_converter/js/api.html';
 
 function reply(status, type, body, extra = '') {
   process.stdout.write(`Status: ${status}\r\nContent-Type: ${type}; charset=utf-8\r\n${extra}\r\n`);
@@ -49,8 +52,8 @@ function main() {
     return reply(e.status, 'application/json', JSON.stringify({ error: e }, null, 1));
   }
   if (r.type === 'html') {
-    if (HTML === 'render') return reply(200, 'text/html', page(r.uri || r.unit.uri, converter.toHTML(r, (u) => '?api=' + encodeURIComponent(u) + '.html')));
-    const url = converter.cgiURL(r, CONV_CGI);
+    if (HTML === 'render') return reply(200, 'text/html', page(r.uri || (r.unit && r.unit.uri) || (r.namespace.uri || 'namespaces'), converter.toHTML(r, (u) => '?api=' + encodeURIComponent(u) + '.html')));
+    const url = r.kind === 'namespace' ? PAGE + '#' + (r.namespace.uri || '/') : converter.cgiURL(r, CONV_CGI);
     return reply(302, 'text/html', `<a href="${Conv.escapeHTML(url)}">${Conv.escapeHTML(url)}</a>\n`, `Location: ${url}\r\n`);
   }
   return reply(200, 'application/json', JSON.stringify(r, null, 1));

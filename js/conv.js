@@ -519,6 +519,13 @@
       }
       // the row of the quantity; with a target, a dimension the target belongs to as well
       let cands = qm.rows;
+      // a quantity (no "°") may be answered as a level of a logarithmic dimension: a target with "°"
+      const isLog = (d) => this.units.dimensions[d].scale && this.units.dimensions[d].title !== 'Thermodynamic temperature';
+      if (tm !== null && tScale && Q.op !== '°') {
+        const tRows = this.rows.get(tm) || [];
+        const levels = (this.rows.get(qm.key) || []).filter((r) => r.scale && isLog(r.d) && tRows.some((x) => x.d === r.d && x.scale));
+        if (levels.length) cands = levels;
+      }
       if (tm !== null) {
         const tRows = this.rows.get(tm) || [];
         const both = cands.filter((r) => tRows.some((x) => x.d === r.d));
@@ -578,12 +585,15 @@
       try {
         if (tm !== null) {
           if (tScale && !D.scale) throw new ConvError('not_written', 422, `${D.title} has no scale: write the target without "°"`, 0);
-          const tRow = (this.rows.get(tm) || []).find((x) => x.d === d && (x.scale === tScale || !D.scale));
+          // a level (°) in a logarithmic dimension may be answered as the quantity itself: a target without "°"
+          const logDim = isLog(d);
+          const asQuantity = logDim && !tScale && Q.op === '°';
+          const tRow = (this.rows.get(tm) || []).find((x) => x.d === d && (x.scale === tScale || !D.scale || asQuantity));
           if (tRow) tExpr = order(D.units[tRow.u], tm);
           if (!tRow) throw new ConvError('not_written', 422, tScale ? `"${tm}" is not a scale here` : `write the target as °${tm}`, 0);
           const tu = tRow.u, u = D.units[tu];
           const tr = eng.defaultRadix(u);
-          const tl = tScale && D.scale && D.title !== 'Thermodynamic temperature' ? (options.tl !== undefined ? options.tl : logType) : 0;
+          const tl = tScale && logDim ? (options.tl !== undefined ? options.tl : logType) : 0;
           tlUsed = tl;
           const teng = this.engine(tvr.uus, tvr.tgm);
           const v = teng.unitConvert(u, 0, tl, tr, si);
@@ -759,12 +769,14 @@
   Converter.prototype.request = function (path, options = {}) {
     let s = String(path);
     try { s = decodeURIComponent(s); } catch (e) { throw new ConvError('syntax', 400, 'broken %-encoding', 0); }
-    s = s.replace(/^uus:/, '').replace(/^\/?(?:units|uus)\//, '').replace(/^\//, '');
-    if (s === '') throw new ConvError('empty', 400, 'nothing requested', 0);
+    s = s.replace(/^uus:/, '').replace(/^\/?(?:units|uus)(?:\/|$)/, '').replace(/^\//, '');
     if (s.length > 512) throw new ConvError('syntax', 400, 'the request is too long', 512);
     let type = 'json';
     const tm = /\.(json|html)$/.exec(s);
     if (tm) { type = tm[1]; s = s.slice(0, tm.index); }
+    // a namespace ("", "SI/", "universal/", "TGM/exact/"): the list of its units
+    const ns = this.namespaceRequest(s);
+    if (ns) return Object.assign({ type, kind: 'namespace' }, ns);
     // NAMESPACE/ and VARIANT/ -> suffixes, keeping a map back to the positions of s
     const out = []; const map = [];
     const re = new RegExp('^((?:(?:' + NAMESPACES.concat(VARIANTS).join('|') + ')/)+)([A-Za-z][A-Za-z0-9_]*)');
@@ -829,6 +841,83 @@
     return Object.assign({ type, kind: 'conversion' }, r, { uri });
   };
 
+  // NAMESPACE_INDEX ::= [ NAMESPACE "/" ] [ VARIANT "/" ]: "" is the UUS (harmonic) with the other namespaces;
+  // the variants are those of the UUS (harmonic universal GCD gravitic) and of TGM (exact). The "/" at the end
+  // may be left out. Anything else is not a namespace (null).
+  Converter.prototype.namespaceRequest = function (s) {
+    const parts = s.split('/').filter((x) => x !== '');
+    if (s !== '' && !/^[A-Za-z]+(\/[A-Za-z]+)?\/?$/.test(s)) return null;
+    if (!parts.every((x) => NAMESPACES.includes(x) || VARIANTS.includes(x))) return null;
+    let sys = 'UUS', variant = null;
+    parts.forEach((x, i) => {
+      if (NAMESPACES.includes(x)) {
+        if (i > 0) throw new ConvError('syntax', 400, `the namespace comes first: ${x}/`, 0);
+        sys = x;
+      } else {
+        if (variant) throw new ConvError('syntax', 400, 'two variants', 0);
+        variant = x;
+      }
+    });
+    if (variant === 'exact' && sys !== 'TGM') throw new ConvError('bad_variant', 400, 'exact is a variant of TGM: TGM/exact/', 0);
+    if (variant && variant !== 'exact' && sys !== 'UUS') throw new ConvError('bad_variant', 400, `${sys} has no variant ${variant}`, 0);
+    const out = this.namespaceIndex(sys, variant);
+    if (parts.length === 0) out.namespace.namespaces = this.namespaceList();
+    return out;
+  };
+  // the dimensions each name of the tables is a unit of (as a whole row expression)
+  Converter.prototype.dimensionsOf = function (label) {
+    if (!this._dims) {
+      this._dims = new Map();
+      this.units.dimensions.forEach((D) => {
+        if (D.calendar) return;
+        D.units.forEach((u) => u.expression.split(/\s*=\s*/).forEach((p) => {
+          const k = p.replace(/^°/, '');
+          if (/\s|\^/.test(k)) return;
+          const a = this._dims.get(k) || []; if (!a.includes(D.title)) a.push(D.title); this._dims.set(k, a);
+        }));
+      });
+    }
+    return this._dims.get(label) || [];
+  };
+  Converter.prototype.namespaceIndex = function (sys, variant) {
+    const w = sys === 'UUS' ? (variant || 'harmonic') : variant;
+    const v = w === 'harmonic' || w === 'gravitic' ? '' : w;
+    const units = []; const seen = new Set();
+    const at = (n) => n.row || [1e9, 0];                      // in conv.rb's order, by the first row of each name
+    const entries = Object.entries(this.units.names).filter(([k, n]) => n.system === sys)
+      .sort((a, b) => at(a[1])[0] - at(b[1])[0] || at(a[1])[1] - at(b[1])[1]);
+    for (const [k, n] of entries) {
+      if (sys === 'UUS') {
+        const grav = k.startsWith('gravitic/');
+        if ((w === 'gravitic') !== grav) continue;
+        if (!grav && (n.variant ? n.variant !== w : n.variants && n.variants.length && !n.variants.includes(w))) continue;
+      }
+      const varies = n.value !== null && typeof n.value === 'object';
+      let uri = this.uriExpr(sys === 'UUS' && !k.startsWith('gravitic/') ? this.render(k, v) : k);
+      if (w === 'exact' && varies) uri = uri.replace(/_TGM(?!_)/g, '_TGM_exact');
+      if (seen.has(uri)) {                                       // another name of the same unit (dour = solarUnitia)
+        const own = uriName(k.replace(/^.*\//, '')) + (sys === 'UUS' ? '' : '_' + sys);
+        const e = units.find((x) => x.uri === uri);
+        if (own !== uri && !own.startsWith(uri + '_') && !(e.aliases || []).includes(own)) (e.aliases = e.aliases || []).push(own);
+        continue;
+      }
+      seen.add(uri);
+      let si = n.value;
+      if (varies) si = n.value[w === 'exact' ? 'exact' : v || ''];
+      units.push({ uri, label: n.label, description: plain(n.description || ''), dimensions: this.dimensionsOf(n.label), si: si === undefined ? null : si });
+    }
+    const uri = (sys === 'UUS' ? '' : sys + '/') + (variant ? variant + '/' : '');
+    return { namespace: { uri, system: sys, variant: variant || (sys === 'UUS' ? 'harmonic' : null), count: units.length, units } };
+  };
+  Converter.prototype.namespaceList = function () {
+    const one = (sys, variant) => {
+      const r = this.namespaceIndex(sys, variant).namespace;
+      return { uri: r.uri, system: sys, variant: variant || null, count: r.count };
+    };
+    return ['harmonic', 'universal', 'GCD', 'gravitic'].map((x) => one('UUS', x))
+      .concat(NAMESPACES.map((x) => one(x, null)), [one('TGM', 'exact')]);
+  };
+
   // URI spelling of an expression of the tables: "SI/meter SI/second^-1" -> "meter_SI1second_SI-1"
   Converter.prototype.uriExpr = function (expr) {
     const ts = expr.split(' ').filter((x) => x);
@@ -846,9 +935,11 @@
     const q = r.query;
     const v = q.variant.UUS === 'harmonic' ? '' : q.variant.UUS;
     const tv = q.targetVariant ? (q.targetVariant.UUS === 'harmonic' ? '' : q.targetVariant.UUS) : v;
-    const quantity = (q.value !== null ? q.value + (q.operator === '°' ? '°' : '*') : (q.operator === '°' ? '°' : '')) + this.uriExpr(this.render(q.units, v));
+    // TGM units in the exact variant keep "_exact"
+    const exact = (s, w) => (w && w.TGM === 'exact' ? s.replace(/_TGM(?!_)/g, '_TGM_exact') : s);
+    const quantity = (q.value !== null ? q.value + (q.operator === '°' ? '°' : '*') : (q.operator === '°' ? '°' : '')) + exact(this.uriExpr(this.render(q.units, v)), q.variant);
     const t = q.target ? q.target.replace(/^°/, '') : null;
-    return quantity + '/' + (t ? (q.target.startsWith('°') ? '°' : '') + this.uriExpr(this.render(t.replace(/\b(universal|GCD)\//g, ''), tv)) : '*');
+    return quantity + '/' + (t ? (q.target.startsWith('°') ? '°' : '') + exact(this.uriExpr(this.render(t.replace(/\b(universal|GCD)\//g, ''), tv)), q.targetVariant || q.variant) : '*');
   };
 
   Converter.prototype.describeUnit = function (key) {
@@ -870,6 +961,7 @@
 
   // the conv.cgi parameters of an answer, for a redirect to conv.cgi (or to the page that imitates it)
   Converter.prototype.cgiParams = function (r) {
+    if (r.kind === 'namespace') throw new ConvError('not_written', 422, 'a namespace has no conv.cgi page', 0);
     const code = (uus, tgm) => {
       const u = { '': 0, harmonic: 0, universal: 2, GCD: 3 }[uus] || 0, t = tgm === 'exact' ? 2 : 0;
       return (0x100f0 | (u << 8) | (t << 10)).toString(16);
@@ -908,6 +1000,24 @@
 
   Converter.prototype.toHTML = function (r, link = defaultLink) {
     const a = (uri, text) => `<a href="${esc(link(uri))}">${text}</a>`;
+    if (r.kind === 'namespace') {
+      const N = r.namespace;
+      const title = N.uri === '' ? 'UUS (harmonic) and the other namespaces' : N.uri;
+      const nsl = N.namespaces ? `<ul class="uus-namespaces">${N.namespaces.map((x) =>
+        `<li>${a(x.uri, esc(x.uri))} — ${esc(x.system)}${x.variant ? ' (' + esc(x.variant) + ')' : ''}, ${x.count} units</li>`).join('')}</ul>` : '';
+      const rows = N.units.map((u, i) => `<tr><td class="n">${i + 1}</td><td class="u">${a(u.uri, esc(u.uri))}</td>` +
+        `<td class="k">${esc(u.description)}${u.aliases ? ' <span class="also">(also ' + u.aliases.map((x) => a(x, esc(x))).join(', ') + ')</span>' : ''}</td>` +
+        `<td class="k">${esc(u.dimensions.join(', '))}</td></tr>`).join('\n');
+      return `<section class="uus-namespace">
+<h2>${esc(title)}</h2>
+${nsl}<table class="uus-results">
+<thead><tr><th>#</th><th>URI</th><th>description</th><th>dimension</th></tr></thead>
+<tbody>
+${rows}
+</tbody>
+</table>
+</section>`;
+    }
     if (r.kind === 'unit') {
       const u = r.unit;
       const rows = u.rows.map((w) => `<li>${esc(w.dimension)}: ${esc(w.key)} — ${a('1Z0*' + u.uri + '/*', 'all units of this dimension')}</li>`).join('');
@@ -917,7 +1027,7 @@
 <h2>${esc(u.uri)}</h2>
 <p class="desc">${esc(u.description)}</p>
 <table class="uus-props">
-<tr><th>system</th><td>${esc(u.system)}${u.variant ? ' (' + esc(u.variant) + ')' : ''}</td></tr>
+<tr><th>system</th><td>${a(u.system === 'UUS' ? (u.variant && !['harmonic', 'gravitic'].includes(u.variant) ? u.variant + '/' : u.variant === 'gravitic' ? 'gravitic/' : '/') : u.system + '/', esc(u.system))}${u.variant ? ' (' + esc(u.variant) + ')' : ''}</td></tr>
 <tr><th>name in the tables</th><td>${esc(u.label)}</td></tr>
 ${u.variants ? `<tr><th>variants</th><td>${esc(u.variants.join(', '))}</td></tr>` : ''}
 <tr><th>value in SI units</th><td>${si}</td></tr>

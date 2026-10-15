@@ -36,6 +36,12 @@
   .buttons { text-align: center; margin: 10px 0 14px; }
   label.sub { font-size: .85rem; color: var(--soft); white-space: nowrap; }
   #out { margin-top: 6px; }
+  td.uri { font: .8rem/1.3 ui-monospace, Consolas, monospace; word-break: break-all; }
+  td.uri a { text-decoration: none; }
+  td.uri a:hover { text-decoration: underline; }
+  .perma { text-align: center; font-size: .85rem; color: var(--soft); margin: 4px 0 0; }
+  .perma code { font-family: ui-monospace, Consolas, monospace; word-break: break-all; color: var(--ink); }
+  .perma button { font-size: .8rem; padding: 1px 8px; margin-left: 4px; }
   .wrap { overflow-x: auto; }
   table.res { border-collapse: collapse; margin: 0 auto; }
   table.res th, table.res td { border: 1px solid var(--line); padding: 3px 8px; }
@@ -78,8 +84,9 @@
       <tr><th>quantity</th><td colspan="3"><div class="qrow">
         <input type="text" id="fq" aria-label="quantity" spellcheck="false"> ×
         <select id="frq" aria-label="radix of the quantity"></select> ^ <input type="text" id="fe" aria-label="exponent" spellcheck="false"></div></td></tr>
-      <tr><th>item</th><td style="text-align:center">from</td><td class="mid" rowspan="5"><button type="button" id="swap" title="swap from and to">⇔</button></td><td style="text-align:center">to</td></tr>
+      <tr><th>item</th><td style="text-align:center">from</td><td class="mid" rowspan="6"><button type="button" id="swap" title="swap from and to">⇔</button></td><td style="text-align:center">to</td></tr>
       <tr><th>unit or<br>constant</th><td><select id="fu" aria-label="from unit"></select></td><td><select id="tu" aria-label="to unit"></select></td></tr>
+      <tr class="uri-row"><th>URI</th><td id="fu-uri" class="uri"></td><td id="tu-uri" class="uri"></td></tr>
       <tr><th>power</th><td><select id="fp" aria-label="from power"></select></td><td><select id="tp" aria-label="to power"></select></td></tr>
       <tr><th>radix</th><td><select id="fr" aria-label="from radix"></select>
         <label class="sub"><input type="checkbox" id="fm"> subunits</label></td>
@@ -89,6 +96,7 @@
     <div class="buttons"><button type="submit" class="main">Convert</button></div>
   </form>
   <div id="out" aria-live="polite"></div>
+  <p id="perma" class="perma"></p>
 
   <details id="config-panel">
     <summary>Config</summary>

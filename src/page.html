@@ -61,11 +61,14 @@
     <a href="#3.000E0°earthquakeMagnitude_00_CONST/*">magnitude 3</a>
     <a href="#Omega_1">Omega_1</a>
     <a href="#harmon">harmon</a>
+    <a href="#SI/">SI/ (a namespace)</a>
+    <a href="#/">all namespaces</a>
   </div>
   <div id="out" aria-live="polite"></div>
   <details>
     <summary>How to write a request (<a href="https://github.com/suchowan/a_converter/blob/HEAD/doc/UUS_API.md">the full specification</a>)</summary>
-    <pre>REQUEST    ::= ( UNITS | CONVERSION ) [ "." TYPE ]
+    <pre>REQUEST    ::= ( UNITS | CONVERSION | NAMESPACE_INDEX ) [ "." TYPE ]
+NAMESPACE_INDEX ::= [ NAMESPACE "/" ] [ VARIANT "/" ]        "" (the UUS and every namespace), SI/, universal/, TGM/exact/
 CONVERSION ::= QUANTITY "/" ( QUANTITY | "*" )          "*": every unit of the dimension
 QUANTITY   ::= [ VALUE ( "*" | "°" | "@" ) ] UNITS
 UNITS      ::= UNIT [ POWER ] { UNIT [ POWER ] }         harmon1nic-1, Omega_1nic-1
@@ -87,9 +90,9 @@ The digits of VALUE set the precision of the answer.</pre>
   // the request: after "#", or after "/units/" in the path (a 404 page on a static host), or ?q=
   function current() {
     if (location.hash.length > 1) return location.hash.slice(1);
-    if (!location.search && !/\/units\//.test(location.pathname)) return '1.0000000Z0*harmon/*';     // something to start with
-    var m = /\/units\/(.+)$/.exec(location.pathname);
-    if (m) return m[1];
+    if (!location.search && !/\/units(\/|$)/.test(location.pathname)) return '1.0000000Z0*harmon/*';     // something to start with
+    var m = /\/units(?:\/(.*))?$/.exec(location.pathname);
+    if (m) return m[1] || '/';                                   // /units/ itself: the namespaces
     var q = new URLSearchParams(location.search).get('q');
     return q || '';
   }
@@ -101,7 +104,7 @@ The digits of VALUE set the precision of the answer.</pre>
     try {
       last = conv.request(req);
       out.innerHTML = conv.toHTML(last).replace('<table class="uus-results">', '<div class="wrap"><table class="uus-results">').replace('</table>\n</section>', '</table></div>\n</section>');
-      document.title = (last.uri || (last.unit && last.unit.uri) || 'UUS') + ' — UUS converter';
+      document.title = (last.uri || (last.unit && last.unit.uri) || (last.namespace && (last.namespace.uri || 'namespaces')) || 'UUS') + ' — UUS converter';
     } catch (e) {
       last = null;
       if (!(e instanceof Conv.ConvError)) { out.innerHTML = Conv.errorHTML({ status: 500, code: 'internal', message: String(e) }, req); throw e; }

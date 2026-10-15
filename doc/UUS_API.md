@@ -17,7 +17,8 @@ The namespace `uus:` stands for `http://dozenal.com/units/`.
 ## 1. Abstract syntax
 
 ```
-REQUEST    ::= ( UNITS | CONVERSION ) [ "." TYPE ]
+REQUEST    ::= ( UNITS | CONVERSION | NAMESPACE_INDEX ) [ "." TYPE ]
+NAMESPACE_INDEX ::= [ NAMESPACE "/" ] [ VARIANT "/" ]                  "" , "SI/", "universal/", "TGM/exact/"
 TYPE       ::= "json" | "html"
 CONVERSION ::= QUANTITY "/" TARGET
 TARGET     ::= [ SCALE ] UNITS | "*"
@@ -89,12 +90,26 @@ DIGITS     ::= ( "0" … "9" ) { "0" … "9" }
 * In the logarithmic dimensions (earthquake magnitude, sound pressure and intensity levels,
   absolute and apparent magnitude, pH), `°X` is a level whose reference is X, on the dimension's
   logarithmic scale: `3E0°earthquakeMagnitude_00_CONST` is magnitude 3.
-* `°` elsewhere, or a scale unit written without `°`, is refused (`not_written`).
+* In a logarithmic dimension, a level and the quantity itself convert into each other: a target
+  without `°` answers the quantity (`0E0°earthquakeMagnitude_00_CONST/tonOfTNT_TRAD` is the energy of
+  magnitude 0 in tons of TNT), and a quantity without `°` with a target with `°` answers the level
+  (`1E0*tonOfTNT_TRAD/°earthquakeMagnitude_00_CONST` is the magnitude of one ton of TNT).
+* `°` elsewhere, or a temperature point written without `°`, is refused (`not_written`).
+
+### 1.6 Namespaces
+
+* A namespace written alone, with or without the `/` at the end, is the list of its units:
+  `SI/`, `TRAD/`, `CONST/`. The variants make lists of their own: `harmonic/`, `universal/`, `GCD/`,
+  `gravitic/` (UUS) and `TGM/exact/`.
+* The empty request (`http://dozenal.com/units/`) is the UUS in its harmonic variant, the namespace of
+  the names written without a namespace, followed by the list of every namespace.
+* A namespace can be given one variant of its own (`SI/universal/` is refused: `bad_variant`).
 
 ## 2. What a request does
 
 | request | answer |
 |---|---|
+| `""` or `NAMESPACE/` or `VARIANT/` | the units of the namespace (the empty request: also the namespaces) |
 | `UNIT` (one unit, no VALUE) | the description of the unit |
 | `UNITS` (several) or `QUANTITY` with VALUE, no `/` | converted to the SI unit of the dimension |
 | `QUANTITY/UNITS` | the quantity in that unit |
@@ -148,6 +163,22 @@ A unit:
             "rows": [ { "dimension": "Length", "row": 0, "key": "harmon" } ] } }
 ```
 
+A namespace:
+
+```json
+{ "type": "json", "kind": "namespace",
+  "namespace": { "uri": "TRAD/", "system": "TRAD", "variant": null, "count": 96,
+    "units": [ { "uri": "Fermi_TRAD", "label": "TRAD/Fermi", "description": "Fermi",
+                 "dimensions": ["Length"], "si": 1e-15 },
+               …,
+               { "uri": "byte_TRAD", "label": "TRAD/byte", "description": "byte",
+                 "dimensions": ["Logarithm"], "si": 5.545177444479562, "aliases": ["octet_TRAD"] },
+               … ] } }
+```
+
+* `units` come in conv.rb's order; a unit with several names is listed once, with the others in `aliases`.
+* The empty request adds `namespaces`: `{ uri, system, variant, count }` for each namespace.
+
 ## 4. Errors
 
 A refused request answers `{ "error": { "code", "message", "position"?, "hint"? } }` with the
@@ -156,7 +187,6 @@ when it is certain.
 
 | code | status | meaning |
 |---|---|---|
-| `empty` | 400 | nothing requested |
 | `syntax` | 400 | the request cannot be read (operators, `/`, powers, %-encoding) |
 | `bad_value` | 400 | VALUE: a digit not of its radix, a missing exponent, two points |
 | `bad_variant`, `variant_conflict` | 400 | a variant the unit does not have; two UUS variants in one quantity |
@@ -169,8 +199,9 @@ when it is certain.
 ## 5. HTML
 
 * `api.cgi?api=REQUEST.html` redirects (302) to conv.cgi with the same conversion
-  (`m d fu fq fe fr fp fl tu tp tl tm c=Convert`).
-* `js/index.html` takes the same conv.cgi parameters, and also `#REQUEST`.
+  (`m d fu fq fe fr fp fl tu tp tl tm c=Convert`); a namespace goes to `js/api.html#NAMESPACE/`.
+* `js/index.html` takes the same conv.cgi parameters, and also `#REQUEST`. It shows the URI of the
+  units chosen and of the conversion (when the UUS API can write it: radix 10 or 12, no prefix, no subunits).
 * `js/api.html#REQUEST` shows the answer of any request, with each unit linked.
 
 ## 6. Differences from the draft of 2026-06-28
@@ -181,3 +212,5 @@ when it is certain.
 * Units may follow one another without a power where only one reading is possible.
 * Extensions: `;` as the point; VALUE without `E`/`Z`.
 * The default precision is conv.cgi's (8 digits).
+* A level and the quantity of a logarithmic dimension convert into each other (`°` on one side only).
+* NAMESPACE_INDEX: a namespace (and the empty request) lists its units.

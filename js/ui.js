@@ -170,6 +170,7 @@
     if (D.calendar) {
       $('out').innerHTML = '<p class="err">The calendars of the Date dimension are not in this converter yet; please use <a href="http://hosi.org/cgi-bin/conv.cgi?m=100f0&amp;c=d&amp;d=1">conv.cgi</a>.</p>';
       history.replaceState(null, '', '?m=' + cfg.code + '&d=' + Q.d + '&c=d');
+      permalinks();
       return;
     }
     try {
@@ -184,7 +185,79 @@
     } catch (e) {
       $('out').innerHTML = `<p class="err">Irregal quantity: '${esc(Q.fq)}'</p>`;
     }
+    permalinks();
     history.replaceState(null, '', toAddress(Q) + location.hash);
+  }
+
+
+  // ---------------------------------------------------------------- permanent links (UUS API URIs)
+  // The units and the conversion of the form, written as UUS API requests under http://dozenal.com/units/.
+  // A conversion gets a URI only when the request, read back by conv.js, is the same conversion.
+  const URI_BASE = 'http://dozenal.com/units/';
+  const VIEW_BASE = 'https://suchowan.github.io/a_converter/js/api.html#';
+  let api = null;
+  const apiConv = () => api || (api = Conv.load(UNITS));
+  const href = (req) => encodeURI(req).replace(/#/g, '%23');
+  function unitRequest(u) {
+    const c = apiConv();
+    const first = u.expression.split(/\s*=\s*/)[0];
+    const v = cfg.prefix === 'universal' || cfg.prefix === 'GCD' ? cfg.prefix : '';
+    let s = c.uriExpr(c.render(first.replace(/^°/, ''), v));
+    if (cfg.lightvlos === 'exactly') s = s.replace(/_TGM(?!_)/g, '_TGM_exact');
+    return { req: s, scale: first.startsWith('°') };
+  }
+  // VALUE of the form: the mantissa as typed, E (decimal) or Z (duodecimal), the exponent in decimal
+  function valueRequest() {
+    if (Q.fr !== 10 && Q.fr !== 12) return null;
+    let m = String(Q.fq).trim().replace(/^\+/, '').split(cfg.comma).join('').replace(/\s+/g, '');
+    if (cfg.period !== '.') m = m.split(cfg.period).join('.');
+    if (/[T:'`]/.test(m)) return null;                     // subunits are not written in a URI
+    if (Q.fr === 12) m = m.replace(/[XxAa]/g, 'x').replace(/[EeBb]/g, 'e');
+    let t = String(Q.fe).trim();
+    if (Q.fr === 12) t = t.replace(/[Xx]/g, 'A').replace(/[Ee]/g, 'B');
+    const em = /^([-+]?)([0-9A-Za-z]*)/.exec(t);
+    let body = '';                                        // as conv.cgi reads it: the digits of radix fr
+    for (const ch of em[2]) { if (isNaN(parseInt(ch, Q.fr))) break; body += ch; }
+    const e = (body ? parseInt(body, Q.fr) : 0) * (em[1] === '-' ? -1 : 1);
+    return m + (Q.fr === 10 ? 'E' : 'Z') + e;
+  }
+  function uriLink(req, cls) {
+    return `<a class="${cls || ''}" href="${esc(URI_BASE + href(req))}" title="the UUS API (JSON)">${esc(req)}</a>`;
+  }
+  function permalinks() {
+    const D = view.dimensions[Q.d];
+    $('fu-uri').innerHTML = ''; $('tu-uri').innerHTML = ''; $('perma').innerHTML = '';
+    if (!D || D.calendar) return;
+    const all = UNITS.dimensions[D.source].units;
+    const fu = D.units[Q.fu], tu = Q.tu >= 0 ? D.units[Q.tu] : null;
+    const f = unitRequest(fu), t = tu ? unitRequest(tu) : null;
+    $('fu-uri').innerHTML = uriLink(f.req);
+    if (t) $('tu-uri').innerHTML = uriLink(t.req);
+    const value = valueRequest();
+    let req = null;
+    if (value !== null && (!tu || Q.tp === 0)) {
+      // in a logarithmic dimension, the type Non is the quantity itself, written without "°"
+      const logDim = D.title !== 'Thermodynamic temperature';
+      const fScale = f.scale && !(logDim && Q.fl === 0), tScale = t && t.scale && !(logDim && Q.tl === 0);
+      req = value + (fScale ? '°' : '*') + f.req + '/' + (t ? (tScale ? '°' : '') + t.req : '*');
+      try {                                                // the same conversion when read back?
+        const r = apiConv().request(req);
+        const si = eng.fromQuantity({ d: Q.d, fu: Q.fu, fq: Q.fq, fe: Q.fe, fr: Q.fr, fp: Q.fp, fl: Q.fl }).si;
+        const ok = r.kind === 'conversion' && r.query.dimension.index === D.source && all[r.query.row] === fu &&
+          r.query.read.fl === Q.fl && (tu ? r.results.length === 1 && all[r.results[0].row] === tu && r.query.read.tl === Q.tl : r.results.length > 1) &&
+          Math.abs(r.query.si - si) <= 1e-12 * Math.abs(si);
+        if (!ok) req = null;
+      } catch (e) { req = null; }
+    }
+    $('perma').innerHTML = req
+      ? `URI: <code>${uriLink(req)}</code><button type="button" id="copy-uri">Copy</button> <a href="${esc(VIEW_BASE + href(req))}">view</a>`
+      : 'This conversion has no URI (a radix other than 10 and 12, a prefix, subunits or a type the UUS API does not write).';
+    if (req) $('copy-uri').addEventListener('click', () => {
+      const text = URI_BASE + href(req);
+      (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(
+        () => { $('copy-uri').textContent = 'Copied'; setTimeout(() => { if ($('copy-uri')) $('copy-uri').textContent = 'Copy'; }, 1500); },
+        () => { window.prompt('URI', text); });
+    });
   }
 
   // ---------------------------------------------------------------- events
@@ -196,14 +269,26 @@
     eng = new Conv.Engine(view, {
       variant: cfg.prefix === 'universal' ? 'universal' : cfg.prefix === 'GCD' ? 'GCD' : '',
       tgm: cfg.lightvlos === 'exactly' ? 'exact' : '', xe: cfg.xe, comma: cfg.comma, period: cfg.period, precision: cfg.precision });
-    Q = location.hash.length > 1 ? fromRequest(location.hash.slice(1)) || fromAddress() : fromAddress();
+    const req = requestHash();
+    Q = req ? fromRequest(req) || fromAddress() : fromAddress();
     drawForm(); convert(); drawConfig();
+  }
+  // the UUS API request after "#", or null; a "#" naming an element of the page (#config-panel) is not a request
+  function requestHash() {
+    const h = location.hash.slice(1);
+    if (!h) return null;
+    let id = h; try { id = decodeURIComponent(h); } catch (e) {}
+    const el = document.getElementById(id);
+    if (el && el.tagName === 'DETAILS') el.open = true;
+    return el ? null : h;
   }
   // a UUS API request (#...) -> the form, through the redirect parameters of conv.js
   function fromRequest(req) {
     try {
       const c = Conv.load(UNITS);
-      const p = c.cgiParams(c.request(req));
+      const r0 = c.request(req);
+      if (r0.kind === 'namespace') return null;                // a list of units: api.html shows it
+      const p = c.cgiParams(r0);
       const src = view.dimensions.findIndex((x) => x.source === p.d);
       if (src < 0) return null;
       const D = view.dimensions[src], all = UNITS.dimensions[p.d].units;
@@ -241,7 +326,7 @@
       cfg.comma = $('r').value; cfg.period = cfg.comma === '.' ? ',' : '.'; cfg.xe = $('dg').value === '0'; cfg.precision = Number($('p').value);
       applyConfig();
     });
-    window.addEventListener('hashchange', () => { const q = fromRequest(location.hash.slice(1)); if (q) { Q = q; drawForm(); convert(); } });
+    window.addEventListener('hashchange', () => { const req = requestHash(); const q = req && fromRequest(req); if (q) { Q = q; drawForm(); convert(); } });
   }
   function applyConfig() {
     cfg = mode(modeCode(cfg));
