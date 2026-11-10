@@ -1,6 +1,6 @@
 # UUS API — the request syntax and the answers
 
-Version 2026-10-13. This revises the draft of 2026-06-28
+Version 2026-10-15. This revises the draft of 2026-06-28
 ([blog](https://suchowan.seesaa.net/)); the differences are listed at the end.
 
 The UUS API names units and conversions by URI. The same request works in two places:
